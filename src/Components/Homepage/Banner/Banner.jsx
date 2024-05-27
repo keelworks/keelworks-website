@@ -1,8 +1,15 @@
+import slide1 from "../../../assets/images/slide1.jpeg";
+
 const Banner = () => {
   return (
-    <div className="w-screen h-screen bg-slate-800 flex items-center justify-center text-8xl font-bold text-white">
-      Banner
-    </div>
+    <div
+      className="w-screen h-[calc(100vh-4rem)] bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${slide1})`,
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
+      }}
+    ></div>
   );
 };
 export default Banner;
