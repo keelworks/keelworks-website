@@ -11,7 +11,7 @@ const Banner = () => {
       }}
     >
       <div className="absolute top-0 left-0 w-1/2 h-full flex justify-center items-center bg-black bg-opacity-50 backdrop-blur-lg">
-        <div className="border-solid border-2 border-yellow-600 mx-[3rem]">
+        <div className=" mx-[3rem]">
           <h1 className="text-[4rem] leading-[4.5rem] font-bold text-white">
             We Can Do <br /> This! <br />
             But Only
@@ -26,9 +26,13 @@ const Banner = () => {
             When we come together,
             <br /> we can transform lives.
           </h5>
-          <div className="flex gap-6">
-            <button className="bg-primary500 rounded-full p-1">Donate</button>
-            <button>Get involved</button>
+          <div className="flex gap-6 mt-6">
+            <button className="w-[116px] h-[47px] bg-primary500 rounded-full text-[#101828] font-semibold">
+              Donate
+            </button>
+            <button className="w-[156px] h-[47px] border-primary500 border-solid border-[2px] rounded-full text-primary500 font-semibold">
+              Get involved
+            </button>
           </div>
         </div>
       </div>
