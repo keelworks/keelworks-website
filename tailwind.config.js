@@ -25,8 +25,8 @@ export default {
         error300: "#F04438",
         error200: "#F97066",
 
-        fontPrimary: "#FBBC05",
-        fontSecondary: "#FDD253",
+        fontPrimary: "#101828",
+        fontSecondary: "#DBA300",
       },
 
       fontFamily: {
