@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
-    <div className="w-screen h-screen bg-slate-500">
+    <div className="w-screen bg-slate-500">
       <Navbar />
       <Slider />
       <Cards />

@@ -27,6 +27,9 @@ export default {
 
         fontPrimary: "#FBBC05",
         fontSecondary: "#FDD253",
+
+        customBlack65: 'rgba(0, 0, 0, 0.65)',
+
       },
 
       fontFamily: {
