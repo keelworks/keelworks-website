@@ -27,10 +27,10 @@ const Banner = () => {
             <br /> we can transform lives.
           </h5>
           <div className="flex gap-6 mt-6">
-            <button className="w-[116px] h-[47px] bg-primary500 rounded-full text-[#101828] font-semibold">
+            <button className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[100ms] ease-linear text-[#101828] font-semibold">
               Donate
             </button>
-            <button className="w-[156px] h-[47px] border-primary500 border-solid border-[2px] rounded-full text-primary500 font-semibold">
+            <button className="w-[156px] h-[47px] border-primary500 border-solid border-[2px] rounded-full hover:bg-primary300 transition duration-[100ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold">
               Get involved
             </button>
           </div>
