@@ -6,7 +6,7 @@ import Home from "./Components/Homepage/Home";
 
 function App() {
   return (
-    <main>
+    <main className=" overflow-x-hidden">
       <Home />
     </main>
   );
