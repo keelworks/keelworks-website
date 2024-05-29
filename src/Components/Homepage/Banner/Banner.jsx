@@ -1,9 +1,9 @@
-import slide1 from "../../../assets/images/slide1.jpeg";
+import slide1 from "../../../assets/images/banner.jpeg";
 
 const Banner = () => {
   return (
     <div
-      className="relative w-screen h-[calc(100vh-4rem)] bg-cover bg-center bg-no-repeat z-0"
+      className="relative w-screen h-[calc(100vh-4rem)] bg-left bg-no-repeat bg-[size:150%]"
       style={{
         backgroundImage: `url(${slide1})`,
         // backgroundSize: "cover",
