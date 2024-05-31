@@ -17,7 +17,7 @@ const Cards = () => {
       </div>
       <div className='flex flex-col bg-white w-full lg:h-screen '>
         <div className='justify-center flex p-10 '>
-          <p className='text-lg sm:text-3xl md:text-4xl lg:text-6xl font-extrabold '>The <span className='text-[#FBBC05] '>KeelWorks </span>Solutions</p>
+          <p className='text-lg sm:text-3xl md:text-4xl lg:text-6xl font-bold '>The <span className='text-[#FBBC05] '>KeelWorks </span>Solutions</p>
         </div>
         <div className='w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3  sm:gap-2 gap-6 lg:h-4/5'>
           <div className='overflow-hidden sm:m-2 md:m-4 lg:m-4 relative group  m-2 '>
@@ -34,7 +34,7 @@ const Cards = () => {
 
                 </div>
               </p>
-              <p className='text-lg sm:text-2xl md:text-2xl lg:text-3xl m-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-4  font-semibold xl:leading-loose sm:leading-loose ' >
+              <p className='text-lg sm:text-2xl md:text-2xl lg:text-3xl font-medium m-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-4  xl:leading-loose sm:leading-loose ' >
                 A three-phase approach to support the most challenged unemployed and under-employed individuals mitigating barriers to sustainable employment.
               </p>
             </div>
@@ -53,7 +53,7 @@ const Cards = () => {
                 </div>
                 {/* <span className='text-[#FBBC05] font-bold text-6xl sm:text-8xl md:text-5xl lg:text-7xl xl:text-9xl'>02</span> */}
               </p>
-              <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl m-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-10 leading-relaxed font-semibold xl:leading-loose sm:leading-loose' >
+              <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl m-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-10 leading-relaxed font-medium xl:leading-loose sm:leading-loose' >
                 Designed to bridge the gap for participants with insufficient education and/or experience in our supported fields; better positioning them for employment and/or growth.
               </p>
             </div>
@@ -71,7 +71,7 @@ const Cards = () => {
 
                 </div>
               </p>
-              <p className='text-lg  sm:text-xl md:text-2xl lg:text-3xl m-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-4  font-semibold  xl:leading-loose sm:leading-loose' >
+              <p className='text-lg  sm:text-xl md:text-2xl lg:text-3xl m-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-4  font-medium  xl:leading-loose sm:leading-loose' >
                 Assists graduates breakthrough the “lack of experience” conundrum while providing them valuable employment coaching.
               </p>
             </div>
