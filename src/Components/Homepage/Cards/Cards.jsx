@@ -5,7 +5,7 @@ import greaterImg from "../../../assets/images/_.png";
 const Cards = () => {
   return (
     <div className="">
-      <div className="w-full bg-grey300">
+      <div className="w-full bg-grey200">
         <div className="mx-[8rem]">
           <p className="text-[2.68rem] font-bold leading-relaxed pt-[8rem] ">
             Poverty begets poverty. Affluence begets affluence. <br />
@@ -93,6 +93,15 @@ const Cards = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      {/* ********************* Text at the Bottom of Cards ********************* */}
+      <div className="w-full bg-grey200">
+        <div className="mx-[2rem] md:mx-[8rem]">
+          <p className="text-[2rem] font-bold leading-relaxed py-[8rem] md:text-[2.68rem]">
+            If you believe in our mission to get people to work, we need your
+            support.
+          </p>
         </div>
       </div>
     </div>
