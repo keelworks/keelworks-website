@@ -8,7 +8,7 @@ const Partners = () => {
       <h2 className="text-fontPrimary font-bold text-[2rem] md:text-[3.56rem] leading-[85px]">
         Our partners
       </h2>
-      <div className="w-[calc(100%-8rem)] md:w-[calc(100%-8rem)] flex items-center justify-between mt-10 lg:w-[calc(100%-16rem)]">
+      <div className="w-[calc(100%-8rem)] flex items-center justify-between mt-10 lg:w-[calc(100%-16rem)]">
         <img
           src={adobe_logo}
           alt=""
