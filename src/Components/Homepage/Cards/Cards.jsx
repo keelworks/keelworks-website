@@ -97,7 +97,7 @@ const Cards = () => {
       </div>
       {/* ********************* Text at the Bottom of Cards ********************* */}
       <div className="w-full bg-grey200">
-        <div className="mx-[2rem] md:mx-[8rem]">
+        <div className="mx-[4rem] md:mx-[8rem]">
           <p className="text-[2rem] font-bold leading-relaxed py-[8rem] md:text-[2.68rem]">
             If you believe in our mission to get people to work, we need your
             support.
