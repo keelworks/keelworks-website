@@ -32,17 +32,16 @@ const Slider = () => {
   }, [slides.length])
 
   return (
-    <div className="w-screen h-[1000px] bg-slate-300 flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
+    <div className="w-screen h-[100vh] bg-slate-300 flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
 
-      <div className="absolute top-0 left-0 h-full w-1/2 bg-customBlack65 flex items-center justify-center z-10">
+      <div className="absolute top-0 left-0 h-full w-1/2 bg-customBlack65 flex items-center justify-center z-10 backdrop-blur-lg bg-black/30">
      
          {sliderTexts[currentSlideIndex]}
       </div>
 
-      <img className="w-full h-full object-cover duration-100 relative"
+      <img className="w-full h-full object-cover duration-100 relative float-right"
         src={slides[currentSlideIndex]} alt="Keelworks Slides"
       />
-
 
       <div className="flex justify-center py-1 absolute bottom-2 text-slate-300 z-10 ">
         {slides.map((slide, slideIndex) => (

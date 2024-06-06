@@ -3,8 +3,8 @@ import React from 'react'
 const Slider4 = () => {
     return (
         <div className='w-50 flex flex-col justify-start font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl p-4'>
-            <h6 >KEEL</h6>
-            <h6 className='text-fontPrimary'>MATE</h6>
+            <h6 >KEEL<span className='text-fontPrimary'>MATE</span></h6>
+           
             <h6 className='mb-9'>PROGRAM</h6>
 
 
