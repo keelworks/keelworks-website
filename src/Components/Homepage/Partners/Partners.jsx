@@ -17,42 +17,42 @@ const Partners = () => {
         <img
           src={adobe_logo}
           alt=""
-          className="w-[4rem] md:w-[10rem] lg:w-[6rem]"
+          className="w-[4rem] md:w-[6rem] lg:w-[6rem]"
         />
         <img
           src={microsoft_logo}
           alt=""
-          className="w-[4rem] md:w-[10rem] lg:w-[7rem]"
+          className="w-[4rem] md:w-[6rem] lg:w-[7rem]"
         />
         <img
           src={teamgantt_logo}
           alt=""
-          className="w-[5rem] md:w-[10rem] lg:w-[8rem]"
+          className="w-[5rem] md:w-[8rem] lg:w-[8rem]"
         />
         <img
           src={atlassian_logo}
           alt=""
-          className="w-[2rem] md:w-[6rem] lg:w-[4rem] "
+          className="w-[2rem] md:w-[4rem] lg:w-[4rem] "
         />
         <img
           src={cogniaha_logo}
           alt=""
-          className="w-[4rem] md:w-[10rem] lg:w-[6rem] pb-4"
+          className="w-[4rem] md:w-[6rem] lg:w-[6rem] pb-4"
         />
         <img
           src={eduongo_logo}
           alt=""
-          className="w-[4rem] md:w-[10rem] lg:w-[6rem] pt-3"
+          className="w-[4rem] md:w-[6rem] md:pt-1 lg:w-[6rem] pt-3"
         />
         <img
           src={google_logo}
           alt=""
-          className="w-[4rem] md:w-[10rem] lg:w-[6rem]"
+          className="w-[4rem] md:w-[6rem] lg:w-[6rem]"
         />
         <img
           src={qase_logo}
           alt=""
-          className="w-[4rem] md:w-[10rem] lg:w-[5rem]"
+          className="w-[4rem] md:w-[5rem] lg:w-[5rem]"
         />
       </div>
     </div>
