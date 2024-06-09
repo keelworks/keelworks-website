@@ -13,7 +13,7 @@ const Partners = () => {
       <h2 className="text-fontPrimary font-bold text-[2rem] md:text-[3.56rem] lg:leading-[85px]">
         Our partners
       </h2>
-      <div className="w-[calc(100%-8rem)] grid grid-cols-3 gap-6 md:grid md:grid-cols-4 [@media(min-width:1300px)]:flex items-center [@media(min-width:1200px)]:justify-between mt-[2.5rem] mb-[3rem] [@media(min-width:1200px)]:w-[calc(100%-16rem)]">
+      <div className="w-[calc(100%-8rem)] grid grid-cols-3 gap-6 md:grid md:grid-cols-4 lg:w-[calc(100%-16rem)] [@media(min-width:1300px)]:flex items-center [@media(min-width:1200px)]:justify-between mt-[2.5rem] mb-[3rem] [@media(min-width:1200px)]:w-[calc(100%-16rem)]">
         <img
           src={adobe_logo}
           alt=""
