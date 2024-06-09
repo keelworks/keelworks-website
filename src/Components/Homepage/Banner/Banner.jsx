@@ -3,7 +3,7 @@ import banner_pic from "../../../assets/images/banner.jpeg";
 const Banner = () => {
   return (
     <div
-      className="relative w-screen h-[calc(100vh-4rem)] overflow-hidden bg-center bg-no-repeat bg-cover md:bg-left xl:bg-[size:150%]"
+      className="relative w-screen h-[calc(100vh-5rem)] overflow-hidden bg-center bg-no-repeat bg-cover md:bg-left xl:bg-[size:150%]"
       style={{
         backgroundImage: `url(${banner_pic})`,
       }}
