@@ -2,7 +2,7 @@ import React from "react";
 
 const Slider2 = () => {
   return (
-    <div className="w-50 flex flex-col justify-start font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl p-4">
+    <div className="mx-[4rem] md:mx-[4rem] lg:mx-[8rem] text-[3rem] leading-[3.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] font-bold text-white lg:leading-[4.5rem]">
       <h6>
         {" "}
         KEEL<span className="text-primary500">WINGS</span>{" "}
@@ -10,15 +10,13 @@ const Slider2 = () => {
 
       <h6 className="mb-9">PROGRAM</h6>
 
-      <div className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
-        <p>With job experience and resume/</p>
-        <p>portfolio support students get to</p>
+      <div className="text-[1.5rem] font-bold leading-10 text-white">
         <p>
+          With job experience and resume/ portfolio support students get to
           work. More than
-          <span className="text-primary500"> 150 participants</span>
+          <span className="text-primary500"> 150 participants </span>
+          are active in the program at any given time.
         </p>
-        <p>are active in the program at any</p>
-        <p>given time.</p>
       </div>
     </div>
   );

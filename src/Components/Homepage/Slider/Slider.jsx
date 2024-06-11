@@ -32,16 +32,18 @@ const Slider = () => {
 
   return (
     <div className="w-screen h-[calc(100vh-5rem)] mt-[5rem] bg-grey200 flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
-      <div className="absolute top-0 left-0 h-full w-1/2 bg-customBlack65 flex items-center justify-center z-10 backdrop-blur-lg bg-black bg-opacity-50">
+      <div className="absolute top-0 left-0 h-full w-full backdrop-blur-[2px] md:w-1/2 flex items-center justify-center z-10 md:backdrop-blur-lg bg-black bg-opacity-50">
         {sliderTexts[currentSlideIndex]}
       </div>
 
       <img
-        className={`w-full h-full object-cover relative float-right ${
+        className={`w-full h-full object-cover relative float-right duration-200 ${
           currentSlideIndex === 0
-            ? "object-left md:object-center [@media(min-width:1100px)]:object-left"
+            ? "object-center md:object-center [@media(min-width:1100px)]:object-left"
             : ""
-        } ${currentSlideIndex === 1 ? "md:object-right" : ""}`}
+        } ${currentSlideIndex === 1 ? "object-right md:object-right" : ""}${
+          currentSlideIndex === 3 ? "object-right md:object-center" : ""
+        }`}
         src={slides[currentSlideIndex]}
         alt="Keelworks Slides"
       />
