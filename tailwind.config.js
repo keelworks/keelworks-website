@@ -25,11 +25,8 @@ export default {
         error300: "#F04438",
         error200: "#F97066",
 
-        fontPrimary: "#FBBC05",
-        fontSecondary: "#FDD253",
-
-        customBlack65: 'rgba(0, 0, 0, 0.65)',
-
+        fontPrimary: "#101828",
+        fontSecondary: "#DBA300",
       },
 
       fontFamily: {
