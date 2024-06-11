@@ -38,7 +38,7 @@ const Slider = () => {
 
       <img
         className={`w-full h-full object-cover relative float-right ${
-          currentSlideIndex === 0 ? "object-center" : ""
+          currentSlideIndex === 0 ? "object-left" : ""
         }`}
         src={slides[currentSlideIndex]}
         alt="Keelworks Slides"
