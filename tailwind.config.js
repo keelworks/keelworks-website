@@ -29,7 +29,7 @@ export default {
         fontSecondary: "#DBA300",
       },
       height: {
-        '52': '52%',
+        '68': '68%',
       },
 
       fontFamily: {
