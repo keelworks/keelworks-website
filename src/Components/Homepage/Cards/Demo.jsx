@@ -1,7 +1,7 @@
 import React from 'react'
 
 import slider1 from '../../../assets/images/card1.jpeg'
-import slider2 from '../../../assets/images/card2.jpeg'
+import slider2 from '../../../assets/images/card2.jpg'
 import slider3 from '../../../assets/images/card-3.jpg'
 
 const Demo = () => {
