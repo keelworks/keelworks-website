@@ -5,7 +5,6 @@ import Cards from "./Cards/Cards";
 import Banner from "./Banner/Banner";
 import Partners from "./Partners/Partners";
 import Footer from "../Footer/Footer";
-import Demo from "./Cards/Demo";
 // ******************************************
 
 const Home = () => {
