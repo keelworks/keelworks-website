@@ -28,6 +28,9 @@ export default {
         fontPrimary: "#101828",
         fontSecondary: "#DBA300",
       },
+      height: {
+        '68': '68%',
+      },
 
       fontFamily: {
         Inter: ["Inter", "sans-serif"],
