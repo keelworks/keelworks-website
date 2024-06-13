@@ -31,35 +31,37 @@ const Slider = () => {
   }, [slides.length]);
 
   return (
-    <div className="w-screen h-[calc(100vh-5rem)] mt-[5rem] bg-grey200 flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
-      <div className="absolute top-0 left-0 h-full w-full backdrop-blur-[2px] md:w-1/2 flex items-center justify-center z-10 md:backdrop-blur-lg bg-black bg-opacity-50">
-        {sliderTexts[currentSlideIndex]}
-      </div>
+    <div className="w-screen h-[calc(100vh-5rem)] mt-[5rem] bg-black flex justify-center">
+      <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
+        <div className="absolute top-0 left-0 h-full w-full backdrop-blur-[2px] md:w-1/2 flex items-center justify-center z-10 md:backdrop-blur-lg bg-black bg-opacity-50">
+          {sliderTexts[currentSlideIndex]}
+        </div>
 
-      <img
-        className={`w-full h-full object-cover relative float-right duration-200 ${
-          currentSlideIndex === 0
-            ? "object-center md:object-center [@media(min-width:1100px)]:object-left"
-            : ""
-        } ${currentSlideIndex === 1 ? "object-right md:object-right" : ""}${
-          currentSlideIndex === 3 ? "object-right md:object-center" : ""
-        }`}
-        src={slides[currentSlideIndex]}
-        alt="Keelworks Slides"
-      />
+        <img
+          className={`w-full h-full object-cover relative float-right duration-200 ${
+            currentSlideIndex === 0
+              ? "object-center md:object-center [@media(min-width:1100px)]:object-left"
+              : ""
+          } ${currentSlideIndex === 1 ? "object-right md:object-right" : ""}${
+            currentSlideIndex === 3 ? "object-right md:object-center" : ""
+          }`}
+          src={slides[currentSlideIndex]}
+          alt="Keelworks Slides"
+        />
 
-      <div className="flex justify-center py-1 absolute bottom-2 text-grey500 z-10 ">
-        {slides.map((slide, slideIndex) => (
-          <div
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-            className={`text-5xl cursor-pointer hover:text-white ${
-              currentSlideIndex === slideIndex ? "text-white" : ""
-            } `}
-          >
-            <RxDotFilled />
-          </div>
-        ))}
+        <div className="flex justify-center py-1 absolute bottom-2 text-grey500 z-10 ">
+          {slides.map((slide, slideIndex) => (
+            <div
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+              className={`text-5xl cursor-pointer hover:text-white ${
+                currentSlideIndex === slideIndex ? "text-white" : ""
+              } `}
+            >
+              <RxDotFilled />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
