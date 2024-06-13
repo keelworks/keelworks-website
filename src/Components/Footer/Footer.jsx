@@ -4,9 +4,9 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-black text-white grid grid-cols-1 place-items-center">
-      <div className="w-full max-w-[3000px] px-8 [@media(min-width:3000px)]:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-3 md:order-1 place-items-center gap-8 py-6 md:py-10">
-          <div className="h-full flex flex-row md:flex-col justify-between md:place-self-start items-center md:items-start gap-8">
+      <div className="w-full max-w-[3000px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:order-1 place-items-center gap-8 py-6 md:py-10 mx-[4rem] md:mx-[4rem] lg:mx-[8rem] border-2 border-yellow-400">
+          <div className="h-full w-full flex flex-row md:flex-col justify-between md:place-self-start items-center md:items-start gap-8">
             <div>
               <h1 className="mb-2 text-xl font-semibold">Let's Connect!</h1>
               <a
