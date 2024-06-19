@@ -1,4 +1,4 @@
-import slider1 from "../../../assets/images/card1.jpeg";
+import slider1 from "../../../assets/images/card1.jpg";
 import slider2 from "../../../assets/images/card2.jpg";
 import slider3 from "../../../assets/images/card3.jpg";
 import greaterImg from "../../../assets/images/_.png";
