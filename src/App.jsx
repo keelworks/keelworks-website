@@ -1,8 +1,8 @@
 // **************** Components **************
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-import Home from "./Components/Homepage/Home";
-import GetInvolved from "./Components/GetInvolved/GetInvolved";
+import Home from "./Pages/Homepage/Home";
+import GetInvolved from "./Pages/GetInvolved/GetInvolved";
 
 // ******************************************
 
