@@ -29,9 +29,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <main className=" overflow-x-hidden">
-      {/* <Navbar /> */}
       <RouterProvider router={router} />
-      {/* <Footer /> */}
     </main>
   );
 }

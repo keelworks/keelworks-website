@@ -27,9 +27,12 @@ const Banner = () => {
               <button className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[100ms] ease-linear text-[#101828] font-semibold">
                 Donate
               </button>
-              <button className="w-[156px] h-[47px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[100ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold">
+              <Link
+                to="/getinvolved"
+                className="w-[156px] h-[47px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[100ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold"
+              >
                 Get involved
-              </button>
+              </Link>
             </div>
           </div>
         </div>
