@@ -2,6 +2,7 @@
 import SiteLayout from "./Components/SiteLayout/SiteLayout";
 import Home from "./Pages/Homepage/Home";
 import GetInvolved from "./Pages/GetInvolved/GetInvolved";
+import Error from "./Pages/Error/Error";
 
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -9,6 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <SiteLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
