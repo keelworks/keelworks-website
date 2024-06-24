@@ -8,8 +8,8 @@ import GetInvolved from "./Components/GetInvolved/GetInvolved";
 function App() {
   return (
     <main className=" overflow-x-hidden">
-      <Home />
-      {/* <GetInvolved /> */}
+      {/* <Home /> */}
+      <GetInvolved />
     </main>
   );
 }

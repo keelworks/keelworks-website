@@ -57,6 +57,7 @@ const Cards = () => {
                 A three-phase approach to support the most challenged unemployed
                 and under-employed individuals mitigating barriers to
                 sustainable employment.
+                <a href="" className="ml-2 underline text-primary500 hover:text-primary400">more</a>
               </div>
             </div>
           </div>
@@ -82,6 +83,7 @@ const Cards = () => {
                 Designed to bridge the gap for participants with insufficient
                 education and/or experience in our supported fields; better
                 positioning them for employment and/or growth.
+                <a href="" className="ml-2 underline text-primary500 hover:text-primary400">more</a>
               </div>
             </div>
           </div>
@@ -106,6 +108,7 @@ const Cards = () => {
               <div className="text-[1.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[4rem]">
                 Assists graduates breakthrough the “lack of experience”
                 conundrum while providing them valuable employment coaching.
+                <a href="" className="ml-2 underline text-primary500 hover:text-primary400">more</a>
               </div>
             </div>
           </div>
