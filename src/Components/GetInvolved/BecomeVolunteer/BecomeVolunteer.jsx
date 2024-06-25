@@ -6,7 +6,6 @@ const BecomeVolunteer = () => {
         <div className="h-1/5 flex items-center justify-center ">
           <h1 className="font-bold text-[#2E2E2E] text-[57px]">Become a Volunteer</h1>
         </div>
-
         <div className="w-full max-w-[1300px] flex flex-col md:flex-row h-4/5 mb-10">
           <div className='flex justify-center items-center w-full md:w-45p'>
             <div className='p-8 text-start bg-primary500 w-full text-[#2E2E2E] flex flex-col justify-center '>
@@ -21,11 +20,9 @@ const BecomeVolunteer = () => {
           <div className='flex justify-center items-center w-full md:w-1/2 h-full'>
             <img src={volunteer} alt="Donor" className='w-full h-full object-cover' />
           </div>
-
         </div>
       </div>
     </div>
-
   );
 };
 export default BecomeVolunteer;
