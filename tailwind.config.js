@@ -30,6 +30,10 @@ export default {
       },
       height: {
         '68': '68%',
+        
+      },
+      width:{
+        '45p':'45%'
       },
 
       fontFamily: {
