@@ -7,12 +7,12 @@ const Testimonials = () => {
     <div className="w-screen pt-[5rem] bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
         <div className="grid gird-rows-2 md:grid-rows-1 md:grid-cols-2 mx-[4rem] md:mx-[4rem] lg:mx-[8rem]">
-          <div className="flex flex-col justify-start items-center border-[2px]">
+          <div className="flex flex-col justify-start items-center">
             <div className="flex flex-col justify-center items-center">
               <img src={donor1} alt="girl image" className="w-[347px]" />
               <div></div>
             </div>
-            <p className="w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-10 border-[2px]">
+            <p className="w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-10">
               “Donating and seeing the impact I made in real time is not rare
               with Keelworks”
             </p>
@@ -22,7 +22,7 @@ const Testimonials = () => {
               <img src={donor2} alt="girl image" className="w-[347px]" />
               <div></div>
             </div>
-            <p className="w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-10 border-[2px]">
+            <p className="w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-10">
               “Getting email updates makes me feel reassured that my donations
               are going to a good cause”
             </p>
