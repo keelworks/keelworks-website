@@ -41,7 +41,7 @@ const BecomeDonor = () => {
             </div>
             <div className='absolute bottom-0 right-0 w-[90%] md:w-[520px] lg:w-[520px] h-[auto] md:h-[400px] lg:h-[394px] bg-primary500'>
               <div className="p-6 md:p-8 xl:p-12 text-start text-[#2E2E2E] flex flex-col justify-center items-center h-full">
-                <p className="font-bold text-[25px] sm:text-[40px] leading-tight ">
+                <p className="font-bold text-[25px] sm:text-[40px]  leading-tight ">
                   The quickest and fastest way to help is by becoming a donor.
                 </p>
                 <p className="text-[20px] sm:text-[25px] mt-6 md:mt-12 leading-tight">
