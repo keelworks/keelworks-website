@@ -35,16 +35,16 @@ const BecomeDonor = () => {
           <div className="flex items-center justify-center">
             <h1 className="font-bold text-[#2E2E2E] text-[40px] md:text-[57px]">Become a Donor</h1>
           </div>
-          <div className='w-full md:w-[1218px] h-full md:h-[651px] relative flex flex-col mt-10'>
+          <div className='w-full md:w-[1218px] h-full sm:h-[700px] md:h-[651px] relative flex flex-col mt-10 '>
             <div className='w-full md:w-[958px] h-full md:h-[600px] flex justify-center items-center'>
               <img src={doner} alt="Donor" className="w-full h-full object-cover" />
             </div>
-            <div className='absolute bottom-0 right-0 w-[90%] md:w-[520px] lg:w-[520px] h-[auto] md:h-[400px] lg:h-[394px] bg-primary500'>
+            <div className='absolute bottom-20 sm:bottom-0 right-0 w-[90%] md:w-[520px] lg:w-[520px] h-[auto] md:h-[400px] lg:h-[394px] bg-primary500'>
               <div className="p-6 md:p-8 xl:p-12 text-start text-[#2E2E2E] flex flex-col justify-center items-center h-full">
                 <p className="font-bold text-[25px] sm:text-[40px]  leading-tight ">
                   The quickest and fastest way to help is by becoming a donor.
                 </p>
-                <p className="text-[20px] sm:text-[25px] mt-6 md:mt-12 leading-tight">
+                <p className="text-[20px] sm:text-[25px] mt-6 md:mt-12 leading-loose">
                   Whether it is one time, or on a regular basis, every bit helps!
                 </p>
               </div>

@@ -30,7 +30,7 @@ const BecomeVolunteer = () => {
         <div className="flex items-center justify-center">
           <h1 className="font-bold text-[#2E2E2E] text-[40px] md:text-[57px]">Become a Volunteer</h1>
         </div>
-        <div className="w-full  h-auto sm:h-full md:h-[600px]  flex flex-row md:flex-row mt-10  justify-end  items-end relative">          
+        <div className="w-full  h-auto sm:h-[700px] md:h-[600px]  flex flex-row md:flex-row mt-10  justify-end  items-end relative">          
           <div className='h-[600px] '>
             <img src={volunteer} alt="Volunteer" className="w-full h-full object-cover" />
             </div>
