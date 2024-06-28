@@ -24,7 +24,7 @@ const BecomeVolunteer = () => {
     //   </div>
     // </div>
 
-    <div className="w-screen min-h-screen mt-[5rem] flex justify-center bg-[#F6F7F9]">
+    <div className="w-screen min-h-screen mt-[5rem] flex justify-center bg-grey200">
     <div className="w-full max-w-[3000px] min-h-full text-center flex flex-col items-center">
       <div className="w-[90%] md:w-[1302px] h-full md:h-[717px] xl:h-[768px] my-10 ">
         <div className="flex items-center justify-center">

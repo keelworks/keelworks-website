@@ -30,7 +30,7 @@ const BecomeDonor = () => {
     //   </div>
     // </div>
     <div className="w-screen min-h-screen mt-[5rem] flex justify-center">
-      <div className="w-full max-w-[3000px] min-h-full text-center flex flex-col items-center bg-[#F6F7F9]">
+      <div className="w-full max-w-[3000px] min-h-full text-center flex flex-col items-center bg-grey200">
         <div className='w-[90%] md:w-[1218px] h-full md:h-[768px] xl:h-[768px] my-10'>
           <div className="flex items-center justify-center">
             <h1 className="font-bold text-[#2E2E2E] text-[40px] md:text-[57px]">Become a Donor</h1>
