@@ -16,7 +16,7 @@ const Testimonials = () => {
               />
               <div className="absolute w-full h-full bg-primary500 top-[-1.5rem] left-[-1.5rem] z-0"></div>
             </div>
-            <p className="w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-10">
+            <p className="w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-[8rem] md:mb-10">
               “Donating and seeing the impact I made in real time is not rare
               with Keelworks”
             </p>
@@ -26,11 +26,11 @@ const Testimonials = () => {
               <img
                 src={donor2}
                 alt="girl image"
-                className="w-[347px] mt-[1.5rem] z-10"
+                className="w-[347px] md:mt-[1.5rem] z-10"
               />
               <div className="absolute w-full h-full bg-primary500 top-[-1.5rem] right-[-1.5rem] z-0"></div>
             </div>
-            <p className="w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-10">
+            <p className="w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-[8rem] md:mb-10">
               “Getting email updates makes me feel reassured that my donations
               are going to a good cause”
             </p>
