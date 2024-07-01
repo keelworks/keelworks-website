@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets/images/KeelWorks-Logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,12 +58,12 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="getinvolved"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   Get Involved
-                </a>
+                </Link>
               </li>
               <li>
                 <a
