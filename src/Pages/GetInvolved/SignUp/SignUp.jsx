@@ -53,7 +53,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="w-screen h-full py-10 md:h-[calc(100vh-5rem)] md:mt-[5rem] px-5 bg-white flex justify-center">
+    <div className="w-screen h-full py-10 md:h-[calc(100vh-5rem)] md:min-h-[650px] md:mt-[5rem] px-5 bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center font-bold">
         <div>
           <h2 className="text-3xl md:text-[3.5rem] lg:text-5xl text-center mb-2">
