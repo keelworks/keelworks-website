@@ -53,10 +53,12 @@ const SignUp = () => {
   };
 
   return (
-    <div className="w-screen mt-[5rem] px-5 bg-white flex justify-center">
+    <div className="w-screen h-full py-10 md:h-[calc(100vh-5rem)] md:mt-[5rem] px-5 bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center font-bold">
         <div>
-          <h2 className="text-5xl text-center">Volunteer Sign-Up & Needs</h2>
+          <h2 className="text-3xl md:text-[3.5rem] lg:text-5xl text-center mb-2">
+            Volunteer Sign-Up & Needs
+          </h2>
           <form className="space-y-4 mt-2" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
               <div>
