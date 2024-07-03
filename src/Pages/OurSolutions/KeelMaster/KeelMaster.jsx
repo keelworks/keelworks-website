@@ -1,9 +1,9 @@
 const KeelMaster = () => {
   return (
     <div className="w-full h-auto mt-[5rem] bg-[#FFFFFF] flex justify-center items-center font-Inter">
-  <div className="w-full max-w-[3000px] h-full flex flex-col items-center overflow-hidden relative mx-[4rem] lg:mx-[8rem]">
-    <div className="flex items-center flex-col w-full h-full">
-      <div className="mt-[40px] font-bold  text-[50px] lg:text-[64px] h-[97px] text-center">
+  <div className="w-full max-w-[3000px] h-full flex flex-col items-center overflow-hidden relative mx-[4rem]  ">
+    <div className="flex items-center flex-col w-full h-full" id="keelmaster">
+      <div className="mt-[40px] font-bold  text-[50px] lg:text-[64px] h-[97px] text-center " >
         <p>KeelMaster</p>
       </div>
       <div className="w-full h-auto bg-primary500 px-[1rem] py-[1rem] md:px-[4rem] md:py-[4rem] xl:px-[180px] xl:py-[190px] text-white font-bold text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] my-[40px] text-center">
@@ -13,6 +13,7 @@ const KeelMaster = () => {
           </p>
         </div>
       </div>
+
       <div className="w-full max-w-[900px] h-auto mb-10">
         <div className="text-[18px] h-auto">
           <p>Breaking the pattern of unemployment or underemployment is the program goal for KeelMaster. This program recognizes that continued failure is a certainty, unless informed intervention is applied. It also recognizes that change is easier when confronted in a community rather than in isolation.</p>
