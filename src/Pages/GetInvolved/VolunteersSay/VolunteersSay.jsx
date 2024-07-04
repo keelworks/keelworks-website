@@ -5,7 +5,8 @@ import ImageFrame from "../ImageFrame/ImageFrame";
 const volunteers = [
   {
     id: 1,
-    name: "Kathryn Tomlinson",
+    name: "Kathryn",
+    lastName: "Tomlinson",
     title: "Instructional Designer",
     image: Volunteer1,
     content:
@@ -13,7 +14,8 @@ const volunteers = [
   },
   {
     id: 2,
-    name: "Kathryn Tomlinson",
+    name: "Kathryn",
+    lastName: "Tomlinson",
     title: "Instructional Designer",
     image: Volunteer2,
     content:
@@ -25,7 +27,7 @@ const VolunteersSay = () => {
   return (
     <div className="w-screen mt-[5rem] flex justify-center flex-col">
       <div className="w-full max-w-[3000px] flex flex-col items-center justify-center text-6xl font-bold overflow-hidden mx-[2rem] mb-[6rem]">
-        What our Volunteers Say
+        What Our Volunteers Say
       </div>
       <div className="w-full h-full flex flex-col items-center justify-center gap-[2rem]">
         {volunteers.map((volunteer, index) => {
@@ -39,12 +41,20 @@ const VolunteersSay = () => {
               <ImageFrame
                 image={volunteer.image}
                 name={volunteer.name}
+                lastName={volunteer.lastName}
                 index={index}
               />
               <div className="flex flex-col m-auto gap-[1rem] my-[2rem] w-full lg:w-[40%] p-[2rem]">
-                <h6 className="font-bold text-4xl">{volunteer.name}</h6>
-                <p className="font-bold mb-[1rem]">{volunteer.title}</p>
-                <p>{volunteer.content}</p>
+                <h6 className="font-bold text-[2.5rem] leading-8">
+                  {volunteer.name}
+                </h6>
+                <h6 className="font-bold text-[2.5rem] leading-8">
+                  {volunteer.lastName}
+                </h6>
+                <p className="font-bold text-[1.25rem] mb-[1rem]">
+                  {volunteer.title}
+                </p>
+                <p className="text-[1.25rem]">{volunteer.content}</p>
               </div>
             </div>
           );
