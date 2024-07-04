@@ -2,7 +2,7 @@ import React from "react";
 
 const ImageFrame = ({ image, name, index }) => {
   return (
-    <div className="w-[75%] m-auto md:w-[25%] h-auto relative mb-8 md:mb-16 md:mr-[6rem] mx-[4rem] border-[2px] border-purple-600">
+    <div className="w-[75%] md:w-[30%] lg:w-[35%] max-w-[500px] h-auto relative lg:mb-8 md:mb-16 md:mr-[6rem] mx-[4rem]">
       <div className="bg-primary500 w-4/5 h-4/5 absolute top-0 left-0 z-0"></div>
       <img
         src={image}
