@@ -66,12 +66,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="oursolutions"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   Our Solutions
-                </a>
+                </Link>
               </li>
               <li>
                 <a

@@ -1,8 +1,9 @@
 // **************** Components **************
 import SiteLayout from "./Components/SiteLayout/SiteLayout";
+import Error from "./Pages/Error/Error";
 import Home from "./Pages/Homepage/Home";
 import GetInvolved from "./Pages/GetInvolved/GetInvolved";
-import Error from "./Pages/Error/Error";
+import OurSolutions from "./Pages/OurSolutions/OurSolutions";
 
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "getinvolved",
         element: <GetInvolved />,
+      },
+      {
+        path: "oursolutions",
+        element: <OurSolutions />,
       },
     ],
   },
