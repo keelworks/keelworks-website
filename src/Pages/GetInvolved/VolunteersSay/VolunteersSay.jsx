@@ -26,7 +26,7 @@ const volunteers = [
 const VolunteersSay = () => {
   return (
     <div className="w-screen mt-[5rem] flex justify-center items-center flex-col">
-      <div className="max-w-[3000px] flex flex-col items-center overflow-hidden mb-[2rem] md:mb-[6rem] text-[1.5rem] md:text-6xl font-bold mx-[4rem]">
+      <div className="max-w-[3000px] flex flex-col items-center overflow-hidden mb-[2rem] md:mb-[6rem] text-[1.5rem] md:text-6xl font-bold mx-[4rem] lg:mx-[8rem]">
         What Our Volunteers Say
       </div>
       <div className="h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem]">
