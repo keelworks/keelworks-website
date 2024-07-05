@@ -10,7 +10,7 @@ import Faq from "./FAQ/Faq";
 
 const GetInvolved = () => {
   return (
-    <div className="w-screen bg-grey300">
+    <div className="w-screen bg-grey200">
       <Hero />
       <BecomeDonor />
       <Testimonials />

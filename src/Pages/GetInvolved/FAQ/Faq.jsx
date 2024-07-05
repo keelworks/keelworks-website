@@ -66,7 +66,7 @@ const Faq = () => {
   return (
     <div className="w-screen  mt-[5rem] bg-grey300 flex justify-center items-center flex-col ">
       <div className="w-full max-w-[3000px] flex flex-col items-center justify-center overflow-hidden">
-        <h4 className="text-[1.5rem] md:text-6xl font-bold mb-[3rem]">
+        <h4 className="text-[1.5rem] md:text-6xl font-bold my-10">
           Frequently Asked Questions
         </h4>
         <div className="md:w-full h-full flex flex-col items-center justify-center mb-[7rem] mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">

@@ -39,7 +39,7 @@ const Testimonials = () => {
         <div>
           <Link
             to="/getinvolved"
-            className="w-[225px] h-[47px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[100ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold text-[1.31rem] mb-10"
+            className="w-[297px] h-[76px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[100ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold text-[1.31rem] mb-10"
           >
             Become a Donor
           </Link>
