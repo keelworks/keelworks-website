@@ -19,6 +19,7 @@ export default {
         grey400: "#D0D5DD",
         grey300: "#E7EAEE",
         grey200: "#F6F7F9",
+        greyCustom: "#646464",
 
         error500: "#912018",
         error400: "#D92D20",
