@@ -26,19 +26,19 @@ const volunteers = [
 const VolunteersSay = () => {
   return (
     <div className="w-screen flex justify-center items-center flex-col">
-      <div className="max-w-[3000px] flex flex-col items-center overflow-hidden my-[2rem] md:my-[2.5rem] text-[1.5rem] md:text-6xl font-bold mx-[4rem] lg:mx-[8rem]">
+      <div className="max-w-[3000px] flex flex-col items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[1.5rem] md:text-6xl font-bold mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
         What Our Volunteers Say
       </div>
-      <div className="h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem]">
+      <div className="max-w-[1600px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem]">
         {volunteers.map((volunteer, index) => {
           return (
             <div
               key={index}
-              className={`w-full flex flex-col justify-center items-center mb-[4rem] ${
+              className={`w-full flex flex-col justify-center lg:justify-between items-center mb-[4rem] ${
                 index % 2 === 0
                   ? "md:flex md:flex-row md:items-start"
                   : "md:flex md:flex-row-reverse md:items-start"
-              } md:mx-[4rem] gap-[4rem]`}
+              } gap-[4rem]`}
             >
               <ImageFrame
                 image={volunteer.image}
@@ -46,7 +46,7 @@ const VolunteersSay = () => {
                 lastName={volunteer.lastName}
                 index={index}
               />
-              <div className="flex flex-col gap-[1rem] w-full lg:w-[35%] max-w-[500px] lg:mt-[2.5rem]">
+              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] lg:mt-[2.5rem]">
                 <h6 className="font-bold text-[2.5rem] leading-8">
                   {volunteer.name}
                 </h6>

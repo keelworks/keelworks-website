@@ -3,9 +3,9 @@ const BecomeVolunteer = () => {
   return (
     <div className="w-screen h-full flex justify-center bg-grey200">
       <div className="w-full max-w-[3000px] min-h-full text-center flex flex-col items-center">
-        <div className="h-full my-10">
+        <div className="max-w-[1600px] h-full my-10">
           <div className="flex items-center justify-center">
-            <h1 className="font-bold text-[#2E2E2E] text-[40px] md:text-[57px] mb-[2rem]">
+            <h1 className="font-bold text-[#2E2E2E] text-[2rem] md:text-[3.56rem] mb-[2rem]">
               Become a Volunteer
             </h1>
           </div>

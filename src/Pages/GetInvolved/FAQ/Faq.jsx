@@ -74,14 +74,14 @@ const Faq = () => {
             return (
               <div
                 key={index}
-                className="flex flex-col justify-center w-full md:w-[70%] max-w-[1000px]"
+                className="flex flex-col justify-center w-full md:w-[71%] max-w-[1000px]"
               >
                 <div className="p-[1rem] items-center flex justify-between font-bold">
                   <p className="flex-1">
                     {index + 1} . {faq.question}
                   </p>
                   <div
-                    className="bg-primary500 text-[1rem] md:text-[1.5rem] m-auto p-1"
+                    className="bg-primary500 text-[1rem] md:text-[1.5rem] m-auto p-1 hover:cursor-pointer"
                     onClick={() => toggleFAQ(index)}
                   >
                     {activeFAQ === index ? <SlArrowUp /> : <SlArrowDown />}
