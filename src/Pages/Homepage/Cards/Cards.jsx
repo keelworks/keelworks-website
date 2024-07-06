@@ -4,7 +4,7 @@ import slider3 from "../../../assets/images/card3.jpg";
 import greaterImg from "../../../assets/images/_.png";
 import { Link, useNavigate } from "react-router-dom";
 const Cards = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="w-screen">
       {/* ********************* Text at the Top of Cards ********************* */}
@@ -48,17 +48,20 @@ const Cards = () => {
                   <h1 className="text-primary500 font-bold text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl ml-4">
                     KeelMaster
                   </h1>
-
+                  {/* <img
+                    src={greaterImg}
+                    alt=""
+                    className="mx-8 lg:w-6 lg:h-6 md:w-6 md:h-6 h-5 w-5 sm:w-6 sm:h-6 xl:w-8 xl:h-8"
+                  /> */}
                 </div>
               </div>
               <div className="text-[1.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[4rem]">
                 A three-phase approach to support the most challenged unemployed
                 and under-employed individuals mitigating barriers to
                 sustainable employment.
-                <span className="inline-flex items-center">
-                  <Link to="/oursolutions#keelmaster">
-                    <img src={greaterImg} alt="" className="w-5 h-5 ml-1 cursor-pointer" />
-                  </Link>
+                {/* <a href="" className="ml-2 underline text-primary500 hover:text-primary400">more</a> */}
+                <span className="inline-flex items-center ">
+                  <img src={greaterImg} alt="" className="w-5 h-5 ml-1" />
                 </span>
               </div>
             </div>
@@ -74,17 +77,15 @@ const Cards = () => {
                   <h1 className="text-primary500 font-bold text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl ml-4">
                     KeelMate
                   </h1>
-
                 </div>
               </div>
               <div className="text-[1.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[4rem]">
                 Designed to bridge the gap for participants with insufficient
                 education and/or experience in our supported fields; better
                 positioning them for employment and/or growth.
+                {/* <a href="" className="ml-2 underline text-primary500 hover:text-primary400">more</a> */}
                 <span className="inline-flex items-center">
-                <Link to="/oursolutions#keelmate">
-                    <img src={greaterImg} alt="" className="w-5 h-5 ml-1 cursor-pointer" />
-                  </Link>
+                  <img src={greaterImg} alt="" className="w-5 h-5 ml-1" />
                 </span>
               </div>
             </div>
@@ -100,16 +101,18 @@ const Cards = () => {
                   <h1 className="text-primary500 font-bold text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl ml-4">
                     KeelWings
                   </h1>
-
+                  {/* <img
+                    src={greaterImg}
+                    alt=""
+                    className="mx-8 lg:w-6 lg:h-6 md:w-6 md:h-6 h-5 w-5 sm:w-6 sm:h-6 xl:w-8 xl:h-8"
+                  /> */}
                 </div>
               </div>
               <div className="text-[1.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[4rem]">
                 Assists graduates breakthrough the “lack of experience”
                 conundrum while providing them valuable employment coaching.
                 <span className="inline-flex items-center">
-                <Link to="/oursolutions#keelwings">
-                    <img src={greaterImg} alt="" className="w-5 h-5 ml-1 cursor-pointer" />
-                  </Link>
+                  <img src={greaterImg} alt="" className="w- 5 h-5 ml-1" />
                 </span>
               </div>
             </div>
