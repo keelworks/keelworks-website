@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="w-full max-w-[3000px] h-full overflow-hidden relative flex justify-center items-center mx-[4rem]">
         <div className="max-w-[1600px] flex items-center justify-center flex-col xl:w-8/12 w-full h-full">
           <div>
-            <p className="text-[2.5rem] md:text-[3.5rem] xl:text-[4.75rem] mt-5 font-bold text-[#2E2E2E] text-center">
+            <p className="text-[3rem] leading-[3.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] mt-5 font-bold text-[#2E2E2E] text-center">
               Our Solutions
             </p>
           </div>
@@ -31,7 +31,7 @@ const Hero = () => {
           </div>
           <div className="flex justify-center md:justify-end w-full mt-4 sm:mt-8">
             <button
-              className="rounded-full bg-primary500 p-4 text-[#0B0A0A] font-semibold text-[14px] flex items-end justify-end mb-10"
+              className="rounded-full bg-primary500 hover:bg-primary300 transition duration-[300ms] ease-linear p-4 text-[#0B0A0A] font-semibold text-[14px] flex items-end justify-end mb-10"
               onClick={() => navigate("/home")}
             >
               <img

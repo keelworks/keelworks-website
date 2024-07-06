@@ -6,7 +6,7 @@ const KeelMaster = () => {
           className="flex items-center flex-col w-full h-full"
           id="keelmaster"
         >
-          <div className="mt-[40px] font-bold text-[50px] lg:text-[64px] h-[97px] text-center ">
+          <div className="mt-[40px] font-bold text-[2rem] md:text-[3.56rem] text-center ">
             <p>KeelMaster</p>
           </div>
           <div className="w-full h-auto bg-primary500 px-[1rem] py-[1rem] md:px-[4rem] md:py-[4rem] xl:px-[180px] xl:py-[190px] text-white font-bold text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] my-[40px] text-center">
