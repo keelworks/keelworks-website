@@ -74,12 +74,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="home"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
                 <a

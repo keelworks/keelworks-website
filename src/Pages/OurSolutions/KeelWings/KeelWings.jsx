@@ -2,7 +2,7 @@ import keelwingsImg from "../../../assets/images/Our-Solutions/keelwings.jpg";
 
 const KeelWings = () => {
   return (
-    <div className="w-screen bg-white flex justify-center">
+    <div className="w-screen bg-white flex justify-center" id="keelWings">
       <div className="w-full max-w-[3000px] h-full flex justify-center items-center">
         <div className="max-w-[1300px] flex items-center justify-center flex-col w-5/6 h-full  mx-[4rem] lg:mx-[8rem]">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mx-5 lg:ml-0 md:ml-0">

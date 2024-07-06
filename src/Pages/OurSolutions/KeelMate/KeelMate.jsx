@@ -22,7 +22,10 @@ const roles = [
 
 const KeelMate = () => {
   return (
-    <div className="w-screen h-auto md:mt-[5rem] flex flex-col justify-center p-[2rem]">
+    <div
+      className="w-screen h-auto md:mt-[5rem] flex flex-col justify-center p-[2rem]"
+      id="keelMate"
+    >
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center overflow-hidden relative justify-center gap-[3rem] ">
         <div className="max-w-[1300px] flex flex-col items-center overflow-hidden justify-center mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
           <h4 className="text-3xl md:text-5xl lg:text-6xl font-bold">

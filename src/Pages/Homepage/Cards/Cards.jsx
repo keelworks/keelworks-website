@@ -37,7 +37,13 @@ const Cards = () => {
           </p>
         </div>
         <div className="w-full max-w-[3000px] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3  sm:gap-2 gap-6 lg:h-4/5">
-          <div className="overflow-hidden sm:m-2 md:m-4 lg:m-4 relative group  m-2 ">
+          {/* ******** KeelMaster Card ********* */}
+          <div
+            className="overflow-hidden sm:m-2 md:m-4 lg:m-4 relative group  m-2 "
+            onClick={() => {
+              navigate("/oursolutions#keelMaster");
+            }}
+          >
             <img src={slider1} alt="" className="w-full h-full object-cover" />
             <div className="intro h-1/6 w-full sm:p-2 md:p-2 lg:p-2 text-white absolute bottom-0 lg:group-hover:h-4/5  md:group-hover:h-3/4 group-hover:h-3/5 group-hover:bottom-0 transition-all duration-500 group-hover:cursor-pointer backdrop-blur-lg bg-black bg-opacity-60">
               <div
@@ -66,7 +72,13 @@ const Cards = () => {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden  sm:m-2 md:m-4 lg:m-4   relative group m-2">
+          {/* ******** KeelMate Card ********* */}
+          <div
+            className="overflow-hidden  sm:m-2 md:m-4 lg:m-4   relative group m-2"
+            onClick={() => {
+              navigate("/oursolutions#keelMate");
+            }}
+          >
             <img src={slider2} alt="" className="w-full h-full object-cover" />
             <div className="intro h-1/6 w-full sm:p-2 md:p-2 lg:p-2 text-white absolute bottom-0 lg:group-hover:h-4/5  md:group-hover:h-3/4 group-hover:h-3/5 group-hover:bottom-0 transition-all duration-500 group-hover:cursor-pointer backdrop-blur-lg bg-black bg-opacity-60">
               <div
@@ -90,7 +102,13 @@ const Cards = () => {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden sm:m-2 md:m-4 lg:m-4 relative group m-4">
+          {/* ******** KeelWings Card ********* */}
+          <div
+            className="overflow-hidden sm:m-2 md:m-4 lg:m-4 relative group m-4"
+            onClick={() => {
+              navigate("/oursolutions#keelWings");
+            }}
+          >
             <img src={slider3} alt="" className="w-full h-full object-cover" />
             <div className="w-full h-1/6 sm:p-4 md:p-2 lg:p-2 text-white absolute bottom-0 lg:group-hover:h-4/5  group-hover:h-3/5 md:group-hover:h-3/5 group-hover:bottom-0 transition-all duration-500 group-hover:cursor-pointer backdrop-blur-lg bg-black bg-opacity-60 ">
               <div

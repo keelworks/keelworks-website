@@ -1,6 +1,9 @@
 const KeelMaster = () => {
   return (
-    <div className="w-full h-auto bg-[#FFFFFF] flex justify-center items-center font-Inter">
+    <div
+      className="w-full h-auto bg-[#FFFFFF] flex justify-center items-center font-Inter"
+      id="keelMaster"
+    >
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center overflow-hidden relative">
         <div
           className="flex items-center flex-col w-full h-full"
