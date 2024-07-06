@@ -34,7 +34,7 @@ const KeelMate = () => {
             KeelMate is focused entirely on assisting seasoned professionals who
             are transitioning from one field to another.
           </p>
-          <div className="flex flex-col md:flex-row justify-between gap-[2rem] mt-[4rem] border-2 border-purple-500">
+          <div className="flex flex-col md:flex-row justify-between gap-[2rem] mt-[4rem]">
             <div className="flex-grow">
               <img
                 className="h-[400px] md:h-[550px] object-cover"
@@ -71,7 +71,7 @@ const KeelMate = () => {
               </p>
             </div>
           </div>
-          <div className="w-full mb-[2rem] mx-[4rem] lg:mx-[8rem] my-[4rem] border-2 border-purple-500">
+          <div className="w-full mb-[2rem] mx-[4rem] lg:mx-[8rem] my-[4rem]">
             <h6 className="text-2xl font-semibold mb-[2rem]">
               Some areas KeelMate offers training in:
             </h6>

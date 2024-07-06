@@ -20,7 +20,7 @@ const KeelMaster = () => {
             </div>
           </div>
 
-          <div className="max-w-[900px] h-auto mb-10 mx-[4rem]">
+          <div className="max-w-[1300px] h-auto mb-10 mx-[4rem]">
             <div className="text-[18px] h-auto">
               <p>
                 Breaking the pattern of unemployment or underemployment is the
