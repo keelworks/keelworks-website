@@ -9,7 +9,7 @@ const KeelMaster = () => {
           <div className="mt-[40px] font-bold text-[2rem] md:text-[3.56rem] text-center ">
             <p>KeelMaster</p>
           </div>
-          <div className="w-full h-auto bg-primary500 px-[1rem] py-[1rem] md:px-[4rem] md:py-[4rem] xl:px-[180px] xl:py-[190px] text-white font-bold text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] my-[40px] text-center">
+          <div className="w-full h-auto bg-primary500 px-[1rem] py-[1rem] md:px-[4rem] md:py-[4rem] xl:px-[180px] xl:py-[190px] text-white font-bold text-[1.562rem] md:text-[1.875rem] lg:text-[2.5rem] xl:text-[3rem] my-[40px] text-center">
             <div className="mx-[4rem]">
               <p>
                 KeelMaster is our most ambitious program. It is currently in
