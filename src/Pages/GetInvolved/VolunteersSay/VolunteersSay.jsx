@@ -1,6 +1,6 @@
 import Volunteer1 from "../../../assets/images/Get-Involved/Volunteer1.jpg";
 import Volunteer2 from "../../../assets/images/Get-Involved/Volunteer2.png";
-import ImageFrame from "../ImageFrame/ImageFrame";
+import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
 
 const volunteers = [
   {
