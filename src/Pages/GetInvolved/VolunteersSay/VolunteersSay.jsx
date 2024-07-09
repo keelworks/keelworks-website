@@ -29,7 +29,7 @@ const VolunteersSay = () => {
       <div className="max-w-[3000px] flex flex-col items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[1.5rem] md:text-6xl font-bold mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
         What Our Volunteers Say
       </div>
-      <div className="max-w-[1600px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem]">
+      <div className="max-w-[1050px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem] ">
         {volunteers.map((volunteer, index) => {
           return (
             <div

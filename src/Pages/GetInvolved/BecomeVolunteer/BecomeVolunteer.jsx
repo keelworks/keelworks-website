@@ -14,7 +14,7 @@ const BecomeVolunteer = () => {
               <img
                 src={volunteer}
                 alt="Volunteer"
-                className="h-[35rem] md:w-[60rem] object-cover md:ml-[15rem]"
+                className="h-[35rem] md:w-[60rem] object-cover [@media(min-width:1200px)]:ml-[15rem]"
               />
             </div>
             <div className="absolute bottom-0 left-0 md:bottom-[-6rem] w-[90%] md:w-[30rem] bg-primary500">
