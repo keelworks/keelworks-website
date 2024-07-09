@@ -31,9 +31,9 @@ const Footer = () => {
             <Link to="/getinvolved" className="hover:text-gray-500">
               Get Involved
             </Link>
-            <a href="#" className="hover:text-gray-500">
+            <Link to="/oursolutions" className="hover:text-gray-500">
               Our Solutions
-            </a>
+            </Link>
             <a href="#" className="hover:text-gray-500">
               Blog
             </a>
