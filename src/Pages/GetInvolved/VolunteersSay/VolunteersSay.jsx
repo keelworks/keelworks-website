@@ -5,21 +5,27 @@ import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
 const volunteers = [
   {
     id: 1,
-    name: "Kathryn",
+    name: "Sky",
     lastName: "Tomlinson",
-    title: "Instructional Designer",
     image: Volunteer1,
-    content:
-      "Working toward an MS in Instructional Design Technology, I needed experience to qualify for work in the field. The KeelWorks program gave me that experience. Working with other professionals, I created valuable portfolio components that I still use today. KeelWorks is an important part of my career growth. I use what I learned every day. KeelWorks helped me at a time when I needed direction, guidance, and experience. I gained all of these and so much more through the program. The KeelWorks motto is Learning to Live, Living to Learn: I take that to heart as I continue to learn and apply my craft.",
+    content1:
+      '“The KeelWorks program provided me with the necessary experience and guidance for my MS in Instructional Design Technology, enabling significant career growth through the creation of valuable portfolio components and practical skills I apply daily. Embracing their motto, "Learning to Live, Living to Learn," I continue to evolve in my craft, cherishing the direction and comprehensive growth attained from the program.”',
+    signatureLine1: "With Undying Gratitude,",
+    signatureLine2: "Kathryn “Sky” Tomlinson",
   },
   {
     id: 2,
-    name: "Kathryn",
-    lastName: "Tomlinson",
-    title: "Instructional Designer",
+    name: "Jonathan",
+    lastName: "Jonathan Stanciu",
     image: Volunteer2,
-    content:
-      "Working toward an MS in Instructional Design Technology, I needed experience to qualify for work in the field. The KeelWorks program gave me that experience. Working with other professionals, I created valuable portfolio components that I still use today. KeelWorks is an important part of my career growth. I use what I learned every day. KeelWorks helped me at a time when I needed direction, guidance, and experience. I gained all of these and so much more through the program. The KeelWorks motto is Learning to Live, Living to Learn: I take that to heart as I continue to learn and apply my craft.",
+    content1:
+      "“I was in the last semester of my Master’s Program (M.A. Educational Technology) at Northern Arizona University. I knew I had to have a job after graduation, and that work in instructional design required experience. I needed help with design tools such as Captivate, Storyline, and Photoshop. I needed to be able to show samples of my work.”",
+    content2:
+      "KeelWorks gave my resume legitimate experience. I learned to storyboard and build projects in Captivate using assets created in Photoshop and Audition. This experience was a boost to my confidence. More than creating work samples, I could now talk through instructional design tools and their features to prove my mastery. The Executive Director spoke to prospective employers, helped me with my resume, and advised me on the interview.",
+    content3:
+      "I am a Senior Program Manager at Amazon. My success is the product of several career steps, all of which began with my practice in instructional design - and that started with KeelWorks. I am grateful for KeelWorks and continue to lend my full support to the foundation”.",
+    signatureLine1: "With Gratitude,",
+    signatureLine2: "Jonathan Stanciu",
   },
 ];
 
@@ -47,14 +53,23 @@ const VolunteersSay = () => {
                 index={index}
               />
               <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] lg:mt-[2.5rem]">
+                <h6 className="font-bold text-[2.5rem] leading-8">{"Meet"}</h6>
                 <h6 className="font-bold text-[2.5rem] leading-8">
                   {volunteer.name}
                 </h6>
-                <h6 className="font-bold text-[2.5rem] leading-8">
-                  {volunteer.lastName}
-                </h6>
-                <p className="font-bold text-[1.25rem]">{volunteer.title}</p>
-                <p className="text-[1.25rem]">{volunteer.content}</p>
+                <p className="text-[1.25rem] mt-4">{volunteer.content1}</p>
+                {volunteer.content2 && (
+                  <p className="text-[1.25rem] mt-4">{volunteer.content2}</p>
+                )}
+                {volunteer.content3 && (
+                  <p className="text-[1.25rem] mt-4">{volunteer.content3}</p>
+                )}
+                <p className="text-[1.25rem] mt-4">
+                  {volunteer.signatureLine1}
+                </p>
+                <p className="text-[1.25rem] leading-[0px]">
+                  {volunteer.signatureLine2}
+                </p>
               </div>
             </div>
           );
