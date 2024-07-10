@@ -18,7 +18,13 @@ const Footer = () => {
               </a>
             </div>
             <div className="">
-              <button className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[#101828] font-semibold">
+              <button
+                className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[#101828] font-semibold"
+                onClick={() => {
+                  window.location.href =
+                    "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate";
+                }}
+              >
                 Donate
               </button>
             </div>

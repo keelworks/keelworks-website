@@ -24,7 +24,13 @@ const Banner = () => {
               <br /> we can transform lives.
             </h5>
             <div className="flex mt-6 gap-6">
-              <button className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[100ms] ease-linear text-[#101828] font-semibold">
+              <button
+                className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[100ms] ease-linear text-[#101828] font-semibold"
+                onClick={() => {
+                  window.location.href =
+                    "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate";
+                }}
+              >
                 Donate
               </button>
               <Link
