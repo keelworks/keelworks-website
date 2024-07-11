@@ -1,7 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import back from "../../../assets/images/Our-Solutions/back-arrow.png";
 const Hero = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <div className="w-screen min-h-screen mt-[5rem] bg-[#FFFFFF] flex justify-center items-center font-Inter">
       <div className="w-full max-w-[3000px] h-full overflow-hidden relative flex justify-center items-center mx-[4rem]">
@@ -29,7 +27,7 @@ const Hero = () => {
               participant to present themselves as a tested candidate.
             </p>
           </div>
-          <div className="flex justify-center md:justify-end w-full mt-4 sm:mt-8">
+          {/* <div className="flex justify-center md:justify-end w-full mt-4 sm:mt-8">
             <button
               className="rounded-full bg-primary500 hover:bg-primary300 transition duration-[300ms] ease-linear p-4 text-[#0B0A0A] font-semibold text-[14px] flex items-end justify-end mb-10"
               onClick={() => navigate("/home")}
@@ -41,7 +39,7 @@ const Hero = () => {
               />
               <span>Back to HomePage</span>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
