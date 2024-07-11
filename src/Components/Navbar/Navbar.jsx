@@ -75,12 +75,12 @@ const Navbar = () => {
                 </button>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="about"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
