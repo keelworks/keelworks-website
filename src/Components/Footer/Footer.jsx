@@ -50,7 +50,10 @@ const Footer = () => {
 
           <div className="h-full flex flex-col justify-end md:place-self-center md:order-2">
             <div className="flex space-x-8">
-              <a href="#" className="text-white hover:text-gray-500">
+              <a
+                href="https://www.linkedin.com/company/keelworks-foundation/"
+                className="text-white hover:text-gray-500"
+              >
                 <div className="p-2 border-2 rounded-full hover:border-gray-500">
                   <FaLinkedinIn size={24} />
                 </div>
@@ -60,7 +63,10 @@ const Footer = () => {
                   <FaFacebookF size={24} />
                 </div>
               </a>
-              <a href="#" className="text-white hover:text-gray-500">
+              <a
+                href="https://www.instagram.com/thekeelworks?igsh=MXdpN3I4b280aXBpaw=="
+                className="text-white hover:text-gray-500"
+              >
                 <div className="p-2 border-2 rounded-full hover:border-gray-500">
                   <FaInstagram size={24} />
                 </div>
