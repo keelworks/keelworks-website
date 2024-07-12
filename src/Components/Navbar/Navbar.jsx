@@ -114,6 +114,14 @@ const Navbar = () => {
                   Success Stories
                 </a>
               </li>
+              <li>
+                <Link
+                  to="contactus"
+                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
         ) : null}

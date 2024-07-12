@@ -4,6 +4,7 @@ import Error from "./Pages/Error/Error";
 import Home from "./Pages/Homepage/Home";
 import GetInvolved from "./Pages/GetInvolved/GetInvolved";
 import OurSolutions from "./Pages/OurSolutions/OurSolutions";
+import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 
 // ******************************************
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "about",
         element: <Home />,
         // element: <AboutUs />,
+      },
+      {
+        path: "contactus",
+        element: <ContactUs />,
       },
     ],
   },

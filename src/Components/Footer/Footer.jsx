@@ -46,6 +46,9 @@ const Footer = () => {
             <a href="#" className="hover:text-gray-500">
               Success Stories
             </a>
+            <Link to="/contactus" className="hover:text-gray-500">
+              Contact Us
+            </Link>
           </div>
 
           <div className="h-full flex flex-col justify-end md:place-self-center md:order-2">
