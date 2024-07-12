@@ -58,13 +58,16 @@ const Footer = () => {
                   <FaLinkedinIn size={24} />
                 </div>
               </a>
-              <a href="#" className="text-white hover:text-gray-500">
+              <a
+                href="https://www.facebook.com/TheKeelWorks"
+                className="text-white hover:text-gray-500"
+              >
                 <div className="p-2 border-2 rounded-full hover:border-gray-500">
                   <FaFacebookF size={24} />
                 </div>
               </a>
               <a
-                href="https://www.instagram.com/thekeelworks?igsh=MXdpN3I4b280aXBpaw=="
+                href="https://www.instagram.com/thekeelworks/"
                 className="text-white hover:text-gray-500"
               >
                 <div className="p-2 border-2 rounded-full hover:border-gray-500">
