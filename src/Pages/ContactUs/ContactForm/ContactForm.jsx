@@ -44,7 +44,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-screen h-full xl:h-[calc(100vh-5rem)] md:min-h-[650px] md:mt-[5rem] px-5 bg-white flex justify-center">
+    <div className="w-screen md:h-[calc(100vh-20rem)] xl:h-[calc(100vh-5rem)] mt-[5rem] md:mt-[5rem] px-5 bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center font-bold">
         <div className="w-4/6 mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
           <h2 className="text-3xl md:text-[3.5rem] lg:text-5xl text-left my-[2rem]">
