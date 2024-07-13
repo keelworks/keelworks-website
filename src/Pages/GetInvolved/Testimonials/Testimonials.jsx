@@ -36,13 +36,14 @@ const Testimonials = () => {
             </p>
           </div>
         </div>
-        <div>
-          <Link
-            to="/getinvolved"
-            className="w-[297px] h-[76px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold text-[1.31rem] mb-10"
-          >
-            Become a Donor
-          </Link>
+        <div
+          className="w-[297px] h-[76px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary hover:cursor-pointer font-semibold text-[1.31rem] mb-10"
+          onClick={() => {
+            window.location.href =
+              "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate";
+          }}
+        >
+          Become a Donor
         </div>
       </div>
     </div>

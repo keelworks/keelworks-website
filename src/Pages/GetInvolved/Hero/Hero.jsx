@@ -19,7 +19,7 @@ const Hero = () => {
             <p>
               KeelWorks wants to help everyone to sustaining employment. We are
               KeelWorks! <br />
-              The KeelMaster program can have a significant affect on poverty
+              The KeelMaster program can have a significant effect on poverty
               and boost economies.
               <br /> But we have to build it first. Systems are coming together,
               and you can be part of it!
