@@ -46,21 +46,33 @@ const Footer = () => {
             <a href="#" className="hover:text-gray-500">
               Success Stories
             </a>
+            <Link to="/contactus" className="hover:text-gray-500">
+              Contact Us
+            </Link>
           </div>
 
           <div className="h-full flex flex-col justify-end md:place-self-center md:order-2">
             <div className="flex space-x-8">
-              <a href="#" className="text-white hover:text-gray-500">
+              <a
+                href="https://www.linkedin.com/company/keelworks-foundation/"
+                className="text-white hover:text-gray-500"
+              >
                 <div className="p-2 border-2 rounded-full hover:border-gray-500">
                   <FaLinkedinIn size={24} />
                 </div>
               </a>
-              <a href="#" className="text-white hover:text-gray-500">
+              <a
+                href="https://www.facebook.com/TheKeelWorks"
+                className="text-white hover:text-gray-500"
+              >
                 <div className="p-2 border-2 rounded-full hover:border-gray-500">
                   <FaFacebookF size={24} />
                 </div>
               </a>
-              <a href="#" className="text-white hover:text-gray-500">
+              <a
+                href="https://www.instagram.com/thekeelworks/"
+                className="text-white hover:text-gray-500"
+              >
                 <div className="p-2 border-2 rounded-full hover:border-gray-500">
                   <FaInstagram size={24} />
                 </div>

@@ -30,7 +30,15 @@ const SignUp = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const filterCheckboxes = (data) => {
+    const trueCheckboxes = Object.keys(data.checkboxes)
+      .filter((key) => data.checkboxes[key])
+      .join(", ");
+
+    return { ...data, checkboxes: trueCheckboxes };
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const userInput = {
       firstName,
@@ -41,15 +49,33 @@ const SignUp = () => {
       checkboxes,
     };
 
-    console.log(userInput);
+    const filteredData = filterCheckboxes(userInput);
 
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setContactNo("");
-    setBriefInfo("");
-    setCheckboxes(initialCheckboxState);
-    setTermsAndConditions(false);
+    const data = new FormData();
+    data.append("firstName", filteredData.firstName);
+    data.append("lastName", filteredData.lastName);
+    data.append("email", filteredData.email);
+    data.append("contactNo", filteredData.contactNo);
+    data.append("briefInfo", filteredData.briefInfo);
+    data.append("checkboxes", filteredData.checkboxes);
+
+    const response = await fetch(import.meta.env.VITE_SIGNUP_FORM_SHEET_URL, {
+      method: "POST",
+      body: data,
+      muteHttpExceptions: true,
+    });
+
+    if (response.ok) {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setContactNo("");
+      setBriefInfo("");
+      setCheckboxes(initialCheckboxState);
+      setTermsAndConditions(false);
+    } else {
+      alert("There was an error sending your message.");
+    }
   };
 
   return (
