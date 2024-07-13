@@ -7,7 +7,7 @@ const ImageFrame = ({ image, name, index }) => {
       <img
         src={image}
         alt={name}
-        className={`w-full h-auto bg-grey400 m-auto relative z-10 top-5 left-5 md:top-10 md:left-10 border-5`}
+        className={`w-full h-auto bg-grey400 m-auto relative z-10 top-5 left-5 md:top-[1.5rem] md:left-[1.5rem] border-5`}
       />
     </div>
   );

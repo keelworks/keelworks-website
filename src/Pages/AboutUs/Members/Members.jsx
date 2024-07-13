@@ -5,7 +5,7 @@ import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
 const volunteers = [
   {
     id: 1,
-    name: "Sky",
+    name: "Name",
     lastName: "Tomlinson",
     image: Volunteer1,
     content1:
@@ -15,7 +15,7 @@ const volunteers = [
   },
   {
     id: 2,
-    name: "Jonathan",
+    name: "Name",
     lastName: "Jonathan Stanciu",
     image: Volunteer2,
     content1:
@@ -29,11 +29,11 @@ const volunteers = [
   },
 ];
 
-const VolunteersSay = () => {
+const Members = () => {
   return (
     <div className="w-screen flex justify-center items-center flex-col">
       <div className="max-w-[3000px] flex flex-col items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[1.5rem] md:text-6xl font-bold mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
-        What Our Volunteers Say
+        Current Board Members
       </div>
       <div className="max-w-[1050px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem] ">
         {volunteers.map((volunteer, index) => {
@@ -79,4 +79,4 @@ const VolunteersSay = () => {
   );
 };
 
-export default VolunteersSay;
+export default Members;

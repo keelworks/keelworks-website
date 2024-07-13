@@ -5,6 +5,7 @@ import Hero from "./Hero/Hero";
 import KeelMaster from "./KeelMaster/KeelMaster";
 import KeelWings from "./KeelWings/KeelWings";
 import KeelMate from "./KeelMate/KeelMate";
+import BackToHome from "../../Components/BackToHome/BackToHome";
 
 // ******************************************
 
@@ -20,6 +21,7 @@ const OurSolutions = () => {
   }, [hash]);
   return (
     <div className="w-screen bg-grey300">
+      <BackToHome />
       <Hero />
       <KeelMaster />
       <KeelWings />

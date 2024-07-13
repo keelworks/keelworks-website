@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import logo from "../../assets/images/KeelWorks-Logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // ******** handeling click outside menu (closing menu) ***********
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+  // *****************************************************************
 
   return (
     <nav className="fixed top-0 left-0 h-[5rem] w-full bg-black text-fontPrimary z-[100] flex items-center justify-center">
@@ -20,7 +36,13 @@ const Navbar = () => {
           </div>
         </a>
         <div className="flex items-center gap-6">
-          <button className="hidden md:block w-[80px] h-[36px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-[#101828] font-semibold">
+          <button
+            className="hidden md:block w-[80px] h-[36px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-[#101828] font-semibold"
+            onClick={() => {
+              window.location.href =
+                "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate";
+            }}
+          >
             Donate
           </button>
           <button className="hidden md:block w-[80px] h-[36px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-primary500 hover:text-fontSecondary font-semibold">
@@ -37,7 +59,10 @@ const Navbar = () => {
         </div>
 
         {isOpen ? (
-          <div className="absolute top-[4.5rem] right-[-2rem] lg:right-0 bg-black p-5 rounded-bl-[17px] md:rounded-b-[17px] shadow-[5px_2px_5px_5px_rgba(0,0,0,0.3)]">
+          <div
+            ref={menuRef}
+            className="absolute top-[4.5rem] right-[-2rem] lg:right-0 bg-black p-5 rounded-bl-[17px] md:rounded-b-[17px] shadow-[5px_2px_5px_5px_rgba(0,0,0,0.3)]"
+          >
             <ul className="flex flex-col mt-3 gap-5">
               <li className="md:hidden">
                 <button className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[#101828] font-semibold">
@@ -50,12 +75,12 @@ const Navbar = () => {
                 </button>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="about"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <Link

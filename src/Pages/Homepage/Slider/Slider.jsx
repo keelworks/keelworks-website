@@ -33,7 +33,7 @@ const Slider = () => {
   return (
     <div className="w-screen h-[calc(100vh-5rem)] mt-[5rem] bg-black flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
-        <div className="absolute top-0 left-0 h-full w-full backdrop-blur-[2px] md:w-1/2 flex items-center justify-center z-10 md:backdrop-blur-lg bg-black bg-opacity-50">
+        <div className="absolute top-0 left-0 h-full w-full backdrop-blur-[2px] md:w-1/2 flex items-center justify-center [@media(min-width:1100px)]:justify-start z-10 md:backdrop-blur-lg bg-black bg-opacity-50">
           {sliderTexts[currentSlideIndex]}
         </div>
 

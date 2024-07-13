@@ -4,6 +4,7 @@ import Error from "./Pages/Error/Error";
 import Home from "./Pages/Homepage/Home";
 import GetInvolved from "./Pages/GetInvolved/GetInvolved";
 import OurSolutions from "./Pages/OurSolutions/OurSolutions";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: "oursolutions",
         element: <OurSolutions />,
+      },
+      {
+        path: "about",
+        element: <Home />,
+        // element: <AboutUs />,
       },
     ],
   },
