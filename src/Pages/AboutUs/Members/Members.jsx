@@ -1,4 +1,4 @@
-import Volunteer1 from "../../../assets/images/About-Us/Thomas-G.png"
+import Volunteer1 from "../../../assets/images/About-Us/Thomas-G.png";
 import Volunteer2 from "../../../assets/images/About-Us/Dana-S.png";
 import Volunteer3 from "../../../assets/images/About-Us/Romir-P.png";
 import Volunteer4 from "../../../assets/images/About-Us/Jing-M.png";
@@ -9,9 +9,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
 
-
 const volunteers = [
-
   {
     id: 1,
     name: "Thomas Garrod",
@@ -24,8 +22,8 @@ const volunteers = [
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/",
       facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/"
-    }
+      instagram: "https://www.instagram.com/",
+    },
   },
 
   {
@@ -40,8 +38,8 @@ const volunteers = [
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/",
       facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/"
-    }
+      instagram: "https://www.instagram.com/",
+    },
   },
 
   {
@@ -56,8 +54,8 @@ const volunteers = [
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/",
       facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/"
-    }
+      instagram: "https://www.instagram.com/",
+    },
   },
 
   {
@@ -72,8 +70,8 @@ const volunteers = [
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/",
       facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/"
-    }
+      instagram: "https://www.instagram.com/",
+    },
   },
 
   {
@@ -88,8 +86,8 @@ const volunteers = [
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/",
       facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/"
-    }
+      instagram: "https://www.instagram.com/",
+    },
   },
 
   {
@@ -104,8 +102,8 @@ const volunteers = [
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/",
       facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/"
-    }
+      instagram: "https://www.instagram.com/",
+    },
   },
 ];
 
@@ -120,43 +118,53 @@ const Members = () => {
           return (
             <div
               key={index}
-              className={`w-full flex flex-col justify-center lg:justify-between items-center mb-[4rem] ${index % 2 === 0
+              className={`w-full flex flex-col justify-center lg:justify-between items-center mb-[4rem] ${
+                index % 2 === 0
                   ? "md:flex md:flex-row-reverse md:items-start"
                   : "md:flex md:flex-row md:items-start"
-                } gap-[4rem]`}
+              } gap-[4rem]`}
             >
               <ImageFrame
                 image={volunteer.image}
                 name={volunteer.name}
                 index={index}
               />
-              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] lg:mt-[2.5rem]">
+              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] mt-[1.5rem]">
                 <h6 className="font-bold text-[2.5rem] leading-8">
                   {volunteer.name}
                 </h6>
-                <h6 className="text-1 leading-8">
-                  {volunteer.jobTitle}
-                </h6>
+                <h6 className="text-1 leading-8">{volunteer.jobTitle}</h6>
                 <div className="flex gap-2">
                   <IoLocationOutline color="#FBBC05" size={25} />
-                  <h6 className="text-1 leading-8">
-                    {volunteer.location}
-                  </h6>
-
+                  <h6 className="text-1 leading-8">{volunteer.location}</h6>
                 </div>
 
                 <div className="flex gap-4">
-                  <a href={volunteer.socialMediaLinks.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full ">
+                  <a
+                    href={volunteer.socialMediaLinks.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full "
+                  >
                     <FaLinkedinIn />
                   </a>
-                  <a href={volunteer.socialMediaLinks.facebook} target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full ">
+                  <a
+                    href={volunteer.socialMediaLinks.facebook}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full "
+                  >
                     <FaFacebookF />
                   </a>
-                  <a href={volunteer.socialMediaLinks.instagram} target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full">
+                  <a
+                    href={volunteer.socialMediaLinks.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 flex items-center justify-center border-2 border-black rounded-full"
+                  >
                     <FaInstagram />
                   </a>
                 </div>
-
 
                 <p className="text-[1rem] mt-8">{volunteer.content1}</p>
               </div>
