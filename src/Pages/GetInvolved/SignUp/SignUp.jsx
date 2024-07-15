@@ -59,11 +59,14 @@ const SignUp = () => {
     data.append("briefInfo", filteredData.briefInfo);
     data.append("checkboxes", filteredData.checkboxes);
 
-    const response = await fetch(import.meta.env.VITE_SIGNUP_FORM_SHEET_URL, {
-      method: "POST",
-      body: data,
-      muteHttpExceptions: true,
-    });
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbyMDk_910dWAzdEHkg_3t-ZsjdM8fgGMvtMsdwZhvjOEIhWLC-7Y-ul4zG_3Ll-M8Hh/exec",
+      {
+        method: "POST",
+        body: data,
+        muteHttpExceptions: true,
+      }
+    );
 
     if (response.ok) {
       setFirstName("");
