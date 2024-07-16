@@ -26,11 +26,14 @@ const ContactForm = () => {
     data.append("subject", userInput.subject);
     data.append("message", userInput.message);
 
-    const response = await fetch(import.meta.env.VITE_CONTACT_FORM_SHEET_URL, {
-      method: "POST",
-      body: data,
-      muteHttpExceptions: true,
-    });
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbzpAfgsFLM8VUig9Tpx5T6PQiwZs8OBrXkiQ94fwacM6LduAuX8VukHMm05EmoAhr41/exec",
+      {
+        method: "POST",
+        body: data,
+        muteHttpExceptions: true,
+      }
+    );
 
     if (response.ok) {
       setFirstName("");
