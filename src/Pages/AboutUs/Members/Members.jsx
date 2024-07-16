@@ -18,9 +18,9 @@ const volunteers = [
 
     image: Volunteer1,
     content1:
-      "Thomas founded Keelworks in 2008 (with help and encouragement from Robert Buchinski) where he applied his dream to enable upward mobility into action. Thomas has a master’s degree in education and a long career in technical writing, instructional design, and organizational development. Once a high school dropout, Thomas established the foundation to change outcomes for underachievers like himself.Thomas’s passion has been overseeing the development of foundation learning programs including learning for instructional design. He developed a comprehensive instructional design training program and has mentored hundreds of graduate instructional designers. The foundation ISD program is a laboratory for process improvement and team development. With his minimal free time, Thomas consults for ",
+      "Thomas founded Keelworks in 2008 (with help and encouragement from Robert Buchinski) where he applied his dream to enable upward mobility into action. Thomas has a master’s degree in education and a long career in technical writing, instructional design, and organizational development. Once a high school dropout, Thomas established the foundation to change outcomes for underachievers like himself. Thomas’s passion has been overseeing the development of foundation learning programs including learning for instructional design. He developed a comprehensive instructional design training program and has mentored hundreds of graduate instructional designers. The foundation ISD program is a laboratory for process improvement and team development. With his minimal free time, Thomas consults for organizations seeking better instructional design process for measured return on investment and more sustainable organizations. ",
     socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/",
+      linkedin: "https://www.linkedin.com/in/thomasgarrod/",
       facebook: "https://www.facebook.com/",
       instagram: "https://www.instagram.com/",
     },
