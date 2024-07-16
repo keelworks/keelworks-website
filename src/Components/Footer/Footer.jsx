@@ -31,9 +31,9 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col space-y-3 items-center md:place-self-end md:items-start md:order-3">
-            <a href="#" className="hover:text-gray-500">
+            <Link to="/about" className="hover:text-gray-500">
               About Us
-            </a>
+            </Link>
             <Link to="/getinvolved" className="hover:text-gray-500">
               Get Involved
             </Link>
