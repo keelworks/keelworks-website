@@ -1,9 +1,9 @@
-import Volunteer1 from "../../../assets/images/About-Us/Thomas-G.png";
-import Volunteer2 from "../../../assets/images/About-Us/Dana-S.png";
-import Volunteer3 from "../../../assets/images/About-Us/Romir-P.png";
-import Volunteer4 from "../../../assets/images/About-Us/Jing-M.png";
-import Volunteer5 from "../../../assets/images/About-Us/Ibrahima-D.png";
-import Volunteer6 from "../../../assets/images/About-Us/Aruna-G.png";
+import Volunteer1 from "../../../assets/images/About-Us/Thomas-G.jpg";
+import Volunteer2 from "../../../assets/images/About-Us/Dana-S.jpg";
+import Volunteer3 from "../../../assets/images/About-Us/Romir-P.jpg";
+import Volunteer4 from "../../../assets/images/About-Us/Jing-M.jpg";
+import Volunteer5 from "../../../assets/images/About-Us/Ibrahima-D.jpg";
+import Volunteer6 from "../../../assets/images/About-Us/Aruna-G.jpg";
 
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";

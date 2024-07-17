@@ -1,5 +1,5 @@
-import founderImage from "../../../assets/images/About-Us/Thomas-G.png";
-import founderBanner from "../../../assets/images/About-Us/Founder-Banner.png";
+import founderImage from "../../../assets/images/About-Us/Thomas-G.jpg";
+import founderBanner from "../../../assets/images/About-Us/Founder-Banner.jpg";
 
 const founderInfo = [
   {
