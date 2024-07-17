@@ -78,7 +78,7 @@ const volunteers = [
     id: 5,
     name: "Ibrahima Dieng",
     jobTitle: "Instructional Designer",
-    location: "New York, USA",
+    location: "Dakar, Senegal",
 
     image: Volunteer5,
     content1:
