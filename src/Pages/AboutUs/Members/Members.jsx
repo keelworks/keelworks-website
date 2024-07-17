@@ -14,7 +14,7 @@ const volunteers = [
     id: 1,
     name: "Thomas Garrod",
     jobTitle: "Executive Director/CLO",
-    location: "New York, USA",
+    location: "Oak Harbor, USA",
 
     image: Volunteer1,
     content1:
@@ -30,7 +30,7 @@ const volunteers = [
     id: 2,
     name: "Dana E Smalley",
     jobTitle: "Program Manager/LX Designer and Team Lead",
-    location: "New York, USA",
+    location: "Chicago, USA",
 
     image: Volunteer2,
     content1:
@@ -62,7 +62,7 @@ const volunteers = [
     id: 4,
     name: "Jing Ma",
     jobTitle: "Instructional Designer",
-    location: "xxx, China",
+    location: "Beijing, China",
 
     image: Volunteer4,
     content1:
@@ -78,7 +78,7 @@ const volunteers = [
     id: 5,
     name: "Ibrahima Dieng",
     jobTitle: "Instructional Designer",
-    location: "xxx, xxx",
+    location: "New York, USA",
 
     image: Volunteer5,
     content1:
@@ -94,7 +94,7 @@ const volunteers = [
     id: 6,
     name: "Aruna Ghildiyal",
     jobTitle: "Project Management Lead",
-    location: "xxx, xxx",
+    location: "New York, USA",
 
     image: Volunteer6,
     content1:
@@ -138,8 +138,8 @@ const Members = () => {
                   <IoLocationOutline color="#FBBC05" size={25} />
                   <h6 className="text-1 leading-8">{volunteer.location}</h6>
                 </div>
-
-                <div className="flex gap-4">
+                {/* *************** Social Media Links ****************** */}
+                {/* <div className="flex gap-4">
                   <a
                     href={volunteer.socialMediaLinks.linkedin}
                     target="_blank"
@@ -164,7 +164,7 @@ const Members = () => {
                   >
                     <FaInstagram />
                   </a>
-                </div>
+                </div> */}
 
                 <p className="text-[1rem] mt-8">{volunteer.content1}</p>
               </div>
