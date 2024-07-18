@@ -60,7 +60,7 @@ const SignUp = () => {
     data.append("checkboxes", filteredData.checkboxes);
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbyMDk_910dWAzdEHkg_3t-ZsjdM8fgGMvtMsdwZhvjOEIhWLC-7Y-ul4zG_3Ll-M8Hh/exec",
+      "https://script.google.com/macros/s/AKfycbwwlgVzJv42ERjRKso-pk8Xu9HD3GZl4nxdEltQ3nEzNcX_f9U0_U2ww4kZPlqZi51_Yg/exec",
       {
         method: "POST",
         body: data,

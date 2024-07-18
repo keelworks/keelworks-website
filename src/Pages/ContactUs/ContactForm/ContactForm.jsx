@@ -27,7 +27,7 @@ const ContactForm = () => {
     data.append("message", userInput.message);
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbzpAfgsFLM8VUig9Tpx5T6PQiwZs8OBrXkiQ94fwacM6LduAuX8VukHMm05EmoAhr41/exec",
+      "https://script.google.com/macros/s/AKfycbyE3WnCqDFPWED7P3VUtKY6_unzSDPGS4X0kYGw4yBFKUnGGdP2uy-2wkWhZf2vk7wX/exec",
       {
         method: "POST",
         body: data,
