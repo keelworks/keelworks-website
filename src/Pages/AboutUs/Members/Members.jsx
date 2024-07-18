@@ -166,7 +166,7 @@ const Members = () => {
                   </a>
                 </div> */}
 
-                <p className="text-[1rem] mt-8">{volunteer.content1}</p>
+                <p className="text-[1rem]">{volunteer.content1}</p>
               </div>
             </div>
           );
