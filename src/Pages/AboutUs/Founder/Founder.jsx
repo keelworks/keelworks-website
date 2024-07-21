@@ -1,5 +1,5 @@
 import founderImage from "../../../assets/images/About-Us/Thomas-G.jpg";
-import founderBanner from "../../../assets/images/About-Us/Founder-Banner.jpg";
+// import founderBanner from "../../../assets/images/About-Us/Founder-Banner.jpg";
 
 const founderInfo = [
   {
@@ -41,11 +41,11 @@ const Founder = () => {
             </div>
           </div>
         </div>
-        <img
+        {/* <img
           src={founderBanner}
           alt="Three men"
           className="w-full max-w-[1600px] object-cover my-[4rem] md:my-[6rem] xlg:mx-[8rem]"
-        />
+        /> */}
       </div>
     </div>
   );
