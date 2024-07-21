@@ -1,6 +1,7 @@
 // **************** Components **************
 import SiteLayout from "./Components/SiteLayout/SiteLayout";
 import Error from "./Pages/Error/Error";
+import CommingSoon from "./Pages/ComingSoon/ComingSoon";
 import Home from "./Pages/Homepage/Home";
 import GetInvolved from "./Pages/GetInvolved/GetInvolved";
 import OurSolutions from "./Pages/OurSolutions/OurSolutions";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "contactus",
         element: <ContactUs />,
+      },
+      {
+        path: "comingsoon",
+        element: <CommingSoon />,
       },
     ],
   },

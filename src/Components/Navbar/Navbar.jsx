@@ -100,19 +100,27 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="home"
+                  to="comingsoon"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   Blog
                 </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="comingsoon"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   Success Stories
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="getinvolved#faq"
+                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                >
+                  FAQ
+                </Link>
               </li>
               <li>
                 <Link

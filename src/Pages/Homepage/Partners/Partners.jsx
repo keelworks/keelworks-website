@@ -1,11 +1,11 @@
 import adobe_logo from "../../../assets/images/Logos/Adobe-Logo.png";
 import microsoft_logo from "../../../assets/images/Logos/Microsoft-Logo.png";
 import teamgantt_logo from "../../../assets/images/Logos/Teamgantt-Logo.png";
-import atlassian_logo from "../../../assets/images/Logos/Atlassian-Logo.svg";
 import cogniaha_logo from "../../../assets/images/Logos/Cogniaha-Logo.png";
 import eduongo_logo from "../../../assets/images/Logos/Eduongo-Logo.png";
 import google_logo from "../../../assets/images/Logos/Google-Logo.svg";
 import qase_logo from "../../../assets/images/Logos/Qase-Logo.png";
+// import atlassian_logo from "../../../assets/images/Logos/Atlassian-Logo.svg";
 
 const Partners = () => {
   return (
@@ -30,11 +30,11 @@ const Partners = () => {
             alt=""
             className="w-[5rem] sm:justify-self-end md:w-[8rem] md:justify-self-center lg:w-[9rem]"
           />
-          <img
+          {/* <img
             src={atlassian_logo}
             alt=""
             className="w-[2rem] md:w-[4rem] md:justify-self-end lg:w-[4rem]"
-          />
+          /> */}
           <img
             src={cogniaha_logo}
             alt=""

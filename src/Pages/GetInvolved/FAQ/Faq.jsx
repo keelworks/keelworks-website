@@ -64,7 +64,10 @@ const Faq = () => {
   };
 
   return (
-    <div className="w-screen  mt-[5rem] bg-grey200 flex justify-center items-center flex-col ">
+    <div
+      className="w-screen  mt-[5rem] bg-grey200 flex justify-center items-center flex-col"
+      id="faq"
+    >
       <div className="w-full max-w-[3000px] flex flex-col items-center justify-center overflow-hidden">
         <div className="max-w-[1050px] mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
           <h4 className="text-[1.5rem] md:text-6xl font-bold my-10">
