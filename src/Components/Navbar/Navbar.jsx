@@ -45,7 +45,11 @@ const Navbar = () => {
           >
             Donate
           </button>
-          <button className="hidden md:block w-[80px] h-[36px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-primary500 hover:text-fontSecondary font-semibold">
+          <button
+            disabled
+            // className="hidden md:block w-[80px] h-[36px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-primary500 hover:text-fontSecondary font-semibold"
+            className="hidden md:block w-[80px] h-[36px] border-greyCustom border-solid border-[4px] rounded-full transition duration-[300ms] ease-linear text-[1rem] text-greyCustom hover:text-greyCustom font-semibold"
+          >
             Login
           </button>
 
@@ -70,7 +74,10 @@ const Navbar = () => {
                 </button>
               </li>
               <li className="md:hidden">
-                <button className="w-[116px] h-[47px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold">
+                <button
+                  // className="w-[116px] h-[47px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold"
+                  className="w-[116px] h-[47px] border-greyCustom border-solid border-[4px] rounded-full transition duration-[300ms] ease-linear text-greyCustom hover:text-greyCustom font-semibold"
+                >
                   Login
                 </button>
               </li>
