@@ -110,15 +110,15 @@ const volunteers = [
 const Members = () => {
   return (
     <div className="w-screen flex justify-center items-center flex-col">
-      <div className="max-w-[3000px] flex flex-col items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[1.5rem] md:text-6xl font-bold mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
+      <div className="max-w-[3000px] flex flex-col md:items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[2rem] md:text-5xl font-bold mx-[4rem]  lg:mx-[8rem] ">
         Current Board Members
       </div>
-      <div className="max-w-[1050px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem] ">
+      <div className="max-w-[1050px] h-full flex flex-col md:items-center justify-center gap-[2rem] mx-[4rem] ">
         {volunteers.map((volunteer, index) => {
           return (
             <div
               key={index}
-              className={`w-full flex flex-col justify-center lg:justify-between items-center mb-[4rem] ${
+              className={`w-full flex flex-col justify-center lg:justify-between md:items-center mb-[4rem] ${
                 index % 2 === 0
                   ? "md:flex md:flex-row-reverse md:items-start"
                   : "md:flex md:flex-row md:items-start"
@@ -130,7 +130,7 @@ const Members = () => {
                 index={index}
               />
               <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] mt-[1.5rem]">
-                <h6 className="font-bold text-[2.5rem] leading-8">
+                <h6 className="font-bold text-[2.5rem] leading-12">
                   {volunteer.name}
                 </h6>
                 <h6 className="text-1 leading-8">{volunteer.jobTitle}</h6>

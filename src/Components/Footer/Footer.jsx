@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-black text-white grid grid-cols-1 place-items-center">
       <div className="w-full max-w-[3000px]">
         <div className="grid grid-cols-1 md:grid-cols-3 md:order-1 place-items-center gap-8 py-6 md:py-10 mx-[4rem] md:mx-[4rem] lg:mx-[8rem]">
-          <div className="h-full w-full flex flex-row md:flex-col justify-between md:place-self-start items-center md:items-start gap-8">
+          <div className="h-full w-full flex flex-col md:flex-col justify-between md:place-self-start items-start gap-8">
             <div>
               <h1 className="mb-2 text-xl font-semibold">Let's Connect!</h1>
               <a
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-3 items-center md:place-self-end md:items-start md:order-3">
+          <div className="flex flex-col space-y-3  place-self-start  md:place-self-end items-start md:order-3">
             <Link to="/about" className="hover:text-gray-500">
               About Us
             </Link>
@@ -57,7 +57,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="h-full flex flex-col justify-end md:place-self-center md:order-2">
+          <div className="h-full flex flex-col justify-end place-self-start md:place-self-center md:order-2">
             <div className="flex space-x-8">
               <a
                 href="https://www.linkedin.com/company/keelworks-foundation/"

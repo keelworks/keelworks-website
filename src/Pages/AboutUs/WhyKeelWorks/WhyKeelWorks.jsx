@@ -4,8 +4,8 @@ const WhyKeelWorks = () => {
       <div className="w-full max-w-[3000px] h-full overflow-hidden relative bg-[#F5F5F9] flex items-center justify-center">
         <div className="flex justify-start md:justify-center items-center flex-col xl:h-full w-full h-full mx-[4rem] lg:mx-[8rem]">
           <div className="md:my-[100px] max-w-[1200px] mx-auto ">
-            <div className="sm:text-center">
-              <p className="text-[1.65rem] md:text-[3rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] ">
+            <div className="md:text-center">
+              <p className="text-[1.65rem] sm:text-[1.8rem] md:text-[3rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] ">
                 The <span className="text-primary500">WHY</span> of KeelWorks
               </p>
             </div>
