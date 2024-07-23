@@ -10,7 +10,7 @@ const Cards = () => {
       {/* ********************* Text at the Top of Cards ********************* */}
       <div className="w-screen flex justify-center bg-grey200">
         <div className="w-full max-w-[3000px]">
-          <div className="lg:mx-[8rem] sm:mx-[4rem] mx-[4rem]">
+          <div className="lg:mx-[8rem] sm:mx-[4rem] mx-[2rem]">
             <p className="lg:text-[2.68rem] md:text-[2.25rem] sm:text-[1.875rem] text-[1.5rem] font-bold leading-relaxed lg:pt-[8rem] sm:pt-[6rem] pt-[4rem] ">
               Poverty begets poverty. Affluence begets affluence. When we help{" "}
               <span className="text-primary500 "> ONE </span>person to stable
@@ -18,7 +18,7 @@ const Cards = () => {
             </p>
           </div>
           <div className="w-full">
-            <p className="lg:text-[2.68rem] md:text-[2.25rem] sm:text-[1.875rem] text-[1.5rem] font-bold leading-relaxed lg:mx-[8rem] sm:mx-[4rem] mx-[4rem] pt-10 lg:pb-[8rem] sm:pb-[6rem] pb-[4rem]">
+            <p className="lg:text-[2.68rem] md:text-[2.25rem] text-[2.5rem] font-bold leading-relaxed lg:mx-[8rem] mx-[2rem] pt-10 lg:pb-[8rem] sm:pb-[6rem] pb-[4rem]">
               Globally,{" "}
               <span className="text-primary500">191 million people </span> are
               unemployed.
@@ -139,7 +139,7 @@ const Cards = () => {
       </div>
       {/* ********************* Text at the Bottom of Cards ********************* */}
       <div className="w-full bg-grey200 flex justify-center">
-        <div className="max-w-[3000px] mx-[4rem] md:mx-[8rem]">
+        <div className="max-w-[3000px] mx-[2rem] md:mx-[8rem]">
           <p className="text-[2rem] font-bold leading-relaxed py-[8rem] md:text-[2.68rem]">
             If you believe in our mission to get people to work, we need your
             support.

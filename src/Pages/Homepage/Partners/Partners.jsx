@@ -11,10 +11,12 @@ const Partners = () => {
   return (
     <div className="w-full bg-grey200 flex justify-center">
       <div className="w-full max-w-[3000px] flex flex-col items-center justify-center pt-10 pb-10">
-        <h2 className="text-fontPrimary font-bold text-[2rem] md:text-[3.56rem] lg:leading-[85px]">
-          Our partners
-        </h2>
-        <div className="w-[calc(100%-8rem)] grid grid-cols-3 gap-6 md:grid md:grid-cols-4 lg:w-[calc(100%-16rem)] [@media(min-width:1300px)]:flex items-center [@media(min-width:1200px)]:justify-between mt-[2.5rem] mb-[3rem] [@media(min-width:1200px)]:w-[calc(100%-16rem)]">
+        <div className="w-full flex items-center justify-start md:justify-center">
+          <h2 className="text-fontPrimary font-bold text-[2rem] ml-[2rem] md:ml-[0] md:text-[3.56rem] lg:leading-[85px]">
+            Our partners
+          </h2>
+        </div>
+        <div className="w-[calc(100%-4rem)] grid grid-cols-3 gap-6 md:grid md:grid-cols-4 lg:w-[calc(100%-16rem)] [@media(min-width:1300px)]:flex items-center [@media(min-width:1200px)]:justify-between mt-[2.5rem] mb-[3rem] [@media(min-width:1200px)]:w-[calc(100%-16rem)]">
           <img
             src={adobe_logo}
             alt=""
