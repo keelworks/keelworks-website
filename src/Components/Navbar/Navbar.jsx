@@ -30,14 +30,14 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 h-[5rem] w-full bg-black text-fontPrimary z-[100] flex items-center justify-center">
       <div className="relative w-full max-w-[3000px] flex justify-between mx-8">
         <a href="/">
-          <div className="flex items-center text-white font-bold">
-            <img src={logo} alt="logo" className="h-16" />
-            <h1 className="text-2xl ps-4">KeelWorks</h1>
+          <div className="flex flex-col md:flex-row items-center text-white font-bold">
+            <img src={logo} alt="logo" className="h-10 md:h-16" />
+            <h1 className="text-[1rem] md:text-2xl md:ps-4">KeelWorks</h1>
           </div>
         </a>
         <div className="flex items-center gap-6">
           <button
-            className="hidden md:block w-[80px] h-[36px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-[#101828] font-semibold"
+            className="md:block w-[80px] h-[36px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-[#101828] font-semibold"
             onClick={() => {
               window.location.href =
                 "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate";
@@ -68,19 +68,11 @@ const Navbar = () => {
             className="absolute top-[4.5rem] right-[-2rem] lg:right-0 bg-black p-5 rounded-bl-[17px] md:rounded-b-[17px] shadow-[5px_2px_5px_5px_rgba(0,0,0,0.3)]"
           >
             <ul className="flex flex-col mt-3 gap-5">
-              <li className="md:hidden">
+              {/* <li className="md:hidden">
                 <button className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[#101828] font-semibold">
                   Donate
                 </button>
-              </li>
-              <li className="md:hidden">
-                <button
-                  // className="w-[116px] h-[47px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold"
-                  className="w-[116px] h-[47px] border-greyCustom border-solid border-[4px] rounded-full transition duration-[300ms] ease-linear text-greyCustom hover:text-greyCustom font-semibold"
-                >
-                  Login
-                </button>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="about"
@@ -136,6 +128,14 @@ const Navbar = () => {
                 >
                   Contact Us
                 </Link>
+              </li>
+              <li className="md:hidden">
+                <button
+                  // className="w-[116px] h-[47px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold"
+                  className="w-[116px] h-[47px] border-greyCustom border-solid border-[4px] rounded-full transition duration-[300ms] ease-linear text-greyCustom hover:text-greyCustom font-semibold"
+                >
+                  Login
+                </button>
               </li>
             </ul>
           </div>
