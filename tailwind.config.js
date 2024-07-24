@@ -6,6 +6,8 @@ export default {
       sm: "480px",
       md: "768px",
       lg: "976px",
+      custombp: { raw: "(max-height: 400px),(min-width:800px)" },
+      custombp2: { raw: "(min-height: 650px) and (min-width:800px)" },
       xl: "1440px",
     },
     extend: {
@@ -30,7 +32,7 @@ export default {
         fontSecondary: "#DBA300",
       },
       height: {
-        '68': '68%',
+        68: "68%",
       },
 
       fontFamily: {
