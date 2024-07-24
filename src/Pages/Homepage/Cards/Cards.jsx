@@ -61,7 +61,7 @@ const Cards = () => {
                   /> */}
                 </div>
               </div>
-              <div className="text-[1.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[4rem]">
+              <div className="text-[1.5rem] custombp:text-[1.2rem]/[2rem] custombp2:text-[1.5rem]/[2.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[3rem]">
                 A three-phase approach to support the most challenged unemployed
                 and under-employed individuals mitigating barriers to
                 sustainable employment.
@@ -91,7 +91,7 @@ const Cards = () => {
                   </h1>
                 </div>
               </div>
-              <div className="text-[1.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[4rem]">
+              <div className="text-[1.5rem] custombp:text-[1.2rem]/[2rem] custombp2:text-[1.5rem]/[2.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[3rem]">
                 Designed to bridge the gap for participants with insufficient
                 education and/or experience in our supported fields; better
                 positioning them for employment and/or growth.
@@ -126,7 +126,7 @@ const Cards = () => {
                   /> */}
                 </div>
               </div>
-              <div className="text-[1.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[4rem]">
+              <div className="text-[1.5rem] custombp:text-[1.2rem]/[2rem] custombp2:text-[1.5rem]/[2.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[3rem]">
                 Assists graduates breakthrough the “lack of experience”
                 conundrum while providing them valuable employment coaching.
                 <span className="inline-flex items-center">
