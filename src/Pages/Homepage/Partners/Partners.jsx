@@ -40,22 +40,22 @@ const Partners = () => {
           <img
             src={cogniaha_logo}
             alt=""
-            className="w-[4rem] sm:pb-1 sm:justify-self-center md:justify-self-start md:w-[6rem] md:pb-4 lg:w-[7rem]"
+            className="w-[4rem] sm:pb-1 justify-self-start md:justify-self-end md:w-[6rem] md:pb-4 lg:w-[7rem] "
           />
           <img
             src={eduongo_logo}
             alt=""
-            className="w-[4rem] sm:justify-self-end md:w-[6rem] md:justify-self-center lg:w-[7rem]"
+            className="w-[4rem] justify-self-center md:w-[6rem] md:justify-self-start lg:w-[7rem]"
           />
           <img
             src={google_logo}
             alt=""
-            className="w-[4rem] md:w-[6rem] md:justify-self-center lg:w-[7rem]"
+            className="w-[4rem] md:w-[6rem] justify-self-end md:justify-self-center lg:w-[7rem]"
           />
           <img
             src={qase_logo}
             alt=""
-            className="w-[4rem] sm:justify-self-center md:w-[5rem] md:justify-self-end lg:w-[5rem]"
+            className="w-[4rem] justify-self-start md:w-[5rem] md:justify-self-end lg:justify-self-center lg:w-[5rem]"
           />
         </div>
       </div>

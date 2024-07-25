@@ -47,9 +47,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-screen md:h-[calc(100vh-20rem)] xl:h-[calc(100vh-5rem)] mt-[5rem] md:mt-[5rem] px-5 bg-white flex justify-center">
+    <div className="w-screen mt-[5rem] md:mt-[5rem] px-5 bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center font-bold">
-        <div className="w-4/6 mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
+        <div className="w-4/6 h-full mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
           <h2 className="text-3xl md:text-[3.5rem] lg:text-5xl text-left my-[2rem]">
             Contact Us
           </h2>
@@ -83,7 +83,7 @@ const ContactForm = () => {
                 type="email"
                 id="email"
                 placeholder="Email"
-                className="block w-full sm:w-4/6 px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -94,7 +94,7 @@ const ContactForm = () => {
                 type="text"
                 id="subject"
                 placeholder="Subject"
-                className="block w-full sm:w-4/6 px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
               />
@@ -103,7 +103,7 @@ const ContactForm = () => {
               <textarea
                 id="message"
                 placeholder="Message"
-                className="block w-full sm:w-4/6 px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                 rows="8"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
