@@ -25,12 +25,12 @@ const Partners = () => {
           <img
             src={microsoft_logo}
             alt=""
-            className="w-[4rem] sm:justify-self-center md:w-[6rem] md:justify-self-center lg:w-[8rem]"
+            className="w-[4rem] justify-self-center md:w-[6rem] md:justify-self-center lg:w-[8rem]"
           />
           <img
             src={teamgantt_logo}
             alt=""
-            className="w-[5rem] sm:justify-self-end md:w-[8rem] md:justify-self-center lg:w-[9rem]"
+            className="w-[5rem] justify-self-end md:w-[8rem] md:justify-self-center lg:w-[9rem]"
           />
           {/* <img
             src={atlassian_logo}
@@ -40,7 +40,7 @@ const Partners = () => {
           <img
             src={cogniaha_logo}
             alt=""
-            className="w-[4rem] sm:pb-1 justify-self-start md:justify-self-end md:w-[6rem] md:pb-4 lg:w-[7rem] "
+            className="w-[4rem] pb-4 justify-self-start md:justify-self-end md:w-[6rem] md:pb-4 lg:w-[7rem] "
           />
           <img
             src={eduongo_logo}
@@ -55,7 +55,7 @@ const Partners = () => {
           <img
             src={qase_logo}
             alt=""
-            className="w-[4rem] justify-self-start md:w-[5rem] md:justify-self-end lg:justify-self-center lg:w-[5rem]"
+            className="w-[4rem] justify-self-start md:w-[5rem] md:justify-self-end lg:justify-self-center lg:w-[5rem] lg:mr-4"
           />
         </div>
       </div>
