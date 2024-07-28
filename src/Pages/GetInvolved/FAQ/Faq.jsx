@@ -69,23 +69,23 @@ const Faq = () => {
       id="faq"
     >
       <div className="w-full max-w-[3000px] flex flex-col items-center justify-center overflow-hidden">
-        <div className="max-w-[1050px] mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
+        <div className="max-w-[1050px] mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
           <h4 className="text-[2.5rem] md:text-6xl font-bold my-10">
             Frequently Asked Questions
           </h4>
-          <div className="w-full h-full flex flex-col items-center justify-center mb-[7rem]">
+          <div className="w-full h-full flex flex-col gap-[2rem] md:gap-[1rem] items-center justify-center mb-[7rem]">
             {faqs.map((faq, index) => {
               return (
                 <div
                   key={index}
                   className="max-w-[1050px] flex-col justify-center w-full"
                 >
-                  <div className="py-[1rem] items-center flex justify-between font-bold">
+                  <div className="pb-[1rem] md:py-[1rem] items-start md:items-center flex justify-between font-bold">
                     <p className="flex-1">
                       {index + 1} . {faq.question}
                     </p>
                     <div
-                      className="bg-primary500 text-[1rem] md:text-[1.5rem] m-auto p-1 hover:cursor-pointer"
+                      className="bg-primary500 text-[1rem] md:text-[1.5rem] md:m-auto p-1 hover:cursor-pointer"
                       onClick={() => toggleFAQ(index)}
                     >
                       {activeFAQ === index ? <SlArrowUp /> : <SlArrowDown />}
