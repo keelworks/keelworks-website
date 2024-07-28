@@ -6,13 +6,13 @@ const Testimonials = () => {
   return (
     <div className="w-screen pt-[5rem] bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
-        <div className="max-w-[1600px] grid gird-rows-2 md:grid-rows-1 md:grid-cols-2 mx-[4rem] md:mx-[4rem] lg:mx-[8rem]">
-          <div className="flex flex-col justify-start items-center">
+        <div className="max-w-[1600px] grid gird-rows-2 md:grid-rows-1 md:grid-cols-2 mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
+          <div className="flex flex-col justify-center items-start md:items-center">
             <div className="relative flex flex-col justify-center items-center">
               <img
                 src={donor1}
                 alt="girl image"
-                className="w-[347px] mt-[1.5rem] z-10"
+                className="w-[100vw] md:w-[300px] lg:w-[347px] mt-[1.5rem] z-10"
               />
               <div className="absolute w-full h-full bg-primary500 top-[-1.5rem] left-[-1.5rem] z-0"></div>
             </div>
@@ -21,23 +21,23 @@ const Testimonials = () => {
               with Keelworks”
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-start md:items-center">
             <div className="relative flex flex-col justify-center items-center">
               <img
                 src={donor2}
                 alt="girl image"
-                className="w-[347px] md:mt-[1.5rem] z-10"
+                className="w-[100vw] md:w-[300px] lg:w-[347px] md:mt-[1.5rem] z-10"
               />
               <div className="absolute w-full h-full bg-primary500 top-[-1.5rem] right-[-1.5rem] z-0"></div>
             </div>
-            <p className="w-[100%] md:w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-[8rem] md:mb-10">
+            <p className="w-[100%] md:w-[70%] text-[1.5rem] leading-10 font-normal mt-5 mb-[4rem] md:mb-10">
               “Getting email updates makes me feel reassured that my donations
               are going to a good cause”
             </p>
           </div>
         </div>
         <div
-          className="w-[297px] h-[76px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary hover:cursor-pointer font-semibold text-[1.31rem] mb-10"
+          className="w-[297px] h-[76px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary hover:cursor-pointer font-semibold text-[1.31rem] mb-[5rem] "
           onClick={() => {
             window.location.href =
               "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate";

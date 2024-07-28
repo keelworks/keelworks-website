@@ -25,7 +25,7 @@ const Hero = () => {
               and you can be part of it!
             </p>
           </div>
-          <div className="xl:mt-[40px] grid grid-cols-3 gap-4 justify-start md:gap-24">
+          <div className="xl:mt-[40px] grid grid-cols-3 gap-4 justify-start md:gap-24 mb-[4rem] md:mb-[0]">
             <div className="relative md:ml-6">
               <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
                 01
@@ -53,7 +53,7 @@ const Hero = () => {
               </div>
               <div className="absolute top-0 right-0 h-full w-px bg-[#646464]"></div>
             </div>
-            <div className="relative text-center text-start ">
+            <div className="relative">
               <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
                 03
               </h1>
