@@ -1,10 +1,13 @@
 // **************** Components **************
 import SiteLayout from "./Components/SiteLayout/SiteLayout";
 import Error from "./Pages/Error/Error";
+import CommingSoon from "./Pages/ComingSoon/ComingSoon";
 import Home from "./Pages/Homepage/Home";
 import GetInvolved from "./Pages/GetInvolved/GetInvolved";
 import OurSolutions from "./Pages/OurSolutions/OurSolutions";
+import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import SuccessStories from "./Pages/SuccessStories/SuccessStories";
 
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -32,7 +35,20 @@ const router = createBrowserRouter([
       },
       {
         path: "about",
+        // element: <Home />,
         element: <AboutUs />,
+      },
+      {
+        path: "contactus",
+        element: <ContactUs />,
+      },
+      {
+        path: "success_stories",
+        element: <SuccessStories />,
+      },
+      {
+        path: "comingsoon",
+        element: <CommingSoon />,
       },
     ],
   },
