@@ -40,7 +40,7 @@ const VolunteersSay = () => {
           return (
             <div
               key={index}
-              className={`w-full flex flex-col justify-center lg:justify-between items-center mb-[4rem] ${
+              className={`w-full flex flex-col justify-center lg:justify-between items-end mb-[4rem] ${
                 index % 2 === 0
                   ? "md:flex md:flex-row md:items-start"
                   : "md:flex md:flex-row-reverse md:items-start"
@@ -52,7 +52,7 @@ const VolunteersSay = () => {
                 lastName={volunteer.lastName}
                 index={index}
               />
-              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] lg:mt-[2.5rem] border-2">
+              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] lg:mt-[1.5rem]">
                 <h6 className="font-bold text-[2.5rem] leading-8">{"Meet"}</h6>
                 <h6 className="font-bold text-[2.5rem] leading-8 ">
                   {volunteer.name}
