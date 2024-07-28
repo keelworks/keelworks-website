@@ -31,11 +31,11 @@ const volunteers = [
 
 const VolunteersSay = () => {
   return (
-    <div className="w-screen flex justify-center items-center flex-col">
-      <div className="max-w-[3000px] flex flex-col items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[1.5rem] md:text-6xl font-bold mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
+    <div className="w-screen flex justify-start md:justify-center md:items-center flex-col">
+      <div className="max-w-[3000px] flex flex-col md:items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[2rem] md:text-6xl font-bold mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
         What Our Volunteers Say
       </div>
-      <div className="max-w-[1050px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem] ">
+      <div className="max-w-[1050px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[1rem] md:mx-[4rem] ">
         {volunteers.map((volunteer, index) => {
           return (
             <div
@@ -52,9 +52,9 @@ const VolunteersSay = () => {
                 lastName={volunteer.lastName}
                 index={index}
               />
-              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] lg:mt-[2.5rem]">
+              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] lg:mt-[2.5rem] border-2">
                 <h6 className="font-bold text-[2.5rem] leading-8">{"Meet"}</h6>
-                <h6 className="font-bold text-[2.5rem] leading-8">
+                <h6 className="font-bold text-[2.5rem] leading-8 ">
                   {volunteer.name}
                 </h6>
                 <p className="text-[1.25rem] mt-4">{volunteer.content1}</p>
