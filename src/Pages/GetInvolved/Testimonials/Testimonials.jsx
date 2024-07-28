@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   return (
-    <div className="w-screen pt-[5rem] bg-white flex justify-center">
+    <div className="w-screen pt-[5rem] md:pt-[10rem] lg:pt-[5rem] bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center text-8xl font-bold overflow-hidden relative">
-        <div className="max-w-[1600px] grid gird-rows-2 md:grid-rows-1 md:grid-cols-2 mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
+        <div className="max-w-[1600px] grid gird-rows-2 md:grid-rows-1 md:grid-cols-2 mx-[1rem] md:mx-[4rem] lg:mx-[8rem] md:items-start">
           <div className="flex flex-col justify-center items-start md:items-center">
             <div className="relative flex flex-col justify-center items-center">
               <img
                 src={donor1}
                 alt="girl image"
-                className="w-[100vw] md:w-[300px] lg:w-[347px] mt-[1.5rem] z-10"
+                className="w-[100vw] md:w-[250px] lg:w-[347px] mt-[1.5rem] z-10"
               />
               <div className="absolute w-full h-full bg-primary500 top-[-1.5rem] left-[-1.5rem] z-0"></div>
             </div>
@@ -25,8 +25,8 @@ const Testimonials = () => {
             <div className="relative flex flex-col justify-center items-center">
               <img
                 src={donor2}
-                alt="girl image"
-                className="w-[100vw] md:w-[300px] lg:w-[347px] md:mt-[1.5rem] z-10"
+                alt="Man's image"
+                className="w-[100vw] md:w-[250px] lg:w-[347px] md:mt-[1.5rem] z-10"
               />
               <div className="absolute w-full h-full bg-primary500 top-[-1.5rem] right-[-1.5rem] z-0"></div>
             </div>

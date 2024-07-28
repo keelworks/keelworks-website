@@ -69,7 +69,7 @@ const Faq = () => {
       id="faq"
     >
       <div className="w-full max-w-[3000px] flex flex-col items-center justify-center overflow-hidden">
-        <div className="max-w-[1050px] mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
+        <div className="max-w-[1050px] mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
           <h4 className="text-[2.5rem] md:text-6xl font-bold my-10">
             Frequently Asked Questions
           </h4>
@@ -80,7 +80,7 @@ const Faq = () => {
                   key={index}
                   className="max-w-[1050px] flex-col justify-center w-full"
                 >
-                  <div className="pb-[1rem] md:py-[1rem] items-start md:items-center flex justify-between font-bold">
+                  <div className="pb-[1rem] md:py-[1rem] items-start md:items-center flex justify-between gap-[1rem] font-bold">
                     <p className="flex-1">
                       {index + 1} . {faq.question}
                     </p>

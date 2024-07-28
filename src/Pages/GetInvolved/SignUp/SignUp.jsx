@@ -82,9 +82,9 @@ const SignUp = () => {
   };
 
   return (
-    <div className="w-screen h-full md:min-h-[650px] md:mt-[5rem] md:px-5 bg-white flex justify-center">
+    <div className="w-screen h-full md:min-h-[650px] md:mt-[5rem] lg:px-5 bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-start md:items-center justify-center font-bold">
-        <div className="mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
+        <div className="mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
           <h2 className="text-[2rem] md:text-[3.5rem] lg:text-5xl md:text-center my-[2rem]">
             Volunteer Sign-Up & Needs
           </h2>

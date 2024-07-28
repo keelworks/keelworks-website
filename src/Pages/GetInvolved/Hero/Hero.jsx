@@ -5,7 +5,7 @@ const Hero = () => {
       <div className="w-full max-w-[3000px] h-full overflow-hidden relative bg-white flex justify-center items-start">
         <div className="flex items-start md:items-center justify-center flex-col xl:h-full w-full h-full mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
           <div>
-            <p className="text-[2rem] leading-[3.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] mb-[2rem] mt-[4rem] md:mt-[0]">
+            <p className="text-[2rem] leading-[3.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] mb-[2rem] mt-[4rem] lg:mt-[0]">
               Get Involved
             </p>
           </div>
@@ -15,7 +15,7 @@ const Hero = () => {
               <span className="text-primary500 ">ANYTHING</span>{" "}
             </p>
           </div>
-          <div className=" text-[1rem] md:text-[28px] text-[#646464] md:text-center leading-relaxed my-8">
+          <div className=" text-[1rem] md:text-[28px] text-[#646464] md:text-center leading-relaxed my-8 md:my-[3.5rem] lg:my-8">
             <p>
               KeelWorks wants to help everyone to sustaining employment. We are
               KeelWorks! <br />
@@ -25,7 +25,7 @@ const Hero = () => {
               and you can be part of it!
             </p>
           </div>
-          <div className="xl:mt-[40px] grid grid-cols-3 gap-4 justify-start md:gap-24 mb-[4rem] md:mb-[0]">
+          <div className="xl:mt-[40px] grid grid-cols-3 gap-4 justify-start md:gap-24 mb-[4rem] lg:mb-[0]">
             <div className="relative md:ml-6">
               <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
                 01
