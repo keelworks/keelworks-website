@@ -1,15 +1,15 @@
 const Hero = () => {
   // const navigate = useNavigate();
   return (
-    <div className="w-screen min-h-screen mt-[5rem] bg-[#FFFFFF] flex justify-center items-center font-Inter">
-      <div className="w-full max-w-[3000px] h-full overflow-hidden relative flex justify-center items-center mx-[4rem]">
+    <div className="w-screen min-h-screen mt-[5rem] bg-white flex justify-center items-center font-Inter">
+      <div className="w-full max-w-[3000px] h-full overflow-hidden relative flex justify-center items-center mx-[1rem] md:mx-[4rem]">
         <div className="max-w-[1600px] flex items-center justify-center flex-col xl:w-8/12 w-full h-full">
           <div>
-            <p className="text-[3rem] leading-[3.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] mt-5 font-bold text-[#2E2E2E] text-center">
+            <p className="text-[3rem] leading-[3.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] my-10 md:mt-5 font-bold md:text-[#2E2E2E] text-left md:text-center">
               Our Solutions
             </p>
           </div>
-          <div className="text-[#646464] font-bold text-[25px] md:text-[30px] xl:text-[40px] md:mt-2 text-center p-[10px]">
+          <div className="md:text-[#646464] font-bold text-[25px] md:text-[30px] xl:text-[40px] md:mt-2 text-left md:text-center p-[10px]">
             <p>
               The KeelWorks Foundation offers three programs to get people to
               work. Participants from{" "}
@@ -19,7 +19,7 @@ const Hero = () => {
               <span className="text-primary500">KeelMaster.</span>
             </p>
           </div>
-          <div className="text-[20px]  md:text-[24px] text-[#646464] mt-4 sm:mt-8 p-[10px] text-center">
+          <div className="text-[18px] leading-loose md:text-[24px] md:text-[#646464] mt-4 sm:mt-8 p-[10px] text-left md:text-center">
             <p>
               Each program leverages the combined intelligence of the group,
               teaching participants the importance of mutual support. They

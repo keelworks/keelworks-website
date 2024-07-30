@@ -5,12 +5,15 @@ const KeelMaster = () => {
       id="keelMaster"
     >
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center overflow-hidden relative">
-        <div className="flex items-center flex-col h-full" id="keelmaster">
-          <div className="mt-[40px] font-bold text-[2rem] md:text-[3.56rem] text-center ">
+        <div
+          className="flex items-start md:items-center flex-col h-full"
+          id="keelmaster"
+        >
+          <div className="mt-[80px] mx-[2rem] font-bold text-[2rem] md:text-[3.56rem] text-start md:text-center">
             <p>KeelMaster</p>
           </div>
-          <div className="w-full h-auto bg-primary500 px-[1rem] py-[1rem] md:px-[4rem] md:py-[4rem] xl:px-[180px] xl:py-[190px] text-white font-bold text-[1.562rem] md:text-[1.875rem] lg:text-[2.5rem] xl:text-[3rem] my-[40px] text-center">
-            <div className="max-w-[1600px] mx-[4rem]">
+          <div className="w-full h-auto bg-primary500 py-[2rem] my-[20px] md:my-[40px] md:px-[4rem] md:py-[4rem] xl:px-[180px] xl:py-[190px] text-white font-bold text-[1.562rem] md:text-[1.875rem] lg:text-[2.5rem] xl:text-[3rem] text-start md:text-center">
+            <div className="max-w-[1600px] mx-[2rem] md:mx-[4rem]">
               <p>
                 KeelMaster is our most ambitious program. It is currently in
                 development. It offers a systematic process supporting
@@ -20,16 +23,16 @@ const KeelMaster = () => {
             </div>
           </div>
 
-          <div className="max-w-[1300px] h-auto mb-10 mx-[4rem]">
+          <div className="max-w-[1300px] h-auto mb-10 mx-[2rem] md:mx-[4rem]">
             <div className="text-[18px] h-auto">
-              <p>
+              <p className="leading-loose">
                 Breaking the pattern of unemployment or underemployment is the
                 program goal for KeelMaster. This program recognizes that
                 continued failure is a certainty, unless informed intervention
                 is applied. It also recognizes that change is easier when
                 confronted in a community rather than in isolation.
               </p>
-              <p className="mt-8">
+              <p className="mt-8 leading-loose">
                 The program will recognize and address barriers as well as
                 recognize and leverage strengths. Our unique program offers a
                 four-phase approach that is designed to affect sustainable
@@ -42,29 +45,29 @@ const KeelMaster = () => {
               <div className="text-[#0B0A0A] font-bold text-[30px] md:text-[40px]">
                 <h1>This program features three phases:</h1>
               </div>
-              <div className="mt-[60px]">
+              <div className="mt-[20px] md:mt-[60px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-                  <div>
+                  <p className="leading-loose">
                     1. Needs Analysis: We help participants by identifying
                     barriers and discovering strengths.
-                  </div>
-                  <div>
+                  </p>
+                  <p className="leading-loose">
                     2. Core Competency: As part of a group of peers and a
                     facilitator, participants engage in a series of courses that
                     include self-identity, critical thinking, problem-solving,
                     communication, assertiveness, and team-building. Core
                     Competencies conclude with goal determination and
                     management.
-                  </div>
+                  </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-[40px] md:mt-[100px]">
-                  <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-[32px] md:mt-[100px]">
+                  <p className="leading-loose">
                     3. Ongoing Team Support: Change is difficult, especially for
                     those with a history of struggle. To ensure success, teams
                     stay together for mutual support and peer accountability
                     until all members are gainfully employed.
-                  </div>
-                  <div>
+                  </p>
+                  <p className="leading-loose">
                     4. Internships: An important aspect of the program, for
                     participants, is practice in their field. This is critical
                     to their success since, with experience, applicants become
@@ -75,7 +78,7 @@ const KeelMaster = () => {
                     will be placed within the foundation. We hope to have an
                     endowment fund to pay all interns or place them in external
                     paid internships.
-                  </div>
+                  </p>
                 </div>
               </div>
             </div>
