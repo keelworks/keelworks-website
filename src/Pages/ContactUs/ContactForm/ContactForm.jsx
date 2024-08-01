@@ -47,14 +47,14 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-screen md:h-screen mt-[5rem] md:mt-[5rem] px-5 bg-white flex justify-center">
-      <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center font-bold">
-        <div className="w-4/6 h-full mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
+    <div className="w-screen md:h-screen mt-[5rem] md:mt-[5rem] md:px-5 bg-white flex justify-center">
+      <div className="w-full max-w-[3000px] h-full flex flex-col items-start md:items-center justify-center font-bold">
+        <div className="w-5/6 md:w-4/6 h-full mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
           <h2 className="text-3xl md:text-[3.5rem] lg:text-5xl text-left my-[2rem]">
             Contact Us
           </h2>
           <form className="space-y-4 mt-2" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
+            <div className="grid grid-cols-2 gap-4 mt-5">
               <div>
                 <input
                   type="text"
@@ -111,7 +111,7 @@ const ContactForm = () => {
               ></textarea>
             </div>
 
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-start">
               <button className="block mt-7 mb-[4rem] px-24 py-5 bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-white font-semibold">
                 Send
               </button>
