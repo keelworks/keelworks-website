@@ -109,11 +109,11 @@ const volunteers = [
 
 const Members = () => {
   return (
-    <div className="w-screen flex justify-center items-center flex-col">
-      <div className="max-w-[3000px] flex flex-col items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[1.5rem] md:text-6xl font-bold mx-[2rem] md:mx-[4rem] lg:mx-[8rem]">
+    <div className="w-screen flex justify-center md:items-center flex-col mx-[1rem]">
+      <div className="max-w-[3000px] flex flex-col  text-left overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[1.5rem] md:text-6xl font-bold  md:mx-[4rem] lg:mx-[8rem]">
         Current Board Members
       </div>
-      <div className="max-w-[1050px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[4rem] ">
+      <div className="max-w-[1050px] h-full flex flex-col  gap-[2rem] md:mx-[4rem] ">
         {volunteers.map((volunteer, index) => {
           return (
             <div
@@ -175,5 +175,9 @@ const Members = () => {
     </div>
   );
 };
+
+
+
+
 
 export default Members;
