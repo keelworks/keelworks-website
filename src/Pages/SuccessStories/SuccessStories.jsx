@@ -1,30 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import donor1 from "../../assets/images/Get-Involved/Volunteer1.jpg";
 import upComing from "../../assets/images/Success-Stories/UpComing.jpg";
 import { IoIosCloseCircle } from "react-icons/io";
+import { IoPlayCircleOutline } from "react-icons/io5";
 
 const videos = [
   {
     id: 1,
-    videoLink: "https://www.youtube.com/embed/S-PA1gjYexU?si=zNDI5zl-s208HwfJ",
+    videoLink: "https://www.youtube.com/embed/FEDR3c7Rwno?si=imSpcChsOqi1-dza",
     image: donor1,
-    content1: 'Kathryn "Sky" Tomlinson',
+    content: 'Kathryn "Sky" Tomlinson',
   },
   {
     id: 2,
-    videoLink: "https://www.youtube.com/embed/S-PA1gjYexU?si=zNDI5zl-s208HwfJ",
+    videoLink: "",
     image: upComing,
-    content1: "",
+    content: "",
   },
   {
     id: 3,
-    videoLink: "https://www.youtube.com/embed/S-PA1gjYexU?si=zNDI5zl-s208HwfJ",
+    videoLink: "",
     image: upComing,
-    content1: "",
+    content: "",
   },
 ];
 
 const SuccessStories = () => {
+  const [windowopen, setWindowOpen] = useState(false);
+  const [videoIndex, setVideoIndex] = useState();
   return (
     <div className="w-screen pt-[5rem] bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center text-8xl overflow-hidden relative">
@@ -38,7 +41,7 @@ const SuccessStories = () => {
                 Case Studies
               </h4>
             </div>
-            <div className="flex justify-start gap-10 overflow-x-auto mb-10">
+            <div className="flex justify-start items-start gap-10 overflow-x-auto mb-10">
               {videos.map((volunteer, index) => (
                 <div
                   key={index}
@@ -46,36 +49,50 @@ const SuccessStories = () => {
                 >
                   <div className="w-[calc(100vw-2rem)] md:w-[30%] lg:w-[60%] max-w-[500px] h-auto relative mx-[1rem] md:mx-[0] mb-[1rem]">
                     <div className="bg-primary500 w-4/5 h-4/5 absolute z-0"></div>
-                    <img
-                      src={volunteer.image}
-                      alt={volunteer.content1}
-                      className={`w-full md:w-[300px] lg:w-full h-auto bg-grey400 m-auto relative z-10 top-5 left-5 md:top-[1.5rem] md:left-[1.5rem]`}
-                    />
+                    <div
+                      className="relative w-full md:w-[300px] lg:w-full h-auto m-auto z-10 top-5 left-5 md:top-[1.5rem] md:left-[1.5rem] cursor-pointer"
+                      onClick={() => {
+                        setVideoIndex(index);
+                        setWindowOpen(!windowopen);
+                      }}
+                    >
+                      <img src={volunteer.image} alt={volunteer.content} />
+                      {volunteer.content && (
+                        <IoPlayCircleOutline className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primary500 text-[4rem] hover:text-primary300 transition duration-[150ms] ease-linear z-10" />
+                      )}
+                    </div>
                   </div>
-                  <p className="text-[17%] text-center mt-10 border-2">
-                    {volunteer.content1}
+                  <p className="text-[1rem] text-center my-5 ml-[2.5rem]">
+                    {volunteer.content}
                   </p>
                 </div>
               ))}
-              <div className="absolute top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 backdrop-blur-sm z-10">
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[50%] h-[50%]">
-                  <iframe
-                    className="w-full h-full"
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/FEDR3c7Rwno?si=imSpcChsOqi1-dza"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
+              {windowopen && videos[videoIndex].content && (
+                <div className="absolute top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 backdrop-blur-sm z-10">
+                  <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[50%] h-[50%]">
+                    <iframe
+                      className="w-full h-full"
+                      width="560"
+                      height="315"
+                      src={videos[videoIndex].videoLink}
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
 
-                  <button className="absolute top-[-40px] right-[-40px] z-50">
-                    <IoIosCloseCircle className="text-primary500 text-[3rem] hover:text-primary300 transition duration-[150ms] ease-linear" />
-                  </button>
+                    <button
+                      className="absolute top-[-40px] right-[-40px] z-50"
+                      onClick={() => {
+                        setWindowOpen(!windowopen);
+                      }}
+                    >
+                      <IoIosCloseCircle className="text-primary500 text-[2.5rem] hover:text-primary300 transition duration-[150ms] ease-linear" />
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
