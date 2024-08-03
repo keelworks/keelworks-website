@@ -1,7 +1,7 @@
 import React from "react";
 import donor1 from "../../assets/images/Get-Involved/Volunteer1.jpg";
-import donor2 from "../../assets/images/Get-Involved/Donor2.jpg";
-import ImageFrame from "../../Components/ImageFrame/ImageFrame";
+import upComing from "../../assets/images/Success-Stories/UpComing.jpg";
+import { IoIosCloseCircle } from "react-icons/io";
 
 const videos = [
   {
@@ -13,20 +13,14 @@ const videos = [
   {
     id: 2,
     videoLink: "https://www.youtube.com/embed/S-PA1gjYexU?si=zNDI5zl-s208HwfJ",
-    image: donor2,
-    content1: "Upcoming Soon",
+    image: upComing,
+    content1: "",
   },
   {
     id: 3,
     videoLink: "https://www.youtube.com/embed/S-PA1gjYexU?si=zNDI5zl-s208HwfJ",
-    image: donor2,
-    content1: "Upcoming Soon",
-  },
-  {
-    id: 4,
-    videoLink: "https://www.youtube.com/embed/S-PA1gjYexU?si=zNDI5zl-s208HwfJ",
-    image: donor2,
-    content1: "Upcoming Soon",
+    image: upComing,
+    content1: "",
   },
 ];
 
@@ -44,11 +38,11 @@ const SuccessStories = () => {
                 Case Studies
               </h4>
             </div>
-            <div className="flex gap-10 overflow-x-auto">
+            <div className="flex justify-start gap-10 overflow-x-auto mb-10">
               {videos.map((volunteer, index) => (
                 <div
                   key={index}
-                  className="w-1/3 flex flex-col justify-center items-center mb-[1rem] flex-shrink-0 border-2"
+                  className="w-1/3 flex flex-col justify-center items-center mb-[1rem] flex-shrink-0"
                 >
                   <div className="w-[calc(100vw-2rem)] md:w-[30%] lg:w-[60%] max-w-[500px] h-auto relative mx-[1rem] md:mx-[0] mb-[1rem]">
                     <div className="bg-primary500 w-4/5 h-4/5 absolute z-0"></div>
@@ -63,6 +57,25 @@ const SuccessStories = () => {
                   </p>
                 </div>
               ))}
+              <div className="absolute top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 backdrop-blur-sm z-10">
+                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[50%] h-[50%]">
+                  <iframe
+                    className="w-full h-full"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/FEDR3c7Rwno?si=imSpcChsOqi1-dza"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+
+                  <button className="absolute top-[-40px] right-[-40px] z-50">
+                    <IoIosCloseCircle className="text-primary500 text-[3rem] hover:text-primary300 transition duration-[150ms] ease-linear" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
