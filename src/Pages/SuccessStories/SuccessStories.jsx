@@ -10,6 +10,7 @@ const videos = [
     videoLink: "https://www.youtube.com/embed/FEDR3c7Rwno?si=imSpcChsOqi1-dza",
     image: donor1,
     content: 'Kathryn "Sky" Tomlinson',
+    duration: "1:52",
   },
   {
     id: 2,
@@ -60,9 +61,14 @@ const SuccessStories = () => {
                       {volunteer.content && (
                         <IoPlayCircleOutline className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primary500 text-[4rem] hover:text-primary300 transition duration-[150ms] ease-linear z-10" />
                       )}
+                      {volunteer.duration && (
+                        <span className="absolute bottom-4 right-4 w-[50px] h-[30px] bg-black rounded-full text-[1rem] text-gray-50 flex justify-center items-center">
+                          {volunteer.duration}
+                        </span>
+                      )}
                     </div>
                   </div>
-                  <p className="text-[1rem] text-center my-5 ml-[2.5rem]">
+                  <p className="text-[1.2rem] text-center font-bold my-8 ml-[2.5rem]">
                     {volunteer.content}
                   </p>
                 </div>
