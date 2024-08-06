@@ -63,7 +63,7 @@ const SuccessStories = () => {
                         className="w-full"
                       />
                       {volunteer.content && (
-                        <IoPlayCircleOutline className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-grey400 text-[4rem] hover:text-primary300 transition duration-[150ms] ease-linear z-10" />
+                        <IoPlayCircleOutline className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-grey400 text-[4rem] hover:text-grey200 transition duration-[150ms] ease-linear z-10" />
                       )}
                       {volunteer.duration && (
                         <span className="absolute bottom-4 right-4 w-[50px] h-[30px] bg-black rounded-full text-[1rem] text-gray-50 flex justify-center items-center">
