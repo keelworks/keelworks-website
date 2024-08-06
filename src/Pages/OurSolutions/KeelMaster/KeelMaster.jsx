@@ -1,21 +1,21 @@
 const KeelMaster = () => {
   return (
     <div
-      className="w-full h-auto bg-[#FFFFFF] flex justify-center items-center font-Inter"
+      className="w-full h-auto bg-[#FFFFFF] flex justify-center items-center"
       id="keelMaster"
     >
-      <div className="w-full max-w-[3000px] h-full flex flex-col items-center overflow-hidden relative">
+      <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center overflow-hidden">
         <div
-          className="flex items-start md:items-center flex-col h-full"
+          className="flex items-start md:items-center justify-center flex-col h-full"
           id="keelmaster"
         >
-          <div className="mt-[80px] mx-[2rem] font-bold text-[2rem] md:text-[3.56rem] text-start md:text-center">
+          <div className="mt-[4rem] mx-[1rem] font-bold text-[2rem] md:text-[3.56rem] text-start md:text-center">
             <p>KeelMaster</p>
           </div>
-          <div className="w-full h-auto bg-primary500 py-[2rem] my-[20px] md:my-[40px] md:px-[4rem] md:py-[4rem] xl:px-[180px] xl:py-[190px] text-white font-bold text-[1.562rem] md:text-[1.875rem] lg:text-[2.5rem] xl:text-[3rem] text-start md:text-center">
-            <div className="max-w-[1600px] mx-[2rem] md:mx-[4rem]">
+          <div className="w-full flex justify-center items-center md:h-screen bg-primary500 py-[4rem] md:my-[40px] text-white font-bold text-[1.562rem] md:text-[1.875rem] lg:text-[2.5rem] xl:text-[3rem]">
+            <div className="max-w-[1300px] flex mx-[1rem] lg:mx-[8rem] text-left md:text-center">
               <p>
-                KeelMaster is our most ambitious program. It is currently in
+                KeelMaster is our most ambitious program. It is currently in
                 development. It offers a systematic process supporting
                 individuals with the greatest employment challenges to gainful
                 employment.
@@ -23,7 +23,7 @@ const KeelMaster = () => {
             </div>
           </div>
 
-          <div className="max-w-[1300px] h-auto mb-10 mx-[2rem] md:mx-[4rem]">
+          <div className="h-auto mb-10 mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
             <div className="text-[18px] h-auto">
               <p className="leading-loose">
                 Breaking the pattern of unemployment or underemployment is the
