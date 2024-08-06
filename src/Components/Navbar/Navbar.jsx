@@ -110,7 +110,6 @@ const Navbar = () => {
               <li>
                 <Link
                   to="success_stories"
-                  // to="comingsoon"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   Success Stories

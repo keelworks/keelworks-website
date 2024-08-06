@@ -30,7 +30,9 @@ const Footer = () => {
                 className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[#101828] font-semibold"
                 onClick={() => {
                   window.open(
-                    "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate","_blank")
+                    "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate",
+                    "_blank"
+                  );
                 }}
               >
                 Donate
@@ -40,7 +42,8 @@ const Footer = () => {
               <div className="flex space-x-8">
                 <a
                   href="https://www.linkedin.com/company/keelworks-foundation/"
-                  className="text-white hover:text-gray-500" target="_blank"
+                  className="text-white hover:text-gray-500"
+                  target="_blank"
                 >
                   <div className="p-2 border-2 rounded-full hover:border-gray-500 ">
                     <FaLinkedinIn size={24} />
@@ -48,7 +51,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.youtube.com/@thekeelworksfundation8668"
-                  className="text-white hover:text-gray-500" target="_blank"
+                  className="text-white hover:text-gray-500"
+                  target="_blank"
                 >
                   <div className="p-2 border-2 rounded-full hover:border-gray-500">
                     <FaYoutube size={24} />
@@ -56,7 +60,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://x.com/keelworksthe"
-                  className="text-white hover:text-gray-500" target="_blank"
+                  className="text-white hover:text-gray-500"
+                  target="_blank"
                 >
                   <div className="p-2 border-2 rounded-full hover:border-gray-500">
                     <FaXTwitter size={24} />
@@ -64,7 +69,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.facebook.com/TheKeelWorks"
-                  className="text-white hover:text-gray-500" target="_blank"
+                  className="text-white hover:text-gray-500"
+                  target="_blank"
                 >
                   <div className="p-2 border-2 rounded-full hover:border-gray-500">
                     <FaFacebookF size={24} />
@@ -72,7 +78,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.instagram.com/thekeelworks/"
-                  className="text-white hover:text-gray-500" target="_blank"
+                  className="text-white hover:text-gray-500"
+                  target="_blank"
                 >
                   <div className="p-2 border-2 rounded-full hover:border-gray-500">
                     <FaInstagram size={24} />
@@ -95,7 +102,7 @@ const Footer = () => {
             <Link to="/comingsoon" className="hover:text-gray-500">
               Blog
             </Link>
-            <Link to="/comingsoon" className="hover:text-gray-500">
+            <Link to="/success_stories" className="hover:text-gray-500">
               Success Stories
             </Link>
             <Link
