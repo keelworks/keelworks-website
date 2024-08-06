@@ -4,11 +4,11 @@ const KeelWings = () => {
   return (
     <div className="w-screen bg-white flex justify-center" id="keelWings">
       <div className="w-full max-w-[3000px] h-full flex justify-center items-center">
-        <div className="max-w-[1300px] flex items-center justify-center flex-col w-5/6 h-full  mx-[4rem] lg:mx-[8rem]">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mx-5 lg:ml-0 md:ml-0">
+        <div className="max-w-[1300px] flex items-start md:items-center justify-center flex-col w-full h-full mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold md:ml-0">
             KeelWings
           </h2>
-          <p className=" text-[#646464] font-bold text-[1.562rem] md:text-[1.875rem] lg:text-[2.5rem] xl:text-[3rem] mt-3 md:mt-7 text-center">
+          <p className="md:text-[#646464] font-bold text-[1.562rem] md:text-[1.875rem] lg:text-[2.5rem] xl:text-[3rem] mt-7 text-left md:text-center">
             This dynamic program assists recent graduates who lack prior
             practical experience to practice the essential skills that qualify
             them for employment.
@@ -49,7 +49,7 @@ const KeelWings = () => {
               <p className="leading-loose">
                 Some real-world roles they can take on include:
               </p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside leading-loose">
                 <li>Project Manager</li>
                 <li>Program Manager</li>
                 <li>Product Manager</li>
