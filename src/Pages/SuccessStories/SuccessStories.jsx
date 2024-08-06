@@ -33,7 +33,7 @@ const SuccessStories = () => {
     <div className="w-screen pt-[5rem] bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-center justify-center text-8xl overflow-hidden relative">
         <div className="w-full max-w-[1600px]">
-          <div children className="mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
+          <div children className="mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
             <div className=" flex flex-col justify-center items-start md:items-center">
               <h4 className="text-[2rem] leading-[2rem] md:text-[3.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] mt-[4rem] lg:mt-[2rem]">
                 Gallery of Video
@@ -46,12 +46,12 @@ const SuccessStories = () => {
               {videos.map((volunteer, index) => (
                 <div
                   key={index}
-                  className="w-full md:w-1/3 flex flex-col justify-center items-center md:justify-center md:items-center md:flex-shrink-0"
+                  className="w-full md:w-[350px] lg:w-1/3 flex flex-col justify-center items-center md:justify-center md:items-start lg:items-center md:flex-shrink-0"
                 >
-                  <div className="w-[calc(100vw-2rem)] md:w-[30%] lg:w-[60%] max-w-[500px] relative md:mx-[0] mb-[1rem]">
-                    <div className="bg-primary500 w-4/5 h-4/5 absolute z-0"></div>
+                  <div className="w-[calc(100vw-2rem)] md:w-[60%] lg:w-[60%] max-w-[500px] relative md:mx-[0] mb-[1rem]">
+                    <div className="bg-primary500 w-4/5 md:w-[85%] h-4/5 absolute z-0"></div>
                     <div
-                      className="relative w-full md:w-[300px] lg:w-full z-10 top-5 left-5 md:top-[1.5rem] md:left-[1.5rem] cursor-pointer"
+                      className="relative md:w-[300px] lg:w-full z-10 top-5 left-5 md:top-[1.5rem] md:left-[1.5rem] cursor-pointer"
                       onClick={() => {
                         setVideoIndex(index);
                         setWindowOpen(!windowopen);
@@ -72,7 +72,7 @@ const SuccessStories = () => {
                       )}
                     </div>
                   </div>
-                  <p className="text-[1.5rem] md:text-[1.2rem] font-bold my-8 md:ml-[2.5rem] self-start md:self-auto">
+                  <p className="text-[1.5rem] md:text-[1.2rem] font-bold my-8 lg:ml-[2.5rem] self-start md:self-center">
                     {volunteer.content}
                   </p>
                 </div>
@@ -81,7 +81,7 @@ const SuccessStories = () => {
                 <div className="absolute top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 backdrop-blur-sm z-10">
                   <div className="absolute top-[50%] left-[25%] md:left-[50%] translate-x-[-50%] translate-y-[-50%] w-[50%] h-[50%]">
                     <iframe
-                      className="w-screen md:w-full md:h-full border-2"
+                      className="w-screen md:w-full md:h-full"
                       width="560"
                       height="315"
                       src={videos[videoIndex].videoLink}
