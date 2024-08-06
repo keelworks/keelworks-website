@@ -23,7 +23,7 @@ const KeelMaster = () => {
             </div>
           </div>
 
-          <div className="h-auto mb-10 mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
+          <div className="h-auto mb-10 mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
             <div className="text-[18px] h-auto">
               <p className="leading-loose">
                 Breaking the pattern of unemployment or underemployment is the

@@ -4,7 +4,7 @@ const KeelWings = () => {
   return (
     <div className="w-screen bg-white flex justify-center" id="keelWings">
       <div className="w-full max-w-[3000px] h-full flex justify-center items-center">
-        <div className="max-w-[1300px] flex items-start md:items-center justify-center flex-col w-full h-full mx-[1rem] md:mx-[4rem] lg:mx-[8rem]">
+        <div className="max-w-[1300px] flex items-start md:items-center justify-center flex-col w-full h-full mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold md:ml-0">
             KeelWings
           </h2>
