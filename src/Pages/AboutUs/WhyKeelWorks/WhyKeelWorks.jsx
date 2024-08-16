@@ -1,15 +1,15 @@
 const WhyKeelWorks = () => {
   return (
-    <div className="w-screen h-[calc(100vh-5rem)] lg:min-h-[800px] mt-[5rem] bg-[#F5F5F9] flex items-center justify-center">
-      <div className="w-full max-w-[3000px] h-full overflow-hidden relative bg-[#F5F5F9] flex items-center justify-center">
-        <div className="flex items-start md:items-center justify-center flex-col xl:h-full w-full h-full mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
-          <div className="md:my-[100px] max-w-[1200px] mx-auto ">
-            <div className="md:text-center">
+    <div className="w-screen h-full md:h-[calc(100vh-5rem)] lg:min-h-[800px] mt-[5rem] bg-[#F5F5F9] flex flex-col items-center justify-center">
+      <div className="h-full w-full max-w-[3000px] overflow-hidden relative bg-[#F5F5F9] flex items-center justify-center">
+        <div className="h-full w-full flex justify-center items-center mx-[2rem] md:mx-[2rem] lg:mx-[8rem]">
+          <div className="h-full flex flex-col justify-center items-center max-w-[1200px]">
+            <div className="md:text-center flex flex-col items-center justify-center">
               <p className="text-[2rem] md:text-[3rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] ">
                 The <span className="text-primary500">WHY</span> of KeelWorks
               </p>
             </div>
-            <div className="text-[1rem] sm:text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] text-[#646464] mt-2 lg:mt-[2.5rem]">
+            <div className="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem] text-[#646464] mt-2 lg:mt-[2.5rem]">
               <p>
                 KeelWorks aims to empower individuals worldwide to reach their
                 full potential by offering a proven recipe for success through
