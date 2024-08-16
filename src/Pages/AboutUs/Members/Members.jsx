@@ -129,7 +129,7 @@ const Members = () => {
                 name={volunteer.name}
                 index={index}
               />
-              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] mt-[1.5rem]">
+              <div className="flex flex-col gap-[1rem] w-full md:w-[45%] max-w-[500px] mt-[1.5rem]">
                 <h6 className="font-bold text-[2.5rem] leading-8">
                   {volunteer.name}
                 </h6>

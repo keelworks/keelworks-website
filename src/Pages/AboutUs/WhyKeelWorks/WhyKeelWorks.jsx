@@ -9,7 +9,7 @@ const WhyKeelWorks = () => {
                 The <span className="text-primary500">WHY</span> of KeelWorks
               </p>
             </div>
-            <div className="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem] text-[#646464] mt-2 lg:mt-[2.5rem]">
+            <div className="text-[1rem] md:text-[1.25rem] lg:text-[1.5rem] text-[#646464] mt-8 lg:mt-[2.5rem]">
               <p>
                 KeelWorks aims to empower individuals worldwide to reach their
                 full potential by offering a proven recipe for success through

@@ -23,11 +23,11 @@ const Founder = () => {
             <h4 className="text-[2.5rem] leading-[3.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] my-[2rem] md:my-[4rem]">
               Founder
             </h4>
-            <div className="w-full max-w-[1600px]  md:w-[75%] flex flex-col md:flex-row items-start justify-center gap-[1rem] md:gap-[5rem]">
+            <div className="w-full max-w-[1600px]  md:w-[85%] lg:w-[75%] flex flex-col md:flex-row items-start justify-center gap-[1rem] md:gap-[5rem]">
               <img
                 src={founderImage}
                 alt={founderInfo[0].name}
-                className="w-full md:w-[30%] lg:w-[65%] md:max-w-[400px] mb-5 md:mb-0"
+                className="w-full md:w-[40%] lg:w-[65%] md:max-w-[400px] mb-5 md:mb-0"
               />
               <div className="mb-[5rem]">
                 <div className="w-[8rem] h-[1.1rem] bg-primary500"></div>

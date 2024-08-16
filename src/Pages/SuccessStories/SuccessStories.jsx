@@ -48,7 +48,7 @@ const SuccessStories = () => {
                   key={index}
                   className="w-full md:w-[350px] lg:w-1/3 flex flex-col justify-center items-center md:justify-center md:items-start lg:items-center md:flex-shrink-0"
                 >
-                  <div className="w-[calc(100vw-2rem)] md:w-[60%] lg:w-[60%] max-w-[500px] relative md:mx-[0] mb-[1rem]">
+                  <div className="w-[calc(100vw-1rem)] mr-4 md:mr-0 md:w-[60%] lg:w-[60%] max-w-[500px] relative md:mx-[0] mb-[1rem]">
                     <div className="bg-primary500 w-4/5 md:w-[85%] h-4/5 absolute z-0"></div>
                     <div
                       className="relative md:w-[300px] lg:w-full z-10 top-5 left-5 md:top-[1.5rem] md:left-[1.5rem] cursor-pointer"
