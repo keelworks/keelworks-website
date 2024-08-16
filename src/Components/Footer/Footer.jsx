@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white grid grid-cols-1 place-items-center">
       <div className="w-full max-w-[3000px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:order-1 place-items-start md:place-items-end gap-8 py-6 md:py-10 mx-[2rem] md:mx-[2rem] lg:mx-[8rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:order-1 place-items-start md:place-items-end gap-8 py-6 md:py-10 mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
           <div className="h-full w-full flex flex-col justify-start md:place-self-start gap-5">
             <div>
               <h1 className="mb-2 text-xl font-semibold">Let's Connect!</h1>

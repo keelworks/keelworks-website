@@ -11,7 +11,7 @@ const Banner = () => {
         }}
       >
         <div className="absolute top-0 left-0 w-full h-full flex justify-start md:justify-center items-center bg-black bg-opacity-70 md:bg-opacity-50 md:w-1/2 lg:justify-start md:backdrop-blur-lg">
-          <div className="absolute bottom-[8rem] left-[0] md:relative md:bottom-auto md:left-auto mx-[2rem] md:mx-[2rem] lg:mx-[8rem]">
+          <div className="absolute bottom-[8rem] left-[0] md:relative md:bottom-auto md:left-auto mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
             <h1 className="text-[2rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-white">
               We Can Do This!
               <br />

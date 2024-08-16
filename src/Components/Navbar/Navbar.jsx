@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 h-[5rem] w-full bg-black text-fontPrimary z-[100] flex items-center justify-center">
-      <div className="relative w-full max-w-[3000px] flex justify-between mx-8">
+      <div className="relative w-full max-w-[3000px] flex justify-between mx-4 md:mx-8">
         <a href="/">
           <div className="flex flex-col md:flex-row items-center text-white font-bold">
             <img src={logo} alt="logo" className="h-10 md:h-16" />

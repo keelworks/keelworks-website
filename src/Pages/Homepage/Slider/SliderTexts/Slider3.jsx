@@ -2,7 +2,7 @@ import React from "react";
 
 const Slider3 = () => {
   return (
-    <div className="text-[2.5rem] mx-[2rem] md:mx-[1rem] lg:mx-[2rem] [@media(min-width:1100px)]:mx-[8rem] md:text-[2.5rem]/[3rem] custombp:text-[2.5rem]/[2.5rem] custombp2:text-[3.5rem]/[4rem] custombp3:text-[4rem]/[4.5rem] lg:text-[4rem]/[4.5rem] font-bold text-white">
+    <div className="text-[2.5rem] mx-[1rem] lg:mx-[2rem] [@media(min-width:1100px)]:mx-[8rem] md:text-[2.5rem]/[3rem] custombp:text-[2.5rem]/[2.5rem] custombp2:text-[3.5rem]/[4rem] custombp3:text-[4rem]/[4.5rem] lg:text-[4rem]/[4.5rem] font-bold text-white">
       <h6>
         KEEL<span className="text-primary500">MASTER</span>
       </h6>
