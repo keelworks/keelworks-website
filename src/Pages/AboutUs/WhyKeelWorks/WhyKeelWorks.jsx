@@ -2,8 +2,8 @@ const WhyKeelWorks = () => {
   return (
     <div className="w-screen h-full md:h-[calc(100vh-5rem)] lg:min-h-[800px] mt-[5rem] bg-[#F5F5F9] flex flex-col items-center justify-center">
       <div className="h-full w-full max-w-[3000px] overflow-hidden relative bg-[#F5F5F9] flex items-center justify-center">
-        <div className="h-full w-full flex justify-center items-center mx-[2rem] md:mx-[2rem] lg:mx-[8rem]">
-          <div className="h-full flex flex-col justify-center items-center max-w-[1200px]">
+        <div className="h-full w-full flex justify-center items-center mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
+          <div className="h-full flex flex-col justify-center items-start md:items-center max-w-[1200px]">
             <div className="md:text-center flex flex-col items-center justify-center">
               <p className="text-[2rem] md:text-[3rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] ">
                 The <span className="text-primary500">WHY</span> of KeelWorks

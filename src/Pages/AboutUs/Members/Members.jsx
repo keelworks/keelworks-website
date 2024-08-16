@@ -110,7 +110,7 @@ const volunteers = [
 const Members = () => {
   return (
     <div className="w-screen flex justify-center md:items-center flex-col border-2">
-      <div className="max-w-[3000px] text-[2rem] leading-[2.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] mb-[2rem] mt-[4rem] lg:mt-[0] mx-[2rem]">
+      <div className="max-w-[3000px] text-[2rem] leading-[2.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] mb-[2rem] mt-[4rem] lg:mt-[0] mx-[1rem]">
         Current Board Members
       </div>
       <div className="max-w-[1050px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
@@ -129,7 +129,7 @@ const Members = () => {
                 name={volunteer.name}
                 index={index}
               />
-              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] mt-[1.5rem] border-2">
+              <div className="flex flex-col gap-[1rem] w-full lg:w-[45%] max-w-[500px] mt-[1.5rem]">
                 <h6 className="font-bold text-[2.5rem] leading-8">
                   {volunteer.name}
                 </h6>
