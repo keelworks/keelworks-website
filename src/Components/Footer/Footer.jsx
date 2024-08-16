@@ -24,6 +24,10 @@ const Footer = () => {
               </a>
               <p className="text-[0.8rem] mt-3">KeelWorks Foundation © 2024.</p>
               <p className="text-[0.8rem]">All rights reserved.</p>
+              <p className="text-[0.8rem]">
+                KeelWorks is a 501(c)(3) charitable foundation (EIN:
+                80-0325606).
+              </p>
             </div>
             <div className="">
               <button
