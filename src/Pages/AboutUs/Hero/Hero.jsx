@@ -7,7 +7,7 @@ const Hero = () => {
             <p className="text-[2rem] leading-[3.5rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-[#2E2E2E] mb-[2rem] mt-[4rem] lg:mt-[0]">
               About Us
             </p>
-            <p className="max-w-[1100px] md:text-[#646464] font-bold text-[25px] md:text-[30px] xl:text-[40px] mb-[4rem] md:mb-[0] text-left md:text-center">
+            <p className="max-w-[1100px] md:text-[#646464] font-bold text-[1.562rem] md:text-[1.875rem] xl:text-[2.5rem] mb-[4rem] md:mb-[0] text-left md:text-center">
               <span className="text-primary500">At KeelWorks</span>, our mission
               is to promote, empower, and perpetuate global economic equality
               through <span className="text-primary500">full inclusion</span> at
