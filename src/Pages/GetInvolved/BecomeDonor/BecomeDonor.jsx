@@ -20,10 +20,10 @@ const BecomeDonor = () => {
             </div>
             <div className="absolute bottom-[-40%] right-0 md:bottom-[-6rem] w-[90%] md:w-[30rem] bg-primary500">
               <div className="p-6 md:p-8 xl:p-12 text-start text-[#2E2E2E] flex flex-col justify-center items-center h-full">
-                <p className="font-bold text-[25px] sm:text-[40px]  leading-tight ">
+                <p className="font-bold text-[1.562rem] sm:text-[2.5rem]  leading-tight ">
                   The quickest and fastest way to help is by becoming a donor.
                 </p>
-                <p className="text-[20px] sm:text-[25px] mt-6 md:mt-12 leading-loose">
+                <p className="text-[1.25rem] sm:text-[1.562rem] mt-6 md:mt-12 leading-loose">
                   Whether it is one time, or on a regular basis, every bit
                   helps!
                 </p>
