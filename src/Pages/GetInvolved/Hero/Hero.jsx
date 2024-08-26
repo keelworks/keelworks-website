@@ -15,7 +15,7 @@ const Hero = () => {
               <span className="text-primary500 ">ANYTHING</span>{" "}
             </p>
           </div>
-          <div className=" text-[1rem] md:text-[28px] text-[#646464] md:text-center leading-relaxed my-8 md:my-[3.5rem] lg:my-8">
+          <div className=" text-[1rem] md:text-[1.75rem] text-[#646464] md:text-center leading-relaxed my-8 md:my-[3.5rem] lg:my-8">
             <p>
               KeelWorks wants to help everyone to sustaining employment. We are
               KeelWorks! <br />
@@ -30,9 +30,9 @@ const Hero = () => {
               <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
                 01
               </h1>
-              <p className="text-[16px] text-[#646464]">Making a donation</p>
+              <p className="text-[1rem] text-[#646464]">Making a donation</p>
               <div className="flex justify-center md:justify-start items-center">
-                <span className="text-primary500 font-bold text-[14px]">
+                <span className="text-primary500 font-bold text-[0.875rem]">
                   More Details
                 </span>
                 <img src={greaterImg} alt="" className="mx-2 w-2 xl:h-2" />
@@ -43,10 +43,10 @@ const Hero = () => {
               <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
                 02
               </h1>
-              <p className="text-[16px] text-[#646464]">Volunteer</p>
-              <p className="text-[16px] text-[#646464]">(see below)</p>
+              <p className="text-[1rem] text-[#646464]">Volunteer</p>
+              <p className="text-[1rem] text-[#646464]">(see below)</p>
               <div className="flex justify-center md:justify-start items-center">
-                <span className="text-primary500 font-bold text-[14px]">
+                <span className="text-primary500 font-bold text-[0.875rem]">
                   More Details
                 </span>
                 <img src={greaterImg} alt="" className="mx-2 w-2 h-2" />
@@ -57,10 +57,10 @@ const Hero = () => {
               <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
                 03
               </h1>
-              <p className="text-[16px] text-[#646464]">
+              <p className="text-[1rem] text-[#646464]">
                 Encourage others to donate{" "}
               </p>
-              <p className="text-[16px] text-[#646464]">or volunteer</p>
+              <p className="text-[1rem] text-[#646464]">or volunteer</p>
             </div>
           </div>
         </div>
