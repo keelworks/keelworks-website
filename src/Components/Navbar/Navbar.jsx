@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import logo from "../../assets/images/KeelWorks-Logo.png";
+import logo from "../../assets/images/KeelWorks-logo-color.png";
+// *** Black & White Logo ***
+// import logo from "../../assets/images/KeelWorks-Logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -31,8 +33,8 @@ const Navbar = () => {
       <div className="relative w-full max-w-[3000px] flex justify-between mx-4 md:mx-8">
         <a href="/">
           <div className="flex flex-col md:flex-row items-center text-white font-bold">
-            <img src={logo} alt="logo" className="h-10 md:h-16" />
-            <h1 className="text-[1rem] md:text-2xl md:ps-4">KeelWorks</h1>
+            <img src={logo} alt="logo" className="h-12 md:h-16" />
+            {/* <h1 className="text-[1rem] md:text-2xl md:ps-4">KeelWorks</h1> */}
           </div>
         </a>
         <div className="flex items-center gap-6">
