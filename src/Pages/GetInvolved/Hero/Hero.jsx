@@ -9,7 +9,7 @@ const Hero = () => {
               Get Involved
             </p>
           </div>
-          <div className="text-[#646464] font-bold text-[2.62rem] leading-[2.62rem] md:text-[2.5rem] md:mt-10 md:text-center">
+          <div className="text-[#646464] font-bold text-[2.62rem] leading-[3.5rem] md:text-[2.5rem] md:mt-10 md:text-center">
             <p className="">
               Together, WE can do{" "}
               <span className="text-primary500 ">ANYTHING</span>{" "}
