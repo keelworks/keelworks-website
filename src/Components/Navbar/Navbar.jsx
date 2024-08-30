@@ -69,7 +69,7 @@ const Navbar = () => {
         {isOpen ? (
           <div
             ref={menuRef}
-            className="absolute top-[4.5rem] right-[-2rem] lg:right-0 bg-black p-5 rounded-bl-[17px] md:rounded-b-[17px] shadow-[5px_2px_5px_5px_rgba(0,0,0,0.3)]"
+            className="absolute top-[4rem] right-[-2rem] lg:right-0 bg-black p-5 rounded-bl-[17px] md:rounded-b-[17px] shadow-[5px_2px_5px_5px_rgba(0,0,0,0.3)]"
           >
             <ul className="flex flex-col mt-3 gap-5">
               {/* <li className="md:hidden">
