@@ -24,8 +24,8 @@ const KeelMaster = () => {
           </div>
 
           <div className="h-auto mb-10 mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
-            <div className="text-[18px] h-auto">
-              <p className="leading-loose">
+            <div className="text-[1.125rem] h-auto">
+              <p className="leading-loose mt-8 md:mt-0">
                 Breaking the pattern of unemployment or underemployment is the
                 program goal for KeelMaster. This program recognizes that
                 continued failure is a certainty, unless informed intervention
@@ -42,7 +42,7 @@ const KeelMaster = () => {
               </p>
             </div>
             <div className="mt-[5rem] h-auto mb-[2.5rem]">
-              <div className="text-[#0B0A0A] font-bold text-[30px] md:text-[40px]">
+              <div className="text-[#0B0A0A] font-bold text-[1.875rem] md:text-[2.5rem]">
                 <h1>This program features three phases:</h1>
               </div>
               <div className="mt-[20px] md:mt-[60px]">
