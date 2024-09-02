@@ -31,7 +31,7 @@ const Hero = () => {
                 01
               </h1>
               <p className="text-[1rem] text-[#646464]">Making a donation</p>
-              <div className="flex justify-center md:justify-start items-center">
+              <div className="flex justify-start items-center">
                 <span className="text-primary500 font-bold text-[0.875rem]">
                   More Details
                 </span>
@@ -45,7 +45,7 @@ const Hero = () => {
               </h1>
               <p className="text-[1rem] text-[#646464]">Volunteer</p>
               <p className="text-[1rem] text-[#646464]">(see below)</p>
-              <div className="flex justify-center md:justify-start items-center">
+              <div className="flex justify-start items-center">
                 <span className="text-primary500 font-bold text-[0.875rem]">
                   More Details
                 </span>
