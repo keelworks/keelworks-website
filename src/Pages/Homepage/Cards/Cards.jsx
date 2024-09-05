@@ -61,7 +61,7 @@ const Cards = () => {
                   /> */}
                 </div>
               </div>
-              <div className="text-[1.5rem] custombp:text-[1.2rem]/[2rem] custombp2:text-[1.5rem]/[2.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[3rem] [@media(min-height:800px)]:leading-[3rem]">
+              <div className="text-[1.5rem] custombp:text-[1.2rem]/[2rem] custombp2:text-[1.5rem]/[2.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[2rem] [@media(min-height:800px)]:leading-[3rem]">
                 A three-phase approach to support the most challenged unemployed
                 and under-employed individuals mitigating barriers to
                 sustainable employment.
