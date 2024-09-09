@@ -5,7 +5,7 @@ import { useState } from "react";
 const KeelBot = () => {
   const [chatOpen, setChatOpen] = useState(false);
   return (
-    <div className="fixed z-50 bottom-[6rem] right-[2rem]">
+    <div className={`fixed z-50 bottom-[6rem] right-[2rem]`}>
       <div
         className={`bg-primary500 hover:bg-primary300 transition-all duration-100 ease-linear text-white font-[800] cursor-pointer ${
           chatOpen
@@ -34,11 +34,17 @@ const KeelBot = () => {
         ></div>
         <div className="absolute w-full bottom-0 flex justify-between gap-2 p-4">
           <input
-            className="px-4 py-[0.4rem] w-full bg-gray-200 text-[0.9rem] rounded-lg"
+            className={`px-4 py-[0.4rem] w-full bg-gray-200 focus:outline-grey400 onBlur:outline-grey400 text-[0.9rem] rounded-lg transition-all duration-300 ease-in-out${
+              chatOpen ? "w-full" : "w-0 hidden"
+            }`}
             type="text"
             placeholder="Type message"
           />
-          <button className="bg-primary500 px-4 py-[0.4rem] rounded-full text-[0.9rem] font-bold">
+          <button
+            className={`bg-primary500 hover:bg-primary300 transition-all duration-300 ease-in-out px-4 py-[0.4rem] rounded-full text-[0.9rem] font-bold ${
+              chatOpen ? "" : "hidden"
+            }`}
+          >
             Send
           </button>
         </div>
