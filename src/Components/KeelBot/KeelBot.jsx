@@ -26,13 +26,22 @@ const KeelBot = () => {
           <IoIosArrowDown className="text-[1.5rem]" />
         )}
       </div>
-      <div>
+      <div className="relative">
         <div
           className={`transition-all duration-200 ease-in-out rounded-b-[30px] ${
             chatOpen ? "h-[300px] w-[350px] bg-[#FEFEFE]" : "h-0 w-[350px]"
           }`}
         ></div>
-        <div></div>
+        <div className="absolute w-full bottom-0 flex justify-between gap-2 p-4">
+          <input
+            className="px-4 py-[0.4rem] w-full bg-gray-200 text-[0.9rem] rounded-lg"
+            type="text"
+            placeholder="Type message"
+          />
+          <button className="bg-primary500 px-4 py-[0.4rem] rounded-full text-[0.9rem] font-bold">
+            Send
+          </button>
+        </div>
       </div>
     </div>
   );
