@@ -5,7 +5,7 @@ const BackToHome = () => {
   const navigate = useNavigate();
   return (
     <button
-      className="fixed z-50 bottom-[2rem] md:bottom-1/4 right-[1rem] md:right-[4rem] rounded-full bg-primary500 hover:bg-primary300 transition duration-[300ms] ease-linear p-4 md:p-4 text-[#0B0A0A] font-semibold text-[14px] flex items-end justify-end mb-10 border-2 border-white"
+      className="fixed z-10 bottom-[2rem] md:bottom-1/4 right-[1rem] md:right-[2rem] rounded-full bg-primary500 hover:bg-primary300 transition duration-[300ms] ease-linear p-4 md:p-4 text-[#0B0A0A] font-semibold text-[14px] flex items-end justify-end mb-10 border-2 border-white"
       onClick={() => navigate("/home")}
       // style={{ writingMode: "vertical-rl" }}
     >
