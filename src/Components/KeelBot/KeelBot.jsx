@@ -1,9 +1,10 @@
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import logoBW from "../../assets/images/KeelWorks-Logo.png";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const KeelBot = () => {
   const [chatOpen, setChatOpen] = useState(false);
+  const chatInputRef = useRef(null);
   return (
     <div className={`fixed z-50 bottom-[6rem] right-[2rem]`}>
       <div
@@ -34,7 +35,8 @@ const KeelBot = () => {
         ></div>
         <div className="absolute w-full bottom-0 flex justify-between gap-2 p-4">
           <input
-            className={`px-4 py-[0.4rem] w-full bg-gray-200 focus:outline-grey400 onBlur:outline-grey400 text-[0.9rem] rounded-lg transition-all duration-300 ease-in-out${
+            ref={chatInputRef}
+            className={`px-4 py-[0.4rem] w-full bg-gray-200 focus:outline-grey400  text-[0.9rem] rounded-lg transition-all duration-300 ease-in-out${
               chatOpen ? "w-full" : "w-0 hidden"
             }`}
             type="text"
@@ -44,6 +46,10 @@ const KeelBot = () => {
             className={`bg-primary500 hover:bg-primary300 transition-all duration-300 ease-in-out px-4 py-[0.4rem] rounded-full text-[0.9rem] font-bold ${
               chatOpen ? "" : "hidden"
             }`}
+            onClick={() => {
+              const chatBotInput = chatInputRef.current.value;
+              console.log(chatBotInput);
+            }}
           >
             Send
           </button>
