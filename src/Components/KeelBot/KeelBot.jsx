@@ -1,16 +1,18 @@
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import logoBW from "../../assets/images/KeelWorks-Logo.png";
 import { useState, useRef } from "react";
+let userChats = [];
 
 const KeelBot = () => {
   const [chatOpen, setChatOpen] = useState(false);
   const chatInputRef = useRef(null);
   return (
     <div className={`fixed z-50 bottom-[6rem] right-[2rem]`}>
+      {/* ***** Header ****** */}
       <div
         className={`bg-primary500 hover:bg-primary300 transition-all duration-100 ease-linear text-white font-[800] cursor-pointer ${
           chatOpen
-            ? "w-[350px] h-[60px] fixed z-10 bottom-[23rem] right-[2rem] px-5 rounded-t-[2rem] bg-primary500 hover:bg-primary300 transition duration-100 ease-linear  text-white font-[800] flex justify-between items-center gap-2"
+            ? "w-[350px] h-[60px] px-5 rounded-t-[2rem] bg-primary500 hover:bg-primary300 transition duration-100 ease-linear  text-white font-[800] flex justify-between items-center gap-2"
             : "w-[200px] h-[60px] fixed z-10 bottom-[6rem] right-[2rem] rounded-full bg-primary500 hover:bg-primary300 transition duration-100 ease-linear  text-white font-[800] flex justify-center items-center gap-2"
         }`}
         onClick={() => {
@@ -27,13 +29,30 @@ const KeelBot = () => {
           <IoIosArrowDown className="text-[1.5rem]" />
         )}
       </div>
-      <div className="relative">
+      <div className={` ${chatOpen ? "relative" : "hidden"}`}>
+        {/* ****** Body ****** */}
         <div
-          className={`transition-all duration-200 ease-in-out rounded-b-[30px] ${
-            chatOpen ? "h-[300px] w-[350px] bg-[#FEFEFE]" : "h-0 w-[350px]"
+          className={`flex flex-col transition-all duration-200 ease-in-out overflow-y-scroll overflow-x-hidden ${
+            chatOpen ? "h-[250px] w-[350px] bg-[#FEFEFE]" : "h-0 w-[350px]"
           }`}
-        ></div>
-        <div className="absolute w-full bottom-0 flex justify-between gap-2 p-4">
+        >
+          {userChats.length > 0 ? (
+            userChats.map((chat) => {
+              return (
+                <p className="self-start break-all bg-grey200 mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600">
+                  {chat}
+                </p>
+              );
+            })
+          ) : (
+            <p className="self-start bg-grey300 mt-[2rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600">
+              Hello and welcome to KeelWorks Foundations! I'm Thomas, here to
+              guide you. How can I assist you today? You can:
+            </p>
+          )}
+        </div>
+        {/* ****** Bottom ****** */}
+        <div className="w-full flex justify-between bg-white rounded-b-[30px] gap-2 p-4">
           <input
             ref={chatInputRef}
             className={`px-4 py-[0.4rem] w-full bg-gray-200 focus:outline-grey400  text-[0.9rem] rounded-lg transition-all duration-300 ease-in-out${
@@ -48,7 +67,7 @@ const KeelBot = () => {
             }`}
             onClick={() => {
               const chatBotInput = chatInputRef.current.value;
-              console.log(chatBotInput);
+              userChats.push(chatBotInput);
             }}
           >
             Send
