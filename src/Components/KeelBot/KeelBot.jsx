@@ -1,7 +1,13 @@
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import logoBW from "../../assets/images/KeelWorks-Logo.png";
 import { useState, useRef } from "react";
-let userChats = [];
+let userChats = [
+  {
+    question: "How can I donate?",
+    answer:
+      "On the homepage you can find the donate button in multiple different sections.",
+  },
+];
 
 const KeelBot = () => {
   const [chatOpen, setChatOpen] = useState(false);
@@ -37,15 +43,20 @@ const KeelBot = () => {
           }`}
         >
           {userChats.length > 0 ? (
-            userChats.map((chat) => {
+            userChats.map(({ question, answer }) => {
               return (
-                <p className="self-start break-all bg-grey200 mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600">
-                  {chat}
-                </p>
+                <div>
+                  <p className="self-start break-words mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600 bg-white drop-shadow-md">
+                    {question}
+                  </p>
+                  <p className="self-start break-words bg-grey200 mt-[1rem] mx-6 py-2 px-2 rounded-br-lg rounded-t-lg text-[0.85rem] text-gray-600">
+                    {answer}
+                  </p>
+                </div>
               );
             })
           ) : (
-            <p className="self-start bg-grey300 mt-[2rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600">
+            <p className="self-start bg-grey200 mt-[2rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600">
               Hello and welcome to KeelWorks Foundations! I'm Thomas, here to
               guide you. How can I assist you today? You can:
             </p>
