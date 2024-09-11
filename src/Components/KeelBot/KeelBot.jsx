@@ -2,11 +2,11 @@ import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import logoBW from "../../assets/images/KeelWorks-Logo.png";
 import { useState, useRef } from "react";
 let userChats = [
-  {
-    question: "How can I donate?",
-    answer:
-      "On the homepage you can find the donate button in multiple different sections.",
-  },
+  // {
+  //   question: "How can I donate?",
+  //   answer:
+  //     "On the homepage you can find the donate button in multiple different sections.",
+  // },
 ];
 
 const KeelBot = () => {
@@ -39,7 +39,7 @@ const KeelBot = () => {
         {/* ****** Body ****** */}
         <div
           className={`flex flex-col transition-all duration-200 ease-in-out overflow-y-scroll overflow-x-hidden ${
-            chatOpen ? "h-[250px] w-[350px] bg-[#FEFEFE]" : "h-0 w-[350px]"
+            chatOpen ? "h-[300px] w-[350px] bg-[#FEFEFE]" : "h-0 w-[350px]"
           }`}
         >
           {userChats.length > 0 ? (
@@ -56,10 +56,36 @@ const KeelBot = () => {
               );
             })
           ) : (
-            <p className="self-start bg-grey200 mt-[2rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600">
-              Hello and welcome to KeelWorks Foundations! I'm Thomas, here to
-              guide you. How can I assist you today? You can:
-            </p>
+            <div>
+              <p className="self-start break-words bg-grey200 mt-[1rem] mx-6 py-2 px-2 rounded-br-lg rounded-t-lg text-[0.85rem] text-gray-600">
+                Hello and welcome to KeelWorks Foundations! I'm Thomas, here to
+                guide you. How can I assist you today? You can:
+              </p>
+              <p
+                className="self-start break-words mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600 bg-white drop-shadow-md cursor-pointer hover:bg-grey200"
+                onClick={() => {
+                  console.log("do something");
+                }}
+              >
+                Learn about KeelMaster, KeelWings, or KeelMate.
+              </p>
+              <p
+                className="self-start break-words mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600 bg-white drop-shadow-md cursor-pointer hover:bg-grey200"
+                onClick={() => {
+                  console.log("do something");
+                }}
+              >
+                How to become a donor?
+              </p>
+              <p
+                className="self-start break-words mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600 bg-white drop-shadow-md cursor-pointer hover:bg-grey200"
+                onClick={() => {
+                  console.log("do something");
+                }}
+              >
+                How to join us as a volunteer?
+              </p>
+            </div>
           )}
         </div>
         {/* ****** Bottom ****** */}
