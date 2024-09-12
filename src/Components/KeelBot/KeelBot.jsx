@@ -18,8 +18,8 @@ const KeelBot = () => {
       <div
         className={`bg-primary500 hover:bg-primary300 transition-all duration-100 ease-linear text-white font-[800] cursor-pointer ${
           chatOpen
-            ? "w-[350px] h-[60px] px-5 rounded-t-[2rem] bg-primary500 hover:bg-primary300 transition duration-100 ease-linear  text-white font-[800] flex justify-between items-center gap-2"
-            : "w-[200px] h-[60px] fixed z-10 bottom-[6rem] right-[2rem] rounded-full bg-primary500 hover:bg-primary300 transition duration-100 ease-linear  text-white font-[800] flex justify-center items-center gap-2"
+            ? "w-[350px] h-[60px] px-5 rounded-t-[2rem] bg-primary500 hover:bg-primary300 transition-all duration-100 ease-linear  text-white font-[800] flex justify-between items-center gap-2"
+            : "w-[200px] h-[60px] fixed z-10 bottom-[6rem] right-[2rem] rounded-full bg-primary500 hover:bg-primary300 transition-all duration-300 ease-linear  text-white font-[800] flex justify-center items-center gap-2"
         }`}
         onClick={() => {
           setChatOpen(!chatOpen);
@@ -38,7 +38,7 @@ const KeelBot = () => {
       <div className={` ${chatOpen ? "relative" : "hidden"}`}>
         {/* ****** Body ****** */}
         <div
-          className={`flex flex-col transition-all duration-200 ease-in-out overflow-y-scroll overflow-x-hidden ${
+          className={`flex flex-col transition-all duration-100 ease-linear overflow-y-scroll overflow-x-hidden ${
             chatOpen ? "h-[300px] w-[350px] bg-[#FEFEFE]" : "h-0 w-[350px]"
           }`}
         >
@@ -92,14 +92,14 @@ const KeelBot = () => {
         <div className="w-full flex justify-between bg-white rounded-b-[30px] gap-2 p-4">
           <input
             ref={chatInputRef}
-            className={`px-4 py-[0.4rem] w-full bg-gray-200 focus:outline-grey400  text-[0.9rem] rounded-lg transition-all duration-300 ease-in-out${
+            className={`px-4 py-[0.4rem] w-full bg-gray-200 focus:outline-grey400  text-[0.9rem] rounded-lg transition-all duration-100 ease-linear${
               chatOpen ? "w-full" : "w-0 hidden"
             }`}
             type="text"
             placeholder="Type message"
           />
           <button
-            className={`bg-primary500 hover:bg-primary300 transition-all duration-300 ease-in-out px-4 py-[0.4rem] rounded-full text-[0.9rem] font-bold ${
+            className={`bg-primary500 hover:bg-primary300 transition-all duration-100 ease-linear px-4 py-[0.4rem] rounded-full text-[0.9rem] font-bold ${
               chatOpen ? "" : "hidden"
             }`}
             onClick={() => {
