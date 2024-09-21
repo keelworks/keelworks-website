@@ -1,13 +1,6 @@
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import logoBW from "../../assets/images/KeelWorks-Logo.png";
 import { useState, useRef } from "react";
-let userChats = [
-  // {
-  //   question: "How can I donate?",
-  //   answer:
-  //     "On the homepage you can find the donate button in multiple different sections.",
-  // },
-];
 
 const KeelBot = () => {
   const [chatOpen, setChatOpen] = useState(false);
