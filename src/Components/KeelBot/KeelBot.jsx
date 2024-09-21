@@ -17,6 +17,7 @@ const KeelBot = () => {
       message:
         "Hello and welcome to KeelWorks Foundations! I'm Thomas, here to guide you. How can I assist you today? You can:",
       sender: "KeelBot",
+      direction: "outgoing",
     },
   ]);
   const chatInputRef = useRef(null);
@@ -25,6 +26,7 @@ const KeelBot = () => {
     const newUserMessage = {
       message: userMessage,
       sender: "user",
+      direction: "outgoing",
     };
     const updatedMessages = [...messages, newUserMessage];
     setMessages(updatedMessages);
@@ -64,15 +66,15 @@ const KeelBot = () => {
             chatOpen ? "h-[300px] w-[350px] bg-[#FEFEFE]" : "h-0 w-[350px]"
           }`}
         >
-          {userChats.length > 0 ? (
-            userChats.map(({ question, answer }) => {
+          {messages.length > 0 ? (
+            messages.map(({ message }, index) => {
               return (
-                <div>
+                <div key={index}>
                   <p className="self-start break-words mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600 bg-white drop-shadow-md">
-                    {question}
+                    {message}
                   </p>
                   <p className="self-start break-words bg-grey200 mt-[1rem] mx-6 py-2 px-2 rounded-br-lg rounded-t-lg text-[0.85rem] text-gray-600">
-                    {answer}
+                    {message}
                   </p>
                 </div>
               );
