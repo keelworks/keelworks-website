@@ -22,8 +22,16 @@ const KeelBot = () => {
   const chatInputRef = useRef(null);
 
   const handleSendUserChat = (userMessage) => {
+    const newUserMessage = {
+      message: userMessage,
+      sender: "user",
+    };
+    const updatedMessages = [...messages, newUserMessage];
+    setMessages(updatedMessages);
+
     // sending user's chat to the KeelBot API
-    console.log(userMessage);
+    // messages won't be updated here rightaway
+    console.log(messages);
   };
 
   return (
@@ -117,7 +125,7 @@ const KeelBot = () => {
             }`}
             onClick={() => {
               const chatBotInput = chatInputRef.current.value;
-              userChats.push(chatBotInput);
+              handleSendUserChat(chatBotInput);
             }}
           >
             Send
