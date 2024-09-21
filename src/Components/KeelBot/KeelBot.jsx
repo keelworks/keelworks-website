@@ -11,7 +11,21 @@ let userChats = [
 
 const KeelBot = () => {
   const [chatOpen, setChatOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [messages, setMessages] = useState([
+    {
+      message:
+        "Hello and welcome to KeelWorks Foundations! I'm Thomas, here to guide you. How can I assist you today? You can:",
+      sender: "KeelBot",
+    },
+  ]);
   const chatInputRef = useRef(null);
+
+  const handleSendUserChat = (userMessage) => {
+    // sending user's chat to the KeelBot API
+    console.log(userMessage);
+  };
+
   return (
     <div className={`fixed z-50 bottom-[6rem] right-[2rem]`}>
       {/* ***** Header ****** */}
@@ -58,8 +72,7 @@ const KeelBot = () => {
           ) : (
             <div>
               <p className="self-start break-words bg-grey200 mt-[1rem] mx-6 py-2 px-2 rounded-br-lg rounded-t-lg text-[0.85rem] text-gray-600">
-                Hello and welcome to KeelWorks Foundations! I'm Thomas, here to
-                guide you. How can I assist you today? You can:
+                {messages[0].message}
               </p>
               <p
                 className="self-start break-words mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600 bg-white drop-shadow-md cursor-pointer hover:bg-grey200"
