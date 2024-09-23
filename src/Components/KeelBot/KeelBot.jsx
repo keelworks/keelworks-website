@@ -1,10 +1,11 @@
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import logoBW from "../../assets/images/KeelWorks-Logo.png";
 import { useState, useRef } from "react";
+import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
 
 const KeelBot = () => {
   const [chatOpen, setChatOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [messages, setMessages] = useState([
     {
       message:
@@ -59,16 +60,16 @@ const KeelBot = () => {
             chatOpen ? "h-[300px] w-[350px] bg-[#FEFEFE]" : "h-0 w-[350px]"
           }`}
         >
-          {messages.length > 0 ? (
+          {messages.length > 1 ? (
             messages.map(({ message }, index) => {
               return (
                 <div key={index}>
                   <p className="self-start break-words mt-[1rem] mx-6 py-2 px-2 rounded-lg text-[0.85rem] text-gray-600 bg-white drop-shadow-md">
                     {message}
                   </p>
-                  <p className="self-start break-words bg-grey200 mt-[1rem] mx-6 py-2 px-2 rounded-br-lg rounded-t-lg text-[0.85rem] text-gray-600">
+                  {/* <p className="self-start break-words bg-grey200 mt-[1rem] mx-6 py-2 px-2 rounded-br-lg rounded-t-lg text-[0.85rem] text-gray-600">
                     {message}
-                  </p>
+                  </p> */}
                 </div>
               );
             })
@@ -103,6 +104,7 @@ const KeelBot = () => {
               </p>
             </div>
           )}
+          {loading ? <LoadingSpinner /> : ""}
         </div>
         {/* ****** Bottom ****** */}
         <div className="w-full flex justify-between bg-white rounded-b-[30px] gap-2 p-4">
