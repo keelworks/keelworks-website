@@ -5,7 +5,7 @@ import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
 
 const KeelBot = () => {
   const [chatOpen, setChatOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([
     {
       message:
