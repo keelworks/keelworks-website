@@ -118,7 +118,7 @@ const Footer = () => {
             <Link to="/contactus" className="hover:text-gray-500">
               Contact Us
             </Link>
-            <Link to="/comingsoon" className="hover:text-gray-500">
+            <Link to="/non_dis_policy" className="hover:text-gray-500">
               Non-discrimination Policy
             </Link>
           </div>
