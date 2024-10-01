@@ -118,6 +118,9 @@ const Footer = () => {
             <Link to="/contactus" className="hover:text-gray-500">
               Contact Us
             </Link>
+            <Link to="/comingsoon" className="hover:text-gray-500">
+              Non-discrimination Policy
+            </Link>
           </div>
 
           <div className="md:hidden h-full flex flex-col justify-end md:place-self-center md:order-2">
