@@ -5,10 +5,12 @@ export const Policy = () => {
         <div className="mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
           <div className="w-full flex justify-start items-start gap-[10rem]">
             <div className="text-left">
-              <p className="text-[1rem] text-gray-600">Terms of Service</p>
+              <p className="text-[1.3rem] font-bold text-gray-600">
+                Terms of Service
+              </p>
             </div>
             <div>
-              <h2 className="text-3xl md:text-[3.5rem] lg:text-5xl text-left">
+              <h2 className="text-3xl md:text-[3.5rem] lg:text-5xl font-bold text-left">
                 Non-discrimination Policy Page
               </h2>
             </div>
