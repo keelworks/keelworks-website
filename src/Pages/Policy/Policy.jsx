@@ -4,9 +4,16 @@ export const Policy = () => {
       <div className="w-screen max-w-[3000px] mt-[5rem] md:mt-[8rem] flex justify-start items-center">
         <div className="mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
           <div className="w-full flex justify-start items-start gap-[10rem]">
-            <div className="text-left">
-              <p className="text-[1.3rem] font-bold text-gray-600">
+            <div className="text-left flex flex-col gap-2">
+              <p className="text-[1.2rem] font-bold text-gray-600">
                 Terms of Service
+              </p>
+              <p className="text-[1.2rem] font-bold text-black underline">
+                Non-discrimination Policy
+              </p>
+              <p className="text-[1.2rem] text-black">Privacy Policy</p>
+              <p className="text-[1.2rem] text-black">
+                Accessibility Statements
               </p>
             </div>
             <div>
