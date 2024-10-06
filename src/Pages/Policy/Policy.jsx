@@ -1,11 +1,11 @@
 export const Policy = () => {
   return (
-    <div className="w-screen h-screen bg-white flex justify-center items-start">
-      <div className="w-screen max-w-[3000px] mt-[5rem] md:mt-[8rem] flex justify-start items-center">
+    <div className="w-screen bg-white flex justify-center items-start">
+      <div className="w-screen max-w-[3000px] my-[5rem] md:mt-[8rem] flex justify-start items-center">
         <div className="mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
-          <div className="w-full flex justify-start items-start gap-[10rem] mt-[4rem]">
-            <div className="text-left flex flex-col gap-2">
-              <p className="text-[1.2rem] font-bold text-gray-600">
+          <div className="w-full flex justify-start items-start gap-[6rem] mt-[4rem]">
+            <div className="w-full text-left flex flex-col gap-2">
+              <p className="text-[1.2rem] font-bold text-gray-500">
                 Terms of Service
               </p>
               <p className="text-[1.2rem] font-bold text-black underline">
@@ -37,7 +37,7 @@ export const Policy = () => {
                 Protected Characteristics: We do not discriminate on the basis
                 of:
               </p>
-              <ul className="list-disc pl-8">
+              <ul className="list-disc pl-8 my-4">
                 <li>Age</li>
                 <li>Race</li>
                 <li>Creed</li>
