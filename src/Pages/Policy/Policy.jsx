@@ -31,8 +31,34 @@ export const Policy = () => {
                 dedication to fostering an organization and community that is
                 free from discrimination and harassment. Scope: This policy
                 applies to all KeelWorks Foundation employees, volunteers,
-                interns, contractors, vendors, and third-party partners.{" "}
+                interns, contractors, vendors, and third-party partners.
               </p>
+              <p className="text-[1.2rem] text-black mt-8">
+                Protected Characteristics: We do not discriminate on the basis
+                of:
+              </p>
+              <ul className="list-disc pl-8">
+                <li>Age</li>
+                <li>Race</li>
+                <li>Creed</li>
+                <li>Color</li>
+                <li>Religion</li>
+                <li>National origin</li>
+                <li>Ancestry</li>
+                <li>Disability</li>
+                <li>Veteran status</li>
+                <li>Sexual orientation</li>
+                <li>Gender identity or expression</li>
+                <li>Genetic information</li>
+                <li>Marital status</li>
+                <li>Citizenship status</li>
+                <li>Pregnancy or family status</li>
+                <li>Gender reassignment</li>
+                <li>
+                  Any other basis protected by US Federal Government and the
+                  State of Washington
+                </li>
+              </ul>
             </div>
           </div>
         </div>
