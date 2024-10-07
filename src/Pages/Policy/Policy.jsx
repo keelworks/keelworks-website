@@ -59,6 +59,18 @@ export const Policy = () => {
                   State of Washington
                 </li>
               </ul>
+              <p className="text-[1.2rem] text-black mt-8">
+                Definition of Discrimination: Discrimination includes, but is
+                not limited to, harassment, bias, or unequal treatment based on
+                any protected characteristic.
+              </p>
+              <p className="text-[1.2rem] text-black">
+                <span className="block">Reporting:</span>such incidents allows
+                the organization to address and rectify inappropriate behavior
+                promptly, preventing further harm and reinforcing our commitment
+                to diversity and equality. Every report contributes to creating
+                a respectful organization where everyone feels valued.
+              </p>
             </div>
           </div>
         </div>
