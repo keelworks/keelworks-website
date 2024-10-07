@@ -65,12 +65,25 @@ export const Policy = () => {
                 any protected characteristic.
               </p>
               <p className="text-[1.2rem] text-black">
-                <span className="block">Reporting:</span>such incidents allows
-                the organization to address and rectify inappropriate behavior
-                promptly, preventing further harm and reinforcing our commitment
-                to diversity and equality. Every report contributes to creating
-                a respectful organization where everyone feels valued.
+                <span className="block">Reporting:</span>It is crucial to report
+                any instances of discrimination to ensure a safe and inclusive
+                environment for all employees, volunteers and all other
+                individuals associated with KeelWorks. Reporting such incidents
+                allows the organization to address and rectify inappropriate
+                behavior promptly, preventing further harm and reinforcing our
+                commitment to diversity and equality. Every report contributes
+                to creating a respectful organization where everyone feels
+                valued.
               </p>
+              <p className="text-[1.2rem] text-black mt-8">
+                Any individual who believes they have experienced or witnessed
+                discrimination should report the incident to:
+              </p>
+              <ul className="list-disc pl-8 my-4">
+                <li>The Director of HR</li>
+                <li>Any member of the HR team</li>
+                <li>The anonymous reporting hotline +1 360 207 4450</li>
+              </ul>
             </div>
           </div>
         </div>
