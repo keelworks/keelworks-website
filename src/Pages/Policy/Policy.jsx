@@ -22,7 +22,7 @@ export const Policy = () => {
               </h2>
               <p className="text-[1.2rem] text-black mt-8">
                 Effective Date:
-                <span className="text-gray-600 font-bold">July 10, 2024</span>
+                <span className="text-gray-500 font-bold">July 10, 2024</span>
               </p>
               <p className="text-[1.2rem] text-black mt-8">
                 Purpose: KeelWorks Foundation is committed to creating an
