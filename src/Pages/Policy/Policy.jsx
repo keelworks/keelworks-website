@@ -85,7 +85,10 @@ export const Policy = () => {
               <ul className="list-disc pl-8 my-4">
                 <li>The Director of HR</li>
                 <li>Any member of the HR team</li>
-                <li>The anonymous reporting hotline +1 360 207 4450</li>
+                <li>
+                  The anonymous reporting hotline{" "}
+                  <span className="font-medium italic">+1 360 207 4450</span>
+                </li>
               </ul>
               <p className="text-[1.2rem] text-black mt-8">
                 All reports will be treated confidentially and investigated
