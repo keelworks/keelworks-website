@@ -8,7 +8,7 @@ const SiteLayout = () => {
   return (
     <div>
       <Navbar />
-      <KeelBot />
+      {/* <KeelBot /> */}
       <ScrollRestoration />
       <Outlet />
       <Footer />
