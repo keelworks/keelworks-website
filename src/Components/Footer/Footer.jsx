@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,6 +11,40 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+
+    const userInput = {
+      email,
+    };
+
+    const data = new FormData();
+    data.append("Email", userInput.email);
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbyjny6A1XeEKYTS3M0yNMLX97hO1SRkMudZUddPKIDnPMCAh5wE6D7kxZlo9FyD3NPspQ/exec",
+      {
+        method: "POST",
+        body: data,
+        muteHttpExceptions: true,
+      }
+    );
+
+    if (response.ok) {
+      setEmail("");
+      alert("Your request was sent successfully! Thank you.");
+    } else {
+      alert("There was an error sending your message.");
+    }
+
+    setIsSubmitting(false);
+  };
+
   return (
     <footer className="bg-black text-white grid grid-cols-1 place-items-center">
       <div className="w-full max-w-[3000px]">
@@ -16,12 +52,37 @@ const Footer = () => {
           <div className="h-full w-full flex flex-col justify-start md:place-self-start gap-5">
             <div>
               <h1 className="mb-2 text-xl font-semibold">Let's Connect!</h1>
-              <a
+              <p className="mt-3">Get inspiring stories in your inbox</p>
+              <form className="space-y-4 mt-2" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="col-span-2">
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Email address"
+                      className="w-full px-3 py-3 text-[#101828] font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </div>
+                  <div className="flex justify-start">
+                    <button
+                      className="w-[156px] h-[47px] text-[#101828] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] font-semibold"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Subscribe"}
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              {/* <a
                 href="mailto:info@keelworks.com"
                 className="hover:text-gray-500 text-xl italic"
               >
                 info@keelworks.com
-              </a>
+              </a> */}
               <p className="text-[0.8rem] mt-3">KeelWorks Foundation © 2024.</p>
               <p className="text-[0.8rem]">All rights reserved.</p>
               <p className="text-[0.8rem]">
@@ -29,7 +90,8 @@ const Footer = () => {
                 80-0325606).
               </p>
             </div>
-            <div className="">
+
+            {/* <div className="">
               <button
                 className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[#101828] font-semibold"
                 onClick={() => {
@@ -41,7 +103,8 @@ const Footer = () => {
               >
                 Donate
               </button>
-            </div>
+            </div> */}
+
             <div className="hidden h-full md:flex items-end md:order-2 md:mt-8">
               <div className="flex space-x-8">
                 <a
@@ -117,6 +180,9 @@ const Footer = () => {
             </Link>
             <Link to="/contactus" className="hover:text-gray-500">
               Contact Us
+            </Link>
+            <Link to="/non_dis_policy" className="hover:text-gray-500">
+              Non-discrimination Policy
             </Link>
           </div>
 

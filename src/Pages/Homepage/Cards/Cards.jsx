@@ -54,11 +54,6 @@ const Cards = () => {
                   <h1 className="text-primary500 font-bold text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl ml-4">
                     KeelMaster
                   </h1>
-                  {/* <img
-                    src={greaterImg}
-                    alt=""
-                    className="mx-8 lg:w-6 lg:h-6 md:w-6 md:h-6 h-5 w-5 sm:w-6 sm:h-6 xl:w-8 xl:h-8"
-                  /> */}
                 </div>
               </div>
               <div className="text-[1.5rem] custombp:text-[1.2rem]/[2rem] custombp2:text-[1.5rem]/[2.5rem] xl:text-[1.875rem] font-medium  m-4  opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:mt-2 sm:leading-relaxed md:leading-[2rem] [@media(min-height:800px)]:leading-[3rem]">

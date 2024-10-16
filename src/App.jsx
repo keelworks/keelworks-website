@@ -8,6 +8,7 @@ import OurSolutions from "./Pages/OurSolutions/OurSolutions";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import SuccessStories from "./Pages/SuccessStories/SuccessStories";
+import Policy from "./Pages/Policy/Policy";
 
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "success_stories",
         element: <SuccessStories />,
+      },
+      {
+        path: "non_dis_policy",
+        element: <Policy />,
       },
       {
         path: "comingsoon",
