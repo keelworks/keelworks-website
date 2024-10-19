@@ -4,6 +4,7 @@ import Volunteer3 from "../../../assets/images/About-Us/Romir-P.jpg";
 import Volunteer4 from "../../../assets/images/About-Us/Jing-M.jpg";
 import Volunteer5 from "../../../assets/images/About-Us/Ibrahima-D.jpg";
 import Volunteer6 from "../../../assets/images/About-Us/Aruna-G.jpg";
+import Volunteer7 from "../../../assets/images/About-Us/Priya-S.jpg";
 
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
@@ -109,13 +110,28 @@ const volunteers = [
     id: 7,
     name: "Priya Sharma",
     jobTitle: "Project Management Lead",
-    location: "San Carlos, USA",
+    location: "USA",
 
-    image: Volunteer6,
+    image: Volunteer7,
     content1:
-      "Priya Sharma is an experienced strategic program/product  delivery leader with a passion for continuous improvement, learning and growing people. Keelwork’s mission aligns with her personal purpose in life, which is at the intersection of education/service and community. With 25 years experience in energy, financial services and healthcare program delivery, the goal is to work on strategy and operations at KeelWorks targeting volunteer growth and organization expansion. Priya has been instrumental in reforming and streamlining the organizational structure, helping us identify and place leaders, and holding them accountable. She has made our programs more productive.",
+      "Priya Sharma is an experienced strategic program/product delivery leader with a passion for continuous improvement, learning and growing people. Keelwork’s mission aligns with her personal purpose in life, which is at the intersection of education/service and community. With 25 years experience in energy, financial services and healthcare program delivery, the goal is to work on strategy and operations at KeelWorks targeting volunteer growth and organization expansion. Priya has been instrumental in reforming and streamlining the organizational structure, helping us identify and place leaders, and holding them accountable. She has made our programs more productive.",
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/",
+      facebook: "https://www.facebook.com/",
+      instagram: "https://www.instagram.com/",
+    },
+  },
+  {
+    id: 8,
+    name: "Fredimanuel Seshie",
+    jobTitle: "Executive Assistant",
+    location: "USA",
+
+    image: Volunteer7,
+    content1:
+      "Fredi has consistently demonstrated exceptional dedication and tireless effort as an Executive Assistant for the KeelWorks Foundation. His significant contributions to operations management, hiring and recruitment processes, volunteer coordination, and human resources alongside of being a secretary for KeelWorks, greatly expanding the role of an Executive Assistant. Fredi's commitment to KeelWorks is evident through his unwavering support and willingness to assume additional responsibilities. He has frequently taken on tasks typically handled by the Executive Director and has adeptly represented the Executive Director in meetings when necessary. As a constant source of innovative ideas, Fredi continuously offers valuable suggestions for the improvement of KeelWorks. He actively seeks and shares feedback from members, ensuring that the foundation remains responsive to the needs and concerns of its community. As a board member, Fredi aims to provide the board with valuable insights into the inner workings of KeelWorks, share volunteer feedback and concerns, and serve as a consistent source of constructive feedback. His passion and dedication will be a tremendous asset to our board, helping to propel the KeelWorks Foundation forward.",
+    socialMediaLinks: {
+      linkedin: "https://www.linkedin.com/in/fredimanuel-s-612390301/",
       facebook: "https://www.facebook.com/",
       instagram: "https://www.instagram.com/",
     },
