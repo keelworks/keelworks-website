@@ -115,7 +115,7 @@ const volunteers = [
     content1:
       "Priya Sharma is an experienced strategic program/product  delivery leader with a passion for continuous improvement, learning and growing people. Keelwork’s mission aligns with her personal purpose in life, which is at the intersection of education/service and community. With 25 years experience in energy, financial services and healthcare program delivery, the goal is to work on strategy and operations at KeelWorks targeting volunteer growth and organization expansion. Priya has been instrumental in reforming and streamlining the organizational structure, helping us identify and place leaders, and holding them accountable. She has made our programs more productive.",
     socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/in/aruna-gairola-ghildiyal-8660543/",
+      linkedin: "https://www.linkedin.com/",
       facebook: "https://www.facebook.com/",
       instagram: "https://www.instagram.com/",
     },
