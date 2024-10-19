@@ -126,7 +126,7 @@ const volunteers = [
     id: 8,
     name: "Fredimanuel Seshie",
     jobTitle: "Executive Assistant",
-    location: "USA",
+    location: "Maryland, USA",
 
     image: Volunteer8,
     content1:
