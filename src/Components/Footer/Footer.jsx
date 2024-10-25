@@ -26,14 +26,11 @@ const Footer = () => {
     const data = new FormData();
     data.append("Email", userInput.email);
 
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbyjny6A1XeEKYTS3M0yNMLX97hO1SRkMudZUddPKIDnPMCAh5wE6D7kxZlo9FyD3NPspQ/exec",
-      {
-        method: "POST",
-        body: data,
-        muteHttpExceptions: true,
-      }
-    );
+    const response = await fetch("http://localhost:5500/api/v1/subscribe/", {
+      method: "POST",
+      body: data,
+      muteHttpExceptions: true,
+    });
 
     if (response.ok) {
       setEmail("");

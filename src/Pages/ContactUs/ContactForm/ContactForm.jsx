@@ -27,14 +27,11 @@ const ContactForm = () => {
     data.append("subject", userInput.subject);
     data.append("message", userInput.message);
 
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbyE3WnCqDFPWED7P3VUtKY6_unzSDPGS4X0kYGw4yBFKUnGGdP2uy-2wkWhZf2vk7wX/exec",
-      {
-        method: "POST",
-        body: data,
-        muteHttpExceptions: true,
-      }
-    );
+    const response = await fetch("http://localhost:5500/api/v1/contact/", {
+      method: "POST",
+      body: data,
+      muteHttpExceptions: true,
+    });
 
     if (response.ok) {
       setFirstName("");
