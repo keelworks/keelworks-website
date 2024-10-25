@@ -4,6 +4,7 @@ import Volunteer3 from "../../../assets/images/Get-Involved/Eric.png";
 import Volunteer4 from "../../../assets/images/Get-Involved/Madelyn.png";
 import Volunteer5 from "../../../assets/images/Get-Involved/Likith.png";
 import Volunteer6 from "../../../assets/images/Get-Involved/Thota-S.png";
+import Volunteer7 from "../../../assets/images/Get-Involved/Fredi-S.jpg";
 import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
 
 const volunteers = [
@@ -70,6 +71,16 @@ const volunteers = [
       "“I would highly recommend Keelworks to a friend or colleague. It’s a great organization to start your professional journey, offering a supportive environment where you can learn and contribute to meaningful causes. The Keelworks team encourages growth within the role, making it a great place for gaining experience and developing long-term relationships”",
     signatureLine1: "With Gratitude,",
     signatureLine2: "Thota Sahaja",
+  },
+  {
+    id: 7,
+    name: "Fredimanuel",
+    lastName: "Seshie",
+    image: Volunteer7,
+    content1:
+      "“As a high school student, my experience with KeelWorks has been invaluable in introducing me to the professional world and helping me acquire skills that I wouldn't have gained otherwise. KeelWorks provides an environment where you can develop your professional abilities, take on leadership roles, and grow as a person. If you are considering volunteering at KeelWorks, it is crucial that you leverage this opportunity and take leadership at KeelWorks. By doing so, you can demonstrate the impact you've made not only on the development of KeelWorks, but also on advancing its mission.”",
+    signatureLine1: "With Gratitude,",
+    signatureLine2: "Fredimanuel Seshie",
   },
 ];
 
