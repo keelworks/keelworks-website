@@ -26,6 +26,8 @@ const Footer = () => {
     const data = new FormData();
     data.append("Email", userInput.email);
 
+    console.log("here is the FormData", data);
+
     const response = await fetch("http://localhost:5500/api/v1/subscribe/", {
       method: "POST",
       body: data,
