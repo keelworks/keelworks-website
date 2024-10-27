@@ -103,7 +103,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="comingsoon"
+                  to="blog"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   Blog
