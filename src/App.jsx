@@ -8,6 +8,7 @@ import OurSolutions from "./Pages/OurSolutions/OurSolutions";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import SuccessStories from "./Pages/SuccessStories/SuccessStories";
+import Blog from "./Pages/Blog/Blog";
 import Policy from "./Pages/Policy/Policy";
 
 // ******************************************
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "success_stories",
         element: <SuccessStories />,
+      },
+      {
+        path: "blog",
+        element: <Blog />,
       },
       {
         path: "non_dis_policy",
