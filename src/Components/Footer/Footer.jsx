@@ -166,7 +166,7 @@ const Footer = () => {
             <Link to="/oursolutions" className="hover:text-gray-500">
               Our Solutions
             </Link>
-            <Link to="/comingsoon" className="hover:text-gray-500">
+            <Link to="/blog" className="hover:text-gray-500">
               Blog
             </Link>
             <Link to="/success_stories" className="hover:text-gray-500">
