@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import card1 from '../../assets/images/Blogs/card-1.png'
 import card2 from '../../assets/images/Blogs/card-2.png'
 import card3 from '../../assets/images/Blogs/card-3.png'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export const Blog = () => {
+  const [activePage, setActivePage] = useState(1);
   return (
     <div className="w-screen bg-white flex justify-center">
       <div className="w-screen max-w-[3000px] my-[5rem] md:mt-[8rem] flex justify-center h-auto ">
@@ -24,7 +27,7 @@ export const Blog = () => {
 
 
           {/* New Section Below Blog Header */}
-          <div className="w-full px-4 md:px-8 lg:px-24 flex flex-col items-center space-y-6">
+          <div className="w-full px-4 md:px-8 lg:px-24 flex flex-col items-center space-y-6 bg-green-200 ">
             <div className="w-[393px] h-[55px] flex items-center bg-white rounded-lg shadow-md p-4">
               <ul className="flex w-full justify-between space-x-4 font-normal">
                 <li className="p-3 w-full text-center text-[#3758F9] font-[16px] bg-gray-100 rounded-lg shadow-sm">Stories</li>
@@ -51,7 +54,7 @@ export const Blog = () => {
                     </div>
                   </div>
                 </div>
-                  {/* Card 2 */}
+                {/* Card 2 */}
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img src={card2} alt="Card Image" className="w-full h-[230px] object-cover" />
                   <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
@@ -67,7 +70,7 @@ export const Blog = () => {
                     </div>
                   </div>
                 </div>
-                  {/* Card 3 */}
+                {/* Card 3 */}
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img src={card3} alt="Card Image" className="w-full h-[230px] object-cover" />
                   <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
@@ -99,7 +102,7 @@ export const Blog = () => {
                     </div>
                   </div>
                 </div>
-                  {/* Card 5 */}
+                {/* Card 5 */}
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img src={card2} alt="Card Image" className="w-full h-[230px] object-cover" />
                   <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
@@ -115,7 +118,7 @@ export const Blog = () => {
                     </div>
                   </div>
                 </div>
-                  {/* Card 6 */}
+                {/* Card 6 */}
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img src={card3} alt="Card Image" className="w-full h-[230px] object-cover" />
                   <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
@@ -131,13 +134,38 @@ export const Blog = () => {
                     </div>
                   </div>
                 </div>
-                
-
-
-
               </div>
             </div>
 
+          </div>
+
+          <div className=" w-full p-4 flex flex-col items-center space-y-4">
+            <div className="flex items-center  rounded-lg border">
+              <button
+                className="p-3  sm:p-3  border-gray-300  text-[#637381] "
+                onClick={() => setActivePage((prev) => Math.max(prev - 1, 1))}
+              >
+                <FaChevronLeft />
+              </button>
+
+              {[1, 2, 3, 4, 5].map((page) => (
+                <button
+                  key={page}
+                  onClick={() => setActivePage(page)}
+                  className={`px-3 sm:px-4 py-3.5 sm:py-2 text-sm sm:text-base text-center transition-colors border-l border-gray-300 min-w-[2rem] sm:min-w-[2.5rem] ${activePage === page ? 'bg-[#FDDE82] text-fontSecondary' : 'bg-white text-[#637381]'
+                    }`}
+                >
+                  {page}
+                </button>
+              ))}
+
+              <button
+                className="p-4 sm:p-3 border-l border-gray-300 text-[#637381]"
+                onClick={() => setActivePage((prev) => Math.min(prev + 1, 5))}
+              >
+                <FaChevronRight />
+              </button>
+            </div>
           </div>
         </div>
       </div>
