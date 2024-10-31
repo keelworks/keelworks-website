@@ -9,6 +9,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import SuccessStories from "./Pages/SuccessStories/SuccessStories";
 import Blog from "./Pages/Blog/Blog";
+import BlogContent from "./Pages/Blog/BlogContent";
 import Policy from "./Pages/Policy/Policy";
 
 // ******************************************
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "blog",
-        element: <Blog />,
+        element: <BlogContent />,
       },
       {
         path: "non_dis_policy",
