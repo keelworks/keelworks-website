@@ -17,6 +17,13 @@ export default {
         primary400: "#FDD253",
         primary300: "#FEE290",
         primary200: "#FFF4D7",
+        primary100: "#FEF4D5",
+        primary : "#FBBD05",
+
+        secondary500 : "#4BA5EF",
+        secondary200 : "#B7DBF9",
+  
+
 
         grey500: "#8995A9",
         grey400: "#D0D5DD",
@@ -31,6 +38,8 @@ export default {
 
         fontPrimary: "#101828",
         fontSecondary: "#DBA300",
+
+        baseWhhite : "#FAFAFA"
       },
       height: {
         68: "68%",
