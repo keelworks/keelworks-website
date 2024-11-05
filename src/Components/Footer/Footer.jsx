@@ -23,14 +23,18 @@ const Footer = () => {
       email,
     };
 
-    const data = new FormData();
-    data.append("Email", userInput.email);
+    // const data = new FormData();
+    // data.append("Email", userInput.email);
 
-    console.log("here is the FormData", data);
+    const backEndUrlLocal = "http://localhost:5500/api/v1/subscribe/";
+    const backEndUrl = "http://UPDATE/api/v1/subscribe/";
 
-    const response = await fetch("http://localhost:5500/api/v1/subscribe/", {
+    const response = await fetch(backEndUrlLocal, {
       method: "POST",
-      body: data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userInput),
       muteHttpExceptions: true,
     });
 
