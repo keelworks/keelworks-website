@@ -42,6 +42,7 @@ const ContactForm = () => {
       setEmail("");
       setSubject("");
       setMessage("");
+      alert("Your message was sent successfully! Thank you.");
     } else {
       alert("There was an error sending your message.");
     }
