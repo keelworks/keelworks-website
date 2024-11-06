@@ -27,7 +27,7 @@ const Footer = () => {
     // data.append("Email", userInput.email);
 
     const backEndUrlLocal = "http://localhost:5500/api/v1/subscribe/";
-    const backEndUrl = "http://UPDATE/api/v1/subscribe/";
+    // const backEndUrl = "http://UPDATE/api/v1/subscribe/";
 
     const response = await fetch(backEndUrlLocal, {
       method: "POST",

@@ -18,18 +18,21 @@ const ContactForm = () => {
       message,
     };
 
-    console.log(userInput);
+    // console.log(userInput);
 
-    const data = new FormData();
-    data.append("firstName", userInput.firstName);
-    data.append("lastName", userInput.lastName);
-    data.append("email", userInput.email);
-    data.append("subject", userInput.subject);
-    data.append("message", userInput.message);
+    // const data = new FormData();
+    // data.append("firstName", userInput.firstName);
+    // data.append("lastName", userInput.lastName);
+    // data.append("email", userInput.email);
+    // data.append("subject", userInput.subject);
+    // data.append("message", userInput.message);
 
     const response = await fetch("http://localhost:5500/api/v1/contact/", {
       method: "POST",
-      body: data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userInput),
       muteHttpExceptions: true,
     });
 
