@@ -27,7 +27,10 @@ const ContactForm = () => {
     // data.append("subject", userInput.subject);
     // data.append("message", userInput.message);
 
-    const response = await fetch("http://localhost:5500/api/v1/contact/", {
+    const localAPI = "http://localhost:5500/api/v1/contact/";
+    const keelWorksAPI = "http://keelWorksBack-end/api/v1/contact/";
+
+    const response = await fetch(localAPI, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
