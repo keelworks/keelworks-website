@@ -318,8 +318,10 @@ const SignUp = () => {
       /*----------------Append References in Request Payload------------*/
 
       // **************** (Not Using the FormData) sending data as JSON format to back-end ****************
+      const localAPI = "http://localhost:5500/api/v1/signup/";
+      const keelWorksAPI = "http://keelWorksBack-end/api/v1/signup/";
 
-      const response = await fetch("http://localhost:5500/api/v1/signup/", {
+      const response = await fetch(localAPI, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
