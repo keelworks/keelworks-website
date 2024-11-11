@@ -26,10 +26,10 @@ const Footer = () => {
     // const data = new FormData();
     // data.append("Email", userInput.email);
 
-    const backEndUrlLocal = "http://localhost:5500/api/v1/subscribe/";
-    // const backEndUrl = "http://UPDATE/api/v1/subscribe/";
+    const localAPI = "http://localhost:5500/api/v1/subscribe/";
+    const keelWorksAPI = "http://keelWorksBack-end/api/v1/subscribe/";
 
-    const response = await fetch(backEndUrlLocal, {
+    const response = await fetch(localAPI, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
