@@ -7,6 +7,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export const Blog = () => {
   const [activePage, setActivePage] = useState(1);
+
   return (
     <div className="w-screen bg-white flex justify-center">
       <div className="w-screen max-w-[3000px] my-[5rem] md:mt-[8rem] flex justify-center h-auto ">
@@ -46,7 +47,7 @@ export const Blog = () => {
                 Showing 1-12 of 1000+ blog
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 shadow-sm">
-                {/* Card 1 */}
+                {/* Cards */}
                 {newsLetters.map((newsletter) => {
                   return (
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -73,14 +74,17 @@ export const Blog = () => {
                           <button>Read More</button>
                         </div>
                       </div>
+                      {/* <iframe
+                        src={newsletter.pdfFile}
+                        frameborder="0"
+                        width="100%"
+                        height="600px"
+                        title="PDF Viewer"
+                        style={{ border: "none", marginTop: "20px" }}
+                      ></iframe> */}
                     </div>
                   );
                 })}
-                {/* Card 2 */}
-                {/* Card 3 */}
-                {/* Card 4 */}
-                {/* Card 5 */}
-                {/* Card 6 */}
               </div>
             </div>
           </div>
