@@ -47,167 +47,40 @@ export const Blog = () => {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 shadow-sm">
                 {/* Card 1 */}
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
-                    src={card1}
-                    alt="Card Image"
-                    className="w-full h-[230px] object-cover"
-                  />
-                  <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
-                    <div>
-                      <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
-                        Dec 22, 2023
-                      </p>
+                {newsLetters.map((newsletter) => {
+                  return (
+                    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                      <img
+                        src={newsletter.image}
+                        alt="Card Image"
+                        className="w-full h-[230px] object-cover"
+                      />
+                      <div className="relative p-8 w-full h-[25rem] flex justify-start flex-col items-center gap-7 border-2">
+                        <div>
+                          <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
+                            {newsletter.date}
+                          </p>
+                        </div>
+                        <div className="gap-2 md:gap-4 text-center flex flex-col">
+                          <p className="text-[#111928] text-lg md:text-2xl font-semibold">
+                            {newsletter.title}
+                          </p>
+                          <p className="text-sm md:text-base font-normal text-greyCustom">
+                            {newsletter.description}
+                          </p>
+                        </div>
+                        <div className="absolute bottom-4 rounded-full border-fontSecondary px-5 md:px-7 py-2 md:py-3 text-fontSecondary border text-[14px] md:text-[16px] font-medium">
+                          <button>Read More</button>
+                        </div>
+                      </div>
                     </div>
-                    <div className="gap-2 md:gap-4 text-center flex flex-col">
-                      <p className="text-[#111928] text-lg md:text-2xl font-semibold">
-                        Your Support Makes A Difference
-                      </p>
-                      <p className="text-sm md:text-base font-normal text-greyCustom">
-                        Lorem ipsum dolor sit amet pretium consectetur
-                        adipiscing elit. Lorem consectetur adipiscing elit.
-                      </p>
-                    </div>
-                    <div className="rounded-full border-fontSecondary px-5 md:px-7 py-2 md:py-3 text-fontSecondary border text-[14px] md:text-[16px] font-medium">
-                      <button>Read More</button>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
                 {/* Card 2 */}
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
-                    src={card2}
-                    alt="Card Image"
-                    className="w-full h-[230px] object-cover"
-                  />
-                  <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
-                    <div>
-                      <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
-                        Dec 22, 2023
-                      </p>
-                    </div>
-                    <div className="gap-2 md:gap-4 text-center flex flex-col">
-                      <p className="text-[#111928] text-lg md:text-2xl font-semibold">
-                        Your Support Makes A Difference
-                      </p>
-                      <p className="text-sm md:text-base font-normal text-greyCustom">
-                        Lorem ipsum dolor sit amet pretium consectetur
-                        adipiscing elit. Lorem consectetur adipiscing elit.
-                      </p>
-                    </div>
-                    <div className="rounded-full border-fontSecondary px-5 md:px-7 py-2 md:py-3 text-fontSecondary border text-[14px] md:text-[16px] font-medium">
-                      <button>Read More</button>
-                    </div>
-                  </div>
-                </div>
                 {/* Card 3 */}
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
-                    src={card3}
-                    alt="Card Image"
-                    className="w-full h-[230px] object-cover"
-                  />
-                  <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
-                    <div>
-                      <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
-                        Dec 22, 2023
-                      </p>
-                    </div>
-                    <div className="gap-2 md:gap-4 text-center flex flex-col">
-                      <p className="text-[#111928] text-lg md:text-2xl font-semibold">
-                        Your Support Makes A Difference
-                      </p>
-                      <p className="text-sm md:text-base font-normal text-greyCustom">
-                        Lorem ipsum dolor sit amet pretium consectetur
-                        adipiscing elit. Lorem consectetur adipiscing elit.
-                      </p>
-                    </div>
-                    <div className="rounded-full border-fontSecondary px-5 md:px-7 py-2 md:py-3 text-fontSecondary border text-[14px] md:text-[16px] font-medium">
-                      <button>Read More</button>
-                    </div>
-                  </div>
-                </div>
                 {/* Card 4 */}
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
-                    src={card1}
-                    alt="Card Image"
-                    className="w-full h-[230px] object-cover"
-                  />
-                  <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
-                    <div>
-                      <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
-                        Dec 22, 2023
-                      </p>
-                    </div>
-                    <div className="gap-2 md:gap-4 text-center flex flex-col">
-                      <p className="text-[#111928] text-lg md:text-2xl font-semibold">
-                        Your Support Makes A Difference
-                      </p>
-                      <p className="text-sm md:text-base font-normal text-greyCustom">
-                        Lorem ipsum dolor sit amet pretium consectetur
-                        adipiscing elit. Lorem consectetur adipiscing elit.
-                      </p>
-                    </div>
-                    <div className="rounded-full border-fontSecondary px-5 md:px-7 py-2 md:py-3 text-fontSecondary border text-[14px] md:text-[16px] font-medium">
-                      <button>Read More</button>
-                    </div>
-                  </div>
-                </div>
                 {/* Card 5 */}
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
-                    src={card2}
-                    alt="Card Image"
-                    className="w-full h-[230px] object-cover"
-                  />
-                  <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
-                    <div>
-                      <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
-                        Dec 22, 2023
-                      </p>
-                    </div>
-                    <div className="gap-2 md:gap-4 text-center flex flex-col">
-                      <p className="text-[#111928] text-lg md:text-2xl font-semibold">
-                        Your Support Makes A Difference
-                      </p>
-                      <p className="text-sm md:text-base font-normal text-greyCustom">
-                        Lorem ipsum dolor sit amet pretium consectetur
-                        adipiscing elit. Lorem consectetur adipiscing elit.
-                      </p>
-                    </div>
-                    <div className="rounded-full border-fontSecondary px-5 md:px-7 py-2 md:py-3 text-fontSecondary border text-[14px] md:text-[16px] font-medium">
-                      <button>Read More</button>
-                    </div>
-                  </div>
-                </div>
                 {/* Card 6 */}
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
-                    src={card3}
-                    alt="Card Image"
-                    className="w-full h-[230px] object-cover"
-                  />
-                  <div className="p-8 w-full flex justify-center flex-col items-center gap-7 ">
-                    <div>
-                      <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
-                        Dec 22, 2023
-                      </p>
-                    </div>
-                    <div className="gap-2 md:gap-4 text-center flex flex-col">
-                      <p className="text-[#111928] text-lg md:text-2xl font-semibold">
-                        Your Support Makes A Difference
-                      </p>
-                      <p className="text-sm md:text-base font-normal text-greyCustom">
-                        Lorem ipsum dolor sit amet pretium consectetur
-                        adipiscing elit. Lorem consectetur adipiscing elit.
-                      </p>
-                    </div>
-                    <div className="rounded-full border-fontSecondary px-5 md:px-7 py-2 md:py-3 text-fontSecondary border text-[14px] md:text-[16px] font-medium">
-                      <button>Read More</button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
