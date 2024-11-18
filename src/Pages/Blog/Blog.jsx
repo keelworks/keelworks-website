@@ -32,7 +32,7 @@ export const Blog = () => {
 
           {/* New Section Below Blog Header */}
           <div className="w-full px-4 md:px-8 lg:px-24 flex flex-col items-center space-y-6 ">
-            <div className="w-[393px] h-[55px] flex items-center bg-white rounded-lg shadow-md p-4">
+            {/* <div className="w-[393px] h-[55px] flex items-center bg-white rounded-lg shadow-md p-4">
               <ul className="flex w-full justify-between space-x-4 font-normal">
                 <li className="p-3 w-full text-center text-fontSecondary font-[16px] bg-gray-100 rounded-lg shadow-sm">
                   Newsletter
@@ -44,10 +44,10 @@ export const Blog = () => {
                   Inspiration
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div className="w-full max-w-[1170px] px-4 md:px-8">
               <p className="text-[#8995A9] text-sm mb-4 text-center font-normal">
-                Showing 1-3 of 10 blog
+                Showing 1-3 of 10 blogs
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 shadow-sm">
                 {/* Cards */}
@@ -97,8 +97,8 @@ export const Blog = () => {
               </div>
             </div>
           </div>
-
-          <div className=" w-full p-4 flex flex-col items-center space-y-4">
+          {/* ************** Pagination bar ************** */}
+          {/* <div className=" w-full p-4 flex flex-col items-center space-y-4">
             <div className="flex items-center  rounded-lg border">
               <button
                 className="p-3  sm:p-3  border-gray-300  text-[#637381] "
@@ -128,7 +128,7 @@ export const Blog = () => {
                 <FaChevronRight />
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
