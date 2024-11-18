@@ -73,8 +73,9 @@ export const Blog = () => {
                             {newsletter.description}
                           </p>
                         </div>
-                        <div className="absolute bottom-4 rounded-full border-gray-500 px-5 md:px-7 py-2 md:py-3 text-gray-500 border text-[14px] md:text-[16px] font-medium hover:cursor-pointer hover:bg-primary200 transition duration-[300ms] ease-linear">
+                        <div className="absolute bottom-4">
                           <button
+                            className="rounded-full border-gray-500 px-5 md:px-7 py-2 md:py-3 text-gray-500 border text-[14px] md:text-[16px] font-medium hover:cursor-pointer hover:bg-primary200 transition duration-[300ms] ease-linear"
                             onClick={() => {
                               handelReadMore(newsletter.pdfFile);
                             }}
