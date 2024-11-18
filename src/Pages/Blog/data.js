@@ -4,26 +4,29 @@ import newsLetterImageJuly24 from "../../assets/images/Blogs/card-3.png";
 
 export const newsLetters = [
   {
-    title: "Welcome to KeelWorks Foundation",
+    id: 1003,
+    title: "Your Support Makes A Difference",
     date: "September, 2024",
     description:
-      "Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.",
+      "The work we do wouldn’t be possible without the generosity of our supporters. Your donation help us get people to work.",
     image: newsLetterImageMay24,
     pdfFile:
       "https://drive.google.com/file/d/11nXzm4uwHr3_XKeTKvi-occnP-LSfsv0/preview",
   },
   {
-    title: "We Can Do This!",
-    date: "October, 2024",
+    id: 1002,
+    title: "Milestones, New Faces & Your Support!",
+    date: "August, 2024",
     description:
-      "Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.",
+      "We are at an exciting jucture at KeelWorks. With our revised website and continued program development we are making progress and our people are getting jobs.",
     image: newsLetterImageJun24,
   },
   {
-    title: "Your Support Makes A Difference",
-    date: "November, 2024",
+    id: 1001,
+    title: "We Can't Do this Without You!",
+    date: "July, 2024",
     description:
-      "Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.",
+      "The Endowment Fund is critical to break the loop from the economic restraints that frequently prevent outstanding people from pursuing further education and better professional possibilities.",
     image: newsLetterImageJuly24,
   },
 ];

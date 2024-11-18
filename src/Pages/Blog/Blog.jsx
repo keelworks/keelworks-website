@@ -7,6 +7,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export const Blog = () => {
   const [activePage, setActivePage] = useState(1);
+  const handelReadMore = (pdfURL) => {
+    window.open(pdfURL, "_blank");
+  };
 
   return (
     <div className="w-screen bg-white flex justify-center">
@@ -31,20 +34,20 @@ export const Blog = () => {
           <div className="w-full px-4 md:px-8 lg:px-24 flex flex-col items-center space-y-6 ">
             <div className="w-[393px] h-[55px] flex items-center bg-white rounded-lg shadow-md p-4">
               <ul className="flex w-full justify-between space-x-4 font-normal">
-                <li className="p-3 w-full text-center text-[#3758F9] font-[16px] bg-gray-100 rounded-lg shadow-sm">
+                <li className="p-3 w-full text-center text-fontSecondary font-[16px] bg-gray-100 rounded-lg shadow-sm">
+                  Newsletter
+                </li>
+                <li className="p-3 w-full text-center text-[#637381] font-[16px] rounded-lg">
                   Stories
                 </li>
-                <li className="p-3 w-full text-center text-[#637381] font-[16px] rounded-lg shadow-sm">
-                  Tech
-                </li>
-                <li className="p-3 w-full text-center text-[#637381] font-[16px]  rounded-lg shadow-sm">
+                <li className="p-3 w-full text-center text-[#637381] font-[16px]  rounded-lg">
                   Inspiration
                 </li>
               </ul>
             </div>
             <div className="w-full max-w-[1170px] px-4 md:px-8">
               <p className="text-[#8995A9] text-sm mb-4 text-center font-normal">
-                Showing 1-12 of 1000+ blog
+                Showing 1-3 of 10 blog
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 shadow-sm">
                 {/* Cards */}
@@ -56,7 +59,7 @@ export const Blog = () => {
                         alt="Card Image"
                         className="w-full h-[230px] object-cover"
                       />
-                      <div className="relative p-8 w-full h-[25rem] flex justify-start flex-col items-center gap-7 border-2">
+                      <div className="relative p-8 w-full h-[27rem] flex justify-start flex-col items-center gap-7 border-2">
                         <div>
                           <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
                             {newsletter.date}
@@ -70,8 +73,14 @@ export const Blog = () => {
                             {newsletter.description}
                           </p>
                         </div>
-                        <div className="absolute bottom-4 rounded-full border-fontSecondary px-5 md:px-7 py-2 md:py-3 text-fontSecondary border text-[14px] md:text-[16px] font-medium">
-                          <button>Read More</button>
+                        <div className="absolute bottom-4 rounded-full border-gray-500 px-5 md:px-7 py-2 md:py-3 text-gray-500 border text-[14px] md:text-[16px] font-medium hover:cursor-pointer hover:bg-primary200 transition duration-[300ms] ease-linear">
+                          <button
+                            onClick={() => {
+                              handelReadMore(newsletter.pdfFile);
+                            }}
+                          >
+                            Read More
+                          </button>
                         </div>
                       </div>
                       {/* <iframe
