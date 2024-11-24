@@ -115,7 +115,7 @@ const SignUp = () => {
   const [volunteerPosition, setVolunteerPosition] = useState(null);
   const [briefInfo, setBriefInfo] = useState("");
   const [skillsAndExperience, setSkillsAndExperience] = useState("");
-  const [volunteerExperience, setVolunteerExperience] = useState("");
+  // const [volunteerExperience, setVolunteerExperience] = useState("");
   const [whyKeelworks, setWhyKeelworks] = useState("");
   const [goalOrExpectation, setGoalOrExpectation] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
@@ -234,7 +234,7 @@ const SignUp = () => {
         volunteerPosition,
         briefInfo,
         skillsAndExperience,
-        volunteerExperience,
+        // volunteerExperience,
         whyKeelworks,
         goalOrExpectation,
         additionalInfo,
@@ -342,7 +342,7 @@ const SignUp = () => {
         setWorkingHours(null);
         setBriefInfo("");
         setSkillsAndExperience("");
-        setVolunteerExperience("");
+        // setVolunteerExperience("");
         setWhyKeelworks("");
         setGoalOrExpectation("");
         setAdditionalInfo("");
@@ -478,14 +478,14 @@ const SignUp = () => {
               ></textarea>
             </div>
             <div>
-              <textarea
+              {/* <textarea
                 id="volunteerExperience"
                 placeholder="Have you volunteered with other organizations? If so, please describe your role(s)."
                 className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                 rows="auto"
                 value={volunteerExperience}
                 onChange={(e) => setVolunteerExperience(e.target.value)}
-              ></textarea>
+              ></textarea> */}
             </div>
 
             <FormDropdown
