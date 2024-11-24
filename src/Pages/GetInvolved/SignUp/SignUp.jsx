@@ -57,10 +57,10 @@ const SignUp = () => {
       label: "How many hours are you available to volunteer during the week?",
       isDisabled: true,
     },
-    {
-      value: "1to5hours",
-      label: "1 to 5 hours",
-    },
+    // {
+    //   value: "1to5hours",
+    //   label: "1 to 5 hours",
+    // },
     {
       value: "5to10hours",
       label: "5 to 10 hours",
