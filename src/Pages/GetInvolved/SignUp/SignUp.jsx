@@ -116,8 +116,8 @@ const SignUp = () => {
   const [briefInfo, setBriefInfo] = useState("");
   const [skillsAndExperience, setSkillsAndExperience] = useState("");
   // const [volunteerExperience, setVolunteerExperience] = useState("");
-  const [whyKeelworks, setWhyKeelworks] = useState("");
-  const [goalOrExpectation, setGoalOrExpectation] = useState("");
+  // const [whyKeelworks, setWhyKeelworks] = useState("");
+  // const [goalOrExpectation, setGoalOrExpectation] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
   const [termsAndConditions, setTermsAndConditions] = useState(false);
   const [daysCheckbox, setDaysCheckbox] = useState(initDaysCheckboxState);
@@ -343,8 +343,8 @@ const SignUp = () => {
         setBriefInfo("");
         setSkillsAndExperience("");
         // setVolunteerExperience("");
-        setWhyKeelworks("");
-        setGoalOrExpectation("");
+        // setWhyKeelworks("");
+        // setGoalOrExpectation("");
         setAdditionalInfo("");
         setDaysCheckbox(initDaysCheckboxState);
         setTermsAndConditions(false);
@@ -477,16 +477,16 @@ const SignUp = () => {
                 required
               ></textarea>
             </div>
-            <div>
-              {/* <textarea
+            {/* <div>
+              <textarea
                 id="volunteerExperience"
                 placeholder="Have you volunteered with other organizations? If so, please describe your role(s)."
                 className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                 rows="auto"
                 value={volunteerExperience}
                 onChange={(e) => setVolunteerExperience(e.target.value)}
-              ></textarea> */}
-            </div>
+              ></textarea>
+            </div> */}
 
             <FormDropdown
               options={workingHourOptions}
@@ -552,7 +552,7 @@ const SignUp = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <textarea
                 id="whyKeelworks"
                 placeholder="Why do you want to volunteer with the KeelWorks Foundation?"
@@ -562,9 +562,9 @@ const SignUp = () => {
                 onChange={(e) => setWhyKeelworks(e.target.value)}
                 required
               ></textarea>
-            </div>
+            </div> */}
 
-            <div>
+            {/* <div>
               <textarea
                 id="goalOrExpectation"
                 placeholder="Do you have any specific goals or expectation as a volunteer experience?"
@@ -573,7 +573,7 @@ const SignUp = () => {
                 value={goalOrExpectation}
                 onChange={(e) => setGoalOrExpectation(e.target.value)}
               ></textarea>
-            </div>
+            </div> */}
 
             <div>
               <textarea
