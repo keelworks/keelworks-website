@@ -123,7 +123,7 @@ const SignUp = () => {
   const [daysCheckbox, setDaysCheckbox] = useState(initDaysCheckboxState);
   const [workingHours, setWorkingHours] = useState(null);
 
-  const [references, setReferences] = useState([]);
+  // const [references, setReferences] = useState([]);
 
   const handleDaysCheckbox = (event) => {
     const { name, checked } = event.target;
@@ -144,35 +144,35 @@ const SignUp = () => {
   const handleAddReferenceClick = (e) => {
     e.preventDefault();
 
-    if (references.length < 2) {
-      setReferences([
-        ...references,
-        {
-          refFirstName: "",
-          refLastName: "",
-          refEmail: "",
-          refContactNo: "",
-          refCity: "",
-          refState: "",
-          refCountry: "",
-          relationshipToRef: null,
-        },
-      ]);
-    }
+    // if (references.length < 2) {
+    //   setReferences([
+    //     ...references,
+    //     {
+    //       refFirstName: "",
+    //       refLastName: "",
+    //       refEmail: "",
+    //       refContactNo: "",
+    //       refCity: "",
+    //       refState: "",
+    //       refCountry: "",
+    //       relationshipToRef: null,
+    //     },
+    //   ]);
+    // }
   };
 
-  const handleRemoveReferenceClick = (index, e) => {
-    e.preventDefault();
-    const newReferences = references.filter((_, i) => i !== index);
-    setReferences(newReferences);
-  };
+  // const handleRemoveReferenceClick = (index, e) => {
+  //   e.preventDefault();
+  //   const newReferences = references.filter((_, i) => i !== index);
+  //   setReferences(newReferences);
+  // };
 
-  const handleRefInputChange = (index, field, value) => {
-    const newReferences = references.map((reference, i) =>
-      i === index ? { ...reference, [field]: value } : reference
-    );
-    setReferences(newReferences);
-  };
+  // const handleRefInputChange = (index, field, value) => {
+  //   const newReferences = references.map((reference, i) =>
+  //     i === index ? { ...reference, [field]: value } : reference
+  //   );
+  //   setReferences(newReferences);
+  // };
 
   const filterCheckboxes = (data) => {
     const trueCheckboxes = Object.keys(data.daysCheckbox)
@@ -183,32 +183,32 @@ const SignUp = () => {
 
     const workingHoursLabel = data.workingHours?.label;
 
-    const flattenedReferences = {};
-    data.references.forEach((reference, index) => {
-      const referenceNumber = index + 1;
-      Object.keys(reference).forEach((key) => {
-        if (key === "relationshipToRef") {
-          flattenedReferences[
-            `reference${referenceNumber}${
-              key.charAt(0).toUpperCase() + key.slice(1)
-            }`
-          ] = reference[key]?.label;
-        } else {
-          flattenedReferences[
-            `reference${referenceNumber}${
-              key.charAt(0).toUpperCase() + key.slice(1)
-            }`
-          ] = reference[key];
-        }
-      });
-    });
+    // const flattenedReferences = {};
+    // data.references.forEach((reference, index) => {
+    //   const referenceNumber = index + 1;
+    //   Object.keys(reference).forEach((key) => {
+    //     if (key === "relationshipToRef") {
+    //       flattenedReferences[
+    //         `reference${referenceNumber}${
+    //           key.charAt(0).toUpperCase() + key.slice(1)
+    //         }`
+    //       ] = reference[key]?.label;
+    //     } else {
+    //       flattenedReferences[
+    //         `reference${referenceNumber}${
+    //           key.charAt(0).toUpperCase() + key.slice(1)
+    //         }`
+    //       ] = reference[key];
+    //     }
+    //   });
+    // });
 
     return {
       ...data,
       daysCheckbox: trueCheckboxes,
       volunteerPosition: volunteerPositionLabel,
       workingHours: workingHoursLabel,
-      ...flattenedReferences,
+      // ...flattenedReferences,
     };
   };
 
@@ -235,12 +235,12 @@ const SignUp = () => {
         briefInfo,
         skillsAndExperience,
         // volunteerExperience,
-        whyKeelworks,
-        goalOrExpectation,
+        // whyKeelworks,
+        // goalOrExpectation,
         additionalInfo,
         daysCheckbox,
         workingHours,
-        references,
+        // references,
       };
 
       const filteredData = filterCheckboxes(userInput);
@@ -348,7 +348,7 @@ const SignUp = () => {
         setAdditionalInfo("");
         setDaysCheckbox(initDaysCheckboxState);
         setTermsAndConditions(false);
-        setReferences([]);
+        // setReferences([]);
 
         alert(
           "Your message was sent successfully! Thank you for the application. We’ll analyze your information and come back to you as soon as possible."
@@ -586,7 +586,7 @@ const SignUp = () => {
               ></textarea>
             </div>
 
-            {references.map((ref, index) => (
+            {/* {references.map((ref, index) => (
               <div key={index}>
                 <p className="mt-5 text-sm font-light">Reference {index + 1}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
@@ -733,7 +733,7 @@ const SignUp = () => {
                   <FaCirclePlus className="inline ml-1 text-primary500" />
                 </button>
               </div>
-            )}
+            )} */}
 
             <div>
               <label className="inline-flex items-start mt-10">
