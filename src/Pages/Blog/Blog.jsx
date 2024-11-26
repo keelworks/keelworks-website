@@ -57,14 +57,9 @@ export const Blog = () => {
                       <img
                         src={newsletter.image}
                         alt="Card Image"
-                        className="w-full h-[230px] object-cover"
+                        className="w-full h-[150px] object-cover"
                       />
-                      <div className="relative p-8 w-full h-[27rem] flex justify-start flex-col items-center gap-7 border-2">
-                        <div>
-                          <p className="w-auto px-4 py-1 bg-[#FEF4D5] text-fontSecondary rounded-md text-xs">
-                            {newsletter.date}
-                          </p>
-                        </div>
+                      <div className="relative p-8 w-full h-[12rem] flex justify-start flex-col items-center gap-7 border-2">
                         <div className="gap-2 md:gap-4 text-center flex flex-col">
                           <p className="text-[#111928] text-lg md:text-2xl font-semibold">
                             {newsletter.title}
@@ -80,7 +75,7 @@ export const Blog = () => {
                               handelReadMore(newsletter.pdfFile);
                             }}
                           >
-                            Read More
+                            Open
                           </button>
                         </div>
                       </div>
