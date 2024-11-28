@@ -49,6 +49,10 @@ const SignUp = () => {
       value: "attorney",
       label: "Attorney (Specialization in Patent/Copyright Law)",
     },
+    {
+      value: "custom",
+      label: "Enter a position manually (below)",
+    },
   ];
 
   const workingHourOptions = [
@@ -113,6 +117,7 @@ const SignUp = () => {
   const [state, setState] = useState("");
   const [country, setCountry] = useState("");
   const [volunteerPosition, setVolunteerPosition] = useState(null);
+  const [customPosition, setCustomPosition] = useState("");
   const [briefInfo, setBriefInfo] = useState("");
   const [skillsAndExperience, setSkillsAndExperience] = useState("");
   // const [volunteerExperience, setVolunteerExperience] = useState("");
@@ -134,7 +139,18 @@ const SignUp = () => {
   };
 
   const handleVolunteerPosition = (option) => {
-    setVolunteerPosition(option);
+    if (option?.value === "custom") {
+      setVolunteerPosition({
+        value: "custom",
+        label: "Enter a position manually (below)",
+      });
+    } else {
+      setVolunteerPosition(option);
+    }
+  };
+
+  const handleCustomPosition = (customValue) => {
+    setCustomPosition(customValue);
   };
 
   const handleWorkingHours = (option) => {
@@ -178,7 +194,8 @@ const SignUp = () => {
     const trueCheckboxes = Object.keys(data.daysCheckbox)
       .filter((key) => data.daysCheckbox[key])
       .join(", ");
-
+    if (data.volunteerPosition) {
+    }
     const volunteerPositionLabel = data.volunteerPosition?.label;
 
     const workingHoursLabel = data.workingHours?.label;
@@ -231,7 +248,13 @@ const SignUp = () => {
         city,
         state,
         country,
-        volunteerPosition,
+        volunteerPosition:
+          volunteerPosition.value === "custom"
+            ? {
+                value: "custom",
+                label: customPosition || "Enter a position manually (below)", // Use custom input or fallback text
+              }
+            : volunteerPosition,
         briefInfo,
         skillsAndExperience,
         // volunteerExperience,
@@ -339,6 +362,7 @@ const SignUp = () => {
         setState("");
         setCountry("");
         setVolunteerPosition(null);
+        setCustomPosition("");
         setWorkingHours(null);
         setBriefInfo("");
         setSkillsAndExperience("");
@@ -455,6 +479,19 @@ const SignUp = () => {
               placeholder="Please select the volunteer position you are interested in applying for"
               required={true}
             />
+            {volunteerPosition?.value === "custom" && (
+              <div>
+                <input
+                  type="text"
+                  id="manualPosition"
+                  placeholder="Enter the volunteer position here"
+                  className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                  value={customPosition}
+                  onChange={(e) => handleCustomPosition(e.target.value)}
+                  required
+                />
+              </div>
+            )}
 
             <div>
               <textarea
