@@ -61,12 +61,12 @@ export const Blog = () => {
                       />
                       <div className="relative p-8 w-full h-[12rem] flex justify-start flex-col items-center gap-7 border-2">
                         <div className="gap-2 md:gap-4 text-center flex flex-col">
-                          <p className="text-[#111928] text-lg md:text-2xl font-semibold">
-                            {newsletter.title}
+                          <p className="text-[#111928] text-lg md:text-[1.25rem] font-semibold">
+                            {`${newsletter.title} | ${newsletter.date}`}
                           </p>
-                          <p className="text-sm md:text-base font-normal text-greyCustom">
+                          {/* <p className="text-sm md:text-base font-normal text-greyCustom">
                             {newsletter.description}
-                          </p>
+                          </p> */}
                         </div>
                         <div className="absolute bottom-4">
                           <button
