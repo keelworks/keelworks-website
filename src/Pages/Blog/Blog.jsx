@@ -53,7 +53,12 @@ export const Blog = () => {
                 {/* Cards */}
                 {newsLetters.map((newsletter) => {
                   return (
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div
+                      className="bg-white rounded-lg shadow-md overflow-hidden hover:cursor-pointer"
+                      onClick={() => {
+                        handelReadMore(newsletter.pdfFile);
+                      }}
+                    >
                       <img
                         src={newsletter.image}
                         alt="Card Image"
@@ -67,16 +72,6 @@ export const Blog = () => {
                           {/* <p className="text-sm md:text-base font-normal text-greyCustom">
                             {newsletter.description}
                           </p> */}
-                        </div>
-                        <div className="absolute bottom-4">
-                          <button
-                            className="rounded-full border-gray-500 px-5 md:px-7 py-2 md:py-3 text-gray-500 border text-[14px] md:text-[16px] font-medium hover:cursor-pointer hover:bg-primary200 transition duration-[300ms] ease-linear"
-                            onClick={() => {
-                              handelReadMore(newsletter.pdfFile);
-                            }}
-                          >
-                            Open
-                          </button>
                         </div>
                       </div>
                       {/* <iframe

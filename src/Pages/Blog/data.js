@@ -1,4 +1,4 @@
-import newsLetterImageMay24 from "../../assets/images/Blogs/card-1.png";
+import newsLetterImageMay24 from "../../assets/images/Blogs/Newsletter-Oct 2024-P1.jpg";
 import newsLetterImageJun24 from "../../assets/images/Blogs/card-2.png";
 import newsLetterImageJuly24 from "../../assets/images/Blogs/card-3.png";
 
