@@ -1,29 +1,31 @@
-import newsLetterImageMay24 from "../../assets/images/Blogs/Newsletter-Oct 2024-P1.jpg";
-import newsLetterImageJun24 from "../../assets/images/Blogs/card-2.png";
-import newsLetterImageJuly24 from "../../assets/images/Blogs/card-3.png";
+import newsLetterImageOct24 from "../../assets/images/Blogs/Newsletter-Oct 2024-P1.jpg";
 
 export const newsLetters = [
   {
     id: 1003,
     title: "Newsletter",
-    date: "09/2024",
+    date: "10/2024",
     description: "September Newsletter",
-    image: newsLetterImageMay24,
+    image: newsLetterImageOct24,
     pdfFile:
-      "https://drive.google.com/file/d/11nXzm4uwHr3_XKeTKvi-occnP-LSfsv0/preview",
+      "https://drive.google.com/file/d/1tc2p4RmqGuoVvC0qONv32RENUTYYP-9E/view?usp=drive_link",
   },
   {
     id: 1002,
     title: "Newsletter",
-    date: "08/2024",
+    date: "10/2024",
     description: "August Newsletter",
-    image: newsLetterImageJun24,
+    image: newsLetterImageOct24,
+    pdfFile:
+      "https://drive.google.com/file/d/11nXzm4uwHr3_XKeTKvi-occnP-LSfsv0/preview",
   },
   {
     id: 1001,
     title: "Newsletter",
-    date: "07/2024",
+    date: "10/2024",
     description: "July Newsletter",
-    image: newsLetterImageJuly24,
+    image: newsLetterImageOct24,
+    pdfFile:
+      "https://drive.google.com/file/d/11nXzm4uwHr3_XKeTKvi-occnP-LSfsv0/preview",
   },
 ];
