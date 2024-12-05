@@ -49,7 +49,7 @@ export const Blog = () => {
               <p className="text-[#8995A9] text-sm mb-4 text-center font-normal">
                 Showing 1-3 of 10 blogs
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 shadow-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-12 shadow-sm">
                 {/* Cards */}
                 {newsLetters.map((newsletter) => {
                   return (
@@ -57,9 +57,9 @@ export const Blog = () => {
                       <img
                         src={newsletter.image}
                         alt="Card Image"
-                        className="w-full h-[150px] object-cover"
+                        className="w-full h-[250px] object-cover"
                       />
-                      <div className="relative p-8 w-full h-[12rem] flex justify-start flex-col items-center gap-7 border-2">
+                      <div className="relative p-8 w-full h-[10rem] flex justify-start flex-col items-center gap-7 border-2">
                         <div className="gap-2 md:gap-4 text-center flex flex-col">
                           <p className="text-[#111928] text-lg md:text-[1.25rem] font-semibold">
                             {`${newsletter.title} | ${newsletter.date}`}
