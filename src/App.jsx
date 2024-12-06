@@ -1,3 +1,5 @@
+import ReactGA from "react-ga4";
+const MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 // **************** Components **************
 import SiteLayout from "./Components/SiteLayout/SiteLayout";
 import Error from "./Pages/Error/Error";
@@ -12,6 +14,7 @@ import Policy from "./Pages/Policy/Policy";
 
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +64,19 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize(MEASUREMENT_ID);
+  }, []);
+
+  useEffect(() => {
+    // Send a pageview event whenever the route changes
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname,
+      title: location.pathname, // Use the pathname as the title for simplicity
+    });
+  }, [location.pathname]);
+
   return (
     <main className=" overflow-x-hidden">
       <RouterProvider router={router} />
