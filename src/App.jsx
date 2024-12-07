@@ -1,5 +1,5 @@
 import ReactGA from "react-ga4";
-const MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+const MEASUREMENT_ID = "G-K7FMRVVS50";
 // **************** Components **************
 import SiteLayout from "./Components/SiteLayout/SiteLayout";
 import Error from "./Pages/Error/Error";
