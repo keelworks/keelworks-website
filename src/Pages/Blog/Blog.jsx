@@ -12,7 +12,7 @@ export const Blog = () => {
   return (
     <div className="w-screen bg-white flex justify-center">
       <div className="w-screen max-w-[3000px] my-[5rem] md:mt-[8rem] flex justify-center h-auto ">
-        <div className="m-[1rem] md:mx-[2rem] lg:mx-[8rem]  w-screen h-auto flex flex-col items-center gap-12 ">
+        <div className="m-[1rem] md:mx-[2rem] [@media(min-width:1100px)]:mx-[8rem] w-screen h-auto flex flex-col items-center gap-12 ">
           {/* Blog Header Section */}
           <div className="w-full md:w-[755px] h-auto flex justify-center items-center flex-col gap-5 px-4 md:px-0">
             <div className="h-auto md:h-[114px]">
@@ -47,7 +47,7 @@ export const Blog = () => {
               <p className="text-[#8995A9] text-sm mb-4 text-center font-normal">
                 Showing 1-6 of 6 blogs
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 ">
                 {/* Cards */}
                 {newsLetters.map((newsletter) => {
                   return (
@@ -61,9 +61,9 @@ export const Blog = () => {
                       <img
                         src={newsletter.image}
                         alt="Card Image"
-                        className="w-full h-[250px] object-cover"
+                        className="w-full md:h-[150px] xl:h-[250px] object-cover"
                       />
-                      <div className="relative p-8 w-full h-[5rem] flex justify-start flex-col items-center gap-7">
+                      <div className="relative p-8 w-full h-[6rem] flex justify-start flex-col items-center gap-7">
                         <div className="gap-2 md:gap-4 text-center flex flex-col">
                           <p className="text-[#111928] text-lg md:text-[1.25rem] font-semibold">
                             {`${newsletter.title} | ${newsletter.date}`}
