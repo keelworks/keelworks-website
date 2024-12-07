@@ -1,7 +1,5 @@
 import { newsLetters } from "./data";
-import card1 from "../../assets/images/Blogs/card-1.png";
-import card2 from "../../assets/images/Blogs/card-2.png";
-import card3 from "../../assets/images/Blogs/card-3.png";
+
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -24,8 +22,8 @@ export const Blog = () => {
             </div>
             <div className="text-sm sm:text-base md:text-lg lg:text-xl fontPrimarys text-center">
               <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
+                Stay informed with the latest updates and insights from
+                KeelWorks Foundation.
               </p>
             </div>
           </div>
@@ -47,7 +45,7 @@ export const Blog = () => {
             </div> */}
             <div className="w-full max-w-[1170px] px-4 md:px-8">
               <p className="text-[#8995A9] text-sm mb-4 text-center font-normal">
-                Showing 1-3 of 10 blogs
+                Showing 1-6 of 6 blogs
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-12">
                 {/* Cards */}
@@ -55,6 +53,7 @@ export const Blog = () => {
                   return (
                     <div
                       className="bg-white rounded-lg shadow-md overflow-hidden hover:cursor-pointer"
+                      key={newsletter.id}
                       onClick={() => {
                         handelReadMore(newsletter.pdfFile);
                       }}
