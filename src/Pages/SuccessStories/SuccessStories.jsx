@@ -1,25 +1,35 @@
 import React, { useState } from "react";
 import Sky from "../../assets/images/Success-Stories/SkyVideo.jpg";
+import Sharon from "../../assets/images/Success-Stories/Sharon.jpg";
 import upComing from "../../assets/images/Success-Stories/UpComing.jpg";
 import { IoIosCloseCircle } from "react-icons/io";
 import { IoPlayCircleOutline } from "react-icons/io5";
 
+import { IoIosPlayCircle } from "react-icons/io";
+
 const videos = [
   {
     id: 1,
+    videoLink: "https://youtu.be/sOkDxZtSs_U?si=gf7Hj8TJCYtY_ymc",
+    image: Sharon,
+    content: "Sharon",
+    duration: "1:32",
+  },
+  {
+    id: 2,
     videoLink: "https://www.youtube.com/embed/FEDR3c7Rwno?si=imSpcChsOqi1-dza",
     image: Sky,
     content: 'Kathryn "Sky" Tomlinson',
     duration: "1:52",
   },
   {
-    id: 2,
+    id: 3,
     videoLink: "",
     image: upComing,
     content: "",
   },
   {
-    id: 3,
+    id: 4,
     videoLink: "",
     image: upComing,
     content: "",
@@ -63,7 +73,7 @@ const SuccessStories = () => {
                         className="w-full"
                       />
                       {volunteer.content && (
-                        <IoPlayCircleOutline className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-grey400 text-[4rem] hover:text-grey200 transition duration-[150ms] ease-linear z-10" />
+                        <IoIosPlayCircle className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primary500 text-[3rem] hover:text-grey200 transition duration-[150ms] ease-linear z-10" />
                       )}
                       {volunteer.duration && (
                         <span className="absolute bottom-4 right-4 w-[50px] h-[30px] bg-black rounded-full text-[1rem] text-gray-50 flex justify-center items-center">
