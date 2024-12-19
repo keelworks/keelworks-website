@@ -1,5 +1,6 @@
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import logoBW from "../../assets/images/KeelWorks-Logo.png";
+import axios from "axios";
 import { useState, useRef } from "react";
 import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
 
@@ -11,12 +12,14 @@ const KeelBot = () => {
       message:
         "Hello and welcome to KeelWorks Foundations! I'm Thomas, here to guide you. How can I assist you today? You can:",
       sender: "KeelBot",
-      direction: "outgoing",
+      direction: "incoming",
     },
   ]);
   const chatInputRef = useRef(null);
 
-  const handleSendUserChat = (userMessage) => {
+  const handleSendUserChat = async (userMessage) => {
+    // if (!userMessage.trim()) return; // Prevent sending empty messages
+
     const newUserMessage = {
       message: userMessage,
       sender: "user",
@@ -26,8 +29,14 @@ const KeelBot = () => {
     setMessages(updatedMessages);
 
     // sending user's chat to the KeelBot API
+    const response = await axios.get(
+      "http://test.keelworks.org:8000/api/",
+      // { message: userMessage }, // Payload
+      { headers: { "Content-Type": "application/json" } } // Optional headers
+    );
+    console.log(response);
     // messages won't be updated here rightaway
-    console.log(messages);
+    // console.log(messages);
   };
 
   return (
