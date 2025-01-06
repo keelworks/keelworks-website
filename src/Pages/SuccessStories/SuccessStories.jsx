@@ -10,7 +10,7 @@ import { IoIosPlayCircle } from "react-icons/io";
 const videos = [
   {
     id: 1,
-    videoLink: "https://youtu.be/sOkDxZtSs_U?si=gf7Hj8TJCYtY_ymc",
+    videoLink: "https://youtube.com/shorts/9OjtZASA5xM?feature=share",
     image: Sharon,
     content: "Sharon",
     duration: "1:32",
