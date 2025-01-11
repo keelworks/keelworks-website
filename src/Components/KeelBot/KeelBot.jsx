@@ -37,6 +37,18 @@ const KeelBot = () => {
     console.log(response);
     // messages won't be updated here rightaway
     // console.log(messages);
+
+    // **** Testing POST  Method*****
+    const responsePOST = await axios.post(
+      "http://test.keelworks.org:8000/api/ask", // URL
+      {
+        user_question: "Thomas", // JSON payload
+      },
+      {
+        headers: { "Content-Type": "application/json" }, // Optional headers
+      }
+    );
+    console.log("ResponsePOST:", responsePOST);
   };
 
   return (
