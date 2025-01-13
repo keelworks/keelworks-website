@@ -51,6 +51,10 @@ const SignUp = () => {
       value: "attorney",
       label: "Attorney (Specialization in Patent/Copyright Law)",
     },
+    {
+      value: "custom",
+      label: "Enter a position manually (below)",
+    },
   ];
 
   const workingHourOptions = [
@@ -59,10 +63,10 @@ const SignUp = () => {
       label: "How many hours are you available to volunteer during the week?",
       isDisabled: true,
     },
-    {
-      value: "1to5hours",
-      label: "1 to 5 hours",
-    },
+    // {
+    //   value: "1to5hours",
+    //   label: "1 to 5 hours",
+    // },
     {
       value: "5to10hours",
       label: "5 to 10 hours",
@@ -115,17 +119,18 @@ const SignUp = () => {
   const [state, setState] = useState("");
   const [country, setCountry] = useState("");
   const [volunteerPosition, setVolunteerPosition] = useState(null);
+  const [customPosition, setCustomPosition] = useState("");
   const [briefInfo, setBriefInfo] = useState("");
   const [skillsAndExperience, setSkillsAndExperience] = useState("");
-  const [volunteerExperience, setVolunteerExperience] = useState("");
-  const [whyKeelworks, setWhyKeelworks] = useState("");
-  const [goalOrExpectation, setGoalOrExpectation] = useState("");
+  // const [volunteerExperience, setVolunteerExperience] = useState("");
+  // const [whyKeelworks, setWhyKeelworks] = useState("");
+  // const [goalOrExpectation, setGoalOrExpectation] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
   const [termsAndConditions, setTermsAndConditions] = useState(false);
   const [daysCheckbox, setDaysCheckbox] = useState(initDaysCheckboxState);
   const [workingHours, setWorkingHours] = useState(null);
 
-  const [references, setReferences] = useState([]);
+  // const [references, setReferences] = useState([]);
 
   const handleDaysCheckbox = (event) => {
     const { name, checked } = event.target;
@@ -136,7 +141,18 @@ const SignUp = () => {
   };
 
   const handleVolunteerPosition = (option) => {
-    setVolunteerPosition(option);
+    if (option?.value === "custom") {
+      setVolunteerPosition({
+        value: "custom",
+        label: "Enter a position manually (below)",
+      });
+    } else {
+      setVolunteerPosition(option);
+    }
+  };
+
+  const handleCustomPosition = (customValue) => {
+    setCustomPosition(customValue);
   };
 
   const handleWorkingHours = (option) => {
@@ -146,71 +162,72 @@ const SignUp = () => {
   const handleAddReferenceClick = (e) => {
     e.preventDefault();
 
-    if (references.length < 2) {
-      setReferences([
-        ...references,
-        {
-          refFirstName: "",
-          refLastName: "",
-          refEmail: "",
-          refContactNo: "",
-          refCity: "",
-          refState: "",
-          refCountry: "",
-          relationshipToRef: null,
-        },
-      ]);
-    }
+    // if (references.length < 2) {
+    //   setReferences([
+    //     ...references,
+    //     {
+    //       refFirstName: "",
+    //       refLastName: "",
+    //       refEmail: "",
+    //       refContactNo: "",
+    //       refCity: "",
+    //       refState: "",
+    //       refCountry: "",
+    //       relationshipToRef: null,
+    //     },
+    //   ]);
+    // }
   };
 
-  const handleRemoveReferenceClick = (index, e) => {
-    e.preventDefault();
-    const newReferences = references.filter((_, i) => i !== index);
-    setReferences(newReferences);
-  };
+  // const handleRemoveReferenceClick = (index, e) => {
+  //   e.preventDefault();
+  //   const newReferences = references.filter((_, i) => i !== index);
+  //   setReferences(newReferences);
+  // };
 
-  const handleRefInputChange = (index, field, value) => {
-    const newReferences = references.map((reference, i) =>
-      i === index ? { ...reference, [field]: value } : reference
-    );
-    setReferences(newReferences);
-  };
+  // const handleRefInputChange = (index, field, value) => {
+  //   const newReferences = references.map((reference, i) =>
+  //     i === index ? { ...reference, [field]: value } : reference
+  //   );
+  //   setReferences(newReferences);
+  // };
 
   const filterCheckboxes = (data) => {
     const trueCheckboxes = Object.keys(data.daysCheckbox)
       .filter((key) => data.daysCheckbox[key])
       .join(", ");
-
+    if (data.volunteerPosition) {
+    }
     const volunteerPositionLabel = data.volunteerPosition?.label;
 
     const workingHoursLabel = data.workingHours?.label;
 
-    const flattenedReferences = {};
-    data.references.forEach((reference, index) => {
-      const referenceNumber = index + 1;
-      Object.keys(reference).forEach((key) => {
-        if (key === "relationshipToRef") {
-          flattenedReferences[
-            `reference${referenceNumber}${
-              key.charAt(0).toUpperCase() + key.slice(1)
-            }`
-          ] = reference[key]?.label;
-        } else {
-          flattenedReferences[
-            `reference${referenceNumber}${
-              key.charAt(0).toUpperCase() + key.slice(1)
-            }`
-          ] = reference[key];
-        }
-      });
-    });
+    // const flattenedReferences = {};
+    // data.references.forEach((reference, index) => {
+    //   const referenceNumber = index + 1;
+    //   Object.keys(reference).forEach((key) => {
+    //     if (key === "relationshipToRef") {
+    //       flattenedReferences[
+    //         `reference${referenceNumber}${
+    //           key.charAt(0).toUpperCase() + key.slice(1)
+    //         }`
+    //       ] = reference[key]?.label;
+    //     } else {
+    //       flattenedReferences[
+    //         `reference${referenceNumber}${
+    //           key.charAt(0).toUpperCase() + key.slice(1)
+    //         }`
+    //       ] = reference[key];
+    //     }
+    //   });
+    // });
 
     return {
       ...data,
       daysCheckbox: trueCheckboxes,
       volunteerPosition: volunteerPositionLabel,
       workingHours: workingHoursLabel,
-      ...flattenedReferences,
+      // ...flattenedReferences,
     };
   };
 
@@ -233,16 +250,22 @@ const SignUp = () => {
         city,
         state,
         country,
-        volunteerPosition,
+        volunteerPosition:
+          volunteerPosition.value === "custom"
+            ? {
+                value: "custom",
+                label: customPosition || "Enter a position manually (below)", // Use custom input or fallback text
+              }
+            : volunteerPosition,
         briefInfo,
         skillsAndExperience,
-        volunteerExperience,
-        whyKeelworks,
-        goalOrExpectation,
+        // volunteerExperience,
+        // whyKeelworks,
+        // goalOrExpectation,
         additionalInfo,
         daysCheckbox,
         workingHours,
-        references,
+        // references,
       };
 
       const filteredData = filterCheckboxes(userInput);
@@ -260,62 +283,62 @@ const SignUp = () => {
       data.append("Volunteer Position", filteredData.volunteerPosition);
       data.append("Brief Info", filteredData.briefInfo);
       data.append("Skills And Experience", filteredData.skillsAndExperience);
-      data.append("Volunteer Experience", filteredData.volunteerExperience);
-      data.append("Why Keelworks", filteredData.whyKeelworks);
-      data.append("Goal Or Expectation", filteredData.goalOrExpectation);
+      // data.append("Volunteer Experience", filteredData.volunteerExperience);
+      // data.append("Why Keelworks", filteredData.whyKeelworks);
+      // data.append("Goal Or Expectation", filteredData.goalOrExpectation);
       data.append("Additional Info", filteredData.additionalInfo);
       data.append("Working Days", filteredData.daysCheckbox);
       data.append("Working Hours", filteredData.workingHours);
 
       /*----------------Append References in Request Payload------------*/
 
-      data.append(
-        "Reference 1 First Name",
-        filteredData.reference1RefFirstName ?? " "
-      );
-      data.append(
-        "Reference 1 Last Name",
-        filteredData.reference1RefLastName ?? " "
-      );
-      data.append("Reference 1 Email", filteredData.reference1RefEmail ?? " ");
-      data.append(
-        "Reference 1 Contact No",
-        filteredData.reference1RefContactNo ?? " "
-      );
-      data.append("Reference 1 City", filteredData.reference1RefCity ?? " ");
-      data.append("Reference 1 State", filteredData.reference1RefState ?? " ");
-      data.append(
-        "Reference 1 Country",
-        filteredData.reference1RefCountry ?? " "
-      );
-      data.append(
-        "Reference 1 Relationship",
-        filteredData.reference1RelationshipToRef ?? " "
-      );
+      // data.append(
+      //   "Reference 1 First Name",
+      //   filteredData.reference1RefFirstName ?? " "
+      // );
+      // data.append(
+      //   "Reference 1 Last Name",
+      //   filteredData.reference1RefLastName ?? " "
+      // );
+      // data.append("Reference 1 Email", filteredData.reference1RefEmail ?? " ");
+      // data.append(
+      //   "Reference 1 Contact No",
+      //   filteredData.reference1RefContactNo ?? " "
+      // );
+      // data.append("Reference 1 City", filteredData.reference1RefCity ?? " ");
+      // data.append("Reference 1 State", filteredData.reference1RefState ?? " ");
+      // data.append(
+      //   "Reference 1 Country",
+      //   filteredData.reference1RefCountry ?? " "
+      // );
+      // data.append(
+      //   "Reference 1 Relationship",
+      //   filteredData.reference1RelationshipToRef ?? " "
+      // );
 
-      data.append(
-        "Reference 2 First Name",
-        filteredData.reference2RefFirstName ?? " "
-      );
-      data.append(
-        "Reference 2 Last Name",
-        filteredData.reference2RefLastName ?? " "
-      );
-      data.append("Reference 2 Email", filteredData.reference2RefEmail ?? " ");
-      data.append(
-        "Reference 2 Contact No",
-        filteredData.reference2RefContactNo ?? " "
-      );
-      data.append("Reference 2 City", filteredData.reference2RefCity ?? " ");
-      data.append("Reference 2 State", filteredData.reference2RefState ?? " ");
-      data.append(
-        "Reference 2 Country",
-        filteredData.reference2RefCountry ?? " "
-      );
-      data.append(
-        "Reference 2 Relationship",
-        filteredData.reference2RelationshipToRef ?? " "
-      );
+      // data.append(
+      //   "Reference 2 First Name",
+      //   filteredData.reference2RefFirstName ?? " "
+      // );
+      // data.append(
+      //   "Reference 2 Last Name",
+      //   filteredData.reference2RefLastName ?? " "
+      // );
+      // data.append("Reference 2 Email", filteredData.reference2RefEmail ?? " ");
+      // data.append(
+      //   "Reference 2 Contact No",
+      //   filteredData.reference2RefContactNo ?? " "
+      // );
+      // data.append("Reference 2 City", filteredData.reference2RefCity ?? " ");
+      // data.append("Reference 2 State", filteredData.reference2RefState ?? " ");
+      // data.append(
+      //   "Reference 2 Country",
+      //   filteredData.reference2RefCountry ?? " "
+      // );
+      // data.append(
+      //   "Reference 2 Relationship",
+      //   filteredData.reference2RelationshipToRef ?? " "
+      // );
 
       /*----------------Append References in Request Payload------------*/
 
@@ -340,13 +363,13 @@ const SignUp = () => {
         setWorkingHours(null);
         setBriefInfo("");
         setSkillsAndExperience("");
-        setVolunteerExperience("");
-        setWhyKeelworks("");
-        setGoalOrExpectation("");
+        // setVolunteerExperience("");
+        // setWhyKeelworks("");
+        // setGoalOrExpectation("");
         setAdditionalInfo("");
         setDaysCheckbox(initDaysCheckboxState);
         setTermsAndConditions(false);
-        setReferences([]);
+        // setReferences([]);
 
         alert(
           "Your message was sent successfully! Thank you for the application. We’ll analyze your information and come back to you as soon as possible."
@@ -453,6 +476,19 @@ const SignUp = () => {
               placeholder="Please select the volunteer position you are interested in applying for"
               required={true}
             />
+            {volunteerPosition?.value === "custom" && (
+              <div>
+                <input
+                  type="text"
+                  id="manualPosition"
+                  placeholder="Enter the volunteer position here"
+                  className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                  value={customPosition}
+                  onChange={(e) => handleCustomPosition(e.target.value)}
+                  required
+                />
+              </div>
+            )}
 
             <div>
               <textarea
@@ -475,7 +511,7 @@ const SignUp = () => {
                 required
               ></textarea>
             </div>
-            <div>
+            {/* <div>
               <textarea
                 id="volunteerExperience"
                 placeholder="Have you volunteered with other organizations? If so, please describe your role(s)."
@@ -484,7 +520,7 @@ const SignUp = () => {
                 value={volunteerExperience}
                 onChange={(e) => setVolunteerExperience(e.target.value)}
               ></textarea>
-            </div>
+            </div> */}
 
             <FormDropdown
               options={workingHourOptions}
@@ -550,7 +586,7 @@ const SignUp = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <textarea
                 id="whyKeelworks"
                 placeholder="Why do you want to volunteer with the KeelWorks Foundation?"
@@ -560,9 +596,9 @@ const SignUp = () => {
                 onChange={(e) => setWhyKeelworks(e.target.value)}
                 required
               ></textarea>
-            </div>
+            </div> */}
 
-            <div>
+            {/* <div>
               <textarea
                 id="goalOrExpectation"
                 placeholder="Do you have any specific goals or expectation as a volunteer experience?"
@@ -571,7 +607,7 @@ const SignUp = () => {
                 value={goalOrExpectation}
                 onChange={(e) => setGoalOrExpectation(e.target.value)}
               ></textarea>
-            </div>
+            </div> */}
 
             <div>
               <textarea
@@ -584,7 +620,7 @@ const SignUp = () => {
               ></textarea>
             </div>
 
-            {references.map((ref, index) => (
+            {/* {references.map((ref, index) => (
               <div key={index}>
                 <p className="mt-5 text-sm font-light">Reference {index + 1}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
@@ -731,7 +767,7 @@ const SignUp = () => {
                   <FaCirclePlus className="inline ml-1 text-primary500" />
                 </button>
               </div>
-            )}
+            )} */}
 
             <div>
               <label className="inline-flex items-start mt-10">
