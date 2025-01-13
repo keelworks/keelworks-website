@@ -4,8 +4,18 @@ import newsLetterImageAug24 from "../../assets/images/Blogs/Newsletter-Aug2024.j
 import newsLetterImageSep24 from "../../assets/images/Blogs/Newsletter-Sep2024.jpg";
 import newsLetterImageOct24 from "../../assets/images/Blogs/Newsletter-Oct2024.jpg";
 import newsLetterImageNov24 from "../../assets/images/Blogs/Newsletter-Nov2024.jpg";
+import newsLetterImageDec24 from "../../assets/images/Blogs/Newsletter-Dec2024.jpg";
 
 export const newsLetters = [
+  {
+    id: 1007,
+    title: "Newsletter",
+    date: "12/2024",
+    description: "December's Newsletter",
+    image: newsLetterImageDec24,
+    pdfFile:
+      "https://drive.google.com/file/d/1TEnNGtXMEiZE4r4vLuNTKqN59I5fkAcc/view?usp=drive_link",
+  },
   {
     id: 1006,
     title: "Newsletter",
