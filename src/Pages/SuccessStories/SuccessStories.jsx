@@ -8,13 +8,13 @@ import { IoPlayCircleOutline } from "react-icons/io5";
 import { IoIosPlayCircle } from "react-icons/io";
 
 const videos = [
-  {
-    id: 1,
-    videoLink: "https://youtube.com/shorts/9OjtZASA5xM?feature=share",
-    image: Sharon,
-    content: "Sharon",
-    duration: "1:32",
-  },
+  // {
+  //   id: 1,
+  //   videoLink: "https://youtube.com/shorts/9OjtZASA5xM?feature=share",
+  //   image: Sharon,
+  //   content: "Sharon",
+  //   duration: "1:32",
+  // },
   {
     id: 2,
     videoLink: "https://www.youtube.com/embed/FEDR3c7Rwno?si=imSpcChsOqi1-dza",
