@@ -270,7 +270,7 @@ const SignUp = () => {
 
       const filteredData = filterCheckboxes(userInput);
 
-      console.log(filteredData);
+      // console.log(filteredData);
 
       const data = new FormData();
       data.append("First Name", filteredData.firstName);
@@ -283,9 +283,9 @@ const SignUp = () => {
       data.append("Volunteer Position", filteredData.volunteerPosition);
       data.append("Brief Info", filteredData.briefInfo);
       data.append("Skills And Experience", filteredData.skillsAndExperience);
-      // data.append("Volunteer Experience", filteredData.volunteerExperience);
-      // data.append("Why Keelworks", filteredData.whyKeelworks);
-      // data.append("Goal Or Expectation", filteredData.goalOrExpectation);
+      data.append("Volunteer Experience", "N/A");
+      data.append("Why Keelworks", "N/A");
+      data.append("Goal Or Expectation", "N/A");
       data.append("Additional Info", filteredData.additionalInfo);
       data.append("Working Days", filteredData.daysCheckbox);
       data.append("Working Hours", filteredData.workingHours);
@@ -341,15 +341,15 @@ const SignUp = () => {
       // );
 
       /*----------------Append References in Request Payload------------*/
-
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwwlgVzJv42ERjRKso-pk8Xu9HD3GZl4nxdEltQ3nEzNcX_f9U0_U2ww4kZPlqZi51_Yg/exec",
-        {
-          method: "POST",
-          body: data,
-          muteHttpExceptions: true,
-        }
-      );
+      const TESTING_URL =
+        "https://script.google.com/macros/s/AKfycbxBIUntQ1EB-vaR3nMuUabSn0WO3YghlyFAGFFB-tx02vnc6DtU_AgLgCFiLsHLWjTO/exec";
+      const MASTER_URL =
+        "https://script.google.com/macros/s/AKfycbwwlgVzJv42ERjRKso-pk8Xu9HD3GZl4nxdEltQ3nEzNcX_f9U0_U2ww4kZPlqZi51_Yg/exec";
+      const response = await fetch(TESTING_URL, {
+        method: "POST",
+        body: data,
+        muteHttpExceptions: true,
+      });
 
       if (response.ok) {
         setFirstName("");
