@@ -22,6 +22,10 @@ const SignUp = () => {
       isDisabled: true,
     },
     {
+      value: "custom",
+      label: "Enter a position manually (below)",
+    },
+    {
       value: "marketingBrandingSpecialist",
       label: "Marketing/Branding Specialist",
     },
@@ -35,6 +39,8 @@ const SignUp = () => {
         "Fundraising/Grant Acquisition Associate (Experience in Writing Proposals and Grants Required)",
     },
     { value: "graphicArtist", label: "Graphic Artist" },
+    { value: "uxResearcher", label: "UX Researcher" },
+    { value: "uxProductDesigner", label: "UX/Product designer" },
     { value: "humanResourceSpecialist", label: "Human Resource Specialist" },
     { value: "editorWriter", label: "Editor/Writer" },
     { value: "contentWriter", label: "Content Writer" },
@@ -48,10 +54,6 @@ const SignUp = () => {
     {
       value: "attorney",
       label: "Attorney (Specialization in Patent/Copyright Law)",
-    },
-    {
-      value: "custom",
-      label: "Enter a position manually (below)",
     },
   ];
 
