@@ -22,6 +22,10 @@ const SignUp = () => {
       isDisabled: true,
     },
     {
+      value: "custom",
+      label: "Enter a position manually (below)",
+    },
+    {
       value: "marketingBrandingSpecialist",
       label: "Marketing/Branding Specialist",
     },
@@ -50,10 +54,6 @@ const SignUp = () => {
     {
       value: "attorney",
       label: "Attorney (Specialization in Patent/Copyright Law)",
-    },
-    {
-      value: "custom",
-      label: "Enter a position manually (below)",
     },
   ];
 
