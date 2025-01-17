@@ -35,8 +35,7 @@ const SignUp = () => {
     },
     {
       value: "fundraisingGrantAcquisitionAssociate",
-      label:
-        "Fundraising/Grant Acquisition Associate (Experience in Writing Proposals and Grants Required)",
+      label: "Fundraising/Grant Acquisition Associate",
     },
     { value: "graphicArtist", label: "Graphic Artist" },
     { value: "uxResearcher", label: "UX Researcher" },
