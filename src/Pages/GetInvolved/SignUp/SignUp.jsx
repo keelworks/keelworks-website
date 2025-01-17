@@ -346,7 +346,7 @@ const SignUp = () => {
       const SIGNUP_SHEET_MASTER_URL =
         "https://script.google.com/macros/s/AKfycbwwlgVzJv42ERjRKso-pk8Xu9HD3GZl4nxdEltQ3nEzNcX_f9U0_U2ww4kZPlqZi51_Yg/exec";
 
-      const response = await fetch(TESTING_URL, {
+      const response = await fetch(SIGNUP_SHEET_MASTER_URL, {
         method: "POST",
         body: data,
         muteHttpExceptions: true,
