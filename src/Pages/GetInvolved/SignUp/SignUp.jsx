@@ -51,8 +51,8 @@ const SignUp = () => {
     { value: "communicationsDirector", label: "Director of Communications" },
     { value: "AdministrativeSupport", label: "Administrative Support" },
     {
-      value: "attorney",
-      label: "Attorney (Specialization in Patent/Copyright Law)",
+      value: "legalResearcher",
+      label: "Legal Researcher",
     },
   ];
 
