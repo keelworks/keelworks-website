@@ -46,10 +46,10 @@ const SignUp = () => {
     { value: "boardMember", label: "Board Member" },
     {
       value: "projectManager",
-      label: "Project Manager (PMP Certification Required)",
+      label: "Project Manager",
     },
     { value: "communicationsDirector", label: "Director of Communications" },
-    { value: "executiveAssistant", label: "Executive Assistant" },
+    { value: "AdministrativeSupport", label: "Administrative Support" },
     {
       value: "attorney",
       label: "Attorney (Specialization in Patent/Copyright Law)",
@@ -340,13 +340,13 @@ const SignUp = () => {
       // );
 
       /*----------------Append References in Request Payload------------*/
-      // const TESTING_URL =
-      //   "https://script.google.com/macros/s/AKfycbxBIUntQ1EB-vaR3nMuUabSn0WO3YghlyFAGFFB-tx02vnc6DtU_AgLgCFiLsHLWjTO/exec";
+      const TESTING_URL =
+        "https://script.google.com/macros/s/AKfycbxBIUntQ1EB-vaR3nMuUabSn0WO3YghlyFAGFFB-tx02vnc6DtU_AgLgCFiLsHLWjTO/exec";
 
       const SIGNUP_SHEET_MASTER_URL =
         "https://script.google.com/macros/s/AKfycbwwlgVzJv42ERjRKso-pk8Xu9HD3GZl4nxdEltQ3nEzNcX_f9U0_U2ww4kZPlqZi51_Yg/exec";
 
-      const response = await fetch(SIGNUP_SHEET_MASTER_URL, {
+      const response = await fetch(TESTING_URL, {
         method: "POST",
         body: data,
         muteHttpExceptions: true,
