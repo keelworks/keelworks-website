@@ -21,10 +21,10 @@ const SignUp = () => {
         "Please select the volunteer position you are interested in applying for",
       isDisabled: true,
     },
-    {
-      value: "custom",
-      label: "Enter a position manually (below)",
-    },
+    // {
+    //   value: "custom",
+    //   label: "Enter a position manually (below)",
+    // },
     {
       value: "marketingBrandingSpecialist",
       label: "Marketing/Branding Specialist",
