@@ -128,7 +128,7 @@ const SignUp = () => {
   const [termsAndConditions, setTermsAndConditions] = useState(false);
   const [daysCheckbox, setDaysCheckbox] = useState(initDaysCheckboxState);
   const [workingHours, setWorkingHours] = useState(null);
-
+  const [resumeLink, setResumeLink] = useState("");
   // const [references, setReferences] = useState([]);
 
   const handleDaysCheckbox = (event) => {
@@ -264,6 +264,7 @@ const SignUp = () => {
         additionalInfo,
         daysCheckbox,
         workingHours,
+        resumeLink,
         // references,
       };
 
@@ -288,6 +289,7 @@ const SignUp = () => {
       data.append("Additional Info", filteredData.additionalInfo);
       data.append("Working Days", filteredData.daysCheckbox);
       data.append("Working Hours", filteredData.workingHours);
+      data.append("Resume Link", filteredData.resumeLink);
 
       /*----------------Append References in Request Payload------------*/
 
@@ -346,7 +348,7 @@ const SignUp = () => {
       const SIGNUP_SHEET_MASTER_URL =
         "https://script.google.com/macros/s/AKfycbwwlgVzJv42ERjRKso-pk8Xu9HD3GZl4nxdEltQ3nEzNcX_f9U0_U2ww4kZPlqZi51_Yg/exec";
 
-      const response = await fetch(SIGNUP_SHEET_MASTER_URL, {
+      const response = await fetch(TESTING_URL, {
         method: "POST",
         body: data,
         muteHttpExceptions: true,
@@ -370,6 +372,7 @@ const SignUp = () => {
         setAdditionalInfo("");
         setDaysCheckbox(initDaysCheckboxState);
         setTermsAndConditions(false);
+        setResumeLink("");
         // setReferences([]);
 
         alert(
@@ -619,6 +622,17 @@ const SignUp = () => {
                 value={additionalInfo}
                 onChange={(e) => setAdditionalInfo(e.target.value)}
               ></textarea>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="resumeLink"
+                placeholder="Resume's link (optional)"
+                className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                value={resumeLink}
+                onChange={(e) => setResumeLink(e.target.value)}
+                // required
+              />
             </div>
 
             {/* {references.map((ref, index) => (
