@@ -35,8 +35,7 @@ const SignUp = () => {
     },
     {
       value: "fundraisingGrantAcquisitionAssociate",
-      label:
-        "Fundraising/Grant Acquisition Associate (Experience in Writing Proposals and Grants Required)",
+      label: "Fundraising/Grant Acquisition Associate",
     },
     { value: "graphicArtist", label: "Graphic Artist" },
     { value: "uxResearcher", label: "UX Researcher" },
@@ -47,13 +46,13 @@ const SignUp = () => {
     { value: "boardMember", label: "Board Member" },
     {
       value: "projectManager",
-      label: "Project Manager (PMP Certification Required)",
+      label: "Project Manager",
     },
     { value: "communicationsDirector", label: "Director of Communications" },
-    { value: "executiveAssistant", label: "Executive Assistant" },
+    { value: "AdministrativeSupport", label: "Administrative Support" },
     {
-      value: "attorney",
-      label: "Attorney (Specialization in Patent/Copyright Law)",
+      value: "legalResearcher",
+      label: "Legal Researcher",
     },
   ];
 
@@ -129,6 +128,7 @@ const SignUp = () => {
   const [termsAndConditions, setTermsAndConditions] = useState(false);
   const [daysCheckbox, setDaysCheckbox] = useState(initDaysCheckboxState);
   const [workingHours, setWorkingHours] = useState(null);
+  const [resumeLink, setResumeLink] = useState("");
 
   // const [references, setReferences] = useState([]);
 
@@ -265,6 +265,7 @@ const SignUp = () => {
         additionalInfo,
         daysCheckbox,
         workingHours,
+        resumeLink,
         // references,
       };
 
@@ -289,6 +290,7 @@ const SignUp = () => {
       // data.append("Additional Info", filteredData.additionalInfo);
       // data.append("Working Days", filteredData.daysCheckbox);
       // data.append("Working Hours", filteredData.workingHours);
+      // data.append("Resume Link", filteredData.resumeLink);
 
       // /*----------------Append References in Request Payload------------*/
 
@@ -344,7 +346,9 @@ const SignUp = () => {
 
       // **************** (Not Using the FormData) sending data as JSON format to back-end ****************
       const localAPI = "http://localhost:5500/api/v1/signup/";
-      const keelWorksAPI = "http://keelWorksBack-end/api/v1/signup/";
+
+      // *************** The Back-End URL of KeelWorks.org Project *****************
+      // const keelWorksAPI = "http://keelWorksBack-end/api/v1/signup/";
 
       const response = await fetch(localAPI, {
         method: "POST",
@@ -374,6 +378,7 @@ const SignUp = () => {
         setAdditionalInfo("");
         setDaysCheckbox(initDaysCheckboxState);
         setTermsAndConditions(false);
+        setResumeLink("");
         // setReferences([]);
 
         alert(
@@ -623,6 +628,17 @@ const SignUp = () => {
                 value={additionalInfo}
                 onChange={(e) => setAdditionalInfo(e.target.value)}
               ></textarea>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="resumeLink"
+                placeholder="Enter resume link (optional)"
+                className="block w-full px-3 py-3 font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                value={resumeLink}
+                onChange={(e) => setResumeLink(e.target.value)}
+                // required
+              />
             </div>
 
             {/* {references.map((ref, index) => (
