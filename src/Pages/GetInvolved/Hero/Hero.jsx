@@ -1,4 +1,4 @@
-import greaterImg from "../../../assets/images/_.png";
+import greaterImg from "../../../assets/images/greater.png";
 const Hero = () => {
   return (
     <div className="w-screen lg:min-h-[800px] mt-[5rem] bg-white flex justify-center items-center font-Inter">
