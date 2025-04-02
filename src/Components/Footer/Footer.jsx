@@ -13,7 +13,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  var test_url = "https://script.google.com/macros/s/AKfycbz1Id1zW50lzq-kLctDrBwXrvONZRkol622A0kiuawlLyCqvxuazupUJOVSBcHsyLG7/exec";
+  var master_url = "https://script.google.com/macros/s/AKfycbyjny6A1XeEKYTS3M0yNMLX97hO1SRkMudZUddPKIDnPMCAh5wE6D7kxZlo9FyD3NPspQ/exec";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -27,7 +28,7 @@ const Footer = () => {
     data.append("Email", userInput.email);
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbyjny6A1XeEKYTS3M0yNMLX97hO1SRkMudZUddPKIDnPMCAh5wE6D7kxZlo9FyD3NPspQ/exec",
+      master_url,
       {
         method: "POST",
         body: data,
