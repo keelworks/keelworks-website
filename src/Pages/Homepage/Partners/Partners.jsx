@@ -5,6 +5,7 @@ import cogniaha_logo from "../../../assets/images/Logos/Cogniaha-Logo.png";
 import eduongo_logo from "../../../assets/images/Logos/Eduongo-Logo.png";
 import google_logo from "../../../assets/images/Logos/Google-Logo.svg";
 import qase_logo from "../../../assets/images/Logos/Qase-Logo.png";
+import akamai_logo from "../../../assets/images/Logos/Akamai-Logo.png";
 // import atlassian_logo from "../../../assets/images/Logos/Atlassian-Logo.svg";
 
 const Partners = () => {
@@ -22,11 +23,11 @@ const Partners = () => {
             alt=""
             className="w-[4rem] md:w-[6rem] lg:w-[7rem]"
           />
-          <img
+          {/* <img
             src={microsoft_logo}
             alt=""
             className="w-[4rem] justify-self-center md:w-[6rem] md:justify-self-center lg:w-[8rem]"
-          />
+          /> */}
           <img
             src={teamgantt_logo}
             alt=""
@@ -54,6 +55,11 @@ const Partners = () => {
           />
           <img
             src={qase_logo}
+            alt=""
+            className="w-[4rem] justify-self-start md:w-[5rem] md:justify-self-end lg:justify-self-center lg:w-[5rem] lg:mr-4"
+          />
+          <img
+            src={akamai_logo}
             alt=""
             className="w-[4rem] justify-self-start md:w-[5rem] md:justify-self-end lg:justify-self-center lg:w-[5rem] lg:mr-4"
           />
