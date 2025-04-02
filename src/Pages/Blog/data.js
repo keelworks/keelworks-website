@@ -9,6 +9,24 @@ import newsLetterImageJan25 from "../../assets/images/Blogs/Newsletter-Jan2025.j
 
 export const newsLetters = [
   {
+    id: 1010,
+    title: "Newsletter",
+    date: "03/2025",
+    description: "March's Newsletter",
+    image: newsLetterImageMar25,
+    pdfFile:
+      "https://drive.google.com/file/d/1c0Z3yyJNQg7d3jt-OgX2gwmVN1MR94nt/view?usp=drive_link",
+  },
+  {
+    id: 1009,
+    title: "Newsletter",
+    date: "02/2025",
+    description: "February's Newsletter",
+    image: newsLetterImageFeb25,
+    pdfFile:
+      "https://drive.google.com/file/d/1u8vS7BToDYzGsSw8NqY0NvkIGudz2d3l/view?usp=drive_link",
+  },
+  {
     id: 1008,
     title: "Newsletter",
     date: "01/2025",

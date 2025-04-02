@@ -45,7 +45,7 @@ export const Blog = () => {
             </div> */}
             <div className="w-full max-w-[1170px] px-4 md:px-8">
               <p className="text-[#8995A9] text-sm mb-4 text-center font-normal">
-                Showing 1-6 of 6 blogs
+                Showing 1-10 of 10 blogs
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 ">
                 {/* Cards */}
