@@ -6,6 +6,8 @@ import newsLetterImageOct24 from "../../assets/images/Blogs/Newsletter-Oct2024.j
 import newsLetterImageNov24 from "../../assets/images/Blogs/Newsletter-Nov2024.jpg";
 import newsLetterImageDec24 from "../../assets/images/Blogs/Newsletter-Dec2024.jpg";
 import newsLetterImageJan25 from "../../assets/images/Blogs/Newsletter-Jan2025.jpg";
+import newsLetterImageFeb25 from "../../assets/images/Blogs/Newsletter-Feb2025.jpg";
+import newsLetterImageMar25 from "../../assets/images/Blogs/Newsletter-Mar2025.jpg";
 
 export const newsLetters = [
   {
