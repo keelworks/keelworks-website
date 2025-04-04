@@ -13,7 +13,7 @@ const GetInvolved = () => {
     <div className="w-screen bg-grey200">
       <Hero />
       <BecomeDonor />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <BecomeVolunteer />
       <SignUp />
       <VolunteersSay />
