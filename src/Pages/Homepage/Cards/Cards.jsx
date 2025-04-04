@@ -3,6 +3,9 @@ import slider2 from "../../../assets/images/card2.jpg";
 import slider3 from "../../../assets/images/card3.jpg";
 import greaterImg from "../../../assets/images/greater.png";
 import { Link, useNavigate } from "react-router-dom";
+import testimonialImg21 from "../../../assets/images/Testimonials/Rectangle21.png";
+import testimonialImg22 from "../../../assets/images/Testimonials/Rectangle22.png";
+
 const Cards = () => {
   const navigate = useNavigate();
   return (
@@ -12,19 +15,15 @@ const Cards = () => {
         <div className="w-full max-w-[3000px]">
           <div className="lg:mx-[8rem] md:mx-[2rem] mx-[1rem]">
             <p className="lg:text-[2.68rem] md:text-[2.25rem] sm:text-[1.875rem] text-[1.5rem] font-bold leading-relaxed lg:pt-[8rem] sm:pt-[6rem] pt-[4rem] ">
-              Poverty begets poverty. Affluence begets affluence. When we help{" "}
-              <span className="text-primary500 "> ONE </span>person to stable
-              employment, we help families, communities, and nations
+              Too many, eager to work,{" "}
+              <span className="text-primary500 "> lack the required skills </span>to qualify for sustaining employment.
             </p>
           </div>
           <div className="w-full">
             <p className="lg:text-[2.68rem] md:text-[2.25rem] text-[2.5rem] font-bold leading-relaxed lg:mx-[8rem] md:mx-[2rem] mx-[1rem] pt-10 lg:pb-[8rem] sm:pb-[6rem] pb-[4rem]">
-              Globally,{" "}
-              <span className="text-primary500">191 million people </span> are
-              unemployed.
-              <br />
-              This is{" "}
-              <span className="text-primary500">untapped potential.</span>
+              If we can guide them, we can prepare them for that {" "}
+              {" "}
+              <span className="text-primary500">sustaining employment.</span>
             </p>
           </div>
         </div>
@@ -132,6 +131,51 @@ const Cards = () => {
           </div>
         </div>
       </div>
+      {/* ********************* Testimonial Section ********************* */}
+      <div className="w-screen flex flex-col justify-center items-center bg-white py-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-primary500 mb-12">
+          Testimonials
+        </h2>
+
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 max-w-5xl">
+          {/* Testimonial 1 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="relative w-64 h-64">
+              <img src={testimonialImg21} alt="Jonathan Stanciu" className="w-full h-full object-cover rounded-lg shadow-lg" />
+              <div className="absolute -top-3 -left-3 w-full h-full border-4 border-yellow-500"></div>
+            </div>
+            <p className="font-bold text-lg mt-4">Jonathan Stanciu</p>
+            <p className="text-gray-600">Senior Program Manager at Amazon</p>
+            <p className="text-gray-700 mt-2 px-4 max-w-xs">
+            “KeelWorks gave my resume legitimate experience. I learned to storyboard and build projects in Captivate using assets created in Photoshop and Audition.
+              Now, I am a Senior Program Manager at Amazon. My success is the product of several career steps, all of which began with my practice in instructional design - and that started with KeelWorks.”
+            </p>
+          </div>
+
+          {/* Testimonial 2 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="relative w-64 h-64">
+              <img src={testimonialImg22} alt="Eric Halterman" className="w-full h-full object-cover rounded-lg shadow-lg" />
+              <div className="absolute -top-3 -left-3 w-full h-full border-4 border-yellow-500"></div>
+            </div>
+            <p className="font-bold text-lg mt-4">Eric Halterman</p>
+            <p className="text-gray-600">Instructional Designer</p>
+            <p className="text-gray-700 mt-2 px-4 max-w-xs">
+              “I have been trying to transition out of the classroom and into instructional design for a while now, and I was fortunate enough to find this internship opportunity. From the moment I joined, I was given valuable resources to help guide not only my processes, but my thinking.”
+            </p>
+          </div>
+        </div>
+
+        {/* Learn More Button */}
+        <a href="https://keelworks.org/getinvolved" target="_blank" rel="noopener noreferrer">
+    <button class="mt-8 border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-500 hover:text-white transition">
+        Learn More
+    </button>
+</a>
+
+      </div>
+
+
       {/* ********************* Text at the Bottom of Cards ********************* */}
       <div className="w-full bg-grey200 flex justify-center">
         <div className="max-w-[3000px] mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
