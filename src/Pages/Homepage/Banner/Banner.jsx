@@ -13,15 +13,11 @@ const Banner = () => {
         <div className="absolute top-0 left-0 w-full h-full flex justify-start md:justify-center items-center bg-black bg-opacity-70 md:bg-opacity-50 md:w-1/2 lg:justify-start md:backdrop-blur-lg">
           <div className="absolute bottom-[8rem] left-[0] md:relative md:bottom-auto md:left-auto mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
             <h1 className="text-[2rem] md:text-[3.5rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-bold text-white">
-              We Can Do This!
-              <br />
-              But Only
-              <br /> With
-              <span className="text-primary500"> Your Help.</span>
+            Invest In <span className="inline-block whitespace-nowrap">Our Training</span> <br />
+              Programs.
             </h1>
-            <h5 className="text-[1.5rem] font-bold text-white mt-6">
-              When we come together,
-              <br /> we can transform lives.
+            <h5 className="text-[1.5rem] text-white mt-6">
+            With your gift, we can get more people ready for the job market, whether as employees or entrepreneurs.
             </h5>
             <div className="flex flex-col md:flex-row mt-6 gap-6">
               <button
@@ -39,7 +35,7 @@ const Banner = () => {
                 to="/getinvolved"
                 className="w-[156px] h-[47px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[150ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold"
               >
-                Get involved
+                Get Involved
               </Link>
             </div>
           </div>
