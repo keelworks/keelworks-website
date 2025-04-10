@@ -17,7 +17,7 @@ export const newsLetters = [
     description: "March's Newsletter",
     image: newsLetterImageMar25,
     pdfFile:
-      "https://drive.google.com/file/d/1c0Z3yyJNQg7d3jt-OgX2gwmVN1MR94nt/view?usp=drive_link",
+      "https://drive.google.com/file/d/1qYmlw6KK8ep9uUx8sL25mfB94xADFpIH/view?usp=drive_link",
   },
   {
     id: 1009,
