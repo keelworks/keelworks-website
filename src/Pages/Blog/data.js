@@ -6,8 +6,8 @@ import newsLetterImageOct24 from "../../assets/images/Blogs/Newsletter-Oct2024.j
 import newsLetterImageNov24 from "../../assets/images/Blogs/Newsletter-Nov2024.jpg";
 import newsLetterImageDec24 from "../../assets/images/Blogs/Newsletter-Dec2024.jpg";
 import newsLetterImageJan25 from "../../assets/images/Blogs/Newsletter-Jan2025.jpg";
-import newsLetterImageFeb25 from "../../assets/images/Blogs/Newsletter-Feb2025.jpg";
-import newsLetterImageMar25 from "../../assets/images/Blogs/Newsletter-Mar2025.jpg";
+import newsLetterImageFeb25 from "../../assets/images/Blogs/Newsletter-Feb2025.png";
+import newsLetterImageMar25 from "../../assets/images/Blogs/Newsletter-Mar2025.png";
 
 export const newsLetters = [
   {
@@ -17,7 +17,7 @@ export const newsLetters = [
     description: "March's Newsletter",
     image: newsLetterImageMar25,
     pdfFile:
-      "https://drive.google.com/file/d/1c0Z3yyJNQg7d3jt-OgX2gwmVN1MR94nt/view?usp=drive_link",
+      "https://drive.google.com/file/d/1d7_ynL1FHIqgQPZUVCFYiF20NH28_vDH/view?usp=sharing",
   },
   {
     id: 1009,
