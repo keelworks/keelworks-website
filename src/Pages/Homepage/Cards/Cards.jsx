@@ -147,7 +147,7 @@ const Cards = () => {
             <p className="font-bold text-lg mt-4">Jonathan Stanciu</p>
             <p className="text-gray-600">Senior Program Manager at Amazon</p>
             <p className="text-gray-700 mt-2 px-4 max-w-xs">
-            “KeelWorks gave my resume legitimate experience. I learned to storyboard and build projects in Captivate using assets created in Photoshop and Audition.
+              “KeelWorks gave my resume legitimate experience. I learned to storyboard and build projects in Captivate using assets created in Photoshop and Audition.
               Now, I am a Senior Program Manager at Amazon. My success is the product of several career steps, all of which began with my practice in instructional design - and that started with KeelWorks.”
             </p>
           </div>
@@ -168,11 +168,10 @@ const Cards = () => {
 
         {/* Learn More Button */}
         <a href="https://keelworks.org/getinvolved" target="_blank" rel="noopener noreferrer">
-    <button class="mt-8 border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-500 hover:text-white transition">
-        Learn More
-    </button>
-</a>
-
+          <button class="mt-8 border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-500 hover:text-white transition">
+            Learn More
+          </button>
+        </a>
       </div>
 
 
@@ -180,8 +179,7 @@ const Cards = () => {
       <div className="w-full bg-grey200 flex justify-center">
         <div className="max-w-[3000px] mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
           <p className="text-[2rem] font-bold leading-relaxed py-[8rem] md:text-[2.68rem]">
-            If you believe in our mission to get people to work, we need your
-            support.
+            If you believe in our mission to get people to work, we need your partnership.
           </p>
         </div>
       </div>
