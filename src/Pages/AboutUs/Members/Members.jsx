@@ -5,7 +5,7 @@ import Volunteer4 from "../../../assets/images/About-Us/Jing-M.jpg";
 import Volunteer5 from "../../../assets/images/About-Us/Ibrahima-D.jpg";
 import Volunteer6 from "../../../assets/images/About-Us/Aruna-G.jpg";
 import Volunteer7 from "../../../assets/images/About-Us/Priya-S.jpg";
-import Volunteer8 from "../../../assets/images/About-Us/Fredi-S.jpg";
+import Volunteer8 from "../../../assets/images/About-Us/Fredi-S.png";
 
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
