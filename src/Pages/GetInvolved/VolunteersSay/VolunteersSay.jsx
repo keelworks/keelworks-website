@@ -4,7 +4,7 @@ import Volunteer3 from "../../../assets/images/Get-Involved/Eric.png";
 import Volunteer4 from "../../../assets/images/Get-Involved/Madelyn.png";
 import Volunteer5 from "../../../assets/images/Get-Involved/Likith.png";
 import Volunteer6 from "../../../assets/images/Get-Involved/Thota-S.png";
-import Volunteer7 from "../../../assets/images/Get-Involved/Fredi-S.jpg";
+import Volunteer7 from "../../../assets/images/Get-Involved/Fredi-S.png";
 import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
 
 const volunteers = [
