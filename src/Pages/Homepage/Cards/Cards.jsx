@@ -3,8 +3,30 @@ import slider2 from "../../../assets/images/card2.jpg";
 import slider3 from "../../../assets/images/card3.jpg";
 import greaterImg from "../../../assets/images/greater.png";
 import { Link, useNavigate } from "react-router-dom";
-import testimonialImg21 from "../../../assets/images/Testimonials/Rectangle21.png";
-import testimonialImg22 from "../../../assets/images/Testimonials/Rectangle22.png";
+import testimonialImg21 from "../../../assets/images/Get-Involved/Volunteer2.png";
+import testimonialImg22 from "../../../assets/images/Get-Involved/Eric.png";
+import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
+
+const testimonial = [
+  {
+    id: 1,
+    name: "Jonathan",
+    lastName: "Stanciu",
+    image: testimonialImg21,
+    content1:
+      '“KeelWorks gave my resume legitimate experience. I learned to storyboard and build projects in Captivate using assets created in Photoshop and Audition. Now, I am a Senior Program Manager at Amazon. My success is the product of several career steps, all of which began with my practice in instructional design - and that started with KeelWorks.”',
+    designation: "Senior Program Manager at Amazon",
+  },
+  {
+    id: 2,
+    name: "Eric",
+    lastName: "Halterman",
+    image: testimonialImg22,
+    content1:
+      '“I have been trying to transition out of the classroom and into instructional design for a while now, and I was fortunate enough to find this internship opportunity. From the moment I joined, I was given valuable resources to help guide not only my processes, but my thinking.”',
+    designation: "Instructional Designer",
+  }
+]
 
 const Cards = () => {
   const navigate = useNavigate();
@@ -131,44 +153,40 @@ const Cards = () => {
           </div>
         </div>
       </div>
+      
       {/* ********************* Testimonial Section ********************* */}
-      <div className="w-screen flex flex-col justify-center items-center bg-white py-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-primary500 mb-12">
-          Testimonials
-        </h2>
+      <div className="w-full flex flex-col justify-center items-center bg-white py-16">
+      {/* Section Title */}
+      <h2 className="text-4xl md:text-5xl font-bold text-center text-primary500 mb-12">
+        Testimonials
+      </h2>
 
-        <div className="flex flex-col md:flex-row justify-center items-center gap-12 max-w-5xl">
-          {/* Testimonial 1 */}
-          <div className="flex flex-col items-center text-center">
-            <div className="relative w-64 h-64">
-              <img src={testimonialImg21} alt="Jonathan Stanciu" className="w-full h-full object-cover rounded-lg shadow-lg" />
+      {/* Testimonial Cards Container */}
+      <div className="max-w-5xl w-full px-4 mx-auto flex flex-col md:flex-row justify-center items-center gap-12">
+        {testimonial.map(({ id, name, lastName, image, content1, designation }, index) => (
+          <div key={id} className="flex flex-col items-center text-center">
+            {/* Image with Yellow Box Effect */}
+            <div className="relative w-[250px] h-[250px] mb-4">
+              {/* Yellow border box behind image */}
               <div className="absolute -top-3 -left-3 w-full h-full border-4 border-yellow-500"></div>
+              {/* The actual image on the front */}
+              <img
+                src={image}
+                alt={`${name} ${lastName}`}
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
-            <p className="font-bold text-lg mt-4">Jonathan Stanciu</p>
-            <p className="text-gray-600">Senior Program Manager at Amazon</p>
-            <p className="text-gray-700 mt-2 px-4 max-w-xs">
-              “KeelWorks gave my resume legitimate experience. I learned to storyboard and build projects in Captivate using assets created in Photoshop and Audition.
-              Now, I am a Senior Program Manager at Amazon. My success is the product of several career steps, all of which began with my practice in instructional design - and that started with KeelWorks.”
-            </p>
+            {/* Testimonial text */}
+            <p className="font-bold text-lg">{name} {lastName}</p>
+            <p className="text-gray-600">{designation}</p>
+            <p className="text-gray-700 mt-2 px-4 max-w-xs">{content1}</p>
           </div>
-
-          {/* Testimonial 2 */}
-          <div className="flex flex-col items-center text-center">
-            <div className="relative w-64 h-64">
-              <img src={testimonialImg22} alt="Eric Halterman" className="w-full h-full object-cover rounded-lg shadow-lg" />
-              <div className="absolute -top-3 -left-3 w-full h-full border-4 border-yellow-500"></div>
-            </div>
-            <p className="font-bold text-lg mt-4">Eric Halterman</p>
-            <p className="text-gray-600">Instructional Designer</p>
-            <p className="text-gray-700 mt-2 px-4 max-w-xs">
-              “I have been trying to transition out of the classroom and into instructional design for a while now, and I was fortunate enough to find this internship opportunity. From the moment I joined, I was given valuable resources to help guide not only my processes, but my thinking.”
-            </p>
-          </div>
-        </div>
+        ))}
+      </div>
 
         {/* Learn More Button */}
         <a href="https://keelworks.org/getinvolved" target="_blank" rel="noopener noreferrer">
-          <button class="mt-8 border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-500 hover:text-white transition">
+          <button className="mt-8 border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-500 hover:text-white transition">
             Learn More
           </button>
         </a>
