@@ -17,7 +17,7 @@ export const Blog = () => {
           <div className="w-full md:w-[755px] h-auto flex justify-center items-center flex-col gap-5 px-4 md:px-0">
             <div className="h-auto md:h-[114px]">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-Inter font-bold fontPrimarys">
-                Blogs
+                Newsletters
               </h1>
             </div>
             <div className="text-sm sm:text-base md:text-lg lg:text-xl fontPrimarys text-center">
@@ -45,7 +45,7 @@ export const Blog = () => {
             </div> */}
             <div className="w-full max-w-[1170px] px-4 md:px-8">
               <p className="text-[#8995A9] text-sm mb-4 text-center font-normal">
-                Showing 10 blogs
+                Showing 10 newsletters
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 ">
                 {/* Cards */}
