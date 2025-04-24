@@ -11,3 +11,17 @@
 html {
   font-family: "Inter", sans-serif;
 }
+<<<<<<< Updated upstream
+=======
+
+<<<<<<< Updated upstream
+.input-style {
+  @apply w-full px-3 py-3 text-[#101828] font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 text-sm;
+}
+=======
+
+.input-style {
+  @apply w-full px-3 py-3 text-[#101828] font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 text-sm;
+}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
