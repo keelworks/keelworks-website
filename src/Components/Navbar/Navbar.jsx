@@ -132,6 +132,15 @@ const Navbar = () => {
                 >
                   Contact Us
                 </Link>
+                <li>
+                <Link
+                  to="careers"
+                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                >
+                  Careers
+                </Link>
+              </li>
+
               </li>
               <li className="md:hidden">
                 <button
