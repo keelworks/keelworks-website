@@ -195,6 +195,9 @@ const Footer = () => {
 
 
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             <Link to="/non_dis_policy" className="hover:text-gray-500">
               Non-discrimination Policy
