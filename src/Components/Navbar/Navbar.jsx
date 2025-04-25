@@ -13,7 +13,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // ******** handeling click outside menu (closing menu) ***********
+  // ******** handling click outside menu (closing menu) ***********
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -51,7 +51,6 @@ const Navbar = () => {
           </button>
           <button
             disabled
-            // className="hidden md:block w-[80px] h-[36px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-primary500 hover:text-fontSecondary font-semibold"
             className="hidden md:block w-[80px] h-[36px] border-greyCustom border-solid border-[4px] rounded-full transition duration-[300ms] ease-linear text-[1rem] text-greyCustom hover:text-greyCustom font-semibold"
           >
             Login
@@ -72,11 +71,6 @@ const Navbar = () => {
             className="absolute top-[4rem] right-[-2rem] lg:right-0 bg-black p-5 rounded-bl-[17px] md:rounded-b-[17px] shadow-[5px_2px_5px_5px_rgba(0,0,0,0.3)]"
           >
             <ul className="flex flex-col mt-3 gap-5">
-              {/* <li className="md:hidden">
-                <button className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[#101828] font-semibold">
-                  Donate
-                </button>
-              </li> */}
               <li>
                 <Link
                   to="about"
@@ -132,19 +126,9 @@ const Navbar = () => {
                 >
                   Contact Us
                 </Link>
-                <li>
-                <Link
-                  to="careers"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
-                >
-                  Careers
-                </Link>
-              </li>
-
               </li>
               <li className="md:hidden">
                 <button
-                  // className="w-[116px] h-[47px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold"
                   className="w-[116px] h-[47px] border-greyCustom border-solid border-[4px] rounded-full transition duration-[300ms] ease-linear text-greyCustom hover:text-greyCustom font-semibold"
                 >
                   Login
