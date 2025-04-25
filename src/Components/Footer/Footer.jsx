@@ -182,23 +182,9 @@ const Footer = () => {
             <Link to="/contactus" className="hover:text-gray-500">
               Contact Us
             </Link>
-<<<<<<< Updated upstream
-=======
             <Link to="/careers" className="hover:text-gray-500">
-<<<<<<< Updated upstream
             Careers
             </Link>
-=======
-              Careers
-            </Link>
-
-
-
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             <Link to="/non_dis_policy" className="hover:text-gray-500">
               Non-discrimination Policy
             </Link>
