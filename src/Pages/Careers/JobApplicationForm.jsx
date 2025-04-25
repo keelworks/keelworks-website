@@ -40,10 +40,7 @@ const JobApplicationForm = () => {
         const file = data.resume;
         const reader = await file.arrayBuffer();
         const base64 = btoa(
-          new Uint8Array(reader).reduce(
-            (data, byte) => data + String.fromCharCode(byte),
-            ""
-          )
+          new Uint8Array(reader).reduce((data, byte) => data + String.fromCharCode(byte), "")
         );
         formDataToSend.append("fileContent", base64);
         formDataToSend.append("mimeType", file.type);
@@ -54,7 +51,7 @@ const JobApplicationForm = () => {
     }
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbxNuC6lamnvM9kiTKAZGF2KG6LxGnNtltrJfOcdcMWkWqK22JMx6iIgnzSVBkdnx7LbdA/exec",
+      "https://script.google.com/macros/s/AKfycbzyLaq4bWvqApKMgJxkoQNu1tZKWLJvVLfYyKqhUvGVBjoyt37zzC2dH7XO2hmG-2pfWA/exec",
       {
         method: "POST",
         body: formDataToSend,
@@ -87,9 +84,6 @@ const JobApplicationForm = () => {
         <span className="font-semibold capitalize">{formData.position}</span>
       </p>
       <form onSubmit={handleSubmit} className="space-y-6">
-<<<<<<< HEAD
-        {/* Form fields remain the same as your working version */}
-=======
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <input
             type="text"
@@ -187,7 +181,6 @@ const JobApplicationForm = () => {
           onChange={handleChange}
           required
         />
-
         <input
           type="tel"
           name="phone"
@@ -233,9 +226,7 @@ const JobApplicationForm = () => {
         </div>
 
         <div>
-          <label className="block mb-1 font-medium text-sm">
-            Upload Your Resume
-          </label>
+          <label className="block mb-1 font-medium text-sm">Upload Your Resume</label>
           <input
             type="file"
             name="resume"
@@ -261,7 +252,6 @@ const JobApplicationForm = () => {
         >
           Apply
         </button>
->>>>>>> main
       </form>
     </div>
   );
