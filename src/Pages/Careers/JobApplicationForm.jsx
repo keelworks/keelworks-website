@@ -40,10 +40,7 @@ const JobApplicationForm = () => {
         const file = data.resume;
         const reader = await file.arrayBuffer();
         const base64 = btoa(
-          new Uint8Array(reader).reduce(
-            (data, byte) => data + String.fromCharCode(byte),
-            ""
-          )
+          new Uint8Array(reader).reduce((data, byte) => data + String.fromCharCode(byte), "")
         );
         formDataToSend.append("fileContent", base64);
         formDataToSend.append("mimeType", file.type);
@@ -54,7 +51,7 @@ const JobApplicationForm = () => {
     }
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbzyLaq4bWvqApKMgJxkoQNu1tZKWLJvVLfYyKqhUvGVBjoyt37zzC2dH7XO2hmG-2pfWA/exec",
+      "https://script.google.com/macros/s/AKfycbxNuC6lamnvM9kiTKAZGF2KG6LxGnNtltrJfOcdcMWkWqK22JMx6iIgnzSVBkdnx7LbdA/exec",
       {
         method: "POST",
         body: formDataToSend,
@@ -86,5 +83,11 @@ const JobApplicationForm = () => {
         Please complete the form below to apply for the position:{" "}
         <span className="font-semibold capitalize">{formData.position}</span>
       </p>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Form fields remain the same as your working version */}
+      </form>
     </div>
-  )}
+  );
+};
+
+export default JobApplicationForm;
