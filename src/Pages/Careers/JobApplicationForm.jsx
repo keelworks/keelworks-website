@@ -215,6 +215,7 @@ const JobApplicationForm = () => {
             <option value="Other">Other</option>
           </select>
 
+<<<<<<< Updated upstream
           <input
             type="date"
             name="startDate"
