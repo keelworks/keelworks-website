@@ -11,18 +11,21 @@ const blogs = [
     date: 'Dec 22, 2023',
     description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     image: media1,
+    pdfFile: "https://drive.google.com/file/d/1YKU_-5sXFtv-2N0RzcVCh51G5qHQQkg8/view?usp=drive_link", 
   },
   {
     title: 'Financial Disability Dables',
     date: 'Dec 22, 2023',
     description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     image: media2,
+    pdfFile: "https://drive.google.com/file/d/1YKU_-5sXFtv-2N0RzcVCh51G5qHQQkg8/view?usp=drive_link",
   },
   {
     title: 'Your Support Makes A Difference',
     date: 'Dec 22, 2023',
     description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     image: media3,
+    pdfFile: "https://drive.google.com/file/d/1YKU_-5sXFtv-2N0RzcVCh51G5qHQQkg8/view?usp=drive_link",
   },
 ];
 
@@ -127,7 +130,10 @@ const Blog_new = () => {
                       </div>
                     </div>
                     <div className="flex justify-center mt-4 mb-8">
-                      <button className="bg-white text-[#8995A9] border border-[#8995A9] rounded-full px-8 py-2 mt-4 text-sm font-bold hover:bg-[#DBA300] hover:text-white transition-colors duration-300">
+                      <button
+                        className="bg-white text-[#8995A9] border border-[#8995A9] rounded-full px-8 py-2 mt-4 text-sm font-bold hover:bg-[#DBA300] hover:text-white transition-colors duration-300"
+                        onClick={() => handelReadMore(item.pdfFile)}
+                      >
                         Read More
                       </button>
                     </div>
