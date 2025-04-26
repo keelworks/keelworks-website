@@ -12,6 +12,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import SuccessStories from "./Pages/SuccessStories/SuccessStories";
 import Blog from "./Pages/Blog/Blog";
+import Blog_new from "./Pages/Blog/Blog_new";
 import Policy from "./Pages/Policy/Policy";
 import Careers from "./Pages/Careers/Careers";
 import JobApplicationForm from "./Pages/Careers/JobApplicationForm"; // ✅ NEW
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       { path: "about", element: <AboutUs /> },
       { path: "contactus", element: <ContactUs /> },
       { path: "success_stories", element: <SuccessStories /> },
-      { path: "blog", element: <Blog /> },
+      { path: "blog", element: <Blog_new /> },
       { path: "non_dis_policy", element: <Policy /> },
       { path: "comingsoon", element: <CommingSoon /> },
       {
