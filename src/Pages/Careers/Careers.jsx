@@ -1,46 +1,60 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Careers = () => {
   const [jobs, setJobs] = useState([]);
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://script.google.com/macros/s/AKfycbxCl9eKDy2O8h5sQm001b02W3yuN8W9sKpOPfi8TO7BevX-0SJCOL5MYdlgzj09GGrjIg/exec")
+    // Replace this with your new Apps Script URL
+    fetch("https://script.google.com/macros/s/AKfycbzL3qgWF2-yrCgQcgQXEbscWm-KugU1Q32wFgEDGKJYk1ePc4dVmgN_DAFiBsPktWcO/exec")
       .then(res => res.json())
       .then(data => {
         const openJobs = data.filter(job => job.Status === "Open");
         setJobs(openJobs);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error("Error fetching job listings:", error);
+        setLoading(false);
       });
   }, []);
 
-  const handleApply = (title) => {
-    const slug = title.toLowerCase().replace(/\s+/g, "-");
-    navigate(`/careers/apply/${slug}`);
+  const handleApply = (job) => {
+    if (job.FormURL) {
+      window.open(job.FormURL, '_blank');
+    } else {
+      alert("Application form not available for this position.");
+    }
   };
 
+  if (loading) {
+    return <div className="text-center py-10">Loading job opportunities...</div>;
+  }
+
   return (
-    <div className="px-8 py-12 bg-gray-100 min-h-screen">
-      <h1 className="text-4xl font-bold mb-10 text-center">Current Openings</h1>
+    <div className="px-4 md:px-8 py-12">
+      <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Career Opportunities</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {jobs.length === 0 ? (
-          <p>No openings available at this time.</p>
+          <p className="col-span-full text-center text-lg">No openings available at this time. Please check back later.</p>
         ) : (
           jobs.map((job, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl cursor-pointer animate-fade-slide"
-              onClick={() => handleApply(job.Title)}
+              className="bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-xl"
             >
-              <h2 className="text-xl font-bold mb-2">{job.Title}</h2>
-              <p><strong>Location:</strong> {job.Location}</p>
-              <p><strong>Type:</strong> {job.Type}</p>
-              <p className="mt-2 text-gray-600">{job.Description}</p>
+              <h3 className="text-xl font-bold mb-3">{job.Title}</h3>
+              <div className="mb-4">
+                <p className="text-gray-700"><strong>Location:</strong> {job.Location}</p>
+                <p className="text-gray-700"><strong>Type:</strong> {job.Type}</p>
+              </div>
+              <p className="text-gray-600 mb-6">{job.Description}</p>
               <button
-                className="mt-4 bg-primary500 text-white px-4 py-2 rounded-full hover:bg-primary300 transition duration-300"
+                className="w-full bg-primary500 text-white px-4 py-2 rounded-full hover:bg-primary300 transition duration-300 font-semibold"
+                onClick={() => handleApply(job)}
               >
-                Apply
+                Apply Now
               </button>
             </div>
           ))
