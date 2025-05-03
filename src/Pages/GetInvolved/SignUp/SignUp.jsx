@@ -4,6 +4,8 @@ import Checkbox from "../../../Components/Checkbox/Checkbox";
 import { FaCirclePlus } from "react-icons/fa6";
 
 const SignUp = () => {
+  const [showForm, setShowForm] = useState(false);
+
   const initDaysCheckboxState = {
     monday: false,
     tuesday: false,
@@ -387,13 +389,28 @@ const SignUp = () => {
   };
 
   return (
-    <div className="w-screen h-full md:min-h-[650px] md:mt-[5rem] lg:px-5 bg-white flex justify-center">
+    <div className="w-screen lg:px-5 py-10 md:py-20 bg-white flex justify-center">
       <div className="w-full max-w-[3000px] h-full flex flex-col items-start md:items-center justify-center font-bold">
-        <div className="max-w-[1100px] mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
+        <div className="max-w-[1100px] mx-[1rem] md:mx-[2rem] lg:mx-[8rem] mb-10 md:mb-16">
           <h2 className="text-[2rem] md:text-[3.5rem] lg:text-5xl md:text-center my-[2rem]">
             Volunteer Sign-Up & Needs
           </h2>
-          <form className="space-y-4 mt-2" onSubmit={handleSubmit}>
+          <p className="text-gray-700 text-base md:text-lg mb-6 md:text-center leading-relaxed">
+            <strong>We're always looking for passionate individuals to join our mission.</strong> If you're interested,{" "}
+             <span
+              onClick={() => setShowForm((prev) => !prev)}
+              className="text-primary500 font-semibold cursor-pointer hover:text-primary300"
+              >
+              click here to fill out the application
+            </span>.
+            </p>
+
+            <div
+            className={`transition-all duration-700 ease-in-out overflow-hidden ${
+            showForm ? "max-h-[4000px] opacity-100 mt-4" : "max-h-0 opacity-0"
+             }`}
+            >
+            <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
               <div>
                 <input
@@ -812,6 +829,7 @@ const SignUp = () => {
               </button>
             </div>
           </form>
+</div>
         </div>
       </div>
     </div>
