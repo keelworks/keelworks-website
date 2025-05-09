@@ -346,7 +346,7 @@ const SignUp = () => {
         "https://script.google.com/macros/s/AKfycbxBIUntQ1EB-vaR3nMuUabSn0WO3YghlyFAGFFB-tx02vnc6DtU_AgLgCFiLsHLWjTO/exec";
 
       const SIGNUP_SHEET_MASTER_URL =
-        "https://script.google.com/macros/s/AKfycbwwlgVzJv42ERjRKso-pk8Xu9HD3GZl4nxdEltQ3nEzNcX_f9U0_U2ww4kZPlqZi51_Yg/exec";
+        "https://script.google.com/macros/s/AKfycbyRoPGVv2_M5LQuwcLpzlQtUX1ciR0wScDaBxczOqnB2qDrSD8y8Tt0FtMJTfiT9In1gA/exec";
 
       const response = await fetch(SIGNUP_SHEET_MASTER_URL, {
         method: "POST",
