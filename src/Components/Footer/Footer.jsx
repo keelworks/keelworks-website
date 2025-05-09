@@ -14,7 +14,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   var test_url = "https://script.google.com/macros/s/AKfycbz1Id1zW50lzq-kLctDrBwXrvONZRkol622A0kiuawlLyCqvxuazupUJOVSBcHsyLG7/exec";
-  var master_url = "https://script.google.com/macros/s/AKfycbwqfmJUZWvCFKaiUMZwMHikxD5HI_D3eNWPi7D2xmNnhi9N8gqT9Qyk0ELAYQ2aBJ60ew/exec";
+  var master_url = "https://script.google.com/macros/s/AKfycbxglcDWtgey1PHh1qkpViHthjG08E3TK3hnjLJfDOQjQKw5dVYmNu4g-vvRmzJzy3zY_g/exec";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
