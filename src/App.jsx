@@ -13,6 +13,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import SuccessStories from "./Pages/SuccessStories/SuccessStories";
 import Blog from "./Pages/Blog/Blog";
+import Blog_new from "./Pages/Blog/Blog_new";
 import Policy from "./Pages/Policy/Policy";
 
 // Auth pages
@@ -63,7 +64,7 @@ const router = createBrowserRouter([
       },
       {
         path: "blog",
-        element: <Blog />,
+        element: <Blog_new />,
       },
       {
         path: "non_dis_policy",

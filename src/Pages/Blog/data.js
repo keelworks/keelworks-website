@@ -13,7 +13,7 @@ import newsLetterImageApr25 from "../../assets/images/Blogs/Newsletter-Apr2025.j
 export const newsLetters = [
   {
     id: 1011,
-    title: "Newsletter",
+    title: "April's Newsletter",
     date: "04/2025",
     description: "April's Newsletter",
     image: newsLetterImageApr25,
@@ -22,7 +22,7 @@ export const newsLetters = [
   },
   {
     id: 1010,
-    title: "Newsletter",
+    title: "March's Newsletter",
     date: "03/2025",
     description: "March's Newsletter",
     image: newsLetterImageMar25,
@@ -31,7 +31,7 @@ export const newsLetters = [
   },
   {
     id: 1009,
-    title: "Newsletter",
+    title: "February's Newsletter",
     date: "02/2025",
     description: "February's Newsletter",
     image: newsLetterImageFeb25,
@@ -40,7 +40,7 @@ export const newsLetters = [
   },
   {
     id: 1008,
-    title: "Newsletter",
+    title: "January's Newsletter",
     date: "01/2025",
     description: "January's Newsletter",
     image: newsLetterImageJan25,
@@ -49,7 +49,7 @@ export const newsLetters = [
   },
   {
     id: 1007,
-    title: "Newsletter",
+    title: "December's Newsletter",
     date: "12/2024",
     description: "December's Newsletter",
     image: newsLetterImageDec24,
@@ -58,7 +58,7 @@ export const newsLetters = [
   },
   {
     id: 1006,
-    title: "Newsletter",
+    title: "November's Newsletter",
     date: "11/2024",
     description: "November's Newsletter",
     image: newsLetterImageNov24,
@@ -67,7 +67,7 @@ export const newsLetters = [
   },
   {
     id: 1005,
-    title: "Newsletter",
+    title: "Octobers's Newsletter",
     date: "10/2024",
     description: "Octobers's Newsletter",
     image: newsLetterImageOct24,
@@ -76,7 +76,7 @@ export const newsLetters = [
   },
   {
     id: 1004,
-    title: "Newsletter",
+    title: "September's Newsletter",
     date: "09/2024",
     description: "September's Newsletter",
     image: newsLetterImageSep24,
@@ -85,7 +85,7 @@ export const newsLetters = [
   },
   {
     id: 1003,
-    title: "Newsletter",
+    title: "August's Newsletter",
     date: "08/2024",
     description: "August's Newsletter",
     image: newsLetterImageAug24,
@@ -94,7 +94,7 @@ export const newsLetters = [
   },
   {
     id: 1002,
-    title: "Newsletter",
+    title: "June's Newsletter",
     date: "06/2024",
     description: "June's Newsletter",
     image: newsLetterImageJune24,
@@ -103,7 +103,7 @@ export const newsLetters = [
   },
   {
     id: 1001,
-    title: "Newsletter",
+    title: "May's Newsletter",
     date: "05/2024",
     description: "May's Newsletter",
     image: newsLetterImageMay24,
