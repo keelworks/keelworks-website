@@ -10,8 +10,9 @@ import OurSolutions from "./Pages/OurSolutions/OurSolutions";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import SuccessStories from "./Pages/SuccessStories/SuccessStories";
-import Blog from "./Pages/Blog/Blog";
+import Blog from "./Pages/Blog/Blog_new";
 import Policy from "./Pages/Policy/Policy";
+import MayNewsletter from "./Pages/Newsletters/MayNewsletter";
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "non_dis_policy",
         element: <Policy />,
+      },
+      {
+        path: "newsletters/may-2025",
+        element: <MayNewsletter />,
       },
       {
         path: "comingsoon",

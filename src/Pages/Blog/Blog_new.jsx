@@ -165,7 +165,7 @@ export default function Blog_new() {
                       key={i}
                       className="bg-white rounded-lg shadow-md overflow-hidden hover:cursor-pointer"
                       onClick={() =>
-                        open(item.pdfFile ?? item.link) /* newsletter vs article */
+                        open(item.htmlLink ?? item.pdfFile ?? item.link) /* newsletter vs article */
                       }
                     >
                       <img
