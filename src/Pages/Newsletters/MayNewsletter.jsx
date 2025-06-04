@@ -3,6 +3,7 @@ import socialmediateam from "../../assets/images/Newsletters/MayNewsletter/socia
 import volunteer from "../../assets/images/Newsletters/MayNewsletter/volunteer.png";
 import founder from "../../assets/images/Newsletters/MayNewsletter/Thomas-G.jpg";
 import jewish from "../../assets/images/Newsletters/MayNewsletter/Jewish.png";
+import logo from "../../assets/images/Newsletters/MayNewsletter/keelworks_logo.jpg";
 import malcolm from "../../assets/images/Newsletters/MayNewsletter/malcolm.png";
 
 export default function NewsletterTemplate() {
@@ -99,7 +100,7 @@ export default function NewsletterTemplate() {
             Monthly Newsletter
           </h1>
           <img
-            src="https://iili.io/3kOC4SI.jpg"
+            src={logo}
             alt="Keelworks Logo"
             className="w-[90%] mx-auto my-2 rounded"
             style={{ maxWidth: 720 }}
