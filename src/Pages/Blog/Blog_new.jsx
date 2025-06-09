@@ -18,58 +18,91 @@ const SHEET_URL =
 export default function Blog_new() {
   /* ---------- state ---------- */
   const [activeFilter, setActiveFilter] = useState("Article");
-  const [activePage,   setActivePage]   = useState(1);
-
+  const [activePage, setActivePage] = useState(1);
   const [articles, setArticles] = useState([]);
   const [videos,   setVideos]   = useState([]);
+  const [cachedArticles, setCachedArticles] = useState({}); // In-memory cache
 
   const [loadingA, setLoadingA] = useState(true);
   const [loadingV, setLoadingV] = useState(true);
 
   /* -------- fetch *all* WordPress posts -------- */
+  // Fetch only the first page initially
+  useEffect(() => {
+    const fetchArticles = async (page) => {
+      if (cachedArticles[page]) {
+        return cachedArticles[page];
+      }
+
+      try {
+        const PER_PAGE = 9;
+        const response = await fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=${page}`);
+        if (!response.ok) throw new Error(response.statusText);
+
+        const data = await response.json();
+        const formattedArticles = data.map((p) => ({
+          title: p.title.rendered.replace(/<[^>]+>/g, ""),
+          date: new Date(p.date).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          }),
+          image:
+            p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
+            "https://via.placeholder.com/600x400?text=KeelWorks",
+          link: p.link,
+        }));
+
+        setCachedArticles((prevCache) => ({ ...prevCache, [page]: formattedArticles }));
+        return formattedArticles;
+      } catch (err) {
+        console.error(`WordPress fetch error for page ${page}:`, err);
+        return [];
+      }
+    };
+
+    const loadInitialArticles = async () => {
+      setLoadingA(true);
+      const initialArticles = await fetchArticles(1);
+      setArticles(initialArticles);
+      setLoadingA(false);
+    };
+
+    loadInitialArticles();
+  }, []);
+
+  // Fetch remaining pages in the background after the initial render
   useEffect(() => {
     (async () => {
       try {
-        const PER_PAGE = 100;
-        const first = await fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=1`);
-        if (!first.ok) throw new Error(first.statusText);
+        const response = await fetch(`${WP_BASE}&per_page=9&page=1`);
+        if (!response.ok) throw new Error(response.statusText);
 
         const totalPages = parseInt(
-          first.headers.get("X-WP-TotalPages") || "1",
+          response.headers.get("X-WP-TotalPages") || "1",
           10
         );
-        let all = await first.json();
-
-        /* remaining pages in parallel */
-        const rest = await Promise.all(
-          Array.from({ length: totalPages - 1 }, (_, i) =>
-            fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=${i + 2}`).then((r) =>
-              r.json()
+        if (totalPages > 1) {
+          const rest = await Promise.all(
+            Array.from({ length: totalPages - 1 }, (_, i) =>
+              fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=${i + 2}`).then((r) =>
+                r.json()
+              )
             )
-          )
-        );
-        rest.forEach((chunk) => (all = all.concat(chunk)));
+          ).then(chunks => chunks.flat().map(p => ({
+              title: p.title.rendered.replace(/<[^>]+>/g, ""),
+              date: new Date(p.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+              image: p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? "https://via.placeholder.com/600x400?text=KeelWorks",
+              link: p.link,
+            })));
 
-        setArticles(
-          all.map((p) => ({
-            title: p.title.rendered.replace(/<[^>]+>/g, ""),
-            date:  new Date(p.date).toLocaleDateString("en-US", {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            }),
-            image:
-              p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
-              "https://via.placeholder.com/600x400?text=KeelWorks",
-            link:  p.link,           // WordPress permalink
-          }))
-        );
-      } catch (err) {
-        console.error("WordPress fetch error:", err);
-        setArticles([]);
-      } finally {
-        setLoadingA(false);
-      }
+          // Cache the remaining pages
+          const PER_PAGE = 9;
+          for (let i = 0; i < rest.length; i++) {
+            setCachedArticles(prevCache => ({ ...prevCache, [i + 2]: rest[i].map(p => ({ title: p.title.rendered.replace(/<[^>]+>/g, ""), date: new Date(p.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }), image: p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? "https://via.placeholder.com/600x400?text=KeelWorks", link: p.link, })) }));
+          }
+        }
+      } catch (err) {} // Ignore errors for background fetch
     })();
   }, []);
 
@@ -101,11 +134,10 @@ export default function Blog_new() {
   /* ---------- pagination ---------- */
   const ITEMS_PER_PAGE = 9;
   const masterList = {
-    Newsletter: newsLetters,
-    Article:    loadingA ? Array(3).fill({ skeleton: true }) : articles,
-    Media:      loadingV ? Array(3).fill({ skeleton: true }) : videos,
+    Newsletter: newsLetters, // Assuming newsletters are not fetched dynamically
+    Article: loadingA && !cachedArticles[activePage] ? Array(9).fill({ skeleton: true }) : cachedArticles[activePage] || articles, // Show 9 skeletons initially or cached data
+    Media: loadingV ? Array(9).fill({ skeleton: true }) : videos, // Show 9 skeletons initially
   }[activeFilter];
-
   const totalPages     = Math.max(1, Math.ceil(masterList.length / ITEMS_PER_PAGE));
   const paginatedItems = masterList.slice(
     (activePage - 1) * ITEMS_PER_PAGE,
@@ -113,6 +145,17 @@ export default function Blog_new() {
   );
 
   useEffect(() => setActivePage(1), [activeFilter]);
+  useEffect(() => {
+    // When activePage changes, load articles for that page if not cached
+    if (activeFilter === 'Article' && !cachedArticles[activePage]) {
+      (async () => {
+        setLoadingA(true);
+        const pageArticles = await fetchArticles(activePage);
+        setArticles(pageArticles); // This might not be strictly necessary if using cachedArticles for rendering
+        setLoadingA(false);
+      })();
+    }
+  }, [activePage, activeFilter, cachedArticles]);
 
   const open = (url) => window.open(url, "_blank");
 
@@ -158,7 +201,7 @@ export default function Blog_new() {
               {/* Newsletter / Article */}
               {activeFilter !== "Media" &&
                 paginatedItems.map((item, i) =>
-                  item.skeleton ? (
+                  item.skeleton ? ( // Use skeleton state
                     <div key={i} className="h-[310px] bg-gray-100 animate-pulse rounded-lg" />
                   ) : (
                     <article
@@ -186,7 +229,7 @@ export default function Blog_new() {
               {/* Media */}
               {activeFilter === "Media" &&
                 paginatedItems.map((vid, i) =>
-                  vid.skeleton ? (
+                  vid.skeleton ? ( // Use skeleton state
                     <div key={i} className="h-[310px] bg-gray-100 animate-pulse rounded-lg" />
                   ) : (
                     <article key={i} className="bg-white rounded-lg shadow-md overflow-hidden">

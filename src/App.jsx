@@ -1,6 +1,9 @@
 import ReactGA from "react-ga4";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
+
 const MEASUREMENT_ID = "G-K7FMRVVS50";
-// **************** Components **************
+
 import SiteLayout from "./Components/SiteLayout/SiteLayout";
 import Error from "./Pages/Error/Error";
 import CommingSoon from "./Pages/ComingSoon/ComingSoon";
@@ -13,9 +16,9 @@ import SuccessStories from "./Pages/SuccessStories/SuccessStories";
 import Blog from "./Pages/Blog/Blog_new";
 import Policy from "./Pages/Policy/Policy";
 import MayNewsletter from "./Pages/Newsletters/MayNewsletter";
-// ******************************************
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { useEffect } from "react";
+import Login from "./Pages/Auth/Login";
+import Signup from "./Pages/Auth/Signup";
+import ForgotPassword from "./Pages/Auth/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -23,51 +26,20 @@ const router = createBrowserRouter([
     element: <SiteLayout />,
     errorElement: <Error />,
     children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "home",
-        element: <Home />,
-      },
-      {
-        path: "getinvolved",
-        element: <GetInvolved />,
-      },
-      {
-        path: "oursolutions",
-        element: <OurSolutions />,
-      },
-      {
-        path: "about",
-        // element: <Home />,
-        element: <AboutUs />,
-      },
-      {
-        path: "contactus",
-        element: <ContactUs />,
-      },
-      {
-        path: "success_stories",
-        element: <SuccessStories />,
-      },
-      {
-        path: "blog",
-        element: <Blog />,
-      },
-      {
-        path: "non_dis_policy",
-        element: <Policy />,
-      },
-      {
-        path: "newsletters/may-2025",
-        element: <MayNewsletter />,
-      },
-      {
-        path: "comingsoon",
-        element: <CommingSoon />,
-      },
+      { index: true, element: <Home /> },
+      { path: "home", element: <Home /> },
+      { path: "getinvolved", element: <GetInvolved /> },
+      { path: "oursolutions", element: <OurSolutions /> },
+      { path: "about", element: <AboutUs /> },
+      { path: "contactus", element: <ContactUs /> },
+      { path: "success_stories", element: <SuccessStories /> },
+      { path: "blog", element: <Blog /> },
+      { path: "non_dis_policy", element: <Policy /> },
+      { path: "newsletters/may-2025", element: <MayNewsletter /> },
+      { path: "comingsoon", element: <CommingSoon /> },
+      { path: "login", element: <Login /> },
+      { path: "signup", element: <Signup /> },
+      { path: "forgot-password", element: <ForgotPassword /> },
     ],
   },
 ]);
@@ -76,18 +48,20 @@ function App() {
   useEffect(() => {
     ReactGA.initialize(MEASUREMENT_ID);
   }, []);
+
   useEffect(() => {
-    // Send a pageview event whenever the route changes
     ReactGA.send({
       hitType: "pageview",
-      page: location.pathname,
-      title: location.pathname, // Use the pathname as the title for simplicity
+      page: window.location.pathname,
+      title: window.location.pathname,
     });
-  }, [location.pathname]);
+  }, [window.location.pathname]);
+
   return (
-    <main className=" overflow-x-hidden">
+    <main className="overflow-x-hidden">
       <RouterProvider router={router} />
     </main>
   );
 }
+
 export default App;
