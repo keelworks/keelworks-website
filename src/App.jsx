@@ -16,9 +16,7 @@ import SuccessStories from "./Pages/SuccessStories/SuccessStories";
 import Blog from "./Pages/Blog/Blog_new";
 import Policy from "./Pages/Policy/Policy";
 import MayNewsletter from "./Pages/Newsletters/MayNewsletter";
-import Login from "./Pages/Auth/Login";
-import Signup from "./Pages/Auth/Signup";
-import ForgotPassword from "./Pages/Auth/ForgotPassword";
+
 
 const router = createBrowserRouter([
   {
@@ -37,9 +35,6 @@ const router = createBrowserRouter([
       { path: "non_dis_policy", element: <Policy /> },
       { path: "newsletters/may-2025", element: <MayNewsletter /> },
       { path: "comingsoon", element: <CommingSoon /> },
-      { path: "login", element: <Login /> },
-      { path: "signup", element: <Signup /> },
-      { path: "forgot-password", element: <ForgotPassword /> },
     ],
   },
 ]);

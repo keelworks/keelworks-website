@@ -45,12 +45,6 @@ const Navbar = () => {
             Donate
           </button>
 
-          <Link to="/login">
-            <button className="hidden md:block w-[80px] h-[36px] border border-primary500 text-primary500 rounded-full hover:bg-primary300 hover:text-white transition duration-300 text-[1rem] font-semibold">
-              Login
-            </button>
-          </Link>
-
           <div className="text-[2rem] cursor-pointer text-white flex items-center justify-center">
             {isOpen ? <FaTimes onClick={toggleMenu} /> : <FaBars onClick={toggleMenu} />}
           </div>
@@ -69,8 +63,6 @@ const Navbar = () => {
               <li><Link to="success_stories" className="text-white hover:text-gray-500">Success Stories</Link></li>
               <li><Link to="getinvolved#faq" className="text-white hover:text-gray-500">FAQ</Link></li>
               <li><Link to="contactus" className="text-white hover:text-gray-500">Contact Us</Link></li>
-              <li><Link to="/login" className="text-white hover:text-gray-500">Login</Link></li>
-              <li><Link to="/signup" className="text-white hover:text-gray-500">Signup</Link></li>
             </ul>
           </div>
         )}
@@ -80,3 +72,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// This code defines a responsive navigation bar for a website using React.
+// It includes a logo, a "Donate" button, and a menu that toggles open and closed.  
