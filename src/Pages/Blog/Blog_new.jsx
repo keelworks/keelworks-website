@@ -1,32 +1,36 @@
 /*****************************************************************
  * Blog_new.jsx  –  KeelWorks “Blogs / Media” page                *
  *  ▸ Newsletter : opens PDF when you click the card              *
- *  ▸ Article    : all posts from blog.keelworks.org              *
+ *  ▸ Article    : paginated posts from blog.keelworks.org        *
  *  ▸ Media      : YouTube rows from Google-Sheet Apps Script     *
  *****************************************************************/
-import React, { useState, useEffect } from "react";
-import YouTube from "react-youtube";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { newsLetters } from "./data";
+import initialArticles from "./initialArticles.json"; // ← array of your first 9 items
 
-/* ------------- endpoints ------------- */
+const YouTube = lazy(() => import("react-youtube"));
+
 const WP_BASE =
-  "https://blog.keelworks.org/wp-json/wp/v2/posts?_embed"; // we'll add paging
+  "https://blog.keelworks.org/wp-json/wp/v2/posts?_embed";
 const SHEET_URL =
   "https://script.google.com/macros/s/AKfycbyTqWa2lpBigwckddK4ZpIY-UK1LzjbtrG56D_IWTxRVN9Kd47MkN4YdRjeu52DrYU3TA/exec";
 
 export default function Blog_new() {
-  /* ---------- state ---------- */
-  const [activeFilter, setActiveFilter] = useState("Article");
+  const [activeFilter, setActiveFilter] = useState("Newsletter");
   const [activePage,   setActivePage]   = useState(1);
 
-  const [articles, setArticles] = useState([]);
+  // Start with your pre-fetched first page
+  const [articles, setArticles] = useState(initialArticles);
   const [videos,   setVideos]   = useState([]);
 
-  const [loadingA, setLoadingA] = useState(true);
-  const [loadingV, setLoadingV] = useState(true);
+  // true while we’re loading the *full* list in background
+  const [refreshingA, setRefreshingA] = useState(true);
+  const [loadingV,    setLoadingV]    = useState(true);
 
-  /* -------- fetch *all* WordPress posts -------- */
+  const ITEMS_PER_PAGE = 9;
+
+  // on mount: fetch *all* WP posts in background, then replace
   useEffect(() => {
     (async () => {
       try {
@@ -35,46 +39,42 @@ export default function Blog_new() {
         if (!first.ok) throw new Error(first.statusText);
 
         const totalPages = parseInt(
-          first.headers.get("X-WP-TotalPages") || "1",
-          10
+          first.headers.get("X-WP-TotalPages") || "1", 10
         );
-        let all = await first.json();
 
-        /* remaining pages in parallel */
+        let all = await first.json();
         const rest = await Promise.all(
           Array.from({ length: totalPages - 1 }, (_, i) =>
-            fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=${i + 2}`).then((r) =>
-              r.json()
-            )
+            fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=${i + 2}`)
+              .then((r) => r.json())
           )
         );
         rest.forEach((chunk) => (all = all.concat(chunk)));
 
-        setArticles(
-          all.map((p) => ({
-            title: p.title.rendered.replace(/<[^>]+>/g, ""),
-            date:  new Date(p.date).toLocaleDateString("en-US", {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            }),
-            image:
-              p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
-              "https://via.placeholder.com/600x400?text=KeelWorks",
-            link:  p.link,           // WordPress permalink
-          }))
-        );
+        const mapped = all.map((p) => ({
+          title: p.title.rendered.replace(/<[^>]+>/g, ""),
+          date:  new Date(p.date).toLocaleDateString("en-US", {
+            month: "short", day: "numeric", year: "numeric"
+          }),
+          image:
+            p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+            "https://via.placeholder.com/600x400?text=KeelWorks",
+          link: p.link,
+        }));
+
+        setArticles(mapped);
       } catch (err) {
-        console.error("WordPress fetch error:", err);
-        setArticles([]);
+        console.error("WordPress full-fetch error:", err);
       } finally {
-        setLoadingA(false);
+        setRefreshingA(false);
       }
     })();
   }, []);
 
-  /* -------- fetch YouTube rows -------- */
+  // fetch media only when tab is active
   useEffect(() => {
+    if (activeFilter !== "Media") return;
+    setLoadingV(true);
     fetch(SHEET_URL)
       .then((r) => r.json())
       .then((rows) =>
@@ -84,9 +84,7 @@ export default function Blog_new() {
             .map((r) => ({
               ...r,
               date: new Date(r.date).toLocaleDateString("en-US", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
+                month: "short", day: "numeric", year: "numeric"
               }),
             }))
         )
@@ -96,27 +94,30 @@ export default function Blog_new() {
         setVideos([]);
       })
       .finally(() => setLoadingV(false));
-  }, []);
+  }, [activeFilter]);
 
-  /* ---------- pagination ---------- */
-  const ITEMS_PER_PAGE = 9;
+  // build the list & pagination
   const masterList = {
     Newsletter: newsLetters,
-    Article:    loadingA ? Array(3).fill({ skeleton: true }) : articles,
+    Article:    articles,
     Media:      loadingV ? Array(3).fill({ skeleton: true }) : videos,
   }[activeFilter];
 
-  const totalPages     = Math.max(1, Math.ceil(masterList.length / ITEMS_PER_PAGE));
+  const totalPages = Math.max(
+    1,
+    Math.ceil(masterList.length / ITEMS_PER_PAGE)
+  );
+
   const paginatedItems = masterList.slice(
     (activePage - 1) * ITEMS_PER_PAGE,
     activePage * ITEMS_PER_PAGE
   );
 
+  // reset to page 1 when switching tabs
   useEffect(() => setActivePage(1), [activeFilter]);
 
   const open = (url) => window.open(url, "_blank");
 
-  /* ---------- UI ---------- */
   return (
     <div className="w-screen bg-white flex justify-center">
       <div className="w-screen max-w-[3000px] my-[5rem] md:mt-[8rem] flex justify-center">
@@ -152,25 +153,35 @@ export default function Blog_new() {
             <p className="text-[#8995A9] text-sm text-center">
               Showing {masterList.length} {activeFilter}
               {masterList.length !== 1 && "s"}
+              {activeFilter === "Article" && refreshingA && (
+                <span className="ml-2 text-xs text-orange-500">
+                  (updating…)
+                </span>
+              )}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 w-full max-w-[1170px]">
+
               {/* Newsletter / Article */}
               {activeFilter !== "Media" &&
                 paginatedItems.map((item, i) =>
                   item.skeleton ? (
-                    <div key={i} className="h-[310px] bg-gray-100 animate-pulse rounded-lg" />
+                    <div
+                      key={i}
+                      className="h-[310px] bg-gray-100 animate-pulse rounded-lg"
+                    />
                   ) : (
                     <article
                       key={i}
                       className="bg-white rounded-lg shadow-md overflow-hidden hover:cursor-pointer"
                       onClick={() =>
-                        open(item.htmlLink ?? item.pdfFile ?? item.link) /* newsletter vs article */
+                        open(item.htmlLink ?? item.pdfFile ?? item.link)
                       }
                     >
                       <img
                         src={item.image}
                         alt={item.title}
+                        loading="lazy"
                         className="w-full md:h-[150px] xl:h-[250px] object-cover"
                       />
                       <div className="p-8 flex flex-col items-center gap-3">
@@ -184,35 +195,44 @@ export default function Blog_new() {
                 )}
 
               {/* Media */}
-              {activeFilter === "Media" &&
-                paginatedItems.map((vid, i) =>
-                  vid.skeleton ? (
-                    <div key={i} className="h-[310px] bg-gray-100 animate-pulse rounded-lg" />
-                  ) : (
-                    <article key={i} className="bg-white rounded-lg shadow-md overflow-hidden">
-                      <YouTube
-                        videoId={vid.videoId}
-                        opts={{
-                          width: "100%",
-                          height: "200",
-                          playerVars: { rel: 0, modestbranding: 1 },
-                        }}
+              {activeFilter === "Media" && (
+                <Suspense fallback={<div>Loading videos…</div>}>
+                  {paginatedItems.map((vid, i) =>
+                    vid.skeleton ? (
+                      <div
+                        key={i}
+                        className="h-[310px] bg-gray-100 animate-pulse rounded-lg"
                       />
-                      <div className="p-5 flex flex-col items-center gap-3">
-                        <h3 className="text-lg font-semibold text-center">
-                          {vid.title}
-                        </h3>
-                        <p className="text-xs text-[#8995A9]">{vid.date}</p>
-                        <button
-                          onClick={() => open(`https://youtu.be/${vid.videoId}`)}
-                          className="bg-white border border-[#8995A9] text-[#8995A9] rounded-full px-8 py-2 text-sm font-bold hover:bg-[#DBA300] hover:text-white transition-colors"
-                        >
-                          Watch on YouTube
-                        </button>
-                      </div>
-                    </article>
-                  )
-                )}
+                    ) : (
+                      <article
+                        key={i}
+                        className="bg-white rounded-lg shadow-md overflow-hidden"
+                      >
+                        <YouTube
+                          videoId={vid.videoId}
+                          opts={{
+                            width: "100%",
+                            height: "200",
+                            playerVars: { rel: 0, modestbranding: 1 },
+                          }}
+                        />
+                        <div className="p-5 flex flex-col items-center gap-3">
+                          <h3 className="text-lg font-semibold text-center">
+                            {vid.title}
+                          </h3>
+                          <p className="text-xs text-[#8995A9]">{vid.date}</p>
+                          <button
+                            onClick={() => open(`https://youtu.be/${vid.videoId}`)}
+                            className="bg-white border border-[#8995A9] text-[#8995A9] rounded-full px-8 py-2 text-sm font-bold hover:bg-[#DBA300] hover:text-white transition-colors"
+                          >
+                            Watch on YouTube
+                          </button>
+                        </div>
+                      </article>
+                    )
+                  )}
+                </Suspense>
+              )}
             </div>
           </section>
 
@@ -240,6 +260,7 @@ export default function Blog_new() {
               </div>
             </footer>
           )}
+
         </div>
       </div>
     </div>
