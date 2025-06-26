@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import LoadingSpinner from "../../Components/KeelBot/LoadingSpinner/LoadingSpinner";
 
 const Careers = () => {
   const [jobs, setJobs] = useState([]);
@@ -40,7 +41,11 @@ const Careers = () => {
   };
 
   if (loading) {
-    return <div className="text-center py-10">Loading job opportunities...</div>;
+    return (
+      <div className="flex justify-center items-center min-h-[300px]">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   return (
@@ -58,7 +63,8 @@ const Careers = () => {
           currentJobs.map((job, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-xl flex flex-col h-full"
+              className="job-card bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-2xl hover:scale-[1.03] flex flex-col h-full animate-fadeInUp"
+              style={{ animationDelay: `${index * 80}ms` }}
             >
               <div className="flex flex-col h-full">
                 <div className="mb-6">
@@ -68,15 +74,16 @@ const Careers = () => {
                       <strong>Location:</strong> {job.Location}
                     </p>
                     <p className="text-gray-700">
-                      <strong>Type:</strong> {job.Type}
+                      <strong>Type:</strong> <span className="inline-block px-2 py-0.5 rounded bg-primary100 text-primary500 text-xs font-semibold ml-1">{job.Type}</span>
                     </p>
                   </div>
                   <p className="text-gray-600">{job.Description}</p>
                 </div>
 
                 <button
-                  className="mt-auto w-full bg-primary500 text-white px-4 py-2 rounded-full hover:bg-primary300 transition duration-300 font-semibold"
-                  onClick={() => handleApply(job)}
+                  className="mt-auto w-full bg-primary500 text-white px-4 py-2 rounded-full hover:bg-primary300 transition duration-300 font-semibold relative overflow-hidden ripple"
+                  onClick={e => { handleApply(job); createRipple(e); }}
+                  type="button"
                 >
                   Apply Now
                 </button>
@@ -92,7 +99,7 @@ const Careers = () => {
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="px-3 py-1 rounded border bg-white hover:bg-gray-100 disabled:opacity-50"
+            className="px-3 py-1 rounded border bg-white hover:bg-primary100 hover:scale-105 transition disabled:opacity-50"
           >
             Prev
           </button>
@@ -101,10 +108,10 @@ const Careers = () => {
             <button
               key={i}
               onClick={() => handlePageChange(i + 1)}
-              className={`px-3 py-1 rounded border ${
+              className={`px-3 py-1 rounded border transition hover:scale-105 ${
                 currentPage === i + 1
                   ? "bg-primary500 text-white"
-                  : "bg-white hover:bg-gray-100"
+                  : "bg-white hover:bg-primary100"
               }`}
             >
               {i + 1}
@@ -114,7 +121,7 @@ const Careers = () => {
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="px-3 py-1 rounded border bg-white hover:bg-gray-100 disabled:opacity-50"
+            className="px-3 py-1 rounded border bg-white hover:bg-primary100 hover:scale-105 transition disabled:opacity-50"
           >
             Next
           </button>
@@ -123,5 +130,23 @@ const Careers = () => {
     </div>
   );
 };
+
+// Ripple effect for Apply button
+function createRipple(event) {
+  const button = event.currentTarget;
+  const circle = document.createElement("span");
+  const diameter = Math.max(button.clientWidth, button.clientHeight);
+  const radius = diameter / 2;
+  circle.style.width = circle.style.height = `${diameter}px`;
+  circle.style.left = `${event.clientX - button.getBoundingClientRect().left - radius}px`;
+  circle.style.top = `${event.clientY - button.getBoundingClientRect().top - radius}px`;
+  circle.classList.add("ripple-effect");
+  const ripple = button.getElementsByClassName("ripple-effect")[0];
+  if (ripple) {
+    ripple.remove();
+  }
+  button.appendChild(circle);
+  setTimeout(() => circle.remove(), 600);
+}
 
 export default Careers;
