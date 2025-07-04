@@ -15,24 +15,24 @@ import newsLetterImageJune25 from "../../assets/images/Blogs/Newsletter-June2025
 export const newsLetters = [
   {
     id: 1013,
-    title: "June's Newsletter",
-    date: "05/2025",
+    title: "June 2025",
+    // date: "06/2025",
     description: "June's Newsletter",
     image: newsLetterImageJune25,
     htmlLink: "/newsletters/june-2025",
   },
   {
     id: 1012,
-    title: "May's Newsletter",
-    date: "05/2025",
+    title: "May 2025",
+    // date: "05/2025",
     description: "May's Newsletter",
     image: newsLetterImageMay25,
     htmlLink: "/newsletters/may-2025",
   },
   {
     id: 1011,
-    title: "April's Newsletter",
-    date: "04/2025",
+    title: "April 2025",
+    // date: "04/2025",
     description: "April's Newsletter",
     image: newsLetterImageApr25,
     pdfFile:
@@ -40,8 +40,8 @@ export const newsLetters = [
   },
   {
     id: 1010,
-    title: "March's Newsletter",
-    date: "03/2025",
+    title: "March 2025",
+    // date: "03/2025",
     description: "March's Newsletter",
     image: newsLetterImageMar25,
     pdfFile:
@@ -49,8 +49,8 @@ export const newsLetters = [
   },
   {
     id: 1009,
-    title: "February's Newsletter",
-    date: "02/2025",
+    title: "February 2025",
+    // date: "02/2025",
     description: "February's Newsletter",
     image: newsLetterImageFeb25,
     pdfFile:
@@ -58,8 +58,8 @@ export const newsLetters = [
   },
   {
     id: 1008,
-    title: "January's Newsletter",
-    date: "01/2025",
+    title: "January 2025",
+    // date: "01/2025",
     description: "January's Newsletter",
     image: newsLetterImageJan25,
     pdfFile:
@@ -67,8 +67,8 @@ export const newsLetters = [
   },
   {
     id: 1007,
-    title: "December's Newsletter",
-    date: "12/2024",
+    title: "December 2024",
+    // date: "12/2024",
     description: "December's Newsletter",
     image: newsLetterImageDec24,
     pdfFile:
@@ -76,8 +76,8 @@ export const newsLetters = [
   },
   {
     id: 1006,
-    title: "November's Newsletter",
-    date: "11/2024",
+    title: "November 2024",
+    // date: "11/2024",
     description: "November's Newsletter",
     image: newsLetterImageNov24,
     pdfFile:
@@ -85,8 +85,8 @@ export const newsLetters = [
   },
   {
     id: 1005,
-    title: "Octobers's Newsletter",
-    date: "10/2024",
+    title: "Octobers 2024",
+    // date: "10/2024",
     description: "Octobers's Newsletter",
     image: newsLetterImageOct24,
     pdfFile:
@@ -94,8 +94,8 @@ export const newsLetters = [
   },
   {
     id: 1004,
-    title: "September's Newsletter",
-    date: "09/2024",
+    title: "September 2024",
+    // date: "09/2024",
     description: "September's Newsletter",
     image: newsLetterImageSep24,
     pdfFile:
@@ -103,8 +103,8 @@ export const newsLetters = [
   },
   {
     id: 1003,
-    title: "August's Newsletter",
-    date: "08/2024",
+    title: "August 2024",
+    // date: "08/2024",
     description: "August's Newsletter",
     image: newsLetterImageAug24,
     pdfFile:
@@ -112,8 +112,8 @@ export const newsLetters = [
   },
   {
     id: 1002,
-    title: "June's Newsletter",
-    date: "06/2024",
+    title: "June 2024",
+    // date: "06/2024",
     description: "June's Newsletter",
     image: newsLetterImageJune24,
     pdfFile:
@@ -121,8 +121,8 @@ export const newsLetters = [
   },
   {
     id: 1001,
-    title: "May's Newsletter",
-    date: "05/2024",
+    title: "May 2024",
+    // date: "05/2024",
     description: "May's Newsletter",
     image: newsLetterImageMay24,
     pdfFile:
