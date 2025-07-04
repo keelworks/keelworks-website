@@ -85,7 +85,7 @@ export const newsLetters = [
   },
   {
     id: 1005,
-    title: "Octobers 2024",
+    title: "October 2024",
     // date: "10/2024",
     description: "Octobers's Newsletter",
     image: newsLetterImageOct24,
