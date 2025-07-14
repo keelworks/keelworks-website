@@ -3,7 +3,6 @@ import Hero from "./Hero/Hero";
 import BecomeDonor from "./BecomeDonor/BecomeDonor";
 import Testimonials from "./Testimonials/Testimonials";
 import BecomeVolunteer from "./BecomeVolunteer/BecomeVolunteer";
-import SignUp from "./SignUp/SignUp";
 import VolunteersSay from "./VolunteersSay/VolunteersSay";
 import Faq from "./FAQ/Faq";
 import Careers from "../Careers/Careers"; 
@@ -24,7 +23,6 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      <SignUp />
       <VolunteersSay />
       <Faq />
     </div>
