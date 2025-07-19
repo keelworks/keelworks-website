@@ -17,7 +17,7 @@ const GetInvolved = () => {
       <BecomeVolunteer />
 
       
-      <section className="bg-grey200 px-6 md:px-16 lg:px-24 py-10">
+      <section id="careers" className="bg-grey200 px-6 md:px-16 lg:px-24 py-10">
         <div className="max-w-6xl mx-auto">
           <Careers />
         </div>

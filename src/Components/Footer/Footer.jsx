@@ -164,6 +164,9 @@ const Footer = () => {
             <Link to="/getinvolved" className="hover:text-gray-500">
               Get Involved
             </Link>
+            <Link to="/getinvolved#careers" className="hover:text-gray-500">
+             Careers
+            </Link>
             <Link to="/oursolutions" className="hover:text-gray-500">
               Our Solutions
             </Link>
