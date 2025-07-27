@@ -49,13 +49,13 @@ const Navbar = () => {
           >
             Donate
           </button>
-          <button
+          {/* <button
             disabled
             // className="hidden md:block w-[80px] h-[36px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-primary500 hover:text-fontSecondary font-semibold"
             className="hidden md:block w-[80px] h-[36px] border-greyCustom border-solid border-[4px] rounded-full transition duration-[300ms] ease-linear text-[1rem] text-greyCustom hover:text-greyCustom font-semibold"
           >
             Login
-          </button>
+          </button> */}
 
           <div className="text-[2rem] cursor-pointer text-white flex items-center justify-center">
             {isOpen ? (
@@ -133,14 +133,14 @@ const Navbar = () => {
                   Contact Us
                 </Link>
               </li>
-              <li className="md:hidden">
+              {/* <li className="md:hidden">
                 <button
                   // className="w-[116px] h-[47px] border-primary500 border-solid border-[4px] rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold"
                   className="w-[116px] h-[47px] border-greyCustom border-solid border-[4px] rounded-full transition duration-[300ms] ease-linear text-greyCustom hover:text-greyCustom font-semibold"
                 >
                   Login
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         ) : null}
