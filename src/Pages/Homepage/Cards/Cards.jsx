@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import testimonialImg21 from "../../../assets/images/Get-Involved/Volunteer2.png";
 import testimonialImg22 from "../../../assets/images/Get-Involved/Eric.png";
 import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
+import { useState } from "react";
+
 
 const testimonial = [
   {
@@ -179,7 +181,8 @@ const Cards = () => {
             {/* Testimonial text */}
             <p className="font-bold text-lg">{name} {lastName}</p>
             <p className="text-gray-600">{designation}</p>
-            <p className="text-gray-700 mt-2 px-4 max-w-xs">{content1}</p>
+            {/* <p className="text-gray-700 mt-2 px-4 max-w-xs">{content1}</p> */}
+            <TestimonialText content={content1} charLimit={188} />
           </div>
         ))}
       </div>
@@ -204,4 +207,26 @@ const Cards = () => {
     </div>
   );
 };
+const TestimonialText = ({ content, charLimit }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleExpand = () => setIsExpanded(!isExpanded);
+
+  const showToggle = content.length > charLimit;
+  const displayText = isExpanded ? content : content.slice(0, charLimit) + (showToggle ? "..." : "");
+
+  return (
+    <p className="text-gray-700 mt-2 px-4 max-w-xs">
+      {displayText}
+      {showToggle && (
+        <button
+          onClick={toggleExpand}
+          className="ml-2 text-primary500 font-semibold hover:underline focus:outline-none"
+        >
+          {isExpanded ? "Read Less" : "Read More"}
+        </button>
+      )}
+    </p>
+  );
+};
+
 export default Cards;
