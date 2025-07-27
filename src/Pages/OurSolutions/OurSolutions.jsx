@@ -21,7 +21,7 @@ const OurSolutions = () => {
   }, [hash]);
   return (
     <div className="w-screen bg-grey300">
-      <BackToHome />
+      {/* <BackToHome /> */}
       <Hero />
       <KeelMaster />
       <KeelWings />
