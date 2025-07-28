@@ -125,14 +125,14 @@ const Navbar = () => {
                   Success Stories
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="getinvolved#faq"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
                   FAQ
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="contactus"
