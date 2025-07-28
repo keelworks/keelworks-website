@@ -53,8 +53,8 @@ const Hero = () => (
           {/* 02 ─ Volunteer / Careers */}
           <div className="relative">
             <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">02</h1>
-            <p className="text-[1rem] text-[#646464]">Volunteer</p>
-            <p className="text-[1rem] text-[#646464]">(see below)</p>
+            <p className="text-[1rem] text-[#646464]">Become a volunteer</p>
+            {/* <p className="text-[1rem] text-[#646464]">(see below)</p> */}
 
             <Link
               to="/getinvolved#careers"

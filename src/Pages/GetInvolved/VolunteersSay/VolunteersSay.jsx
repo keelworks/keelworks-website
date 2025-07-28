@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
+
 import Volunteer1 from "../../../assets/images/Get-Involved/Volunteer1.jpg";
 import Volunteer2 from "../../../assets/images/Get-Involved/Volunteer2.png";
 import Volunteer3 from "../../../assets/images/Get-Involved/Eric.png";
@@ -5,7 +8,8 @@ import Volunteer4 from "../../../assets/images/Get-Involved/Madelyn.png";
 import Volunteer5 from "../../../assets/images/Get-Involved/Likith.png";
 import Volunteer6 from "../../../assets/images/Get-Involved/Thota-S.png";
 import Volunteer7 from "../../../assets/images/Get-Involved/Fredi-S.png";
-import ImageFrame from "../../../Components/ImageFrame/ImageFrame";
+
+const charLimit = 300;
 
 const volunteers = [
   {
@@ -85,46 +89,63 @@ const volunteers = [
 ];
 
 const VolunteersSay = () => {
+  const [expandedIds, setExpandedIds] = useState(new Set());
+
+  const toggleExpand = id =>
+    setExpandedIds(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+
   return (
     <div className="w-screen flex justify-start md:justify-center md:items-center flex-col">
-      <div className="max-w-[3000px] flex flex-col md:items-center overflow-hidden my-[2rem] md:mt-[4rem] md:mb-[4rem] text-[2rem] md:text-6xl font-bold mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
+      <h2 className="max-w-[3000px] my-[2rem] md:my-[4rem] mx-[1rem] md:mx-[2rem] lg:mx-[8rem] text-[2rem] md:text-6xl font-bold">
         What Our Volunteers Say
-      </div>
-      <div className="max-w-[1050px] h-full flex flex-col items-center justify-center gap-[2rem] mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
-        {volunteers.map((volunteer, index) => {
+      </h2>
+
+      <div className="max-w-[1050px] flex flex-col items-center gap-[2rem] mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
+        {volunteers.map((v, idx) => {
+          const isExpanded = expandedIds.has(v.id);
+          const fullText = [v.content1, v.content2, v.content3].filter(Boolean).join(" ");
+          const shortText =
+            fullText.length > charLimit ? fullText.slice(0, charLimit) + "…" : fullText;
+
           return (
             <div
-              key={index}
-              className={`w-full flex flex-col justify-center lg:justify-between items-end mb-[4rem] ${
-                index % 2 === 0
-                  ? "md:flex md:flex-row md:items-start"
-                  : "md:flex md:flex-row-reverse md:items-start"
-              } gap-[4rem]`}
+              key={v.id}
+              /*  ▼ only change: items-start instead of items-end  */
+              className={`w-full flex flex-col lg:justify-between items-start mb-[4rem] gap-[4rem] ${
+                idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
             >
+              {/* portrait */}
               <ImageFrame
-                image={volunteer.image}
-                name={volunteer.name}
-                lastName={volunteer.lastName}
-                index={index}
+                image={v.image}
+                name={v.name}
+                lastName={v.lastName}
+                index={idx}
               />
+
+              {/* text column */}
               <div className="flex flex-col gap-[1rem] w-full md:w-[45%] max-w-[500px] lg:mt-[1.5rem]">
-                <h6 className="font-bold text-[2.5rem] leading-8">{"Meet"}</h6>
-                <h6 className="font-bold text-[2.5rem] leading-8 ">
-                  {volunteer.name}
-                </h6>
-                <p className="text-[1.25rem] mt-4">{volunteer.content1}</p>
-                {volunteer.content2 && (
-                  <p className="text-[1.25rem] mt-4">{volunteer.content2}</p>
-                )}
-                {volunteer.content3 && (
-                  <p className="text-[1.25rem] mt-4">{volunteer.content3}</p>
-                )}
+                <h6 className="font-bold text-[2.5rem] leading-8">Meet</h6>
+                <h6 className="font-bold text-[2.5rem] leading-8">{v.name}</h6>
+
                 <p className="text-[1.25rem] mt-4">
-                  {volunteer.signatureLine1}
+                  {isExpanded ? fullText : shortText}
+                  {fullText.length > charLimit && (
+                    <button
+                      onClick={() => toggleExpand(v.id)}
+                      className="ml-2 text-primary500 font-semibold hover:underline focus:outline-none"
+                    >
+                      {isExpanded ? "Read Less" : "Read More"}
+                    </button>
+                  )}
                 </p>
-                <p className="text-[1.25rem] leading-[0px]">
-                  {volunteer.signatureLine2}
-                </p>
+
+                <p className="text-[1.25rem] mt-4">{v.signatureLine1}</p>
+                <p className="text-[1.25rem] leading-none">{v.signatureLine2}</p>
               </div>
             </div>
           );
