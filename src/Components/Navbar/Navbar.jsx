@@ -95,6 +95,14 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
+                  to="getinvolved#careers"
+                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+              >
+                Careers
+              </Link>
+              </li>
+              <li>
+                <Link
                   to="oursolutions"
                   className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
                 >
