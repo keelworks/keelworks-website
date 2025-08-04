@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import LoadingSpinner from "../../Components/KeelBot/LoadingSpinner/LoadingSpinner";
 
-const charLimit = 220; // change if you want a different truncate length
+const charLimit = 2000; // change if you want a different truncate length
 
 /* ────────────────────────────────────────────────────────── */
 const Careers = () => {
