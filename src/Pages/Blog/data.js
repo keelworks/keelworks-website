@@ -11,8 +11,17 @@ import newsLetterImageMar25 from "../../assets/images/Blogs/Newsletter-Mar2025.p
 import newsLetterImageApr25 from "../../assets/images/Blogs/Newsletter-Apr2025.jpeg";
 import newsLetterImageMay25 from "../../assets/images/Blogs/NewsletterMay2025.png";
 import newsLetterImageJune25 from "../../assets/images/Blogs/Newsletter-June2025.png";
+import newsLetterImageJuly25 from "../../assets/images/Blogs/Newsletter-July2025.png";
 
 export const newsLetters = [
+  {
+    id: 1014,
+    title: "July 2025",
+    // date: "07/2025",
+    description: "July's Newsletter",
+    image: newsLetterImageJuly25,
+    htmlLink: "/newsletters/july-2025",
+  },
   {
     id: 1013,
     title: "June 2025",
