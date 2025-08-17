@@ -26,7 +26,7 @@ const Hero = () => (
           <p>Our program is taking shape—join us in making a difference!</p>
         </div>
 
-        {/* ────────────── 3‑Column CTA List ────────────── */}
+        {/* ────────────── 3-Column CTA List ────────────── */}
         <div className="xl:mt-[40px] grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-24 mb-[4rem] lg:mb-0">
 
           {/* 01 ─ Donation */}
@@ -41,10 +41,11 @@ const Hero = () => (
                   "_blank"
                 )
               }
-              className="flex items-center mt-1 text-primary500 font-bold text-[0.875rem] hover:underline"
+              aria-label="More details about making a donation"
+              className="flex items-center mt-1 font-bold text-[0.875rem] hover:underline focus:underline text-[#0000EE]"
             >
               More Details
-              <img src={greaterImg} alt="" className="mx-2 w-2 h-2" />
+              {/* <img src={greaterImg} alt="" className="ml-2 w-2 h-2" /> */}
             </button>
 
             <div className="absolute top-0 right-0 h-full w-px bg-[#646464]" />
@@ -54,14 +55,13 @@ const Hero = () => (
           <div className="relative">
             <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">02</h1>
             <p className="text-[1rem] text-[#646464]">Become a volunteer</p>
-            {/* <p className="text-[1rem] text-[#646464]">(see below)</p> */}
 
             <Link
               to="/getinvolved#careers"
-              className="flex items-center mt-1 text-primary500 font-bold text-[0.875rem] hover:underline"
+              className="flex items-center mt-1 font-bold text-[0.875rem] hover:underline focus:underline text-[#0000EE] visited:text-[#551A8B]"
             >
               More Details
-              <img src={greaterImg} alt="" className="mx-2 w-2 h-2" />
+              {/* <img src={greaterImg} alt="" className="ml-2 w-2 h-2" /> */}
             </Link>
 
             <div className="absolute top-0 right-0 h-full w-px bg-[#646464]" />
