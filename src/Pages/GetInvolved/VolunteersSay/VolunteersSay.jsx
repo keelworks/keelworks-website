@@ -42,7 +42,7 @@ const volunteers = [
     lastName: "Halterman",
     image: Volunteer3,
     content1:
-      "“I have been trying to transition out of the classroom and into instructional design for a while now, and I was fortunate enough to find this internship opportunity. From the moment I joined, I was given valuable resources to help guide not only my processes, but my thinking. On top of that, Thomas has been extremely helpful in guiding me in the right direction. At first, I was just trying to teach myself tools like Articulate and Camtasia. Really, I was just wasting my time. This volunteer opportunity is giving me valuable, practical, experience in creating courses and applying ID theory. The plus side is that the mission of this organization is admirable and something that will really help people who participate in our courses. I am extremely grateful to be part of this organization, and I would encourage others to join.”",
+      "“I have been trying to transition out of the classroom and into instructional design for a while now, and I was fortunate enough to find this internship opportunity. From the moment I joined, I was given valuable resources to help guide not only my processes, but also my thinking. On top of that, Thomas has been extremely helpful in guiding me in the right direction. At first, I was just trying to teach myself tools like Articulate and Camtasia. Really, I was just wasting my time. This volunteer opportunity is giving me valuable, practical, experience in creating courses and applying ID theory. The plus side is that the mission of this organization is admirable and something that will really help people who participate in our courses. I am extremely grateful to be part of this organization, and I would encourage others to join.”",
     signatureLine1: "With Gratitude,",
     signatureLine2: "Eric Halterman",
   },
@@ -91,8 +91,8 @@ const volunteers = [
 const VolunteersSay = () => {
   const [expandedIds, setExpandedIds] = useState(new Set());
 
-  const toggleExpand = id =>
-    setExpandedIds(prev => {
+  const toggleExpand = (id) =>
+    setExpandedIds((prev) => {
       const next = new Set(prev);
       next.has(id) ? next.delete(id) : next.add(id);
       return next;
@@ -114,18 +114,12 @@ const VolunteersSay = () => {
           return (
             <div
               key={v.id}
-              /*  ▼ only change: items-start instead of items-end  */
               className={`w-full flex flex-col lg:justify-between items-start mb-[4rem] gap-[4rem] ${
                 idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
               {/* portrait */}
-              <ImageFrame
-                image={v.image}
-                name={v.name}
-                lastName={v.lastName}
-                index={idx}
-              />
+              <ImageFrame image={v.image} name={v.name} lastName={v.lastName} index={idx} />
 
               {/* text column */}
               <div className="flex flex-col gap-[1rem] w-full md:w-[45%] max-w-[500px] lg:mt-[1.5rem]">
@@ -137,7 +131,8 @@ const VolunteersSay = () => {
                   {fullText.length > charLimit && (
                     <button
                       onClick={() => toggleExpand(v.id)}
-                      className="ml-2 text-primary500 font-semibold hover:underline focus:outline-none"
+                      aria-expanded={isExpanded}
+                      className="ml-2 font-semibold hover:underline focus:underline text-[#0000EE]"
                     >
                       {isExpanded ? "Read Less" : "Read More"}
                     </button>

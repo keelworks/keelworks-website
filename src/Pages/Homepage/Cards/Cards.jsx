@@ -95,11 +95,10 @@ const Cards = () => {
 
               <div className="my-4 h-px w-24 bg-fontPrimary/70" />
 
-              <p className="text-greyCustom leading-relaxed">
-                {sol.desc}
-              </p>
+              <p className="text-greyCustom leading-relaxed">{sol.desc}</p>
 
-              <span className="mt-6 inline-block font-semibold text-teal-700 hover:underline">
+              {/* Changed to classic link blue */}
+              <span className="mt-6 inline-block font-semibold text-[#0000EE] hover:underline focus:underline">
                 Learn More
               </span>
             </button>
@@ -134,6 +133,7 @@ const Cards = () => {
           ))}
         </div>
 
+        {/* Leaving the big CTA button as-is (yellow brand style) */}
         <a
           href="https://keelworks.org/getinvolved"
           target="_blank"
@@ -173,7 +173,8 @@ const TestimonialText = ({ content, charLimit }) => {
       {showToggle && (
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="ml-2 text-primary500 font-semibold hover:underline focus:outline-none"
+          aria-expanded={isExpanded}
+          className="ml-2 font-semibold hover:underline focus:underline text-[#0000EE]"
         >
           {isExpanded ? "Read Less" : "Read More"}
         </button>
