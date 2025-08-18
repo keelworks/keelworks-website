@@ -4,9 +4,6 @@ import { useNavigate } from "react-router-dom";
 import testimonialImg21 from "../../../assets/images/Get-Involved/Volunteer2.png";
 import testimonialImg22 from "../../../assets/images/Get-Involved/Eric.png";
 
-/* ----------------------------------------------------------
-   SHARED DATA
----------------------------------------------------------- */
 const solutions = [
   {
     id: "keelMaster",
@@ -49,15 +46,12 @@ const testimonial = [
   },
 ];
 
-/* ==========================================================
-   MAIN COMPONENT
-========================================================== */
 const Cards = () => {
   const navigate = useNavigate();
 
   return (
     <div className="w-screen">
-      {/* ─────────── Top Intro Copy ─────────── */}
+      {/* Top intro */}
       <div className="w-screen flex justify-center bg-grey200">
         <div className="w-full max-w-[3000px]">
           <div className="lg:mx-[8rem] md:mx-[2rem] mx-[1rem]">
@@ -76,18 +70,19 @@ const Cards = () => {
         </div>
       </div>
 
-      {/* ─────────── KeelWorks Solutions (Text-only Cards) ─────────── */}
+      {/* KeelWorks Solutions */}
       <div className="w-screen flex flex-col items-center bg-white">
         <h2 className="w-full text-center text-4xl md:text-5xl lg:text-6xl font-bold pt-[3.5rem] pb-10">
           The <span className="text-primary500">KeelWorks </span>Solutions
         </h2>
 
-        <div className="w-full max-w-[3000px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 lg:px-[8rem]">
+        {/* ★ Make cards equal height */}
+        <div className="w-full max-w-[3000px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 lg:px-[8rem] items-stretch">
           {solutions.map((sol) => (
             <button
               key={sol.id}
               onClick={() => navigate(`/oursolutions#${sol.id}`)}
-              className="text-left rounded-xl border border-teal-400 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="text-left rounded-xl border border-teal-400 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-500 h-full flex flex-col"
             >
               <h3 className="text-3xl md:text-[2.1rem] font-semibold text-fontPrimary">
                 {sol.title}
@@ -95,9 +90,12 @@ const Cards = () => {
 
               <div className="my-4 h-px w-24 bg-fontPrimary/70" />
 
-              <p className="text-greyCustom leading-relaxed">{sol.desc}</p>
+              {/* grow so the link sits at the bottom */}
+              <p className="text-greyCustom leading-relaxed flex-1">
+                {sol.desc}
+              </p>
 
-              {/* Changed to classic link blue */}
+              {/* classic link blue; anchored to bottom via flex */}
               <span className="mt-6 inline-block font-semibold text-[#0000EE] hover:underline focus:underline">
                 Learn More
               </span>
@@ -106,7 +104,7 @@ const Cards = () => {
         </div>
       </div>
 
-      {/* ─────────── Testimonials ─────────── */}
+      {/* Testimonials */}
       <div className="w-full flex flex-col items-center bg-white py-16">
         <h2 className="text-4xl md:text-5xl font-bold text-primary500 mb-12">
           Testimonials
@@ -133,7 +131,6 @@ const Cards = () => {
           ))}
         </div>
 
-        {/* Leaving the big CTA button as-is (yellow brand style) */}
         <a
           href="https://keelworks.org/getinvolved"
           target="_blank"
@@ -145,7 +142,7 @@ const Cards = () => {
         </a>
       </div>
 
-      {/* ─────────── Bottom CTA ─────────── */}
+      {/* Bottom CTA */}
       <div className="w-full bg-grey200 flex justify-center">
         <div className="max-w-[3000px] mx-4 md:mx-8 lg:mx-[8rem]">
           <p className="text-[2rem] md:text-[2.68rem] font-bold leading-relaxed py-[8rem]">
@@ -158,7 +155,6 @@ const Cards = () => {
   );
 };
 
-/* helper for expandable testimonial copy */
 const TestimonialText = ({ content, charLimit }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const showToggle = content.length > charLimit;
