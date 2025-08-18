@@ -3,6 +3,36 @@ import LoadingSpinner from "../../Components/KeelBot/LoadingSpinner/LoadingSpinn
 
 const charLimit = 2000; // change if you want a different truncate length
 
+/** Case/space-insensitive column getter */
+function flexiblePick(row = {}, keys = []) {
+  const norm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const dict = Object.fromEntries(Object.keys(row).map((k) => [norm(k), row[k]]));
+  for (const k of keys) {
+    const v = dict[norm(k)];
+    if (v != null && String(v).trim() !== "") return String(v).trim();
+  }
+  return undefined;
+}
+
+/** Normalize one row from the sheet into consistent keys */
+function normalizeRow(row = {}) {
+  const Title =
+    flexiblePick(row, ["Title", "JobTitle", "Job Title", "Role", "Position", "Name"]) ||
+    "Role (title pending)";
+
+  const Location = flexiblePick(row, ["Location", "City"]) || "Remote";
+  const Type = flexiblePick(row, ["Type", "Role Type"]) || "Volunteer";
+  const Description =
+    flexiblePick(row, ["Description", "Job Description", "Role Description"]) || "";
+
+  const StatusRaw = flexiblePick(row, ["Status", "State"]) || "Open";
+  const Status = String(StatusRaw).trim().toLowerCase();
+
+  const FormURL = flexiblePick(row, ["FormURL", "Form URL", "Application Link", "Apply Link"]);
+
+  return { Title, Location, Type, Description, Status, FormURL, _raw: row };
+}
+
 /* ────────────────────────────────────────────────────────── */
 const Careers = () => {
   const [jobs, setJobs] = useState([]);
@@ -11,7 +41,7 @@ const Careers = () => {
   const [expandedIds, setExpandedIds] = useState(new Set());
   const jobsPerPage = 6;
 
-  /* scroll‑to‑top ref */
+  /* scroll-to-top ref */
   const topRef = useRef(null);
 
   /* fetch jobs */
@@ -19,31 +49,32 @@ const Careers = () => {
     fetch(
       "https://script.google.com/macros/s/AKfycbzL3qgWF2-yrCgQcgQXEbscWm-KugU1Q32wFgEDGKJYk1ePc4dVmgN_DAFiBsPktWcO/exec"
     )
-      .then(res => res.json())
-      .then(data => {
-        const openJobs = data.filter(job => job.Status === "Open");
+      .then((res) => res.json())
+      .then((data) => {
+        // Normalize keys and keep only open roles
+        const normalized = (Array.isArray(data) ? data : []).map(normalizeRow);
+        const openJobs = normalized.filter((j) => j.Status === "open");
         setJobs(openJobs);
-        setLoading(false);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("Error fetching job listings:", err);
-        setLoading(false);
-      });
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   /* open application form */
-  const handleApply = job =>
+  const handleApply = (job) =>
     job.FormURL
-      ? window.open(job.FormURL, "_blank")
+      ? window.open(job.FormURL, "_blank", "noopener,noreferrer")
       : alert("Application form not available for this position.");
 
   /* pagination calc */
   const indexOfLastJob = currentPage * jobsPerPage;
   const currentJobs = jobs.slice(indexOfLastJob - jobsPerPage, indexOfLastJob);
-  const totalPages = Math.ceil(jobs.length / jobsPerPage);
+  const totalPages = Math.ceil(jobs.length / jobsPerPage) || 1;
 
   /* page change + scroll to top */
-  const handlePageChange = page => {
+  const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
       if (topRef.current) {
@@ -52,9 +83,9 @@ const Careers = () => {
     }
   };
 
-  /* toggle read‑more */
-  const toggleExpand = idx => {
-    setExpandedIds(prev => {
+  /* toggle read-more */
+  const toggleExpand = (idx) => {
+    setExpandedIds((prev) => {
       const next = new Set(prev);
       next.has(idx) ? next.delete(idx) : next.add(idx);
       return next;
@@ -88,10 +119,11 @@ const Careers = () => {
           currentJobs.map((job, idx) => {
             const globalIdx = (currentPage - 1) * jobsPerPage + idx;
             const isExpanded = expandedIds.has(globalIdx);
+            const description = job.Description || "";
             const shortText =
-              job.Description.length > charLimit
-                ? job.Description.slice(0, charLimit) + "…"
-                : job.Description;
+              description.length > charLimit
+                ? description.slice(0, charLimit) + "…"
+                : description;
 
             return (
               <div
@@ -105,20 +137,20 @@ const Careers = () => {
                     <h3 className="text-xl font-bold mb-3">{job.Title}</h3>
                     <div className="mb-4">
                       <p className="text-gray-700">
-                        <strong>Location:</strong> {job.Location}
+                        <strong>Location:</strong> {job.Location || "Remote"}
                       </p>
                       <p className="text-gray-700">
                         <strong>Type:</strong>
                         <span className="inline-block px-2 py-0.5 rounded bg-primary100 text-primary500 text-xs font-semibold ml-1">
-                          {job.Type}
+                          {job.Type || "Volunteer"}
                         </span>
                       </p>
                     </div>
 
                     {/* description + read more */}
                     <p className="text-gray-600">
-                      {isExpanded ? job.Description : shortText}
-                      {job.Description.length > charLimit && (
+                      {isExpanded ? description : shortText}
+                      {description.length > charLimit && (
                         <button
                           className="ml-2 text-primary500 font-semibold hover:underline focus:outline-none"
                           onClick={() => toggleExpand(globalIdx)}
@@ -133,7 +165,7 @@ const Careers = () => {
                   <button
                     type="button"
                     className="mt-auto w-full bg-primary500 text-white px-4 py-2 rounded-full hover:bg-primary300 transition duration-300 font-semibold relative overflow-hidden ripple"
-                    onClick={e => {
+                    onClick={(e) => {
                       handleApply(job);
                       createRipple(e);
                     }}
