@@ -12,15 +12,15 @@ import newsLetterImageApr25 from "../../assets/images/Blogs/Newsletter-Apr2025.j
 import newsLetterImageMay25 from "../../assets/images/Blogs/NewsletterMay2025.png";
 import newsLetterImageJune25 from "../../assets/images/Blogs/Newsletter-June2025.png";
 import newsLetterImageJuly25 from "../../assets/images/Blogs/Newsletter-July2025.png";
-
+import newsLetterImageAug25 from "../../assets/images/Blogs/Newsletter-Aug2025.png";
 export const newsLetters = [
   {
     id: 1014,
-    title: "July 2025",
-    // date: "07/2025",
-    description: "July's Newsletter",
-    image: newsLetterImageJuly25,
-    htmlLink: "/newsletters/july-2025",
+    title: "Aug 2025",
+    // date: "08/2025",
+    description: "Aug's Newsletter",
+    image: newsLetterImageAug25,
+    htmlLink: "/newsletters/aug-2025",
   },
   {
     id: 1013,
