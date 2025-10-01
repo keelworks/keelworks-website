@@ -19,7 +19,7 @@ const BecomeDonor = () => {
               />
             </div>
             <div className="absolute bottom-[-40%] right-0 md:bottom-[-6rem] w-[90%] md:w-[30rem] bg-primary500">
-              <div className="p-6 md:p-8 xl:p-12 text-start text-[#2E2E2E] flex flex-col justify-center items-center h-full">
+              <div className="p-6 md:p-8 xl:p-12 text-start text-white flex flex-col justify-center items-center h-full">
                 <p className="font-bold text-[1.562rem] sm:text-[2.5rem]  leading-tight ">
                 The most impactful way to support our cause is through a donation.
                 </p>

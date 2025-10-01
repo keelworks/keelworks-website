@@ -42,7 +42,7 @@ const KeelMaster = () => {
               </p>
             </div>
             <div className="mt-[5rem] h-auto mb-[2.5rem]">
-              <div className="text-[#0B0A0A] font-bold text-[1.875rem] md:text-[2.5rem]">
+              <div className="text-fontPrimary font-bold text-[1.875rem] md:text-[2.5rem]">
                 <h1>This program features three phases:</h1>
               </div>
               <div className="mt-[20px] md:mt-[60px]">

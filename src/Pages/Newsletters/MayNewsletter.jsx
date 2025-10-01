@@ -92,7 +92,7 @@ export default function NewsletterTemplate() {
   }
 
   return (
-    <div className="pt-16 bg-[#dcebf7] text-black font-sans min-h-screen pb-10">
+    <div className="pt-16 bg-[#dcebf7] text-fontPrimary font-sans min-h-screen pb-10">
       {/* Header */}
       <div className="max-w-4xl mx-auto mt-0 bg-[#bcf2fc] rounded-none rounded-t-2xl">
         <div className="px-6 pt-8 pb-2 flex flex-col items-center">

@@ -135,7 +135,7 @@ export default function Blog_new() {
                 key={t}
                 onClick={() => setActiveFilter(t)}
                 className={`px-6 py-2 text-sm font-semibold rounded-md transition-all ${
-                  activeFilter === t ? "bg-[#DBA300] text-white" : "text-[#646464]"
+                  activeFilter === t ? "bg-[#077A85] text-white" : "text-[#646464]"
                 }`}
               >
                 {t}
@@ -145,7 +145,7 @@ export default function Blog_new() {
 
           {/* Body */}
           <section className="w-full px-4 md:px-8 lg:px-24 flex flex-col items-center space-y-6">
-            <p className="text-[#8995A9] text-sm text-center">
+            <p className="text-gray-500 text-sm text-center">
               Showing {masterList.length} {activeFilter}
               {masterList.length !== 1 && "s"}
               {activeFilter === "Article" && refreshingA && (
@@ -184,7 +184,7 @@ export default function Blog_new() {
 
                       <div className="p-8 flex flex-col items-center gap-3">
                         <h3 className="text-lg font-semibold text-center">{item.title}</h3>
-                        <p className="text-xs text-[#8995A9]">{item.date}</p>
+                        <p className="text-xs text-gray-500">{item.date}</p>
                       </div>
                     </article>
                   )
@@ -208,10 +208,10 @@ export default function Blog_new() {
                         />
                         <div className="p-5 flex flex-col items-center gap-3">
                           <h3 className="text-lg font-semibold text-center">{vid.title}</h3>
-                          <p className="text-xs text-[#8995A9]">{vid.date}</p>
+                          <p className="text-xs text-gray-500">{vid.date}</p>
                           <button
                             onClick={() => open(`https://youtu.be/${vid.videoId}`)}
-                            className="bg-white border border-[#8995A9] text-[#8995A9] rounded-full px-8 py-2 text-sm font-bold hover:bg-[#DBA300] hover:text-white transition-colors"
+                            className="bg-white border border-gray-400 text-gray-500 rounded-full px-8 py-2 text-sm font-bold hover:bg-[#077A85] hover:text-white transition-colors"
                           >
                             Watch on YouTube
                           </button>
@@ -229,17 +229,17 @@ export default function Blog_new() {
             <footer className="w-full p-4 flex flex-col items-center space-y-4">
               <div className="flex items-center rounded-lg border">
                 <button
-                  className="p-3 text-[#637381]"
+                  className="p-3 text-gray-500"
                   onClick={() => setActivePage((p) => Math.max(p - 1, 1))}
                   disabled={activePage === 1}
                 >
                   <FaChevronLeft />
                 </button>
-                <span className="px-4 py-3 bg-[#FDDE82] text-fontSecondary">
+                <span className="px-4 py-3 bg-[#10ADB8] text-white">
                   {activePage}/{totalPages}
                 </span>
                 <button
-                  className="p-3 text-[#637381]"
+                  className="p-3 text-gray-500"
                   onClick={() => setActivePage((p) => Math.min(p + 1, totalPages))}
                   disabled={activePage === totalPages}
                 >

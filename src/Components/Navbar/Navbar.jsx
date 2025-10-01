@@ -39,7 +39,7 @@ const Navbar = () => {
         </a>
         <div className="flex items-center gap-6">
           <button
-            className="md:block w-[80px] h-[36px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-[#101828] font-semibold"
+            className="md:block w-[80px] h-[36px] bg-[#825E8B] rounded-full hover:bg-[#825E8B]/80 transition duration-[300ms] ease-linear text-[1rem] text-white font-semibold"
             onClick={() => {
               window.open(
                 "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate",

@@ -85,7 +85,7 @@ const Faq = () => {
                       {index + 1} . {faq.question}
                     </p>
                     <div
-                      className="bg-primary500 text-[1rem] md:text-[1.5rem] md:m-auto p-1 hover:cursor-pointer"
+                      className="bg-action500 text-[1rem] md:text-[1.5rem] md:m-auto p-1 hover:cursor-pointer"
                       onClick={() => toggleFAQ(index)}
                     >
                       {activeFAQ === index ? <SlArrowUp /> : <SlArrowDown />}

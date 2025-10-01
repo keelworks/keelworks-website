@@ -8,11 +8,11 @@ export const Policy = () => {
               <p className="text-[1.2rem] font-bold text-gray-500">
                 Terms of Service
               </p>
-              <p className="text-[1.2rem] font-bold text-black underline">
+              <p className="text-[1.2rem] font-bold text-fontPrimary underline">
                 Non-discrimination Policy
               </p>
-              <p className="text-[1.2rem] text-black">Privacy Policy</p>
-              <p className="text-[1.2rem] text-black">
+              <p className="text-[1.2rem] text-fontPrimary">Privacy Policy</p>
+              <p className="text-[1.2rem] text-fontPrimary">
                 Accessibility Statements
               </p>
             </div>
@@ -20,11 +20,11 @@ export const Policy = () => {
               <h2 className="text-3xl md:text-5xl font-bold text-left">
                 Non-discrimination Policy Page
               </h2>
-              <p className="text-[1.2rem] text-black mt-8">
+              <p className="text-[1.2rem] text-fontPrimary mt-8">
                 Effective Date:
                 <span className="text-gray-500 font-bold">July 10, 2024</span>
               </p>
-              <p className="text-[1.2rem] text-black mt-8">
+              <p className="text-[1.2rem] text-fontPrimary mt-8">
                 Purpose: KeelWorks Foundation is committed to creating an
                 inclusive environment that values diversity and promotes
                 equality for all individuals. This policy reaffirms our
@@ -36,7 +36,7 @@ export const Policy = () => {
                   third-party partners.
                 </span>
               </p>
-              <p className="text-[1.2rem] text-black mt-8">
+              <p className="text-[1.2rem] text-fontPrimary mt-8">
                 Protected Characteristics: We do not discriminate on the basis
                 of:
               </p>
@@ -62,12 +62,12 @@ export const Policy = () => {
                   State of Washington
                 </li>
               </ul>
-              <p className="text-[1.2rem] text-black mt-8">
+              <p className="text-[1.2rem] text-fontPrimary mt-8">
                 Definition of Discrimination: Discrimination includes, but is
                 not limited to, harassment, bias, or unequal treatment based on
                 any protected characteristic.
               </p>
-              <p className="text-[1.2rem] text-black">
+              <p className="text-[1.2rem] text-fontPrimary">
                 <span className="block">Reporting:</span>It is crucial to report
                 any instances of discrimination to ensure a safe and inclusive
                 environment for all employees, volunteers and all other
@@ -78,7 +78,7 @@ export const Policy = () => {
                 to creating a respectful organization where everyone feels
                 valued.
               </p>
-              <p className="text-[1.2rem] text-black mt-8">
+              <p className="text-[1.2rem] text-fontPrimary mt-8">
                 Any individual who believes they have experienced or witnessed
                 discrimination should report the incident to:
               </p>
@@ -90,7 +90,7 @@ export const Policy = () => {
                   <span className="font-medium italic">+1 360 207 4450</span>
                 </li>
               </ul>
-              <p className="text-[1.2rem] text-black mt-8">
+              <p className="text-[1.2rem] text-fontPrimary mt-8">
                 All reports will be treated confidentially and investigated
                 promptly.
                 <span className="block">

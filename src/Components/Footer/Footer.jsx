@@ -61,7 +61,7 @@ const Footer = () => {
                       type="email"
                       id="email"
                       placeholder="Email address"
-                      className="w-full px-3 py-3 text-[#101828] font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                      className="w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -69,7 +69,7 @@ const Footer = () => {
                   </div>
                   <div className="flex justify-start">
                     <button
-                      className="w-[156px] h-[47px] text-[#101828] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] font-semibold"
+                      className="w-[156px] h-[47px] text-white bg-[#825E8B] rounded-full hover:bg-[#825E8B]/80 transition duration-[300ms] ease-linear text-[1rem] font-semibold"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Submitting..." : "Subscribe"}
@@ -94,7 +94,7 @@ const Footer = () => {
 
             {/* <div className="">
               <button
-                className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[#101828] font-semibold"
+                className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-fontPrimary font-semibold"
                 onClick={() => {
                   window.open(
                     "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate",
@@ -158,22 +158,22 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col space-y-5 items-start md:place-self-end md:order-3">
-            <Link to="/about" className="hover:text-gray-500">
+            <Link to="/about" className="text-white hover:text-gray-500">
               About Us
             </Link>
-            <Link to="/getinvolved" className="hover:text-gray-500">
+            <Link to="/getinvolved" className="text-white hover:text-gray-500">
               Get Involved
             </Link>
-            <Link to="/getinvolved#careers" className="hover:text-gray-500">
+            <Link to="/getinvolved#careers" className="text-white hover:text-gray-500">
              Careers
             </Link>
-            <Link to="/oursolutions" className="hover:text-gray-500">
+            <Link to="/oursolutions" className="text-white hover:text-gray-500">
               Our Solutions
             </Link>
-            <Link to="/blog" className="hover:text-gray-500">
+            <Link to="/blog" className="text-white hover:text-gray-500">
               Blog
             </Link>
-            <Link to="/success_stories" className="hover:text-gray-500">
+            <Link to="/success_stories" className="text-white hover:text-gray-500">
               Success Stories
             </Link>
             <Link
@@ -182,10 +182,10 @@ const Footer = () => {
             >
               FAQ
             </Link>
-            <Link to="/contactus" className="hover:text-gray-500">
+            <Link to="/contactus" className="text-white hover:text-gray-500">
               Contact Us
             </Link>
-            <Link to="/non_dis_policy" className="hover:text-gray-500">
+            <Link to="/non_dis_policy" className="text-white hover:text-gray-500">
               Non-discrimination Policy
             </Link>
           </div>

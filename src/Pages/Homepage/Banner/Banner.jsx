@@ -21,7 +21,7 @@ const Banner = () => {
             </h5>
             <div className="flex flex-col md:flex-row mt-6 gap-6">
               <button
-                className="w-[116px] h-[47px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[150ms] ease-linear text-[#101828] font-semibold"
+                className="w-[116px] h-[47px] bg-[#8A639B] rounded-full hover:bg-[#8A639B]/80 transition duration-[150ms] ease-linear text-white font-semibold"
                 onClick={() => {
                   window.open(
                     "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate",
@@ -33,7 +33,7 @@ const Banner = () => {
               </button>
               <Link
                 to="/getinvolved"
-                className="w-[156px] h-[47px] border-primary500 border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-primary300 transition duration-[150ms] ease-linear text-primary500 hover:text-fontSecondary font-semibold"
+                className="w-[156px] h-[47px] border-[#8A639B] border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-[#8A639B] transition duration-[150ms] ease-linear text-[#8A639B] hover:text-white font-bold bg-transparent"
               >
                 Get Involved
               </Link>

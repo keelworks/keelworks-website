@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
           {/* <div className="flex justify-center md:justify-end w-full mt-4 sm:mt-8">
             <button
-              className="rounded-full bg-primary500 hover:bg-primary300 transition duration-[300ms] ease-linear p-4 text-[#0B0A0A] font-semibold text-[14px] flex items-end justify-end mb-10"
+              className="rounded-full bg-primary500 hover:bg-primary300 transition duration-[300ms] ease-linear p-4 text-fontPrimary font-semibold text-[14px] flex items-end justify-end mb-10"
               onClick={() => navigate("/home")}
             >
               <img

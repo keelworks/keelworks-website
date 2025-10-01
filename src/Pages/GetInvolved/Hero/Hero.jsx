@@ -42,7 +42,7 @@ const Hero = () => (
                 )
               }
               aria-label="More details about making a donation"
-              className="flex items-center mt-1 font-bold text-[0.875rem] hover:underline focus:underline text-[#0000EE]"
+              className="flex items-center mt-1 font-bold text-[0.875rem] hover:underline focus:underline text-[#006699]"
             >
               More Details
               {/* <img src={greaterImg} alt="" className="ml-2 w-2 h-2" /> */}
@@ -58,7 +58,7 @@ const Hero = () => (
 
             <Link
               to="/getinvolved#careers"
-              className="flex items-center mt-1 font-bold text-[0.875rem] hover:underline focus:underline text-[#0000EE] visited:text-[#551A8B]"
+              className="flex items-center mt-1 font-bold text-[0.875rem] hover:underline focus:underline text-[#006699]"
             >
               More Details
               {/* <img src={greaterImg} alt="" className="ml-2 w-2 h-2" /> */}
