@@ -15,6 +15,14 @@ import newsLetterImageJuly25 from "../../assets/images/Blogs/Newsletter-July2025
 import newsLetterImageAug25 from "../../assets/images/Blogs/Newsletter-Aug2025.png";
 export const newsLetters = [
   {
+    id: 1015,
+    title: "Sept 2025",
+    // date: "09/2025",
+    description: "Sept's Newsletter",
+    image: newsLetterImageAug25,
+    htmlLink: "/newsletters/sept-2025",
+  },
+  {
     id: 1014,
     title: "Aug 2025",
     // date: "08/2025",
