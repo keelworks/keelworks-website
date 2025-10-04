@@ -1,11 +1,10 @@
 import Volunteer1 from "../../../assets/images/About-Us/Thomas-G.jpg";
-import Volunteer2 from "../../../assets/images/About-Us/Dana-S.jpg";
-import Volunteer3 from "../../../assets/images/About-Us/Romir-P.jpg";
-import Volunteer4 from "../../../assets/images/About-Us/Jing-M.jpg";
-import Volunteer5 from "../../../assets/images/About-Us/Ibrahima-D.jpg";
-import Volunteer6 from "../../../assets/images/About-Us/Aruna-G.jpg";
-import Volunteer7 from "../../../assets/images/About-Us/Priya-S.jpg";
-import Volunteer8 from "../../../assets/images/About-Us/Fredi-S.png";
+import Volunteer2 from "../../../assets/images/About-Us/Romir-P.jpg";
+import Volunteer3 from "../../../assets/images/About-Us/Jing-M.jpg";
+import Volunteer4 from "../../../assets/images/About-Us/Ibrahima-D.jpg";
+import Volunteer5 from "../../../assets/images/About-Us/Aruna-G.jpg";
+import Volunteer6 from "../../../assets/images/About-Us/Priya-S.jpg";
+import Volunteer7 from "../../../assets/images/About-Us/Fredi-S.png";
 
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
@@ -28,29 +27,14 @@ const volunteers = [
     },
   },
 
+
   {
     id: 2,
-    name: "Dana E Smalley",
-    jobTitle: "Program Manager/LX Designer and Team Lead",
-    location: "Chicago, USA",
-
-    image: Volunteer2,
-    content1:
-      "Dana is a seasoned instructional designer based in Chicago, holding a Master’s degree and specializing in creating accessible educational content within collaborative learning environments. Her professional journey commenced with the development of math software aimed at supporting underprivileged communities in Chicago, an initiative spearheaded by her and her godmother. Additionally, Dana has played a pivotal role in a foundation that provides scholarships and grants. With a ten-year tenure at KeelWorks Foundation, she has demonstrated expertise in needs analysis, formulating learning objectives, and developing multimedia content and project management. Dana consistently seeks out challenges that enhance her competencies in project management, simulations, and a diverse array of digital media tools, underscoring her commitment to advancing educational opportunities. ",
-    socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/in/danaes/",
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-    },
-  },
-
-  {
-    id: 3,
     name: "Romir Patel",
     jobTitle: "Human Relations",
     location: "Gilbert, USA",
 
-    image: Volunteer3,
+    image: Volunteer2,
     content1:
       "Romir is the founder, CEO, and board chairman of  Helping Hands Corporation, a 501(c)(3) nonprofit. Helping Hands Corporation is a nonprofit that gives back in multiple ways including free online English classes in third world nations, connecting volunteers with local volunteer opportunities at institutions where volunteering is vital, yet volunteers are scarce, coding and cybersecurity classes, computer science based internships, and more, helping thousands of individuals in over 30 nations. Romir is currently a high school sophomore from Arizona.",
     socialMediaLinks: {
@@ -61,12 +45,12 @@ const volunteers = [
   },
 
   {
-    id: 4,
+    id: 3,
     name: "Jing Ma",
     jobTitle: "Instructional Designer",
     location: "San Francisco, USA",
 
-    image: Volunteer4,
+    image: Volunteer3,
     content1:
       "Jing Ma is a native of mainland China with a decade working in the Chinese private educational technology industry. She played a leading role at a Chinese-American start-up raising capital from angel investors and venture capitalists.Jing shares the KeelWorks mission to bring everyone to the table of plenty. She has shown a desire to help the foundation in many ways. She is personally interested in exploring how finance and technology can bring disruptive innovation to education. Her entrepreneurial spirit is especially welcome to KeelWorks. Jing is an instructional designer and has supported KeelWorks instructional design for the past two years. She has been active in KeelWorks fundraising and has led a Chinese team of volunteers/interns at KeelWorks. Jing earned her Master of Science degree in Education, with a focus on Technology Leadership from California State University, East Bay, and her Bachelor of Science degree in Business Administration from Tianjin Cheng Jian University in China.",
     socialMediaLinks: {
@@ -77,12 +61,12 @@ const volunteers = [
   },
 
   {
-    id: 5,
+    id: 4,
     name: "Ibrahima Dieng",
     jobTitle: "Instructional Designer",
     location: "Dakar, Senegal",
 
-    image: Volunteer5,
+    image: Volunteer4,
     content1:
       "Ibrahima Dieng is from Senegal and currently lives in Dakar. He spent the past 15 years supporting women's rights and addressing the needs of orphan boys. He shares the KeelWorks vision of a world where everyone shares a place at the table of plenty. Having known Thomas for several years and admired his foundation, he’s honored to support this foundation's extremely important mission. 'I believe in the foundation mission and I am hopeful that by helping KeelWorks, I can help my people.'",
     socialMediaLinks: {
@@ -93,12 +77,12 @@ const volunteers = [
   },
 
   {
-    id: 6,
+    id: 5,
     name: "Aruna Ghildiyal",
     jobTitle: "Project Management Lead",
     location: "San Carlos, USA",
 
-    image: Volunteer6,
+    image: Volunteer5,
     content1:
       "Aruna, born and brought up in India, is an Indian American with over 17 years of experience as a leader and influencer, where she puts a focus on process improvement and compliance programs from concept to execution to ensure quality programs. She is a Corporate Lead auditor and Internal Audit Trainer for ISO 9001:2015 (Quality Management System) and ISO 14001:2015 (Environmental Management System). Aruna has a passion for communication, and an aptitude for working in cross-functional teams and multi-ethnic environments. Aruna holds a Masters Degree (M Tech) in Solid State materials, and a Master’s degree (MS) in Physics with specialization in Solid State Physics from highly reputed IITs (Indian Institute of Technology) and a Lean Six Sigma Green Belt certification from Purdue University. During her career, she has effectively managed risks, schedules, nurtured strategic customer relationships, applied mitigation strategies, and led post-mortem meetings with key stakeholders.At the Keelworks Foundation, Aruna utilizes her team player and multi-tasking capability skills to serve as the Project Management Lead. ",
     socialMediaLinks: {
@@ -108,12 +92,12 @@ const volunteers = [
     },
   },
   {
-    id: 7,
+    id: 6,
     name: "Priya Sharma",
     jobTitle: "Project Management Lead",
     location: "USA",
 
-    image: Volunteer7,
+    image: Volunteer6,
     content1:
       "Priya Sharma is an experienced strategic program/product delivery leader with a passion for continuous improvement, learning and growing people. Keelwork’s mission aligns with her personal purpose in life, which is at the intersection of education/service and community. With 25 years experience in energy, financial services and healthcare program delivery, the goal is to work on strategy and operations at KeelWorks targeting volunteer growth and organization expansion. Priya has been instrumental in reforming and streamlining the organizational structure, helping us identify and place leaders, and holding them accountable. She has made our programs more productive.",
     socialMediaLinks: {
@@ -123,12 +107,12 @@ const volunteers = [
     },
   },
   {
-    id: 8,
+    id: 7,
     name: "Fredimanuel Seshie",
     jobTitle: "Executive Assistant",
     location: "Maryland, USA",
 
-    image: Volunteer8,
+    image: Volunteer7,
     content1:
       "Fredi has consistently demonstrated exceptional dedication and tireless effort as an Executive Assistant for the KeelWorks Foundation. His significant contributions to operations management, hiring and recruitment processes, volunteer coordination, and human resources alongside of being a secretary for KeelWorks, greatly expanding the role of an Executive Assistant. Fredi's commitment to KeelWorks is evident through his unwavering support and willingness to assume additional responsibilities. He has frequently taken on tasks typically handled by the Executive Director and has adeptly represented the Executive Director in meetings when necessary. As a constant source of innovative ideas, Fredi continuously offers valuable suggestions for the improvement of KeelWorks. He actively seeks and shares feedback from members, ensuring that the foundation remains responsive to the needs and concerns of its community. As a board member, Fredi aims to provide the board with valuable insights into the inner workings of KeelWorks, share volunteer feedback and concerns, and serve as a consistent source of constructive feedback. His passion and dedication will be a tremendous asset to our board, helping to propel the KeelWorks Foundation forward.",
     socialMediaLinks: {
