@@ -33,7 +33,7 @@ const Banner = () => {
               </button>
               <Link
                 to="/getinvolved"
-                className="w-[156px] h-[47px] border-[#8A639B] border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-[#8A639B] transition duration-[150ms] ease-linear text-[#8A639B] hover:text-white font-bold bg-transparent"
+                className="w-[156px] h-[47px] border-[#8A639B] border-solid border-[4px] rounded-full flex justify-center items-center hover:bg-[#8A639B] transition duration-[150ms] ease-linear text-white font-bold bg-transparent"
               >
                 Get Involved
               </Link>

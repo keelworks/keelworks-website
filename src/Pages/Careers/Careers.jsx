@@ -141,7 +141,7 @@ const Careers = () => {
                       </p>
                       <p className="text-gray-700">
                         <strong>Type:</strong>
-                        <span className="inline-block px-2 py-0.5 rounded bg-primary100 text-primary500 text-xs font-semibold ml-1">
+                        <span className="inline-block px-2 py-0.5 rounded bg-primary100 text-xs font-semibold ml-1" style={{ color: '#414141' }}>
                           {job.Type || "Volunteer"}
                         </span>
                       </p>
