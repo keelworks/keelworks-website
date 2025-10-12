@@ -25,63 +25,99 @@ export const Policy = () => {
             Effective Date:
             <span className="text-gray-500 font-bold">September 15, 2025</span>
           </p>
-          
+
           <p className="text-[1.2rem] text-black mt-8">
-            This policy details how we collect, use, and protect your information when you use our digital services.
+            This policy details how we collect, use, and protect your
+            information when you use our digital services.
           </p>
 
           <p className="text-[1.2rem] text-black mt-8">
             <strong>Information We Collect:</strong>
           </p>
           <p className="text-[1.2rem] text-black mt-4">
-            <strong>Personal Information:</strong> If provided, name, email address, or other contact details you provide.
+            <strong>Personal Information:</strong> Name, email address, and/or
+            other contact information you provide.
           </p>
           <p className="text-[1.2rem] text-black mt-4">
-            <strong>Non-Personal Information:</strong> Browser type, device information, pages visited, and general website usage data collected through cookies or analytics tools.
+            <strong>Non-Personal Information:</strong> Browser type, device
+            information, pages visited, and general website usage data collected
+            through cookies or analytics tools.
           </p>
 
           <p className="text-[1.2rem] text-black mt-8">
             <strong>How We Use Your Information:</strong>
           </p>
           <ul className="list-disc pl-8 my-4">
-            <li>To respond to your questions or requests</li>
-            <li>To send updates about our programs, events, or newsletters when you opt in</li>
-            <li>To process donations securely</li>
-            <li>To improve our website and services</li>
+            <li>To respond to your questions or requests.</li>
+            <li>
+              To send updates about our programs, events, or newsletters when
+              you opt in.
+            </li>
+            <li>To process donations securely.</li>
+            <li>To improve our website and services.</li>
           </ul>
 
           <p className="text-[1.2rem] text-black mt-8">
-            <strong>Sharing of Information:</strong> We do not sell, trade, or rent your personal information. We may share information with trusted service providers (such as payment processors or email services) only as needed to operate the website and deliver services.
+            <strong>Sharing of Information:</strong> We do not sell, trade, or
+            rent your personal information. We may share information with
+            trusted service providers (such as payment processors or email
+            services) only as needed to operate the website and deliver
+            services.
           </p>
 
           <p className="text-[1.2rem] text-black mt-8">
-            <strong>Cookies & Tracking:</strong> We use cookies to improve your browsing experience and analyze website traffic. You can disable cookies in your browser settings if you prefer.
+            <strong>Cookies & Tracking:</strong> We use cookies to improve your
+            browsing experience and analyze website traffic. You can disable
+            cookies in your browser settings if you prefer.
           </p>
 
           <p className="text-[1.2rem] text-black mt-8">
             <strong>Your Choices:</strong>
           </p>
           <ul className="list-disc pl-8 my-4">
-            <li>You may unsubscribe from emails at any time by contacting us below</li>
-            <li>You can request access to, correction of, or deletion of your personal information by contacting us</li>
+            <li>
+              You may unsubscribe from emails at any time by contacting us
+              below.
+            </li>
+            <li>
+              You can request access to, correction of, or deletion of your
+              personal information by contacting us.
+            </li>
           </ul>
 
           <p className="text-[1.2rem] text-black mt-8">
-            <strong>Data Security:</strong> We take reasonable steps to protect your information, but no system is completely secure, and we cannot guarantee absolute security.
+            <strong>Data Security:</strong> We take reasonable steps to protect
+            your information and we have never had a breach. That said, no
+            system is completely secure and we cannot guarantee absolute
+            security. We will continue to take every effort to protect your data
+            and we will be completely transparent and immediate in notification
+            should we fail you at any time.
           </p>
 
           <p className="text-[1.2rem] text-black mt-8">
-            <strong>External Links:</strong> Our website may link to other sites. We are not responsible for the privacy practices of those websites.
+            <strong>External Links:</strong> Our website may link to other
+            sites. We are not responsible for the privacy practices of those
+            websites.
           </p>
 
           <p className="text-[1.2rem] text-black mt-8">
-            <strong>Changes to this Policy:</strong> We may update this Privacy Policy from time to time. Any changes will be posted on this page with a new effective date.
+            <strong>Changes to this Policy:</strong> We may update this privacy
+            policy from time to time. Any changes will be posted on this page
+            with a new effective date.
           </p>
 
           <p className="text-[1.2rem] text-black mt-8">
-            <strong>Contact Us:</strong> If you have any questions about this Privacy Policy, please contact us at:
+            <strong>Contact Us:</strong> If you have any questions about this
+            privacy policy, please contact us at:
             <span className="block mt-2">
-              Email: <a href="mailto:thomas.garrod@keelworks.org" className="text-blue-600 hover:underline">thomas.garrod@keelworks.org</a><br/>
+              Email:{" "}
+              <a
+                href="mailto:thomas.garrod@keelworks.org"
+                className="text-blue-600 hover:underline"
+              >
+                thomas.garrod@keelworks.org
+              </a>
+              <br />
               Address: 2398 West Beach Road, Oak Harbor, WA 98277
             </span>
           </p>
@@ -99,20 +135,18 @@ export const Policy = () => {
           <span className="text-gray-500 font-bold">July 10, 2024</span>
         </p>
         <p className="text-[1.2rem] text-black mt-8">
-          Purpose: KeelWorks Foundation is committed to creating an
-          inclusive environment that values diversity and promotes
-          equality for all individuals. This policy reaffirms our
-          dedication to fostering an organization and community that is
-          free from discrimination and harassment.
+          Purpose: KeelWorks Foundation is committed to creating an inclusive
+          environment that values diversity and promotes equality for all
+          individuals. This policy reaffirms our dedication to fostering an
+          organization and community that is free from discrimination and
+          harassment.
           <span className="block">
-            Scope: This policy applies to all KeelWorks Foundation
-            employees, volunteers, interns, contractors, vendors, and
-            third-party partners.
+            Scope: This policy applies to all KeelWorks Foundation employees,
+            volunteers, interns, contractors, vendors, and third-party partners.
           </span>
         </p>
         <p className="text-[1.2rem] text-black mt-8">
-          Protected Characteristics: We do not discriminate on the basis
-          of:
+          Protected Characteristics: We do not discriminate on the basis of:
         </p>
         <ul className="list-disc pl-8 my-4">
           <li>Age</li>
@@ -132,25 +166,24 @@ export const Policy = () => {
           <li>Pregnancy or family status</li>
           <li>Gender reassignment</li>
           <li>
-            Any other basis protected by US Federal Government and the
-            State of Washington
+            Any other basis protected by US Federal Government and the State of
+            Washington
           </li>
         </ul>
         <p className="text-[1.2rem] text-black mt-8">
-          Definition of Discrimination: Discrimination includes, but is
-          not limited to, harassment, bias, or unequal treatment based on
-          any protected characteristic.
+          Definition of Discrimination: Discrimination includes, but is not
+          limited to, harassment, bias, or unequal treatment based on any
+          protected characteristic.
         </p>
         <p className="text-[1.2rem] text-black">
-          <span className="block">Reporting:</span>It is crucial to report
-          any instances of discrimination to ensure a safe and inclusive
-          environment for all employees, volunteers and all other
-          individuals associated with KeelWorks. Reporting such incidents
-          allows the organization to address and rectify inappropriate
-          behavior promptly, preventing further harm and reinforcing our
-          commitment to diversity and equality. Every report contributes
-          to creating a respectful organization where everyone feels
-          valued.
+          <span className="block">Reporting:</span>It is crucial to report any
+          instances of discrimination to ensure a safe and inclusive environment
+          for all employees, volunteers and all other individuals associated
+          with KeelWorks. Reporting such incidents allows the organization to
+          address and rectify inappropriate behavior promptly, preventing
+          further harm and reinforcing our commitment to diversity and equality.
+          Every report contributes to creating a respectful organization where
+          everyone feels valued.
         </p>
         <p className="text-[1.2rem] text-black mt-8">
           Any individual who believes they have experienced or witnessed
@@ -165,72 +198,64 @@ export const Policy = () => {
           </li>
         </ul>
         <p className="text-[1.2rem] text-black mt-8">
-          All reports will be treated confidentially and investigated
-          promptly.
+          All reports will be treated confidentially and investigated promptly.
           <span className="block">
             Investigation and Resolution Procedures:
           </span>
           <span className="block">
-            - Investigations will be conducted fairly, impartially, and in
-            a timely manner.
+            - Investigations will be conducted fairly, impartially, and in a
+            timely manner.
           </span>
           <span className="block">
-            - Appropriate action will be taken according to the
-            organization's disciplinary policy and procedures to address
-            and resolve incidents of discrimination.
+            - Appropriate action will be taken according to the organization's
+            disciplinary policy and procedures to address and resolve incidents
+            of discrimination.
           </span>
           <span className="block">
-            - The outcome of the investigation and any resulting actions
-            will be communicated to the reporting individual.
+            - The outcome of the investigation and any resulting actions will be
+            communicated to the reporting individual.
           </span>
           <span className="block mt-8">
-            Training and Education: KeelWorks Foundation will provide
-            regular training and workshops to promote diversity, equity,
-            and inclusion, and to ensure employees understand this policy
-            and its implications.
+            Training and Education: KeelWorks Foundation will provide regular
+            training and workshops to promote diversity, equity, and inclusion,
+            and to ensure employees understand this policy and its implications.
           </span>
           <span className="block mt-8">
-            Accountability and Monitoring: The foundation will maintain a
-            system to track and monitor incidents, investigations, and
-            resolutions, ensuring accountability and continuous
-            improvement.
+            Accountability and Monitoring: The foundation will maintain a system
+            to track and monitor incidents, investigations, and resolutions,
+            ensuring accountability and continuous improvement.
           </span>
           <span className="block mt-8">
-            Inclusive Language: We strive to use inclusive language and
-            respect individuals' preferred names, pronouns, and
-            identities.
+            Inclusive Language: We strive to use inclusive language and respect
+            individuals' preferred names, pronouns, and identities.
           </span>
           <span className="block mt-8">
-            Intersectionality: We recognize that individuals may face
-            unique challenges based on multiple aspects of their identity
-            and will consider intersectionality in our policies and
-            practices.
+            Intersectionality: We recognize that individuals may face unique
+            challenges based on multiple aspects of their identity and will
+            consider intersectionality in our policies and practices.
           </span>
           <span className="block mt-8">
-            Third-Party Vendors and Partners: We expect all third-party
-            vendors and partners to adhere to this non-discrimination
-            policy.
+            Third-Party Vendors and Partners: We expect all third-party vendors
+            and partners to adhere to this non-discrimination policy.
           </span>
           <span className="block mt-8">
             Review and Updates: This policy will be reviewed and updated
-            annually, or as needed, to ensure it remains effective,
-            relevant, and compliant with evolving legal and social
-            requirements.
+            annually, or as needed, to ensure it remains effective, relevant,
+            and compliant with evolving legal and social requirements.
           </span>
           <span className="block mt-8">
-            Responsibility: All employees, volunteers, interns and
-            third-party partners are responsible for adhering to this
-            policy.
+            Responsibility: All employees, volunteers, interns and third-party
+            partners are responsible for adhering to this policy.
           </span>
           <span className="block">
-            Acknowledgement: By engaging with KeelWorks Foundation,
-            individuals acknowledge that they have read, understood, and
-            will comply with this non-discrimination policy.
+            Acknowledgement: By engaging with KeelWorks Foundation, individuals
+            acknowledge that they have read, understood, and will comply with
+            this non-discrimination policy.
           </span>
           <span className="block">
-            Contact: If you have any questions or concerns about this
-            policy, please reach out to the Director of HR or any member
-            of the management team.
+            Contact: If you have any questions or concerns about this policy,
+            please reach out to the Director of HR or any member of the
+            management team.
           </span>
         </p>
       </div>
