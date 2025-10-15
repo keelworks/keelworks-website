@@ -188,7 +188,7 @@ const Footer = () => {
             <Link to="/non_dis_policy" className="text-white hover:text-gray-500">
               Non-discrimination Policy
             </Link>
-            <Link to="/privacy_policy" className="hover:text-gray-500">
+            <Link to="/privacy_policy" className="text-white hover:text-gray-500">
               Privacy Policy
             </Link>
           </div>
