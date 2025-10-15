@@ -9,5 +9,19 @@ html {
 }
 
 .input-style {
-  @apply w-full px-3 py-3 text-[#101828] font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 text-sm;
+  @apply w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 text-sm;
+}
+
+/* Global text and link color rules */
+@layer utilities {
+  /* Ensure all places using black map to our design token */
+  .text-dark { @apply text-fontPrimary; }
+
+  /* Standard link styling */
+  .kw-link { @apply text-linkColor underline-offset-2 hover:underline focus:underline; }
+}
+
+@layer base {
+  /* Normalize anchor defaults across the site */
+  a { @apply text-linkColor; }
 }

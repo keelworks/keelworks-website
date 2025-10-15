@@ -137,9 +137,10 @@ const Members = () => {
               </h6>
               <h6 className="text-1 leading-8">{volunteer.jobTitle}</h6>
               <div className="flex gap-2">
-                <IoLocationOutline color="#FBBC05" size={25} />
+                <IoLocationOutline color="#212121" size={25} />
                 <h6 className="text-1 leading-8">{volunteer.location}</h6>
               </div>
+              {/* *************** Social Media Links ****************** */}
               <div className="flex gap-4">
                 <a
                   href={volunteer.socialMediaLinks.linkedin}

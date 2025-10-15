@@ -248,7 +248,7 @@ const JobApplicationForm = () => {
 
         <button
           type="submit"
-          className="bg-primary500 text-white font-semibold px-6 py-3 rounded-full hover:bg-primary300 transition duration-300"
+          className="bg-action500 text-white font-semibold px-6 py-3 rounded-full hover:bg-action300 transition duration-300"
         >
           Apply
         </button>

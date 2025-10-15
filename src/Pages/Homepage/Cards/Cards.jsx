@@ -96,7 +96,7 @@ const Cards = () => {
               </p>
 
               {/* classic link blue; anchored to bottom via flex */}
-              <span className="mt-6 inline-block font-semibold text-[#0000EE] hover:underline focus:underline">
+              <span className="mt-6 inline-block font-semibold text-linkColor hover:underline focus:underline">
                 Learn More
               </span>
             </button>
@@ -106,15 +106,15 @@ const Cards = () => {
 
       {/* Testimonials */}
       <div className="w-full flex flex-col items-center bg-white py-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary500 mb-12">
-          Testimonials
+        <h2 className="text-4xl md:text-5xl font-bold text-[#212121] mb-12">
+Testimonials
         </h2>
 
         <div className="max-w-5xl w-full px-4 mx-auto flex flex-col md:flex-row justify-center items-center gap-12 md:mx-auto md:w-fit">
           {testimonial.map((t) => (
             <div key={t.id} className="flex flex-col items-center text-center">
               <div className="relative w-[250px] h-[250px] mb-4">
-                <div className="absolute -top-3 -left-3 w-full h-full border-4 border-yellow-500" />
+                <div className="absolute -top-3 -left-3 w-full h-full border-4 border-[#077A85]" />
                 <img
                   src={t.image}
                   alt=""
@@ -136,7 +136,7 @@ const Cards = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="mt-8 border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-500 hover:text-white transition">
+          <button className="mt-8 border-2 border-linkColor text-linkColor px-6 py-3 rounded-lg text-lg font-semibold hover:bg-linkColor hover:text-white transition">
             Learn More
           </button>
         </a>
@@ -170,7 +170,7 @@ const TestimonialText = ({ content, charLimit }) => {
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           aria-expanded={isExpanded}
-          className="ml-2 font-semibold hover:underline focus:underline text-[#0000EE]"
+          className="ml-2 font-semibold hover:underline focus:underline text-linkColor"
         >
           {isExpanded ? "Read Less" : "Read More"}
         </button>

@@ -35,16 +35,16 @@ export const Blog = () => {
                 <li className="p-3 w-full text-center text-fontSecondary font-[16px] bg-gray-100 rounded-lg shadow-sm">
                   Newsletter
                 </li>
-                <li className="p-3 w-full text-center text-[#637381] font-[16px] rounded-lg">
+                <li className="p-3 w-full text-center text-gray-500 font-[16px] rounded-lg">
                   Stories
                 </li>
-                <li className="p-3 w-full text-center text-[#637381] font-[16px]  rounded-lg">
+                <li className="p-3 w-full text-center text-gray-500 font-[16px]  rounded-lg">
                   Inspiration
                 </li>
               </ul>
             </div> */}
             <div className="w-full max-w-[1170px] px-4 md:px-8">
-              <p className="text-[#8995A9] text-sm mb-4 text-center font-normal">
+              <p className="text-gray-500 text-sm mb-4 text-center font-normal">
                 Showing 10 Newsletters
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 ">
@@ -65,7 +65,7 @@ export const Blog = () => {
                       />
                       <div className="relative p-8 w-full h-[6rem] flex justify-start flex-col items-center gap-7">
                         <div className="gap-2 md:gap-4 text-center flex flex-col">
-                          <p className="text-[#111928] text-lg md:text-[1.25rem] font-semibold">
+                          <p className="text-fontPrimary text-lg md:text-[1.25rem] font-semibold">
                             {`${newsletter.title} | ${newsletter.date}`}
                           </p>
                           {/* <p className="text-sm md:text-base font-normal text-greyCustom">
@@ -91,7 +91,7 @@ export const Blog = () => {
           {/* <div className=" w-full p-4 flex flex-col items-center space-y-4">
             <div className="flex items-center  rounded-lg border">
               <button
-                className="p-3  sm:p-3  border-gray-300  text-[#637381] "
+                className="p-3  sm:p-3  border-gray-300  text-gray-500 "
                 onClick={() => setActivePage((prev) => Math.max(prev - 1, 1))}
               >
                 <FaChevronLeft />
@@ -103,8 +103,8 @@ export const Blog = () => {
                   onClick={() => setActivePage(page)}
                   className={`px-3 sm:px-4 py-3.5 sm:py-2 text-sm sm:text-base text-center transition-colors border-l border-gray-300 min-w-[2rem] sm:min-w-[2.5rem] ${
                     activePage === page
-                      ? "bg-[#FDDE82] text-fontSecondary"
-                      : "bg-white text-[#637381]"
+                      ? "bg-[#10ADB8] text-white"
+                      : "bg-white text-gray-500"
                   }`}
                 >
                   {page}
@@ -112,7 +112,7 @@ export const Blog = () => {
               ))}
 
               <button
-                className="p-4 sm:p-3 border-l border-gray-300 text-[#637381]"
+                className="p-4 sm:p-3 border-l border-gray-300 text-gray-500"
                 onClick={() => setActivePage((prev) => Math.min(prev + 1, 5))}
               >
                 <FaChevronRight />

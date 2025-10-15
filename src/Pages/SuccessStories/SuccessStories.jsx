@@ -52,7 +52,7 @@ const SuccessStories = () => {
                 Case Studies
               </h4>
             </div>
-            <div className="flex flex-col md:flex-row justify-center items-center md:justify-start md:items-start gap-10 md:overflow-x-auto mb-10">
+            <div className="flex flex-col md:flex-row justify-center items-center md:justify-start md:items-start gap-10 mb-10">
               {videos.map((volunteer, index) => (
                 <div
                   key={index}

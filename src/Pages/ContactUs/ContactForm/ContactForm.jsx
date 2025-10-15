@@ -128,7 +128,7 @@ const ContactForm = () => {
                   </div>
 
                   <div className="flex justify-center lg:justify-start">
-                    <button className="block mt-7 mb-[4rem] px-24 py-5 bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-white font-semibold">
+                    <button className="block mt-7 mb-[4rem] px-24 py-5 bg-action500 rounded-full hover:bg-action300 transition duration-[300ms] ease-linear text-[1rem] text-white font-semibold">
                       Send
                     </button>
                   </div>
