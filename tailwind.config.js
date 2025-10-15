@@ -13,10 +13,15 @@ export default {
     },
     extend: {
       colors: {
-        primary500: "#FBBC05",
-        primary400: "#FDD253",
-        primary300: "#FEE290",
-        primary200: "#FFF4D7",
+        primary500: "#077A85",
+        primary400: "#0A8B96",
+        primary300: "#0D9CA7",
+        primary200: "#10ADB8",
+        
+        // Action button colors (keeping original yellow)
+        action500: "#FBBC05",
+        action400: "#FDD253",
+        action300: "#FEE290",
 
         grey500: "#8995A9",
         grey400: "#D0D5DD",
@@ -29,8 +34,11 @@ export default {
         error300: "#F04438",
         error200: "#F97066",
 
-        fontPrimary: "#101828",
-        fontSecondary: "#DBA300",
+        fontPrimary: "#212121",
+        fontSecondary: "#077A85",
+        
+        // Link color
+        linkColor: "#006699",
       },
       height: {
         68: "68%",

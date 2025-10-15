@@ -18,7 +18,7 @@ const BecomeVolunteer = () => {
               />
             </div>
             <div className="absolute bottom-[-40%] left-0 md:bottom-[-6rem] w-[90%] md:w-[30rem] bg-primary500">
-              <div className="p-6 md:p-8 xl:p-12 text-start text-[#2E2E2E] flex flex-col justify-center items-center h-full">
+              <div className="p-6 md:p-8 xl:p-12 text-start text-white flex flex-col justify-center items-center h-full">
                 <p className="font-bold text-[1.25rem] sm:text-[2.5rem] leading-tight ">
                   Volunteers are invaluable to KeelWorks.
                 </p>

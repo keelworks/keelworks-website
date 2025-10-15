@@ -39,7 +39,7 @@ const Navbar = () => {
         </a>
         <div className="flex items-center gap-6">
           <button
-            className="md:block w-[80px] h-[36px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-[#101828] font-semibold"
+            className="md:block w-[80px] h-[36px] bg-[#825E8B] rounded-full hover:bg-[#825E8B]/80 hover:text-yellow-400 transition duration-[300ms] ease-linear text-[1rem] text-white font-semibold"
             onClick={() => {
               window.open(
                 "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate",
@@ -80,7 +80,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="about"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
                   About Us
                 </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="getinvolved"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
                   Get Involved
                 </Link>
@@ -96,15 +96,15 @@ const Navbar = () => {
               <li>
                 <Link
                   to="getinvolved#careers"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
-              >
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
+                >
                 Careers
               </Link>
               </li>
               <li>
                 <Link
                   to="oursolutions"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
                   Our Solutions
                 </Link>
@@ -112,7 +112,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="blog"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
                   Blog
                 </Link>
@@ -120,7 +120,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="success_stories"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
                   Success Stories
                 </Link>
@@ -128,7 +128,7 @@ const Navbar = () => {
               {/* <li>
                 <Link
                   to="getinvolved#faq"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
                   FAQ
                 </Link>
@@ -136,7 +136,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="contactus"
-                  className="text-white hover:text-gray-500 transition duration-[200ms] ease-linear"
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
                   Contact Us
                 </Link>

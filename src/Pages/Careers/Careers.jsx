@@ -141,7 +141,7 @@ const Careers = () => {
                       </p>
                       <p className="text-gray-700">
                         <strong>Type:</strong>
-                        <span className="inline-block px-2 py-0.5 rounded bg-primary100 text-primary500 text-xs font-semibold ml-1">
+                        <span className="inline-block px-2 py-0.5 rounded bg-primary100 text-xs font-semibold ml-1" style={{ color: '#414141' }}>
                           {job.Type || "Volunteer"}
                         </span>
                       </p>
@@ -152,7 +152,7 @@ const Careers = () => {
                       {isExpanded ? description : shortText}
                       {description.length > charLimit && (
                         <button
-                          className="ml-2 text-primary500 font-semibold hover:underline focus:outline-none"
+                          className="ml-2 text-linkColor font-semibold hover:underline focus:outline-none"
                           onClick={() => toggleExpand(globalIdx)}
                         >
                           {isExpanded ? "Read Less" : "Read More"}
@@ -164,7 +164,7 @@ const Careers = () => {
                   {/* apply button */}
                   <button
                     type="button"
-                    className="mt-auto w-full bg-primary500 text-white px-4 py-2 rounded-full hover:bg-primary300 transition duration-300 font-semibold relative overflow-hidden ripple"
+                    className="mt-auto w-full bg-action500 text-[#212121] px-4 py-2 rounded-full hover:bg-action300 transition duration-300 font-semibold relative overflow-hidden ripple"
                     onClick={(e) => {
                       handleApply(job);
                       createRipple(e);
@@ -196,7 +196,7 @@ const Careers = () => {
               onClick={() => handlePageChange(i + 1)}
               className={`px-3 py-1 rounded border transition hover:scale-105 ${
                 currentPage === i + 1
-                  ? "bg-primary500 text-white"
+                  ? "bg-action500 text-fontPrimary"
                   : "bg-white hover:bg-primary100"
               }`}
             >

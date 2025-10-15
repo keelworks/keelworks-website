@@ -132,7 +132,7 @@ const VolunteersSay = () => {
                     <button
                       onClick={() => toggleExpand(v.id)}
                       aria-expanded={isExpanded}
-                      className="ml-2 font-semibold hover:underline focus:underline text-[#0000EE]"
+                      className="ml-2 font-semibold hover:underline focus:underline text-linkColor"
                     >
                       {isExpanded ? "Read Less" : "Read More"}
                     </button>

@@ -48,7 +48,7 @@ export default function July2025Newsletter() {
       :root{
         --bg:#dcebf7; --ink:#0a154f; --muted:#f7f7f7;
         --brand:#406a94; --brand-dark:#0a1d2f;
-        --cta:#ffd700; --cta-ink:#000;
+        --cta:#077A85; --cta-ink:#fff;
         --donate:#5c98ad; --donate-cta:#060e3a;
         --footer:#1f2e3d; --radius:12px; --shadow:0 8px 24px rgba(0,0,0,.08);
         --maxw:960px;
@@ -90,8 +90,8 @@ export default function July2025Newsletter() {
       }
       .btn.round{ border-radius:999px; }
       .btn--primary{ background:var(--cta); color:var(--cta-ink); }
-      .btn--primary:hover{ background:#e6c200; text-decoration:underline; }
-      .btn--primary:active{ background:#d4b300; transform:translateY(1px); }
+      .btn--primary:hover{ background:#0A8B96; text-decoration:underline; }
+      .btn--primary:active{ background:#0D9CA7; transform:translateY(1px); }
       .btn--dark{ background:var(--donate-cta); color:#fff; }
       .btn--dark:hover{ background:#09145a; text-decoration:underline; }
       .btn:focus-visible{ outline:none; box-shadow:0 0 0 3px #fff, 0 0 0 6px #0a154f; }

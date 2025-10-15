@@ -822,7 +822,7 @@ const SignUp = () => {
             </div>
             <div className="flex justify-center lg:justify-start">
               <button
-                className="block mt-7 mb-[4rem] w-[297px] h-[76px] bg-primary500 rounded-full hover:bg-primary300 transition duration-[300ms] ease-linear text-[1rem] text-white font-semibold"
+                className="block mt-7 mb-[4rem] w-[297px] h-[76px] bg-action500 rounded-full hover:bg-action300 transition duration-[300ms] ease-linear text-[1rem] text-white font-semibold"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
