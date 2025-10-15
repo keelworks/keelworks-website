@@ -27,7 +27,7 @@ const volunteers = [
   {
     id: 2,
     name: "Aruna Ghildiyal",
-    jobTitle: "Project Management Lead",
+    jobTitle: "Grant Acquisition",
     location: "San Carlos, USA",
     image: Volunteer2,
     content1:
