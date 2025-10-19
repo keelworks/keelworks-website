@@ -48,13 +48,13 @@ export const Policy = () => {
             <strong>How We Use Your Information:</strong>
           </p>
           <ul className="list-disc pl-8 my-4">
-            <li>To respond to your questions or requests.</li>
+            <li>To respond to your questions or requests</li>
             <li>
               To send updates about our programs, events, or newsletters when
-              you opt in.
+              you opt in
             </li>
-            <li>To process donations securely.</li>
-            <li>To improve our website and services.</li>
+            <li>To process donations securely</li>
+            <li>To improve our website and services</li>
           </ul>
 
           <p className="text-[1.2rem] text-black mt-8">
@@ -76,12 +76,11 @@ export const Policy = () => {
           </p>
           <ul className="list-disc pl-8 my-4">
             <li>
-              You may unsubscribe from emails at any time by contacting us
-              below.
+              You may unsubscribe from emails at any time by contacting us below
             </li>
             <li>
               You can request access to, correction of, or deletion of your
-              personal information by contacting us.
+              personal information by contacting us
             </li>
           </ul>
 
