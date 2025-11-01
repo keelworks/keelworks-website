@@ -1,12 +1,17 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import LoadingSpinner from "../../Components/KeelBot/LoadingSpinner/LoadingSpinner";
 
 const charLimit = 2000; // change if you want a different truncate length
 
 /** Case/space-insensitive column getter */
 function flexiblePick(row = {}, keys = []) {
-  const norm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-  const dict = Object.fromEntries(Object.keys(row).map((k) => [norm(k), row[k]]));
+  const norm = (s) =>
+    String(s || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, "");
+  const dict = Object.fromEntries(
+    Object.keys(row).map((k) => [norm(k), row[k]])
+  );
   for (const k of keys) {
     const v = dict[norm(k)];
     if (v != null && String(v).trim() !== "") return String(v).trim();
@@ -17,18 +22,30 @@ function flexiblePick(row = {}, keys = []) {
 /** Normalize one row from the sheet into consistent keys */
 function normalizeRow(row = {}) {
   const Title =
-    flexiblePick(row, ["Title", "JobTitle", "Job Title", "Role", "Position", "Name"]) ||
-    "Role (title pending)";
+    flexiblePick(row, [
+      "Title",
+      "JobTitle",
+      "Job Title",
+      "Role",
+      "Position",
+      "Name",
+    ]) || "Role (title pending)";
 
   const Location = flexiblePick(row, ["Location", "City"]) || "Remote";
   const Type = flexiblePick(row, ["Type", "Role Type"]) || "Volunteer";
   const Description =
-    flexiblePick(row, ["Description", "Job Description", "Role Description"]) || "";
+    flexiblePick(row, ["Description", "Job Description", "Role Description"]) ||
+    "";
 
   const StatusRaw = flexiblePick(row, ["Status", "State"]) || "Open";
   const Status = String(StatusRaw).trim().toLowerCase();
 
-  const FormURL = flexiblePick(row, ["FormURL", "Form URL", "Application Link", "Apply Link"]);
+  const FormURL = flexiblePick(row, [
+    "FormURL",
+    "Form URL",
+    "Application Link",
+    "Apply Link",
+  ]);
 
   return { Title, Location, Type, Description, Status, FormURL, _raw: row };
 }
@@ -47,7 +64,7 @@ const Careers = () => {
   /* fetch jobs */
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbzL3qgWF2-yrCgQcgQXEbscWm-KugU1Q32wFgEDGKJYk1ePc4dVmgN_DAFiBsPktWcO/exec"
+      "https://script.google.com/macros/s/AKfycbzEmskmmWo59MhJzsTrJwNGWK9EottKP4CvDNb5F70ZLRJbdSs1Jd1VrjgLQ6r_Ik6CwA/exec"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -141,7 +158,10 @@ const Careers = () => {
                       </p>
                       <p className="text-gray-700">
                         <strong>Type:</strong>
-                        <span className="inline-block px-2 py-0.5 rounded bg-primary100 text-xs font-semibold ml-1" style={{ color: '#414141' }}>
+                        <span
+                          className="inline-block px-2 py-0.5 rounded bg-primary100 text-xs font-semibold ml-1"
+                          style={{ color: "#414141" }}
+                        >
                           {job.Type || "Volunteer"}
                         </span>
                       </p>
