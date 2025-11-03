@@ -15,7 +15,7 @@ const Slider1 = () => {
           191 million people
           <span className="text-white"> are</span>
         </p>
-        <p>unemployed</p>
+        <p>unemployed.</p>
         <p>
           This is
           <span className="text-primary500"> untapped potential.</span>
