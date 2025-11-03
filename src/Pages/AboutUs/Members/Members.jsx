@@ -87,11 +87,11 @@ const volunteers = [
   {
     id: 7,
     name: "Fredimanuel Seshie",
-    jobTitle: "Executive Assistant",
+    jobTitle: "Program Manager",
     location: "Maryland, USA",
     image: Volunteer7,
     content1:
-      "Fredi has consistently demonstrated exceptional dedication and tireless effort as an Executive Assistant for the KeelWorks Foundation. His significant contributions to operations management, hiring and recruitment processes, volunteer coordination, and human resources alongside of being a secretary for KeelWorks, greatly expanding the role of an Executive Assistant.Fredi's commitment to KeelWorks is evident through his unwavering support and willingness to assume additional responsibilities. He has frequently taken on tasks typically handled by the Executive Director and has adeptly represented the Executive Director in meetings when necessary.As a constant source of innovative ideas, Fredi continuously offers valuable suggestions for the improvement of KeelWorks. He actively seeks and shares feedback from members, ensuring that the foundation remains responsive to the needs and concerns of its community.As a board member, Fredi aims to provide the board with valuable insights into the inner workings of KeelWorks, share volunteer feedback and concerns, and serve as a consistent source of constructive feedback. His passion and dedication will be a tremendous asset to our board, helping to propel the KeelWorks Foundation forward.",
+      "Fredi has proven to be an exceptional and steadfast member of the KeelWorks Foundation, demonstrating professionalism, initiative, and a deep commitment to the organization’s mission. As a Program Manager, he plays a central role in ensuring that KeelWorks operates efficiently and cohesively, supporting both leadership and volunteers with clarity and direction. Fredi’s thoughtful leadership, strong communication, and collaborative mindset have strengthened coordination across teams and improved overall organizational structure. He approaches challenges with creativity and consistency, ensuring that each project aligns with KeelWorks’ long-term goals. As a board member, Fredi brings valuable insight into the organization’s internal operations and community impact. His balanced perspective, reliability, and dedication make him an essential contributor to KeelWorks' continued growth and success.",
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/in/fredimanuel-s-612390301/",
     },
@@ -99,7 +99,7 @@ const volunteers = [
   {
     id: 8,
     name: "Romir Patel",
-    jobTitle: "Human Relations",
+    jobTitle: "Project Manager",
     location: "Gilbert, USA",
     image: Volunteer8,
     content1:
