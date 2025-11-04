@@ -4,7 +4,7 @@
  *  ▸ Article    : paginated posts from blog.keelworks.org
  *  ▸ Media      : YouTube rows from Google-Sheet Apps Script
  *****************************************************************/
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { newsLetters } from "./data";
 import initialArticles from "./initialArticles.json"; // first 9 mapped items
@@ -40,12 +40,17 @@ export default function Blog_new() {
         const first = await fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=1`);
         if (!first.ok) throw new Error(first.statusText);
 
-        const totalPages = parseInt(first.headers.get("X-WP-TotalPages") || "1", 10);
+        const totalPages = parseInt(
+          first.headers.get("X-WP-TotalPages") || "1",
+          10
+        );
 
         let all = await first.json();
         const rest = await Promise.all(
           Array.from({ length: totalPages - 1 }, (_, i) =>
-            fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=${i + 2}`).then((r) => r.json())
+            fetch(`${WP_BASE}&per_page=${PER_PAGE}&page=${i + 2}`).then((r) =>
+              r.json()
+            )
           )
         );
         rest.forEach((chunk) => (all = all.concat(chunk)));
@@ -57,7 +62,8 @@ export default function Blog_new() {
             day: "numeric",
             year: "numeric",
           }),
-          image: p._embedded?.["wp:featuredmedia"]?.[0]?.source_url || FALLBACK_IMG,
+          image:
+            p._embedded?.["wp:featuredmedia"]?.[0]?.source_url || FALLBACK_IMG,
           link: p.link,
         }));
 
@@ -124,7 +130,8 @@ export default function Blog_new() {
           <header className="w-full md:w-[755px] flex flex-col items-center gap-5 px-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Blog</h1>
             <p className="text-center text-sm md:text-lg">
-              Discover stories, insights and media from the KeelWorks Foundation.
+              Discover stories, insights and media from the KeelWorks
+              Foundation.
             </p>
           </header>
 
@@ -135,7 +142,9 @@ export default function Blog_new() {
                 key={t}
                 onClick={() => setActiveFilter(t)}
                 className={`px-6 py-2 text-sm font-semibold rounded-md transition-all ${
-                  activeFilter === t ? "bg-[#077A85] text-white" : "text-[#646464]"
+                  activeFilter === t
+                    ? "bg-[#077A85] text-white"
+                    : "text-[#646464]"
                 }`}
               >
                 {t}
@@ -149,7 +158,9 @@ export default function Blog_new() {
               Showing {masterList.length} {activeFilter}
               {masterList.length !== 1 && "s"}
               {activeFilter === "Article" && refreshingA && (
-                <span className="ml-2 text-xs text-orange-500">(updating…)</span>
+                <span className="ml-2 text-xs text-orange-500">
+                  (updating…)
+                </span>
               )}
             </p>
 
@@ -158,12 +169,17 @@ export default function Blog_new() {
               {activeFilter !== "Media" &&
                 paginatedItems.map((item, i) =>
                   item.skeleton ? (
-                    <div key={i} className="h-[310px] bg-gray-100 animate-pulse rounded-lg" />
+                    <div
+                      key={i}
+                      className="h-[310px] bg-gray-100 animate-pulse rounded-lg"
+                    />
                   ) : (
                     <article
                       key={i}
                       className="bg-white rounded-lg shadow-md overflow-hidden hover:cursor-pointer"
-                      onClick={() => open(item.htmlLink ?? item.pdfFile ?? item.link)}
+                      onClick={() =>
+                        open(item.htmlLink ?? item.pdfFile ?? item.link)
+                      }
                     >
                       {/* Fixed 3:2 area; swap to placeholder on error; clear alt to avoid visible text */}
                       {item.image ? (
@@ -183,7 +199,9 @@ export default function Blog_new() {
                       )}
 
                       <div className="p-8 flex flex-col items-center gap-3">
-                        <h3 className="text-lg font-semibold text-center">{item.title}</h3>
+                        <h3 className="text-lg font-semibold text-center">
+                          {item.title}
+                        </h3>
                         <p className="text-xs text-gray-500">{item.date}</p>
                       </div>
                     </article>
@@ -195,9 +213,15 @@ export default function Blog_new() {
                 <Suspense fallback={<div>Loading videos…</div>}>
                   {paginatedItems.map((vid, i) =>
                     vid.skeleton ? (
-                      <div key={i} className="h-[310px] bg-gray-100 animate-pulse rounded-lg" />
+                      <div
+                        key={i}
+                        className="h-[310px] bg-gray-100 animate-pulse rounded-lg"
+                      />
                     ) : (
-                      <article key={i} className="bg-white rounded-lg shadow-md overflow-hidden">
+                      <article
+                        key={i}
+                        className="bg-white rounded-lg shadow-md overflow-hidden"
+                      >
                         <YouTube
                           videoId={vid.videoId}
                           opts={{
@@ -207,10 +231,14 @@ export default function Blog_new() {
                           }}
                         />
                         <div className="p-5 flex flex-col items-center gap-3">
-                          <h3 className="text-lg font-semibold text-center">{vid.title}</h3>
+                          <h3 className="text-lg font-semibold text-center">
+                            {vid.title}
+                          </h3>
                           <p className="text-xs text-gray-500">{vid.date}</p>
                           <button
-                            onClick={() => open(`https://youtu.be/${vid.videoId}`)}
+                            onClick={() =>
+                              open(`https://youtu.be/${vid.videoId}`)
+                            }
                             className="bg-white border border-gray-400 text-gray-500 rounded-full px-8 py-2 text-sm font-bold hover:bg-[#077A85] hover:text-white transition-colors"
                           >
                             Watch on YouTube
@@ -240,7 +268,9 @@ export default function Blog_new() {
                 </span>
                 <button
                   className="p-3 text-gray-500"
-                  onClick={() => setActivePage((p) => Math.min(p + 1, totalPages))}
+                  onClick={() =>
+                    setActivePage((p) => Math.min(p + 1, totalPages))
+                  }
                   disabled={activePage === totalPages}
                 >
                   <FaChevronRight />
