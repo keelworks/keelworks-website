@@ -26,7 +26,7 @@ export const newsLetters = [
   },
   {
     id: 1015,
-    title: "Oct 2025",
+    title: "October 2025",
     // date: "10/2025",
     description: "October's Newsletter",
     image: newsLetterImageOct25,
@@ -35,9 +35,9 @@ export const newsLetters = [
   },
   {
     id: 1014,
-    title: "Aug 2025",
+    title: "August 2025",
     // date: "08/2025",
-    description: "Aug's Newsletter",
+    description: "August's Newsletter",
     image: newsLetterImageAug25,
     htmlLink: "/newsletters/aug-2025",
   },
