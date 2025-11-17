@@ -20,7 +20,7 @@ const FALLBACK_IMG =
   "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'%3E%3Crect width='100%25' height='100%25' fill='%23EEF2F7'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Arial' font-size='42' fill='%2390A3B1'%3EKeelWorks%3C/text%3E%3C/svg%3E";
 
 export default function Blog_new() {
-  const [activeFilter, setActiveFilter] = useState("Newsletter");
+  const [activeFilter, setActiveFilter] = useState("Newsletters");
   const [activePage, setActivePage] = useState(1);
 
   // Start with pre-fetched first page (already mapped: {title,date,image,link})
@@ -105,8 +105,8 @@ export default function Blog_new() {
 
   // Build list & pagination
   const masterList = {
-    Newsletter: newsLetters,
-    Article: articles,
+    Newsletters: newsLetters,
+    Articles: articles,
     Media: loadingV ? Array(3).fill({ skeleton: true }) : videos,
   }[activeFilter];
 
@@ -128,7 +128,9 @@ export default function Blog_new() {
         <div className="m-[1rem] md:mx-[2rem] [@media(min-width:1100px)]:mx-[8rem] w-screen flex flex-col items-center gap-12">
           {/* Header */}
           <header className="w-full md:w-[755px] flex flex-col items-center gap-5 px-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Blog</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+              Blogs
+            </h1>
             <p className="text-center text-sm md:text-lg">
               Discover stories, insights and media from the KeelWorks
               Foundation.
@@ -137,7 +139,7 @@ export default function Blog_new() {
 
           {/* Tabs */}
           <nav className="w-full flex justify-center mb-6">
-            {["Newsletter", "Article", "Media"].map((t) => (
+            {["Newsletters", "Articles", "Media"].map((t) => (
               <button
                 key={t}
                 onClick={() => setActiveFilter(t)}
@@ -156,8 +158,8 @@ export default function Blog_new() {
           <section className="w-full px-4 md:px-8 lg:px-24 flex flex-col items-center space-y-6">
             <p className="text-gray-500 text-sm text-center">
               Showing {masterList.length} {activeFilter}
-              {masterList.length !== 1 && "s"}
-              {activeFilter === "Article" && refreshingA && (
+              {/* {masterList.length !== 1 && "s"} */}
+              {activeFilter === "Articles" && refreshingA && (
                 <span className="ml-2 text-xs text-orange-500">
                   (updating…)
                 </span>

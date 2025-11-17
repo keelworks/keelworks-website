@@ -98,8 +98,8 @@ const Navbar = () => {
                   to="getinvolved#careers"
                   className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
-                Careers
-              </Link>
+                  Careers
+                </Link>
               </li>
               <li>
                 <Link
@@ -114,7 +114,7 @@ const Navbar = () => {
                   to="blog"
                   className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
-                  Blog
+                  Blogs
                 </Link>
               </li>
               <li>
@@ -133,6 +133,14 @@ const Navbar = () => {
                   FAQ
                 </Link>
               </li> */}
+              <li>
+                <Link
+                  to="values"
+                  className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
+                >
+                  Values
+                </Link>
+              </li>
               <li>
                 <Link
                   to="contactus"

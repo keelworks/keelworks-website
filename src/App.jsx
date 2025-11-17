@@ -20,6 +20,7 @@ import November2025Newsletter from "./Pages/Newsletters/November2025";
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
+import Values from "./Pages/Values/Values";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "contactus",
         element: <ContactUs />,
+      },
+      {
+        path: "values",
+        element: <Values />,
       },
       {
         path: "success_stories",
