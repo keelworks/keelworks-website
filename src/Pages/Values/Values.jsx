@@ -2,17 +2,17 @@ export const Values = () => {
   return (
     <div className="w-screen bg-white flex justify-center items-start">
       <div className="w-screen max-w-[3000px] my-[5rem] md:mt-[8rem] flex justify-start items-center">
-        <div className="mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
+        <div className="mx-[2rem] md:mx-[4rem] lg:mx-[10rem]">
           <div className="w-full flex flex-col md:flex-row justify-start items-start gap-[2rem] mt-[4rem]">
             {/* Sidebar - constrained width in percent for screen size of 1440 max width 300px*/}
-            <div className="w-full md:max-w-[35%] text-left flex flex-col gap-2 flex-shrink-0">
+            {/* <div className="w-full md:max-w-[35%] text-left flex flex-col gap-2 flex-shrink-0">
               <p className="text-[1.2rem] font-bold text-gray-500">
                 Our Foundation
               </p>
               <p className="text-[1.2rem] text-black font-bold px-2 py-1 border border-black underline">
                 Mission, Beliefs & Values
               </p>
-            </div>
+            </div> */}
 
             {/* Main content area - takes remaining space */}
             <div className="w-full md:flex-1">
@@ -72,8 +72,8 @@ export const Values = () => {
                     dignity for all.
                   </li>
                   <li className="text-[1.2rem] text-black">
-                    <strong>Community:</strong> Mutual support: together, we can
-                    do anything!
+                    <strong>Community:</strong> We give each other mutual
+                    support. Together, we can do anything!
                   </li>
                   <li className="text-[1.2rem] text-black">
                     <strong>Leadership:</strong> Leading with integrity for the
