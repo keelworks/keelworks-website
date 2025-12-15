@@ -14,7 +14,18 @@ import newsLetterImageJune25 from "../../assets/images/Blogs/Newsletter-June2025
 import newsLetterImageAug25 from "../../assets/images/Blogs/Newsletter-Aug2025.png";
 import newsLetterImageOct25 from "../../assets/images/Newsletters/October2025/Newsletter-Oct2025.png";
 import newsLetterImageNov25 from "../../assets/images/Newsletters/November2025/Newsletter-Nov2025.png";
+import newsLetterImageDec25 from "../../assets/images/Newsletters/December2025/Newsletter-Dec2025.png";
+
 export const newsLetters = [
+  {
+    id: 1017,
+    title: "December 2025",
+    // date: "12/2025",
+    description: "December's Newsletter",
+    image: newsLetterImageDec25,
+    // Using Aug 2025 image as placeholder
+    htmlLink: "/newsletters/dec-2025",
+  },
   {
     id: 1016,
     title: "November 2025",
