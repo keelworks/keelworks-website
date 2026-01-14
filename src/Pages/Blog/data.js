@@ -15,33 +15,35 @@ import newsLetterImageAug25 from "../../assets/images/Blogs/Newsletter-Aug2025.p
 import newsLetterImageOct25 from "../../assets/images/Newsletters/October2025/Newsletter-Oct2025.png";
 import newsLetterImageNov25 from "../../assets/images/Newsletters/November2025/Newsletter-Nov2025.png";
 import newsLetterImageDec25 from "../../assets/images/Newsletters/December2025/Newsletter-Dec2025.png";
+import newsLetterImageJan26 from "../../assets/images/Newsletters/January2026/Newsletter-Jan2026.png";
 
 export const newsLetters = [
   {
+    id: 1018,
+    title: "January 2026",
+    description: "January's Newsletter",
+    image: newsLetterImageJan26,
+    htmlLink: "/newsletters/jan-2026",
+  },
+  {
     id: 1017,
     title: "December 2025",
-    // date: "12/2025",
     description: "December's Newsletter",
     image: newsLetterImageDec25,
-    // Using Aug 2025 image as placeholder
     htmlLink: "/newsletters/dec-2025",
   },
   {
     id: 1016,
     title: "November 2025",
-    // date: "11/2025",
     description: "November's Newsletter",
     image: newsLetterImageNov25,
-    // Using Aug 2025 image as placeholder
     htmlLink: "/newsletters/nov-2025",
   },
   {
     id: 1015,
     title: "October 2025",
-    // date: "10/2025",
     description: "October's Newsletter",
     image: newsLetterImageOct25,
-    // Using Aug 2025 image as placeholder
     htmlLink: "/newsletters/oct-2025",
   },
   {
