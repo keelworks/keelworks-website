@@ -13,8 +13,10 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  var test_url = "https://script.google.com/macros/s/AKfycbz1Id1zW50lzq-kLctDrBwXrvONZRkol622A0kiuawlLyCqvxuazupUJOVSBcHsyLG7/exec";
-  var master_url = "https://script.google.com/macros/s/AKfycbxglcDWtgey1PHh1qkpViHthjG08E3TK3hnjLJfDOQjQKw5dVYmNu4g-vvRmzJzy3zY_g/exec";
+  var test_url =
+    "https://script.google.com/macros/s/AKfycbz1Id1zW50lzq-kLctDrBwXrvONZRkol622A0kiuawlLyCqvxuazupUJOVSBcHsyLG7/exec";
+  var master_url =
+    "https://script.google.com/macros/s/AKfycbxglcDWtgey1PHh1qkpViHthjG08E3TK3hnjLJfDOQjQKw5dVYmNu4g-vvRmzJzy3zY_g/exec";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -27,14 +29,11 @@ const Footer = () => {
     const data = new FormData();
     data.append("Email", userInput.email);
 
-    const response = await fetch(
-      master_url,
-      {
-        method: "POST",
-        body: data,
-        muteHttpExceptions: true,
-      }
-    );
+    const response = await fetch(master_url, {
+      method: "POST",
+      body: data,
+      muteHttpExceptions: true,
+    });
 
     if (response.ok) {
       setEmail("");
@@ -164,8 +163,11 @@ const Footer = () => {
             <Link to="/getinvolved" className="text-white hover:text-gray-500">
               Get Involved
             </Link>
-            <Link to="/getinvolved#careers" className="text-white hover:text-gray-500">
-             Careers
+            <Link
+              to="/getinvolved#opportunities"
+              className="text-white hover:text-gray-500"
+            >
+              Opportunities
             </Link>
             <Link to="/oursolutions" className="text-white hover:text-gray-500">
               Our Solutions
@@ -173,7 +175,10 @@ const Footer = () => {
             <Link to="/blog" className="text-white hover:text-gray-500">
               Blog
             </Link>
-            <Link to="/success_stories" className="text-white hover:text-gray-500">
+            <Link
+              to="/success_stories"
+              className="text-white hover:text-gray-500"
+            >
               Success Stories
             </Link>
             <Link
@@ -185,10 +190,16 @@ const Footer = () => {
             <Link to="/contactus" className="text-white hover:text-gray-500">
               Contact Us
             </Link>
-            <Link to="/non_dis_policy" className="text-white hover:text-gray-500">
+            <Link
+              to="/non_dis_policy"
+              className="text-white hover:text-gray-500"
+            >
               Non-discrimination Policy
             </Link>
-            <Link to="/privacy_policy" className="text-white hover:text-gray-500">
+            <Link
+              to="/privacy_policy"
+              className="text-white hover:text-gray-500"
+            >
               Privacy Policy
             </Link>
           </div>

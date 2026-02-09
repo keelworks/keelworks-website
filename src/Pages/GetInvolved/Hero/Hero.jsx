@@ -5,7 +5,6 @@ const Hero = () => (
   <div className="w-screen lg:min-h-[800px] mt-[5rem] bg-white flex justify-center items-center font-Inter">
     <div className="w-full max-w-[3000px] h-full overflow-hidden relative bg-white flex justify-center items-start">
       <div className="flex items-start md:items-center justify-center flex-col xl:h-full w-full h-full mx-[1rem] md:mx-[2rem] lg:mx-[8rem]">
-
         {/* ────────────── Heading & Intro ────────────── */}
         <p className="text-[2rem] md:text-[3rem] lg:text-[3.5rem] font-bold text-[#2E2E2E] mb-[2rem] mt-[4rem] lg:mt-0 leading-[3.5rem] lg:leading-[4rem]">
           Get Involved
@@ -28,17 +27,18 @@ const Hero = () => (
 
         {/* ────────────── 3-Column CTA List ────────────── */}
         <div className="xl:mt-[40px] grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-24 mb-[4rem] lg:mb-0">
-
           {/* 01 ─ Donation */}
           <div className="relative md:ml-6">
-            <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">01</h1>
+            <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
+              01
+            </h1>
             <p className="text-[1rem] text-[#646464]">Making a donation</p>
 
             <button
               onClick={() =>
                 window.open(
                   "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate",
-                  "_blank"
+                  "_blank",
                 )
               }
               aria-label="More details about making a donation"
@@ -53,11 +53,13 @@ const Hero = () => (
 
           {/* 02 ─ Volunteer / Careers */}
           <div className="relative">
-            <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">02</h1>
+            <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
+              02
+            </h1>
             <p className="text-[1rem] text-[#646464]">Become a volunteer</p>
 
             <Link
-              to="/getinvolved#careers"
+              to="/getinvolved#opportunities"
               className="flex items-center mt-1 font-bold text-[0.875rem] hover:underline focus:underline text-[#006699]"
             >
               More Details
@@ -69,8 +71,12 @@ const Hero = () => (
 
           {/* 03 ─ Encourage others */}
           <div className="relative">
-            <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">03</h1>
-            <p className="text-[1rem] text-[#646464]">Encourage others to donate</p>
+            <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-[#646464]">
+              03
+            </h1>
+            <p className="text-[1rem] text-[#646464]">
+              Encourage others to donate
+            </p>
             <p className="text-[1rem] text-[#646464]">or volunteer</p>
           </div>
         </div>

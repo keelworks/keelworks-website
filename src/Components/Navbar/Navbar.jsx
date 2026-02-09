@@ -43,7 +43,7 @@ const Navbar = () => {
             onClick={() => {
               window.open(
                 "https://www.every.org/keelworks-foundation?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo%2Cgift%2Cstocks%2Cdaf#/donate",
-                "_blank"
+                "_blank",
               );
             }}
           >
@@ -95,10 +95,10 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="getinvolved#careers"
+                  to="getinvolved#opportunities"
                   className="text-white hover:text-yellow-400 transition duration-[200ms] ease-linear"
                 >
-                  Careers
+                  Opportunities
                 </Link>
               </li>
               <li>
