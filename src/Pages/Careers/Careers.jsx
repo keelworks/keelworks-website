@@ -10,7 +10,7 @@ function flexiblePick(row = {}, keys = []) {
       .toLowerCase()
       .replace(/[^a-z0-9]/g, "");
   const dict = Object.fromEntries(
-    Object.keys(row).map((k) => [norm(k), row[k]])
+    Object.keys(row).map((k) => [norm(k), row[k]]),
   );
   for (const k of keys) {
     const v = dict[norm(k)];
@@ -64,7 +64,7 @@ const Careers = () => {
   /* fetch jobs */
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbzEmskmmWo59MhJzsTrJwNGWK9EottKP4CvDNb5F70ZLRJbdSs1Jd1VrjgLQ6r_Ik6CwA/exec"
+      "https://script.google.com/macros/s/AKfycbzEmskmmWo59MhJzsTrJwNGWK9EottKP4CvDNb5F70ZLRJbdSs1Jd1VrjgLQ6r_Ik6CwA/exec",
     )
       .then((res) => res.json())
       .then((data) => {
@@ -124,9 +124,13 @@ const Careers = () => {
         ref={topRef}
         className="text-3xl md:text-4xl font-bold mb-10 text-center"
       >
-        Career Opportunities
+        Opportunities
       </h2>
-
+      <p className="mb-8 text-center text-lg text-gray-700">
+        These opportunities are volunteer-based, unpaid roles designed for
+        individuals looking to contribute their time and skills toward
+        meaningful impact.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {currentJobs.length === 0 ? (
           <p className="col-span-full text-center text-lg">
@@ -198,7 +202,6 @@ const Careers = () => {
           })
         )}
       </div>
-
       {/* pagination */}
       {totalPages > 1 && (
         <div className="flex justify-center mt-10 space-x-2">
