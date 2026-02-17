@@ -19,6 +19,7 @@ import October2025Newsletter from "./Pages/Newsletters/October2025";
 import November2025Newsletter from "./Pages/Newsletters/November2025";
 import December2025Newsletter from "./Pages/Newsletters/December2025";
 import January2026Newsletter from "./Pages/Newsletters/January2026";
+import February2026Newsletter from "./Pages/Newsletters/February2026";
 // ******************************************
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
       {
         path: "newsletters/jan-2026",
         element: <January2026Newsletter />,
+      },
+      {
+        path: "newsletters/feb-2026",
+        element: <February2026Newsletter />,
       },
       {
         path: "comingsoon",

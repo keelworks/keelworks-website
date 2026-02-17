@@ -16,8 +16,16 @@ import newsLetterImageOct25 from "../../assets/images/Newsletters/October2025/Ne
 import newsLetterImageNov25 from "../../assets/images/Newsletters/November2025/Newsletter-Nov2025.png";
 import newsLetterImageDec25 from "../../assets/images/Newsletters/December2025/Newsletter-Dec2025.png";
 import newsLetterImageJan26 from "../../assets/images/Newsletters/January2026/Newsletter-Jan2026.png";
+import newsLetterImageFeb26 from "../../assets/images/Newsletters/February2026/Newsletter-Feb2026.png";
 
 export const newsLetters = [
+  {
+    id: 1019,
+    title: "February 2026",
+    description: "February's Newsletter",
+    image: newsLetterImageFeb26,
+    htmlLink: "/newsletters/feb-2026",
+  },
   {
     id: 1018,
     title: "January 2026",
