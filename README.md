@@ -1,47 +1,88 @@
-# keelworks-website
+# KeelWorks Website
 
-The Website Revision Team will use this repo to work on site revision.
+The official website for KeelWorks, a nonprofit organization. Built with React + Vite + Tailwind CSS.
 
-<br>
+---
 
-### Quick Start Workflow for developers
+## Tech Stack
 
-<br>
+- **React 18** + **React Router v6**
+- **Vite 5** (build tool)
+- **Tailwind CSS**
+- **Google Analytics 4** (react-ga4)
 
-#### 1. Ensure You Are on the "develop" Branch:
+---
 
-```bash
+## Getting Started
 
-git checkout develop
+### Prerequisites
 
-```
+- Node.js v18+
+- npm v9+
 
-<br>
-
-#### 2. Pull the Latest Changes from the Remote develop Branch:
-
-```bash
-
-git pull origin develop
-
-```
-
-<br>
-
-#### 3. Create and Switch to a New Feature Branch:
+### Installation
 
 ```bash
-
-git checkout -b feature/<your feature-name>
-
+git clone https://github.com/keelworks/keelworks-website.git
+cd keelworks-website
+npm install
 ```
 
-<br>
-
-#### 4. Push the Feature Branch to the Remote Repository:
+### Running Locally
 
 ```bash
-
-git push -u origin feature/<feature-name>
-
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start local dev server |
+| `npm run build` | Build for production (images auto-compressed) |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run compress-images` | Manually compress images in `src/assets/images/` |
+
+---
+
+## Contributing
+
+### Quick Start Workflow
+
+#### 1. Ensure you are on the `main` branch and up to date
+
+```bash
+git checkout main
+git pull origin main
+```
+
+#### 2. Create a new feature branch
+
+```bash
+git checkout -b feature/<your-feature-name>
+```
+
+#### 3. Make your changes, then push
+
+```bash
+git push -u origin feature/<your-feature-name>
+```
+
+#### 4. Open a Pull Request against `main` on GitHub
+
+---
+
+### Adding Images
+
+Images placed in `src/assets/images/` are automatically compressed at build time via `vite-plugin-imagemin`. If you want to compress images without building, run:
+
+```bash
+npm run compress-images
+```
+
+Target sizes: JPEG and PNG under 300KB where possible.
