@@ -1,5 +1,5 @@
 import ReactGA from "react-ga4";
-const MEASUREMENT_ID = "G-K7FMRVVS50";
+export const MEASUREMENT_ID = "G-K7FMRVVS50";
 // **************** Components **************
 import SiteLayout from "./Components/SiteLayout/SiteLayout";
 import Error from "./Pages/Error/Error";
@@ -120,14 +120,6 @@ function App() {
   useEffect(() => {
     ReactGA.initialize(MEASUREMENT_ID);
   }, []);
-  useEffect(() => {
-    // Send a pageview event whenever the route changes
-    ReactGA.send({
-      hitType: "pageview",
-      page: location.pathname,
-      title: location.pathname, // Use the pathname as the title for simplicity
-    });
-  }, [location.pathname]);
   return (
     <main className=" overflow-x-hidden">
       <RouterProvider router={router} />
