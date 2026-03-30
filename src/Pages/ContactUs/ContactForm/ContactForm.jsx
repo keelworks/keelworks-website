@@ -33,7 +33,7 @@ const ContactForm = () => {
         method: "POST",
         body: data,
         muteHttpExceptions: true,
-      }
+      },
     );
 
     if (response.ok) {
@@ -60,7 +60,7 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               <div className="flex flex-col justify-start items-start mt-2 md:order-2">
                 <p className="text-2xl md:mt-2 text-gray-500 text-left">
-                  Geospatial Distribution of Our People
+                  Geospatial Distribution Of Our People
                 </p>
                 <img
                   src={peopleDistImage}
