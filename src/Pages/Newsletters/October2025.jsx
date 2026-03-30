@@ -1,14 +1,10 @@
-// src/Pages/Newsletters/October2025.jsx
-import { useEffect } from "react";
 import logo from "../../assets/images/Newsletters/October2025/KeelWorks-logo.png";
 import donateIcon from "../../assets/images/Newsletters/October2025/DONATEHAND.png";
 import teamimg from "../../assets/images/Newsletters/October2025/septembernewsletter_team.jpg";
 import associateimg from "../../assets/images/Newsletters/October2025/mariya.jpg";
+import NewsletterTemplate from "../../Components/NewsletterTemplate/NewsletterTemplate";
 
 export default function October2025Newsletter() {
-  useEffect(() => {
-    document.title = "KeelWorks – October 2025 Newsletter";
-  }, []);
 
   const html = `
     <style>
@@ -183,9 +179,5 @@ export default function October2025Newsletter() {
     </div>
   `;
 
-  return (
-    <div className="pt-24 sm:pt-20 bg-white">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  );
+  return <NewsletterTemplate title="KeelWorks – October 2025 Newsletter" html={html} />;
 }
