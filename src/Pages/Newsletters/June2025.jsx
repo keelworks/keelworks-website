@@ -3,16 +3,9 @@ import associateImg from "../../assets/images/Newsletters/June2025/associate.png
 import diversityImg from "../../assets/images/Newsletters/June2025/diversity.png";
 import teamImg from "../../assets/images/Newsletters/June2025/team.png";
 import founder from "../../assets/images/Newsletters/MayNewsletter/Thomas-G.jpg";
-
-// src/Pages/Newsletters/June2025.jsx
-import { useEffect } from "react";
+import NewsletterTemplate from "../../Components/NewsletterTemplate/NewsletterTemplate";
 
 export default function June2025Newsletter() {
-  useEffect(() => {
-    document.title = "KeelWorks – June 2025 Newsletter";
-  }, []);
-
-  // NOTE: Add these to public/index.html (or Vite's index.html) <head>:
   // <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet" />
   // <link href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap" rel="stylesheet" />
 
@@ -335,12 +328,6 @@ export default function June2025Newsletter() {
     </div>
   `;
 
-  return (
-  <div className="pt-24 sm:pt-20 bg-[#dcebf7]">
-    <div dangerouslySetInnerHTML={{ __html: html }} />
-  </div>
-);
-
-
+  return <NewsletterTemplate title="KeelWorks – June 2025 Newsletter" html={html} bg="bg-[#dcebf7]" />;
 }
 

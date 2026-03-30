@@ -1,14 +1,10 @@
-// src/Pages/Newsletters/December2025.jsx
-import { useEffect } from "react";
 import logo from "../../assets/images/Newsletters/December2025/KeelWorks-logo.png";
 import donateIcon from "../../assets/images/Newsletters/December2025/DONATEHAND.png";
 import gratitudesImg from "../../assets/images/Newsletters/December2025/gratitudes.png";
 import associateImg from "../../assets/images/Newsletters/December2025/december_associate.jpg";
+import NewsletterTemplate from "../../Components/NewsletterTemplate/NewsletterTemplate";
 
 export default function December2025Newsletter() {
-  useEffect(() => {
-    document.title = "KeelWorks — December 2025 Newsletter";
-  }, []);
 
   const html = `
     <style>
@@ -395,9 +391,5 @@ export default function December2025Newsletter() {
     </div>
   `;
 
-  return (
-    <div className="pt-24 sm:pt-20 bg-white">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  );
+  return <NewsletterTemplate title="KeelWorks — December 2025 Newsletter" html={html} />;
 }

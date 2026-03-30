@@ -1,15 +1,12 @@
-import { useEffect } from "react";
 import logo from "../../assets/images/Newsletters/January2026/NewLogo.png";
 import donateIcon from "../../assets/images/Newsletters/January2026/DONATEHAND.png";
 import boatsImg from "../../assets/images/Newsletters/January2026/boats.png";
 import diversityImg from "../../assets/images/Newsletters/January2026/diversity.png";
 import nishaImg from "../../assets/images/Newsletters/January2026/Nisha.png";
 import teamOfTheMonthImg from "../../assets/images/Newsletters/January2026/teamOfTheMonth.png";
+import NewsletterTemplate from "../../Components/NewsletterTemplate/NewsletterTemplate";
 
 export default function January2026Newsletter() {
-  useEffect(() => {
-    document.title = "KeelWorks — January 2026 Newsletter";
-  }, []);
 
   const html = `
     <style>
@@ -408,9 +405,5 @@ export default function January2026Newsletter() {
     </div>
   `;
 
-  return (
-    <div className="pt-24 sm:pt-20 bg-white">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  );
+  return <NewsletterTemplate title="KeelWorks — January 2026 Newsletter" html={html} />;
 }

@@ -3,6 +3,7 @@ import logo from "../../assets/images/Newsletters/July2025/KeelWorks-logo.png";
 import teamimg from "../../assets/images/Newsletters/July2025/Julynewsletter_team.png";
 import associateimg from "../../assets/images/Newsletters/July2025/Julynewsletter_asscociate.png";
 import { useEffect } from "react";
+import NewsletterTemplate from "../../Components/NewsletterTemplate/NewsletterTemplate";
 
 export default function July2025Newsletter() {
   useEffect(() => {
@@ -200,10 +201,5 @@ export default function July2025Newsletter() {
     </div>
   `;
 
-  // keep space for fixed navbar + page bg
-  return (
-    <div className="pt-24 sm:pt-20 bg-[#dcebf7]">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  );
+  return <NewsletterTemplate title="KeelWorks – August 2025 Newsletter" html={html} bg="bg-[#dcebf7]" />;
 }

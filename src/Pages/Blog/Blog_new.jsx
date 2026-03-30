@@ -5,6 +5,7 @@
  *  ▸ Media      : YouTube rows from Google-Sheet Apps Script
  *****************************************************************/
 import { useState, useEffect, lazy, Suspense } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { newsLetters } from "./data";
 import initialArticles from "./initialArticles.json"; // first 9 mapped items
@@ -20,6 +21,7 @@ const FALLBACK_IMG =
   "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'%3E%3Crect width='100%25' height='100%25' fill='%23EEF2F7'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Arial' font-size='42' fill='%2390A3B1'%3EKeelWorks%3C/text%3E%3C/svg%3E";
 
 export default function Blog_new() {
+  const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("Newsletters");
   const [activePage, setActivePage] = useState(1);
 
@@ -120,7 +122,8 @@ export default function Blog_new() {
   // Reset to page 1 when switching tabs
   useEffect(() => setActivePage(1), [activeFilter]);
 
-  const open = (url) => window.open(url, "_blank");
+  const open = (url) =>
+    url?.startsWith("/") ? navigate(url) : window.open(url, "_blank");
 
   return (
     <div className="w-screen bg-white flex justify-center">

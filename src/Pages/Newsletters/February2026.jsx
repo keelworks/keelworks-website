@@ -1,16 +1,12 @@
-// src/Pages/Newsletters/February2026.jsx
-import { useEffect } from "react";
 import logo from "../../assets/images/Newsletters/February2026/NewLogo.png";
 import donateIcon from "../../assets/images/Newsletters/February2026/DONATEHAND.png";
 import keelMasterImg from "../../assets/images/Newsletters/February2026/keelmaster.jpg";
 import thomasImg from "../../assets/images/Newsletters/February2026/Thomas.jpg";
 import whidbeyImg from "../../assets/images/Newsletters/February2026/whidbey.jpg";
 import malvikaImg from "../../assets/images/Newsletters/February2026/malvika.jpg";
+import NewsletterTemplate from "../../Components/NewsletterTemplate/NewsletterTemplate";
 
 export default function February2026Newsletter() {
-  useEffect(() => {
-    document.title = "KeelWorks — February 2026 Newsletter";
-  }, []);
 
   const html = `
     <style>
@@ -393,9 +389,5 @@ export default function February2026Newsletter() {
     </div>
   `;
 
-  return (
-    <div className="pt-24 sm:pt-20 bg-white">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  );
+  return <NewsletterTemplate title="KeelWorks — February 2026 Newsletter" html={html} />;
 }
