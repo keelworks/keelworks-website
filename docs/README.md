@@ -7,6 +7,8 @@ This folder contains technical documentation for maintainers and future develope
 ```
 docs/
 ├── README.md                          ← You are here
+├── deployment/
+│   └── README.md                      ← Deployment process + FTP setup
 └── integrations/
     └── google-apps-scripts/
         ├── README.md                  ← Overview of all scripts + status
@@ -21,7 +23,8 @@ docs/
 
 ## Quick Reference
 
-The website uses **Google Apps Script** as a lightweight backend for all form submissions and data fetching. If any form stops working, start with [integrations/google-apps-scripts/README.md](integrations/google-apps-scripts/README.md).
+- **Deployment**: Push to `main` — GitHub Actions builds and deploys automatically. See [deployment/README.md](deployment/README.md).
+- **Forms & integrations**: The website uses **Google Apps Script** as a lightweight backend for all form submissions and data fetching. If any form stops working, start with [integrations/google-apps-scripts/README.md](integrations/google-apps-scripts/README.md).
 
 ## History
 
