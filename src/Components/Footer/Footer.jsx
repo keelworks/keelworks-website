@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 
 import {
@@ -13,36 +12,26 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  var test_url =
-    "https://script.google.com/macros/s/AKfycbz1Id1zW50lzq-kLctDrBwXrvONZRkol622A0kiuawlLyCqvxuazupUJOVSBcHsyLG7/exec";
   var master_url =
-    "https://script.google.com/macros/s/AKfycbxglcDWtgey1PHh1qkpViHthjG08E3TK3hnjLJfDOQjQKw5dVYmNu4g-vvRmzJzy3zY_g/exec";
+    "https://script.google.com/macros/s/AKfycbyOKVVVZPGJWOTntJ_uwlPJrdVNe6LET_VMSIJHZUtXki8qR6ZTiKso4UEZs8n0JCHp/exec";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setIsSubmitting(true);
 
-    const userInput = {
-      email,
-    };
-
-    const data = new FormData();
-    data.append("Email", userInput.email);
-
-    const response = await fetch(master_url, {
-      method: "POST",
-      body: data,
-      muteHttpExceptions: true,
-    });
-
-    if (response.ok) {
+    try {
+      await fetch(master_url, {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        mode: "no-cors",
+      });
       setEmail("");
       alert("Your request was sent successfully! Thank you.");
-    } else {
+    } catch {
       alert("There was an error sending your message.");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
   };
 
   return (
