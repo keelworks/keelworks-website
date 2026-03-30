@@ -3,8 +3,9 @@ import Footer from "../Footer/Footer";
 
 import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
 import KeelBot from "../KeelBot/KeelBot";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import ReactGA from "react-ga4";
+import PageLoader from "../PageLoader/PageLoader";
 
 const SiteLayout = () => {
   const location = useLocation();
@@ -22,7 +23,9 @@ const SiteLayout = () => {
       <Navbar />
       {/* <KeelBot /> */}
       <ScrollRestoration />
-      <Outlet />
+      <Suspense fallback={<PageLoader />}>
+        <Outlet />
+      </Suspense>
       <Footer />
     </div>
   );
