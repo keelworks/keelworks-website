@@ -17,8 +17,32 @@ import newsLetterImageNov25 from "../../assets/images/Newsletters/November2025/N
 import newsLetterImageDec25 from "../../assets/images/Newsletters/December2025/Newsletter-Dec2025.png";
 import newsLetterImageJan26 from "../../assets/images/Newsletters/January2026/Newsletter-Jan2026.png";
 import newsLetterImageFeb26 from "../../assets/images/Newsletters/February2026/Newsletter-Feb2026.png";
+import newsLetterImageMar26 from "../../assets/images/Blogs/Newsletter-Mar2026.png";
+import newsLetterImageApr26 from "../../assets/images/Blogs/Newsletter-Apr2026.png";
+import newsLetterImageMay26 from "../../assets/images/Blogs/Newsletter-May2026.png";
 
 export const newsLetters = [
+  {
+    id: 1022,
+    title: "May 2026",
+    description: "May's Newsletter",
+    image: newsLetterImageMay26,
+    htmlLink: "https://newsletters.keelworks.org/Newsletter/May26-newsletterWeb.html",
+  },
+  {
+    id: 1021,
+    title: "April 2026",
+    description: "April's Newsletter",
+    image: newsLetterImageApr26,
+    htmlLink: "https://newsletters.keelworks.org/Newsletter/April26-newsletterWeb.html",
+  },
+  {
+    id: 1020,
+    title: "March 2026",
+    description: "March's Newsletter",
+    image: newsLetterImageMar26,
+    htmlLink: "https://newsletters.keelworks.org/Newsletter/March26-newsletterWeb.html",
+  },
   {
     id: 1019,
     title: "February 2026",
