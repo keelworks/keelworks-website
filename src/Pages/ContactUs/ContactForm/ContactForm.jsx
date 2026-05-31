@@ -10,39 +10,23 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const userInput = {
-      firstName,
-      lastName,
-      email,
-      subject,
-      message,
-    };
 
-    console.log(userInput);
-
-    const data = new FormData();
-    data.append("firstName", userInput.firstName);
-    data.append("lastName", userInput.lastName);
-    data.append("email", userInput.email);
-    data.append("subject", userInput.subject);
-    data.append("message", userInput.message);
-
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbxKcRVIgBWaNgw09-9desJnhKJYrNzK2kxY4rgBh5Kne-3DALwJVz4XAnyud4VnKe7S/exec",
-      {
-        method: "POST",
-        body: data,
-        muteHttpExceptions: true,
-      },
-    );
-
-    if (response.ok) {
+    try {
+      await fetch(
+        "https://script.google.com/a/macros/keelworks.org/s/AKfycbwzCrtLdH3DM4wdFf5u3wSBtdbeSLGQQPOKmPcKnddDiCq1lcYjRgsFSVK0PIE_opsK/exec",
+        {
+          method: "POST",
+          body: JSON.stringify({ firstName, lastName, email, subject, message }),
+          mode: "no-cors",
+        },
+      );
       setFirstName("");
       setLastName("");
       setEmail("");
       setSubject("");
       setMessage("");
-    } else {
+      alert("Your message was sent successfully! Thank you.");
+    } catch {
       alert("There was an error sending your message.");
     }
   };
