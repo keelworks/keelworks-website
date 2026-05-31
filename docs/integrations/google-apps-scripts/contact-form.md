@@ -3,7 +3,7 @@
 Handles messages submitted via the Contact Us page.
 
 ## Status
-❌ Broken — original script was deleted with former team member's account. Needs recreation.
+✅ Working (recreated May 2026)
 
 ## How to Recreate
 1. Create a new Google Sheet with columns: `First Name`, `Last Name`, `Email`, `Subject`, `Message`, `Timestamp`
@@ -14,11 +14,11 @@ Handles messages submitted via the Contact Us page.
 
 ## Frontend
 - **File:** `src/Pages/ContactUs/ContactForm/ContactForm.jsx`
-- **Method:** POST with `FormData`
-- **Note:** Currently uses `response.ok` check which will fail due to CORS — should be updated to use `mode: "no-cors"` + try/catch (same fix applied to newsletter subscribe)
+- **Method:** POST with JSON body (`JSON.stringify`)
+- **Mode:** `no-cors` (write-only, response not read)
 
-## Fields Sent
-| FormData Key | Description |
+## Fields Sent (JSON body)
+| Key | Description |
 |---|---|
 | `firstName` | First name |
 | `lastName` | Last name |
@@ -29,17 +29,19 @@ Handles messages submitted via the Contact Us page.
 ## Script Code to Recreate
 ```js
 function doPost(e) {
+  const { firstName, lastName, email, subject, message } = JSON.parse(e.postData.contents);
+
   const ss = SpreadsheetApp.openById("YOUR_SHEET_ID");
   const sheet = ss.getSheetByName("Sheet1");
 
-  sheet.appendRow([
-    e.parameter.firstName,
-    e.parameter.lastName,
-    e.parameter.email,
-    e.parameter.subject,
-    e.parameter.message,
-    new Date()
-  ]);
+  sheet.appendRow([firstName, lastName, email, subject, message, new Date()]);
+
+  const recipient = "YOUR_NOTIFICATION_EMAIL@keelworks.org";
+  MailApp.sendEmail(
+    recipient,
+    "New Contact Form Submission: " + (subject || "(no subject)"),
+    `From: ${firstName} ${lastName}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`
+  );
 
   return ContentService
     .createTextOutput("OK")
@@ -49,4 +51,5 @@ function doPost(e) {
 
 ## History
 - Original script owned by former team member — deleted in early 2026
-- Not yet recreated as of March 30, 2026
+- Recreated May 2026 by Mihir Adelkar
+- Frontend fixed at the same time: switched from FormData to JSON.stringify, added mode: "no-cors", wrapped in try/catch

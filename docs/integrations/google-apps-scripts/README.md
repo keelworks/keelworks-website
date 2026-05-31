@@ -14,7 +14,7 @@ The KeelWorks website uses Google Apps Script as a lightweight backend. Scripts 
 | Job Listings (fetch) | ✅ Working | `Job Listings API` | `src/Pages/Careers/Careers.jsx` |
 | Job Application (submit) | ⚠️ Needs re-auth | `KeelWorks Job Application Handler` | `src/Pages/Careers/JobApplicationForm.jsx` |
 | Volunteer Sign-Up | ⚠️ Needs verification | `Volunteer App Drive API` | `src/Pages/GetInvolved/SignUp/SignUp.jsx` |
-| Contact Form | ❌ Broken | _(deleted with old account)_ | `src/Pages/ContactUs/ContactForm/ContactForm.jsx` |
+| Contact Form | ✅ Working | `Contact Form Handler` | `src/Pages/ContactUs/ContactForm/ContactForm.jsx` |
 | Blog Media (YouTube) | ❌ Broken | _(deleted with old account)_ | `src/Pages/Blog/Blog_new.jsx` |
 
 ---
@@ -27,7 +27,7 @@ The KeelWorks website uses Google Apps Script as a lightweight backend. Scripts 
 | Job Listings | `https://script.google.com/macros/s/AKfycbzEmskmmWo59MhJzsTrJwNGWK9EottKP4CvDNb5F70ZLRJbdSs1Jd1VrjgLQ6r_Ik6CwA/exec` |
 | Job Application | `https://script.google.com/macros/s/AKfycbzyLaq4bWvqApKMgJxkoQNu1tZKWLJvVLfYyKqhUvGVBjoyt37zzC2dH7XO2hmG-2pfWA/exec` |
 | Volunteer Sign-Up | `https://script.google.com/macros/s/AKfycbyRoPGVv2_M5LQuwcLpzlQtUX1ciR0wScaDaBxczOqnB2qDrSD8y8Tt0FtMJTfiT9In1gA/exec` |
-| Contact Form | ❌ Needs recreation |
+| Contact Form | `https://script.google.com/a/macros/keelworks.org/s/AKfycbwzCrtLdH3DM4wdFf5u3wSBtdbeSLGQQPOKmPcKnddDiCq1lcYjRgsFSVK0PIE_opsK/exec` |
 | Blog Media | ❌ Needs recreation |
 
 ---
