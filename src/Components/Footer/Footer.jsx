@@ -13,7 +13,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   var master_url =
-    "https://script.google.com/macros/s/AKfycbyOKVVVZPGJWOTntJ_uwlPJrdVNe6LET_VMSIJHZUtXki8qR6ZTiKso4UEZs8n0JCHp/exec";
+    "https://script.google.com/macros/s/AKfycbyqKUPRuLnv_sRuro0CEDHSRmT2SRupvAOBX4eUdNL0IMUIuTPedXsVTu50zoODQk2Ytg/exec";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
