@@ -1,11 +1,9 @@
-import Volunteer1 from "../../../assets/images/About-Us/Thomas-G.jpg";
+import Volunteer1 from "../../../assets/images/About-Us/Thomas1.jpg";
 import Volunteer2 from "../../../assets/images/About-Us/Aruna-G.jpg";
 import Volunteer3 from "../../../assets/images/About-Us/Jing-M.jpg";
 import Volunteer4 from "../../../assets/images/About-Us/Ibrahima-D.jpg";
-import Volunteer5 from "../../../assets/images/About-Us/Priya-S.jpg";
-import Volunteer6 from "../../../assets/images/About-Us/Sonali.jpg"; // ✅ Sonali
-import Volunteer7 from "../../../assets/images/About-Us/Fredi-S.png";
-import Volunteer8 from "../../../assets/images/About-Us/Romir-P1.jpg";
+import Volunteer5 from "../../../assets/images/About-Us/Abdul-K.jpg";
+import Volunteer6 from "../../../assets/images/About-Us/Jamie-G.jpg";
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
@@ -19,7 +17,7 @@ const volunteers = [
     location: "Oak Harbor, USA",
     image: Volunteer1,
     content1:
-      "Thomas founded Keelworks in 2008 (with help and encouragement from Robert Buchinski) where he applied his dream to enable upward mobility into action. Thomas has a master's degree in education and a long career in technical writing, instructional design, and organizational development. Once a high school dropout, Thomas established the foundation to change outcomes for underachievers like himself. Thomas's passion has been overseeing the development of foundation learning programs including learning for instructional design. He developed a comprehensive instructional design training program and has mentored hundreds of graduate instructional designers. The foundation ISD program is a laboratory for process improvement and team development. With his minimal free time, Thomas consults for organizations seeking better instructional design process for measured return on investment and more sustainable organizations.",
+      "Thomas is the founding member of the board. With 25 years experience supporting organizations like Boeing, Intel, IBM, GE Digital, Humana and several others, formed the foundation vision and authored the KeelMaster and SailSpreader programs at KeelWorks. He established the core competencies curriculum for the KeelMaster program. Through this time, Thomas has shepherded hundreds of individuals across the globe from unemployment to sustaining careers.\n\nThomas founded KeelWorks in 2008 applying his dream to enable upward mobility – especially for the economically disadvantaged and for abject failures - like himself. His vision is born of his own experience as a high school dropout with seven children before he was 29. He holds a bachelor's degree in Legal Administration in addition to a master's degree in Education for Instructional design and has 14 grandchildren.\n\nThomas is also an organizational development consultant supporting learning programs for organizational enhancement and employee engagement.",
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/in/thomasgarrod/",
     },
@@ -27,11 +25,11 @@ const volunteers = [
   {
     id: 2,
     name: "Aruna Ghildiyal",
-    jobTitle: "Grant Acquisition",
+    jobTitle: "Grant Acquisition Lead",
     location: "San Carlos, USA",
     image: Volunteer2,
     content1:
-      "Aruna is the Grant Acquisition Lead at Keelworks Foundation, bringing over 20 years of leadership experience in process improvement, compliance, and quality management across Cleantech, Semiconductors, and Automotive industries. She is a certified Corporate Lead Auditor and Internal Audit Trainer for ISO 9001:2015 and ISO 14001:2015, with expertise in ISO 26262, and holds Lean Six Sigma Green Belt certification from Purdue University.At Keelworks, Aruna drives the end-to-end grant process by identifying opportunities, conducting data-driven research, aligning proposals with funder priorities, and preparing compelling applications with compliance artifacts. With advanced degrees from the Indian Institutes of Technology (IITs) in Solid State Materials and Physics, Aruna combines technical rigor with project management expertise. Known for her collaborative approach and ability to deliver results in multi-ethnic, cross-functional environments, she is dedicated to advancing Keelworks’ mission through strategic partnerships and grant success",
+      "Aruna is the Grant Acquisition Lead at Keelworks Foundation, bringing over 20 years of leadership experience in process improvement, compliance, and quality management across Cleantech, Semiconductors, and Automotive industries. She is a certified Corporate Lead Auditor and Internal Audit Trainer for ISO 9001:2015 and ISO 14001:2015, with expertise in ISO 26262, and holds Lean Six Sigma Green Belt certification from Purdue University.\n\nAt Keelworks, Aruna drives the end-to-end grant process by identifying opportunities, conducting data-driven research, aligning proposals with funder priorities, and preparing compelling applications with compliance artifacts.\n\nWith advanced degrees from the Indian Institutes of Technology (IITs) in Solid State Materials and Physics, Aruna combines technical rigor with project management expertise. Known for her collaborative approach and ability to deliver results in multi-ethnic, cross-functional environments, she is dedicated to advancing Keelworks’ mission through strategic partnerships and grant success.",
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/in/aruna-gairola-ghildiyal-8660543/",
     },
@@ -43,7 +41,7 @@ const volunteers = [
     location: "San Francisco, USA",
     image: Volunteer3,
     content1:
-      "Jing Ma is a native of mainland China with a decade of experience in the Chinese private educational technology industry. She played a leading role at a Chinese-American start-up raising capital from angel investors and venture capitalists. Jing shares the KeelWorks mission to bring everyone to the table of plenty. She is personally interested in how finance and technology can bring disruptive innovation to education. Her entrepreneurial spirit is especially welcome at KeelWorks. Jing earned her M.S. in Education (Technology Leadership) from California State University, East Bay, and a B.S. in Business Administration from Tianjin Cheng Jian University.",
+      "Jing Ma is a native of mainland China with a decade working in the Chinese private educational technology industry. She played a leading role at a Chinese-American start-up raising capital from angel investors and venture capitalists.\n\nJing shares the KeelWorks mission to bring everyone to the table of plenty. She has shown a desire to help the foundation in many ways. She is personally interested in exploring how finance and technology can bring disruptive innovation to education. Her entrepreneurial spirit is especially welcome to KeelWorks.\n\nJing is an instructional designer and has supported KeelWorks instructional design for the past two years. She has been active in KeelWorks fundraising and has led a Chinese team of volunteers/interns at KeelWorks. Jing earned her Master of Science degree in Education, with a focus on Technology Leadership from California State University, East Bay, and her Bachelor of Science degree in Business Administration from Tianjin Cheng Jian University in China.",
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/in/jing-ma-001",
     },
@@ -55,57 +53,33 @@ const volunteers = [
     location: "Dakar, Senegal",
     image: Volunteer4,
     content1:
-      "Ibrahima Dieng is from Senegal and currently lives in Dakar. He spent the past 15 years supporting women's rights and addressing the needs of orphan boys. He shares the KeelWorks vision of a world where everyone shares a place at the table of plenty. Having known Thomas for several years and admired his foundation, he’s honored to support this foundation's extremely important mission. “I believe in the foundation mission and I am hopeful that by helping KeelWorks, I can help my people.”",
+      "Ibrahima Dieng is from Senegal and currently lives in Dakar. He spent the past 15 years supporting women's rights and addressing the needs of orphan boys. He shares the KeelWorks vision of a world where everyone shares a place at the table of plenty. Having known Thomas for several years and admired his foundation, he’s honored to support this foundation's extremely important mission.\n\n“I believe in the foundation mission and I am hopeful that by helping KeelWorks, I can help my people.”",
     socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/in/ibrahima-dieng-9abb8921/",
+      linkedin: "https://www.linkedin.com/in/ibrahima-d-9abb8921/",
     },
   },
   {
     id: 5,
-    name: "Priya Sharma",
-    jobTitle: "Project Management Lead",
-    location: "USA",
+    name: "Abdul Kidwai",
+    jobTitle: "Head of Finance",
+    location: "New York, USA",
     image: Volunteer5,
     content1:
-      "Priya Sharma is an experienced strategic program/product delivery leader with a passion for continuous improvement, learning and growing people. Keelwork’s mission aligns with her personal purpose in life, which is at the intersection of education/service and community. With 25 years experience in energy, financial services and healthcare program delivery, the goal is to work on strategy and operations at KeelWorks targeting volunteer growth and organization expansion. Priya has been instrumental in reforming and streamlining the organizational structure, helping us identify and place leaders, and holding them accountable. She has made our programs more productive.",
+      "Abdul Kidwai is a finance and investment professional currently serving as Head of Finance at KeelWorks Foundation, where he leads the organization's finance function across budgeting, forecasting, financial reporting, and investment strategy. His trajectory at KeelWorks reflects a natural progression from financial analysis and tax advisory work into a broader FP&A leadership role overseeing cash flow modeling, working capital management, and executive reporting.\n\nPrior to this, Abdul spent eight years at EY Kuwait within Business Advisory and Tax, advising multinational clients across financial services, energy, telecom, oil & gas, amongst others on cross-border transactions, restructurings, capital allocation, and regulatory compliance — supporting complex M&A and divestiture engagements. Alongside his role at KeelWorks, he works as an Investment Research Analyst at Helix Earth, conducting equity research, building valuation models, and authoring investment reports across a range of sectors.\n\nAbdul holds an MBA in Investment Management and Business Analytics from Pace University's Lubin School of Business, and a Bachelor of Commerce with Honours in Finance and Investment from Christ University, India.",
     socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/",
+      linkedin: "https://www.linkedin.com/in/abdul-kidwai-1602b988/",
     },
   },
   {
     id: 6,
-    name: "Sonali Ramaiah",
-    jobTitle: "Director - Human Resources & Board Member",
-    location: "Illinois, USA",
+    name: "Jamie Gibson",
+    jobTitle: "Marketing Lead",
+    location: "Seattle, USA",
     image: Volunteer6,
     content1:
-      "Senior Level Human Resources Thought Leader, Business Transformation and Change Strategist with significant experience in enabling businesses for decision-making, driving outcome-focused people strategies and an inclusive organizational culture, resulting in strong Employer Brand, a Performance Oriented Workforce and Accountable Leadership as well as sustained business growth. A highly experienced leader with deep expertise in matrix organizations, spanning Engineering, Technology, Services and non-profit sectors, having led HR strategy and transformation. Skilled in navigating complex global environments, working with C-suite executives, regional leadership, and cross-functional teams across the US, Europe, the Middle East, China, and India to drive workforce strategies that scale. Recognized for successfully delivering the People Agenda as a strategic business partner, leveraging HR analytics, digital tools, and predictive insights to optimize workforce performance. Expertise in organizational transformation, change leadership, and leadership coaching, ensuring seamless integration of business and people strategies during high-growth, restructuring, and change-driven environments. Adept at navigating ambiguity and complexity, translating challenges into actionable insights and strategic solutions. Proactively builds high-impact engagements, coaching senior leaders and managers to apply data-driven, solution-oriented approaches, ensuring agility, business continuity, and long-term talent sustainability.",
+      "Jamie Gibson has been with the KeelWorks Foundation since 2024, serving in marketing leadership roles. A graduate of Bryn Mawr College, Jamie built her career at Microsoft, where she contributed to major initiatives including Windows 10, System Center, Microsoft Advertising, and MSN. Based in Seattle, she currently leads KeelWorks’ marketing team and oversees the organization’s marketing strategy and initiatives.",
     socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/",
-    },
-  },
-  {
-    id: 7,
-    name: "Fredimanuel Seshie",
-    jobTitle: "Program Manager",
-    location: "Maryland, USA",
-    image: Volunteer7,
-    content1:
-      "Fredi has proven to be an exceptional and steadfast member of the KeelWorks Foundation, demonstrating professionalism, initiative, and a deep commitment to the organization’s mission. As a Program Manager, he plays a central role in ensuring that KeelWorks operates efficiently and cohesively, supporting both leadership and volunteers with clarity and direction. Fredi’s thoughtful leadership, strong communication, and collaborative mindset have strengthened coordination across teams and improved overall organizational structure. He approaches challenges with creativity and consistency, ensuring that each project aligns with KeelWorks’ long-term goals. As a board member, Fredi brings valuable insight into the organization’s internal operations and community impact. His balanced perspective, reliability, and dedication make him an essential contributor to KeelWorks' continued growth and success.",
-    socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/in/fredimanuel-s-612390301/",
-    },
-  },
-  {
-    id: 8,
-    name: "Romir Patel",
-    jobTitle: "Project Manager",
-    location: "Gilbert, USA",
-    image: Volunteer8,
-    content1:
-      "Romir is the founder, CEO, and board chairman of Helping Hands Corporation, a 501(c)(3) nonprofit. Helping Hands Corporation gives back in multiple ways including free online English classes in third world nations, connecting volunteers with local opportunities where help is vital but scarce, coding and cybersecurity classes, and computer science internships helping thousands across 30+ nations. Romir is currently a high school sophomore from Arizona.",
-    socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/",
+      linkedin: "https://www.linkedin.com/in/jamie-gibson-123456789/",
     },
   },
 ];
@@ -151,7 +125,9 @@ const Members = () => {
                   <FaLinkedinIn />
                 </a>
               </div>
-              <p className="text-[1rem]">{volunteer.content1}</p>
+              <p className="text-[1rem] whitespace-pre-line">
+                {volunteer.content1}
+              </p>
             </div>
           </div>
         ))}
