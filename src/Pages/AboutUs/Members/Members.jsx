@@ -79,7 +79,7 @@ const volunteers = [
     content1:
       "Jamie Gibson has been with the KeelWorks Foundation since 2024, serving in marketing leadership roles. A graduate of Bryn Mawr College, Jamie built her career at Microsoft, where she contributed to major initiatives including Windows 10, System Center, Microsoft Advertising, and MSN. Based in Seattle, she currently leads KeelWorks’ marketing team and oversees the organization’s marketing strategy and initiatives.",
     socialMediaLinks: {
-      linkedin: "https://www.linkedin.com/in/jamie-gibson/",
+      linkedin: "https://www.linkedin.com/in/jamie-gibson-123456789/",
     },
   },
 ];
