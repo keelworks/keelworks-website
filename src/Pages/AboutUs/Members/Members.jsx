@@ -1,7 +1,9 @@
-import Volunteer1 from "../../../assets/images/About-Us/Thomas-G.jpg";
+import Volunteer1 from "../../../assets/images/About-Us/Thomas1.jpg";
 import Volunteer2 from "../../../assets/images/About-Us/Aruna-G.jpg";
 import Volunteer3 from "../../../assets/images/About-Us/Jing-M.jpg";
 import Volunteer4 from "../../../assets/images/About-Us/Ibrahima-D.jpg";
+import Volunteer5 from "../../../assets/images/About-Us/Abdul-K.jpg";
+import Volunteer6 from "../../../assets/images/About-Us/Jamie-G.jpg";
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
@@ -54,6 +56,30 @@ const volunteers = [
       "Ibrahima Dieng is from Senegal and currently lives in Dakar. He spent the past 15 years supporting women's rights and addressing the needs of orphan boys. He shares the KeelWorks vision of a world where everyone shares a place at the table of plenty. Having known Thomas for several years and admired his foundation, he’s honored to support this foundation's extremely important mission.\n\n“I believe in the foundation mission and I am hopeful that by helping KeelWorks, I can help my people.”",
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/in/ibrahima-d-9abb8921/",
+    },
+  },
+  {
+    id: 5,
+    name: "Abdul Kidwai",
+    jobTitle: "Head of Finance",
+    location: "New York, USA",
+    image: Volunteer5,
+    content1:
+      "Abdul Kidwai is a finance and investment professional currently serving as Head of Finance at KeelWorks Foundation, where he leads the organization's finance function across budgeting, forecasting, financial reporting, and investment strategy. His trajectory at KeelWorks reflects a natural progression from financial analysis and tax advisory work into a broader FP&A leadership role overseeing cash flow modeling, working capital management, and executive reporting.\n\nPrior to this, Abdul spent eight years at EY Kuwait within Business Advisory and Tax, advising multinational clients across financial services, energy, telecom, oil & gas, amongst others on cross-border transactions, restructurings, capital allocation, and regulatory compliance — supporting complex M&A and divestiture engagements. Alongside his role at KeelWorks, he works as an Investment Research Analyst at Helix Earth, conducting equity research, building valuation models, and authoring investment reports across a range of sectors.\n\nAbdul holds an MBA in Investment Management and Business Analytics from Pace University's Lubin School of Business, and a Bachelor of Commerce with Honours in Finance and Investment from Christ University, India.",
+    socialMediaLinks: {
+      linkedin: "https://www.linkedin.com/in/abdul-kidwai-1602b988/",
+    },
+  },
+  {
+    id: 6,
+    name: "Jamie Gibson",
+    jobTitle: "Marketing Lead",
+    location: "Seattle, USA",
+    image: Volunteer6,
+    content1:
+      "Jamie Gibson has been with the KeelWorks Foundation since 2024, serving in marketing leadership roles. A graduate of Bryn Mawr College, Jamie built her career at Microsoft, where she contributed to major initiatives including Windows 10, System Center, Microsoft Advertising, and MSN. Based in Seattle, she currently leads KeelWorks’ marketing team and oversees the organization’s marketing strategy and initiatives.",
+    socialMediaLinks: {
+      linkedin: "https://www.linkedin.com/in/jamie-gibson/",
     },
   },
 ];
