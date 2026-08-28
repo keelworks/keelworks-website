@@ -10,10 +10,12 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   var master_url =
-    "https://script.google.com/macros/s/AKfycbyqKUPRuLnv_sRuro0CEDHSRmT2SRupvAOBX4eUdNL0IMUIuTPedXsVTu50zoODQk2Ytg/exec";
+    "https://script.google.com/macros/s/AKfycbwVFE6IkIbkE5goBL1Ph4bs7aPqQNSPTDuIIc4rp2o1fxfmtQUGsLttUgrART04w6yD_Q/exec";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -22,9 +24,11 @@ const Footer = () => {
     try {
       await fetch(master_url, {
         method: "POST",
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ firstName, lastName, email }),
         mode: "no-cors",
       });
+      setFirstName("");
+      setLastName("");
       setEmail("");
       alert("Your request was sent successfully! Thank you.");
     } catch {
@@ -43,26 +47,48 @@ const Footer = () => {
               <h1 className="mb-2 text-xl font-semibold">Let's Connect!</h1>
               <p className="mt-3">Get inspiring stories in your inbox</p>
               <form className="space-y-4 mt-2" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="col-span-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
                     <input
-                      type="email"
-                      id="email"
-                      placeholder="Email address"
+                      type="text"
+                      id="newsletter-first-name"
+                      placeholder="First Name"
                       className="w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                       required
                     />
                   </div>
-                  <div className="flex justify-start">
-                    <button
-                      className="w-[156px] h-[47px] text-white bg-[#825E8B] rounded-full hover:bg-[#825E8B]/80 transition duration-[300ms] ease-linear text-[1rem] font-semibold"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? "Submitting..." : "Subscribe"}
-                    </button>
+                  <div>
+                    <input
+                      type="text"
+                      id="newsletter-last-name"
+                      placeholder="Last Name"
+                      className="w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      required
+                    />
                   </div>
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    className="w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="flex justify-start">
+                  <button
+                    className="w-[156px] h-[47px] text-white bg-[#825E8B] rounded-full hover:bg-[#825E8B]/80 transition duration-[300ms] ease-linear text-[1rem] font-semibold"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Submitting..." : "Subscribe"}
+                  </button>
                 </div>
               </form>
 

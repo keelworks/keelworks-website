@@ -8,7 +8,7 @@ Allows visitors to subscribe via the footer form on every page.
 ## Frontend
 - **File:** `src/Components/Footer/Footer.jsx`
 - **Trigger:** User submits email in the "Let's Connect!" footer form
-- **Method:** POST with JSON body `{ email: "..." }`
+- **Method:** POST with JSON body `{ firstName: "...", lastName: "...", email: "..." }`
 - **Mode:** `no-cors` (write-only, response not read)
 
 ## Script
@@ -17,17 +17,17 @@ Allows visitors to subscribe via the footer form on every page.
 - **Google Sheet:** `Newsletter subscribe KeelWorks Main Site`
   - Sheet ID: `1Wrs2c3voInmDLwPEVCypfLPMon7jPhff2juB8oahBvA`
   - Tab: `Sheet1`
-  - Columns: `email`, `timestamp`
+  - Columns: `firstName`, `lastName`, `email`, `timestamp`
 
 ## Script Code
 ```js
 function doPost(e) {
-  const { email } = JSON.parse(e.postData.contents);
+  const { firstName, lastName, email } = JSON.parse(e.postData.contents);
 
-  const ss = SpreadsheetApp.openById("1Wrs2c3voInmDLwPEVCypfLPMon7jPhff2juB8oahBvA");
+  const ss = SpreadsheetApp.openById("1b0hx3vVN7GvSE6U-3iRNs_-LoMdpNONQDx3Py0AQwng");
   const sheet = ss.getSheetByName("Sheet1");
 
-  sheet.appendRow([email, new Date()]);
+  sheet.appendRow([firstName, lastName, email, new Date()]);
 
   return ContentService
     .createTextOutput("OK")

@@ -40,7 +40,7 @@ All scripts receive HTTP POST requests from the browser. There are two patterns 
 ```js
 fetch(url, {
   method: "POST",
-  body: JSON.stringify({ email }),
+  body: JSON.stringify({ firstName, lastName, email }),
   mode: "no-cors",
 });
 ```
