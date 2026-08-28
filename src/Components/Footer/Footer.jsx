@@ -52,7 +52,7 @@ const Footer = () => {
                     <input
                       type="text"
                       id="newsletter-first-name"
-                      placeholder="First Name"
+                      placeholder="First Name - Test"
                       className="w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
