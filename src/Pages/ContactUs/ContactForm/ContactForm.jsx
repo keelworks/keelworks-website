@@ -13,7 +13,7 @@ const ContactForm = () => {
 
     try {
       await fetch(
-        "https://script.google.com/a/macros/keelworks.org/s/AKfycbwzCrtLdH3DM4wdFf5u3wSBtdbeSLGQQPOKmPcKnddDiCq1lcYjRgsFSVK0PIE_opsK/exec",
+        "https://script.google.com/macros/s/AKfycbzzqjWGyUCb9OVxUfVCgsnUgwFva9pf3WvtJKaknJdj_s4qeY9dSeal-K1V0GXhL_kO/exec",
         {
           method: "POST",
           body: JSON.stringify({ firstName, lastName, email, subject, message }),
