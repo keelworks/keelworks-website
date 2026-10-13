@@ -13,7 +13,9 @@ const ContactForm = () => {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbzzqjWGyUCb9OVxUfVCgsnUgwFva9pf3WvtJKaknJdj_s4qeY9dSeal-K1V0GXhL_kO/exec",
+        /* "https://script.google.com/macros/s/AKfycbzzqjWGyUCb9OVxUfVCgsnUgwFva9pf3WvtJKaknJdj_s4qeY9dSeal-K1V0GXhL_kO/exec",*/
+        /*"https://script.google.com/a/macros/keelworks.org/s/AKfycbyxViQ1xgvZV_nWn5gMPYUiOPnOq9891DdY2-0Mebr5ToofDpgTnxv8aLBSVmFecita/exec",*/
+        "https://script.google.com/macros/s/AKfycbyxViQ1xgvZV_nWn5gMPYUiOPnOq9891DdY2-0Mebr5ToofDpgTnxv8aLBSVmFecita/exec",
         {
           method: "POST",
           body: JSON.stringify({ firstName, lastName, email, subject, message }),
@@ -44,7 +46,7 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               <div className="flex flex-col justify-start items-start mt-2 md:order-2">
                 <p className="text-2xl md:mt-2 text-gray-500 text-left">
-                  Geospatial Distribution Of Our People
+                  KeelWorks Global Reach
                 </p>
                 <img
                   src={peopleDistImage}
