@@ -13,9 +13,7 @@ const ContactForm = () => {
 
     try {
       await fetch(
-        /* "https://script.google.com/macros/s/AKfycbzzqjWGyUCb9OVxUfVCgsnUgwFva9pf3WvtJKaknJdj_s4qeY9dSeal-K1V0GXhL_kO/exec",*/
-        /*"https://script.google.com/a/macros/keelworks.org/s/AKfycbyxViQ1xgvZV_nWn5gMPYUiOPnOq9891DdY2-0Mebr5ToofDpgTnxv8aLBSVmFecita/exec",*/
-        "https://script.google.com/macros/s/AKfycbyxViQ1xgvZV_nWn5gMPYUiOPnOq9891DdY2-0Mebr5ToofDpgTnxv8aLBSVmFecita/exec",
+                "https://script.google.com/macros/s/AKfycbyxViQ1xgvZV_nWn5gMPYUiOPnOq9891DdY2-0Mebr5ToofDpgTnxv8aLBSVmFecita/exec",
         {
           method: "POST",
           body: JSON.stringify({ firstName, lastName, email, subject, message }),
