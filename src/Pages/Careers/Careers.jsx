@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react";
+import { FaChevronRight } from "react-icons/fa";
 import LoadingSpinner from "../../Components/KeelBot/LoadingSpinner/LoadingSpinner";
-
-const charLimit = 2000; // change if you want a different truncate length
 
 /** Case/space-insensitive column getter */
 function flexiblePick(row = {}, keys = []) {
@@ -55,7 +54,7 @@ const Careers = () => {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [expandedIds, setExpandedIds] = useState(new Set());
+  const [expandedJobId, setExpandedJobId] = useState(null);
   const jobsPerPage = 6;
 
   /* scroll-to-top ref */
@@ -100,13 +99,9 @@ const Careers = () => {
     }
   };
 
-  /* toggle read-more */
+  /* toggle opportunity details */
   const toggleExpand = (idx) => {
-    setExpandedIds((prev) => {
-      const next = new Set(prev);
-      next.has(idx) ? next.delete(idx) : next.add(idx);
-      return next;
-    });
+    setExpandedJobId((prev) => (prev === idx ? null : idx));
   };
 
   if (loading) {
@@ -131,7 +126,7 @@ const Careers = () => {
         individuals looking to contribute their time and skills toward
         meaningful impact.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
         {currentJobs.length === 0 ? (
           <p className="col-span-full text-center text-lg">
             No openings available at this time. Please check back later.
@@ -139,23 +134,34 @@ const Careers = () => {
         ) : (
           currentJobs.map((job, idx) => {
             const globalIdx = (currentPage - 1) * jobsPerPage + idx;
-            const isExpanded = expandedIds.has(globalIdx);
-            const description = job.Description || "";
-            const shortText =
-              description.length > charLimit
-                ? description.slice(0, charLimit) + "…"
-                : description;
+            const isExpanded = expandedJobId === globalIdx;
+            const detailsId = `opportunity-details-${globalIdx}`;
 
             return (
               <div
                 key={globalIdx}
-                className="job-card bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-2xl hover:scale-[1.03] flex flex-col h-full animate-fadeInUp"
+                className="job-card bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-2xl animate-fadeInUp"
                 style={{ animationDelay: `${idx * 80}ms` }}
               >
-                <div className="flex flex-col h-full">
-                  {/* header & meta */}
-                  <div className="mb-6">
-                    <h3 className="text-xl font-bold mb-3">{job.Title}</h3>
+                <h3 className="text-xl font-bold">
+                  <button
+                    type="button"
+                    className="flex w-full items-center justify-between gap-3 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-linkColor"
+                    aria-expanded={isExpanded}
+                    aria-controls={detailsId}
+                    onClick={() => toggleExpand(globalIdx)}
+                  >
+                    <span>{job.Title}</span>
+                    <FaChevronRight
+                      aria-hidden="true"
+                      className={`shrink-0 text-base text-gray-600 transition-transform duration-200 ${
+                        isExpanded ? "rotate-90" : ""
+                      }`}
+                    />
+                  </button>
+                </h3>
+                {isExpanded && (
+                  <div id={detailsId} className="mt-4">
                     <div className="mb-4">
                       <p className="text-gray-700">
                         <strong>Location:</strong> {job.Location || "Remote"}
@@ -170,33 +176,19 @@ const Careers = () => {
                         </span>
                       </p>
                     </div>
-
-                    {/* description + read more */}
-                    <p className="text-gray-600">
-                      {isExpanded ? description : shortText}
-                      {description.length > charLimit && (
-                        <button
-                          className="ml-2 text-linkColor font-semibold hover:underline focus:outline-none"
-                          onClick={() => toggleExpand(globalIdx)}
-                        >
-                          {isExpanded ? "Read Less" : "Read More"}
-                        </button>
-                      )}
-                    </p>
+                    <p className="mb-6 text-gray-600">{job.Description || ""}</p>
+                    <button
+                      type="button"
+                      className="w-full bg-action500 text-[#212121] px-4 py-2 rounded-full hover:bg-action300 transition duration-300 font-semibold relative overflow-hidden ripple"
+                      onClick={(e) => {
+                        handleApply(job);
+                        createRipple(e);
+                      }}
+                    >
+                      Apply Now
+                    </button>
                   </div>
-
-                  {/* apply button */}
-                  <button
-                    type="button"
-                    className="mt-auto w-full bg-action500 text-[#212121] px-4 py-2 rounded-full hover:bg-action300 transition duration-300 font-semibold relative overflow-hidden ripple"
-                    onClick={(e) => {
-                      handleApply(job);
-                      createRipple(e);
-                    }}
-                  >
-                    Apply Now
-                  </button>
-                </div>
+                )}
               </div>
             );
           })
