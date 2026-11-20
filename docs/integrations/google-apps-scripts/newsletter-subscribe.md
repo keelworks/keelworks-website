@@ -2,6 +2,12 @@
 
 The footer form sends subscriber details to a Google Apps Script web app, which writes them to a Google Sheet.
 
+## Status
+
+✅ Replacement deployed. Script owner: `automation@keelworks.org`. Failure alerts: `support@keelworks.org`.
+
+- **Web app URL:** `https://script.google.com/macros/s/AKfycbxKix0Bf8-1P3hjlO0l-A_NyLBje2WmcPGH_1iPbcN-RU73lrPI8ETOs6U5lUWUq3rE/exec`
+
 ## Frontend
 
 - **File:** `src/Components/Footer/Footer.jsx`

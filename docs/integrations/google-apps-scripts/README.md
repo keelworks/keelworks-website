@@ -10,7 +10,7 @@ The KeelWorks website uses Google Apps Script as a lightweight backend. Scripts 
 
 | Feature | Status | Script Name (apps script) | Source File |
 |---|---|---|---|
-| Newsletter Subscribe | ⚠️ Replacement deployment required | `KeelWorks Newsletter Subscribe` (to be created) | `src/Components/Footer/Footer.jsx` |
+| Newsletter Subscribe | ✅ Working | `KeelWorks Newsletter Subscribe` | `src/Components/Footer/Footer.jsx` |
 | Job Listings (fetch) | ✅ Working | `Job Listings API` | `src/Pages/Careers/Careers.jsx` |
 | Job Application (submit) | ⚠️ Needs re-auth | `KeelWorks Job Application Handler` | `src/Pages/Careers/JobApplicationForm.jsx` |
 | Volunteer Sign-Up | ⚠️ Needs verification | `Volunteer App Drive API` | `src/Pages/GetInvolved/SignUp/SignUp.jsx` |
@@ -19,11 +19,11 @@ The KeelWorks website uses Google Apps Script as a lightweight backend. Scripts 
 
 ---
 
-## Deployed URLs (as of March 2026)
+## Deployed URLs
 
 | Feature | URL |
 |---|---|
-| Newsletter Subscribe | _Pending replacement deployment; see [setup steps](newsletter-subscribe.md)_ |
+| Newsletter Subscribe | `https://script.google.com/macros/s/AKfycbxKix0Bf8-1P3hjlO0l-A_NyLBje2WmcPGH_1iPbcN-RU73lrPI8ETOs6U5lUWUq3rE/exec` |
 | Job Listings | `https://script.google.com/macros/s/AKfycbzEmskmmWo59MhJzsTrJwNGWK9EottKP4CvDNb5F70ZLRJbdSs1Jd1VrjgLQ6r_Ik6CwA/exec` |
 | Job Application | `https://script.google.com/macros/s/AKfycbzyLaq4bWvqApKMgJxkoQNu1tZKWLJvVLfYyKqhUvGVBjoyt37zzC2dH7XO2hmG-2pfWA/exec` |
 | Volunteer Sign-Up | `https://script.google.com/macros/s/AKfycbyRoPGVv2_M5LQuwcLpzlQtUX1ciR0wScaDaBxczOqnB2qDrSD8y8Tt0FtMJTfiT9In1gA/exec` |
