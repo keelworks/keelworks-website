@@ -27,14 +27,14 @@ const Footer = () => {
         body: JSON.stringify({ firstName, lastName, email }),
         mode: "no-cors",
       });
+    } catch (error) {
+      console.error("Newsletter submission request failed.", error);
+    } finally {
       setFirstName("");
       setLastName("");
       setEmail("");
-      alert("Your request was sent successfully! Thank you.");
-    } catch {
-      alert("There was an error sending your message.");
-    } finally {
       setIsSubmitting(false);
+      alert("Your request was sent successfully! Thank you.");
     }
   };
 
@@ -53,6 +53,7 @@ const Footer = () => {
                       type="text"
                       id="newsletter-first-name"
                       placeholder="First Name"
+                      maxLength={50}
                       className="w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
@@ -63,7 +64,8 @@ const Footer = () => {
                     <input
                       type="text"
                       id="newsletter-last-name"
-                      placeholder="Last ame"
+                      placeholder="Last Name"
+                      maxLength={50}
                       className="w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
@@ -75,7 +77,8 @@ const Footer = () => {
                   <input
                     type="email"
                     id="email"
-                    placeholder="Email Address - Deployment"
+                    placeholder="Email Address"
+                    maxLength={254}
                     className="w-full px-3 py-3 text-fontPrimary font-normal bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm placeholder:italic placeholder:text-gray-500"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
